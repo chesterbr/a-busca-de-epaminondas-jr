@@ -42,3 +42,4 @@ modernizado; `modernizar.py` tem as regras e `testar_textos.py` confere o fonte 
 
 - Comandos com acento: o original apagava as letras acentuadas (`INVENTÁRIO` virava `INVENTRIO` e não era entendido). Aqui os acentos são tirados antes de interpretar o comando.
 - `AJUDA` (ou `?`) repete a explicação da abertura. No original a ajuda ficava no menu (ESC), que não foi reimplementado.
+- Cor (ANSI): `[saídas: …]` e `[com você: …]` em ciano, e o prompt com o comando digitado em verde. Só num terminal que aceite cor: não em pipe, nem com `NO_COLOR` ou `TERM=dumb`. `--cor` força e `--sem-cor` desliga.

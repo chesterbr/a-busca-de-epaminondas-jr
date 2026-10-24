@@ -72,6 +72,17 @@ def main():
     else:
         print('FALHA AJUDA e ?\n' + r.stdout[-300:])
         falhas += 1
+    # cor: só com --cor (ou num terminal); em pipe (como aqui) a saída não leva sequências ANSI
+    with tempfile.NamedTemporaryFile('w', suffix='.txt', encoding='utf-8') as t:
+        t.write('N\n')
+        t.flush()
+        sem = rodar(AQUI / 'epa.py', '--sem-wrap', t.name).stdout
+        com = rodar(AQUI / 'epa.py', '--sem-wrap', '--cor', t.name).stdout
+    if '\x1b' not in sem and '\x1b[36m[saídas' in com and '\x1b[1;32m> N' in com:
+        print('ok    cor')
+    else:
+        print('FALHA cor')
+        falhas += 1
     r = rodar(AQUI / 'testar_textos.py')
     print(r.stdout.rstrip())
     if r.returncode:

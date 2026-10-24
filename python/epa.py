@@ -4,6 +4,7 @@ Fontes: analise/dumps/G1.BIN (DS inicial), E1.BIN (arrays), E2.BIN (heap), anali
 As regras de cada verbo foram transcritas de analise/extracted/verbos_pseudocodigo.txt.
 Só cobre o que foi lido até aqui; o resto responde "(nao implementado)".
 """
+import os
 import re
 import struct
 from enum import IntEnum
@@ -489,6 +490,22 @@ TEXTO_SALA = {
 }
 
 
+# cores ANSI: os colchetes ([saídas], [com você]) e o prompt com o comando digitado
+CIANO = '\033[36m'
+VERDE = '\033[1;32m'
+ZERAR = '\033[0m'
+
+
+def cor_suportada():
+    """Cor só quando a saída é um terminal que a aceita: não em pipe, nem com NO_COLOR (https://no-color.org) ou
+    TERM=dumb. No Windows, liga o modo de sequências ANSI do console."""
+    if 'NO_COLOR' in os.environ or os.environ.get('TERM') == 'dumb' or not sys.stdout.isatty():
+        return False
+    if os.name == 'nt':
+        os.system('')
+    return True
+
+
 LARGURA = 58  # a janela de mensagens do original tem 58 colunas (MostraMensagem quebra quando COL passa disso)
 
 
@@ -517,11 +534,12 @@ AJUDA = ('Digite comandos com um verbo e um objeto, como PEGAR AZULEJO ou EXAMIN
 
 
 class Jogo:
-    def __init__(self, entrada=input, saida=print, teleporta_ao_beijar_akira=False, quebra=True):
+    def __init__(self, entrada=input, saida=print, teleporta_ao_beijar_akira=False, quebra=True, cor=False):
         # Meu atalho de desenvolvimento, desligado no jogo distribuído (ver v16): BEIJAR AKIRA pergunta
         # um número e teleporta para a sala (1 a 66); 999 vai direto ao final. Na linha de comando:
         # --teleporta-ao-beijar-akira
         self.teleporta_ao_beijar_akira = teleporta_ao_beijar_akira
+        self.cor = cor               # False (--sem-cor, NO_COLOR, saída que não é terminal): sem sequências ANSI
         self.quebra = quebra         # False (--sem-wrap): não quebra as linhas (a linha em branco depois de cada mensagem fica)
         self.loc = {i: int(v) for i, v in enumerate(LOC0[:90])
                     if v == v and abs(v) < 1e5}
@@ -549,7 +567,7 @@ class Jogo:
         self.objetos_mostrados = None  # última lista mostrada por mostrar_objetos (o painel Objetos do original)
 
     # ---------- util
-    def dizer(self, t, junto=False, colado=False):
+    def dizer(self, t, junto=False, colado=False, cor=None):
         # como o original: cada mensagem termina com uma linha em branco. junto: a linha em branco só sai
         # antes da próxima mensagem (ou no fim do comando); colado: a mensagem vem sem a linha em branco antes
         # (as saídas e a lista de objetos formam um bloco)
@@ -557,7 +575,7 @@ class Jogo:
             self.saida('')
         self.branco_pendente = False
         for linha in quebra_linhas(t) if self.quebra else [t]:
-            self.saida(linha)
+            self.saida(cor + linha + ZERAR if cor and self.cor else linha)
         if junto:
             self.branco_pendente = True
         else:
@@ -605,7 +623,7 @@ class Jogo:
                 self.dizer(self.txt_aqui.get(o, AQUI[o]))
         sd = self.saidas()
         nomes = {'N': 'NORTE', 'S': 'SUL', 'L': 'LESTE', 'O': 'OESTE', 'C': 'CIMA', 'B': 'BAIXO'}
-        self.dizer('[saídas: %s]' % ', '.join(nomes[d] for d in 'NSLOCB' if sd.get(d)), junto=True)
+        self.dizer('[saídas: %s]' % ', '.join(nomes[d] for d in 'NSLOCB' if sd.get(d)), junto=True, cor=CIANO)
 
     def descrever(self):
         s = self.sala
@@ -1442,7 +1460,7 @@ class Jogo:
         itens = [VOC[i] for i in sorted(self.loc) if self.loc[i] == COM_JOGADOR]
         if itens != self.objetos_mostrados:
             self.objetos_mostrados = itens
-            self.dizer('[com você: %s]' % (', '.join(itens) or 'NADA'), colado=True)
+            self.dizer('[com você: %s]' % (', '.join(itens) or 'NADA'), colado=True, cor=CIANO)
 
     # ---------- LARGAR: 0xa5a1 (caso geral)
     # verbo 8 @ 0xa5a1: LARGAR/DEIXAR/SOLTAR
@@ -1904,7 +1922,7 @@ def jogar(cmds, **opcoes):
     j = novo()
     j.iniciar()
     for c in it:
-        print('> ' + c)
+        print((VERDE + '> ' + c + ZERAR) if opcoes.get('cor') else '> ' + c)
         j.comando(c)
         if j.morreu:
             print('--- reiniciando o jogo ---\n')
@@ -1934,13 +1952,19 @@ def interativo(opcoes):
         import readline  # noqa: F401
     except ImportError:
         pass
+    prompt = '> '
+    if opcoes.get('cor'):  # com o readline, o que não ocupa coluna vai entre \001 e \002
+        ini, fim = ('\001', '\002') if 'readline' in sys.modules else ('', '')
+        prompt = ini + VERDE + fim + '> '
     j = Jogo(**opcoes)
     j.iniciar()
     while True:
         try:
-            c = input('> ')
+            c = input(prompt)
+            if opcoes.get('cor'):
+                print(ZERAR, end='', flush=True)
         except EOFError:  # Ctrl-D
-            print()
+            print(ZERAR if opcoes.get('cor') else '')
             break
         j.comando(c)
         if j.morreu:
@@ -1956,13 +1980,19 @@ if __name__ == '__main__':
     if '--teleporta-ao-beijar-akira' in sys.argv:
         sys.argv.remove('--teleporta-ao-beijar-akira')
         opcoes['teleporta_ao_beijar_akira'] = True
+    for flag, valor in (('--cor', True), ('--sem-cor', False)):
+        if flag in sys.argv:
+            sys.argv.remove(flag)
+            opcoes['cor'] = valor
     if '--sem-wrap' in sys.argv:
         sys.argv.remove('--sem-wrap')
         opcoes['quebra'] = False
+    if 'cor' not in opcoes:
+        opcoes['cor'] = cor_suportada()
     if len(sys.argv) > 1:  # python3 epa.py caminhos/00_caminho_feliz.txt: roda os comandos do arquivo (um por linha)
         jogar(Path(sys.argv[1]).read_text().splitlines(), **opcoes)
         sys.exit()
     try:
         interativo(opcoes)
-    except KeyboardInterrupt:  # Ctrl-C: sai sem traceback
-        print()
+    except KeyboardInterrupt:  # Ctrl-C: sai sem traceback (e sem deixar a cor do prompt ligada)
+        print(ZERAR if opcoes['cor'] else '')
