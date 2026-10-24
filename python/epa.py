@@ -536,14 +536,28 @@ class Jogo:
         self.nome_sala = ''          # SALANOME$: OLHAR <nome> (e LUGAR) mostra a sala
         self.txt_aqui = {}           # textos que o jogo troca durante a partida (txtaqui[]/txtexam[])
         self.txt_exam = {}
+        self.branco_pendente = False
         self.objetos_mostrados = None  # última lista mostrada por mostrar_objetos (o painel Objetos do original)
 
     # ---------- util
-    def dizer(self, t):
-        # como o original: cada mensagem termina com uma linha em branco
+    def dizer(self, t, junto=False, colado=False):
+        # como o original: cada mensagem termina com uma linha em branco. junto: a linha em branco só sai
+        # antes da próxima mensagem (ou no fim do comando); colado: a mensagem vem sem a linha em branco antes
+        # (as saídas e a lista de objetos formam um bloco)
+        if self.branco_pendente and not colado:
+            self.saida('')
+        self.branco_pendente = False
         for linha in quebra_linhas(t) if self.quebra else [t]:
             self.saida(linha)
-        self.saida('')
+        if junto:
+            self.branco_pendente = True
+        else:
+            self.saida('')
+
+    def fechar_bloco(self):
+        if self.branco_pendente:
+            self.saida('')
+            self.branco_pendente = False
 
     def aqui(self, o):
         return abs(self.loc.get(o, 0)) == self.sala
@@ -581,7 +595,8 @@ class Jogo:
             if self.aqui(o) and self.txt_aqui.get(o, AQUI[o]):
                 self.dizer(self.txt_aqui.get(o, AQUI[o]))
         sd = self.saidas()
-        self.dizer('[saídas: %s]' % ' '.join(d for d in 'NSLOCB' if sd.get(d)))
+        nomes = {'N': 'NORTE', 'S': 'SUL', 'L': 'LESTE', 'O': 'OESTE', 'C': 'CIMA', 'B': 'BAIXO'}
+        self.dizer('[saídas: %s]' % ', '.join(nomes[d] for d in 'NSLOCB' if sd.get(d)), junto=True)
 
     def descrever(self):
         s = self.sala
@@ -1143,10 +1158,12 @@ class Jogo:
     def comando(self, texto):
         self.executar(texto)
         self.mostrar_objetos()
+        self.fechar_bloco()
 
     def iniciar(self):
         self.descrever()
         self.mostrar_objetos()
+        self.fechar_bloco()
 
     def executar(self, texto):
         pal = [p for p in re.sub(r'[^A-Za-z ]', '', texto.upper()).split() if p]
@@ -1408,7 +1425,7 @@ class Jogo:
         itens = [VOC[i] for i in sorted(self.loc) if self.loc[i] == COM_JOGADOR]
         if itens != self.objetos_mostrados:
             self.objetos_mostrados = itens
-            self.dizer('[objetos: %s]' % (', '.join(itens) or 'NADA'))
+            self.dizer('[com você: %s]' % (', '.join(itens) or 'NADA'), colado=True)
 
     # ---------- LARGAR: 0xa5a1 (caso geral)
     # verbo 8 @ 0xa5a1: LARGAR/DEIXAR/SOLTAR
@@ -1893,12 +1910,23 @@ if __name__ == '__main__':
         jogar(Path(sys.argv[1]).read_text().splitlines(), **opcoes)
         sys.exit()
     # abertura (só no modo interativo; os textos vêm das telas de ajuda 2 e 3 do original)
-    print('A Busca de Epaminondas Jr. V1.5 - (c) 1992 por CHESTER (Carlos Duarte)\n')
-    for p in ('Digite comandos com um verbo e um objeto, como PEGAR AZULEJO ou OLHAR HOMEM. Artigos e complementos '
-              'são ignorados: PEGAR A NOZ vale PEGAR NOZ.',
+    print('╔' + '═' * (LARGURA - 2) + '╗')
+    for linha in ('A Busca de Epaminondas Jr. V1.5', '(c) 1992 por CHESTER (Carlos Duarte do Nascimento)',
+                  'https://github.com/chesterbr/a-busca-de-epaminondas-jr'):
+        print('║' + linha.center(LARGURA - 2) + '║')
+    print('╚' + '═' * (LARGURA - 2) + '╝\n')
+    for p in ('Digite comandos com um verbo e um objeto, como PEGAR AZULEJO ou EXAMINAR HOMEM. Artigos e complementos '
+              'são ignorados: PEGAR A NOZ é a mesma coisa que PEGAR NOZ.',
               'Para se mover, digite IR PARA O NORTE, IR NORTE ou só N (também S, L e O; C para cima e B para baixo). '
+              'Vale a pena EXAMINAR qualquer objeto, e EXAMINAR LOCAL descreve onde você está. '
               'INVENTARIO mostra o que você carrega, e SAIR termina o jogo.'):
         print(*(quebra_linhas(p) if opcoes.get('quebra', True) else [p]), sep='\n', end='\n\n')
+    if sys.stdin.isatty():  # numa sessão interativa, espera para a abertura não rolar para fora da tela
+        try:
+            input('Tecle ENTER para começar...')
+        except EOFError:
+            pass
+        print()
     j = Jogo(**opcoes)
     j.iniciar()
     while True:

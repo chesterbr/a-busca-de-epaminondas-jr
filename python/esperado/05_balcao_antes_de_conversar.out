@@ -16,38 +16,37 @@ Você nota um azulejo solto no chão.
 
 Um grande cofre de metal jaz na parede.
 
-[saídas: N]
-
-[objetos: GRANA, FOSFOROS]
+[saídas: NORTE]
+[com você: GRANA, FOSFOROS]
 
 > PEGAR AZULEJO
 Ok.
 
-[objetos: AZULEJO, GRANA, FOSFOROS]
+[com você: AZULEJO, GRANA, FOSFOROS]
 
 > N
 Você está na recepção do escritório. Você vê a rua ao norte, o que lhe causa um enorme desejo de sair desta pocilga.
 
 Há uma lista telefônica jogada num canto.
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > PEGAR LISTA
 Ok.
 
-[objetos: LISTA, AZULEJO, GRANA, FOSFOROS]
+[com você: LISTA, AZULEJO, GRANA, FOSFOROS]
 
 > N
 Você está na calçada de uma rua bastante movimentada. É realmente inacreditável o “coeficiente animal” dos motoristas deste bairro.
 
 Um homem mal-encarado está apoiado num poste.
 
-[saídas: S L]
+[saídas: SUL, LESTE]
 
 > L
 Você se encontra num calçadão. Ao sul pode-se ver um salão bastante bonito (considerando o muquifo de bairro no qual você se encontra...)
 
-[saídas: S O]
+[saídas: SUL, OESTE]
 
 > S
 Estamos na biblioteca. Este é um lugar interessante. As prateleiras dos livros ficam atrás do balcão, e não ao acesso do público..
@@ -56,7 +55,7 @@ Uma linda balconista devora um exemplar da revista “Capricho” atrás do balc
 
 O balcão lhe chama a atenção, pois ocupa metade da biblioteca.
 
-[saídas: N]
+[saídas: NORTE]
 
 > ENTRAR BALCAO
 “Sinto muito, mas esta área é restrita a funcionários...” - diz a balconista, num tom de voz mais do que educado.
@@ -83,7 +82,7 @@ Não posso pegar isso.
 
 “Essa foi boa” - você pensa, enquanto observa ela sair pela porta afora. Mas você ainda tem um jogo para jogar. Tire esta expressão ridícula do seu rosto, rapaz!!!
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, GRANA, FOSFOROS]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, GRANA, FOSFOROS]
 
 > CONVERSAR BALCONISTA
 Aonde você vê isso?
@@ -93,5 +92,5 @@ O balcão é apertado, mas deu para entrar (agora que você se arrepende de não
 
 Há uma escada aqui.
 
-[saídas: N B]
+[saídas: NORTE, BAIXO]
 

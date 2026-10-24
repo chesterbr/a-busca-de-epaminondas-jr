@@ -16,14 +16,13 @@ Você nota um azulejo solto no chão.
 
 Um grande cofre de metal jaz na parede.
 
-[saídas: N]
-
-[objetos: GRANA, FOSFOROS]
+[saídas: NORTE]
+[com você: GRANA, FOSFOROS]
 
 > PEGAR AZULEJO
 Ok.
 
-[objetos: AZULEJO, GRANA, FOSFOROS]
+[com você: AZULEJO, GRANA, FOSFOROS]
 
 > LISTAR
 Objetos: AZULEJO, GRANA, FOSFOROS
@@ -33,7 +32,7 @@ Você está na recepção do escritório. Você vê a rua ao norte, o que lhe ca
 
 Há uma lista telefônica jogada num canto.
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > LISTAR
 Objetos: AZULEJO, GRANA, FOSFOROS
@@ -41,7 +40,7 @@ Objetos: AZULEJO, GRANA, FOSFOROS
 > PEGAR LISTA
 Ok.
 
-[objetos: LISTA, AZULEJO, GRANA, FOSFOROS]
+[com você: LISTA, AZULEJO, GRANA, FOSFOROS]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, GRANA, FOSFOROS
@@ -78,7 +77,7 @@ Você está na calçada de uma rua bastante movimentada. É realmente inacredit�
 
 Um homem mal-encarado está apoiado num poste.
 
-[saídas: S L]
+[saídas: SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, GRANA, FOSFOROS
@@ -86,7 +85,7 @@ Objetos: LISTA, AZULEJO, GRANA, FOSFOROS
 > L
 Você se encontra num calçadão. Ao sul pode-se ver um salão bastante bonito (considerando o muquifo de bairro no qual você se encontra...)
 
-[saídas: S O]
+[saídas: SUL, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, GRANA, FOSFOROS
@@ -98,7 +97,7 @@ Uma linda balconista devora um exemplar da revista “Capricho” atrás do balc
 
 O balcão lhe chama a atenção, pois ocupa metade da biblioteca.
 
-[saídas: N]
+[saídas: NORTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, GRANA, FOSFOROS
@@ -116,7 +115,7 @@ Objetos: LISTA, AZULEJO, GRANA, FOSFOROS
 
 “Essa foi boa” - você pensa, enquanto observa ela sair pela porta afora. Mas você ainda tem um jogo para jogar. Tire esta expressão ridícula do seu rosto, rapaz!!!
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, GRANA, FOSFOROS]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, GRANA, FOSFOROS]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, GRANA, FOSFOROS
@@ -126,7 +125,7 @@ O balcão é apertado, mas deu para entrar (agora que você se arrepende de não
 
 Há uma escada aqui.
 
-[saídas: N B]
+[saídas: NORTE, BAIXO]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, GRANA, FOSFOROS
@@ -139,7 +138,7 @@ A escada te levou até um depósito. Agora, basta subir que você pode sair do b
 
 Uma lanterna está no chão.
 
-[saídas: C]
+[saídas: CIMA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, GRANA, FOSFOROS
@@ -147,7 +146,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, GRANA, FOSFOROS
 > PEGAR LANTERNA
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
@@ -157,7 +156,7 @@ Estamos na biblioteca. Este é um lugar interessante. As prateleiras dos livros 
 
 O balcão lhe chama a atenção, pois ocupa metade da biblioteca.
 
-[saídas: N]
+[saídas: NORTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
@@ -165,7 +164,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
 > N
 Você se encontra num calçadão. Ao sul pode-se ver um salão bastante bonito (considerando o muquifo de bairro no qual você se encontra...)
 
-[saídas: S O]
+[saídas: SUL, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
@@ -175,7 +174,7 @@ Você está na calçada de uma rua bastante movimentada. É realmente inacredit�
 
 Um homem mal-encarado está apoiado num poste.
 
-[saídas: S L]
+[saídas: SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
@@ -191,7 +190,7 @@ O ônibus para. Este é o ponto final. Todos descem, inclusive você.
 
 Você está numa viela totalmente deserta.
 
-[saídas: N S L]
+[saídas: NORTE, SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
@@ -220,7 +219,7 @@ De repente, o povo se aglomera à sua volta. Todos começam a gritar.
 
 “Muito bem” - diz o grandão, quando o serviço termina - “Agora você também é um careca. Pode circular aqui à vontade”. Ele se retira do local, gritando e pulando.
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
@@ -228,7 +227,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
 > S
 Você está numa viela totalmente deserta.
 
-[saídas: N S L]
+[saídas: NORTE, SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
@@ -238,7 +237,7 @@ Você está na entrada de uma faculdade. Não é nenhuma Oxford, mas dá para o 
 
 Um vigia está te encarando, rapaz.
 
-[saídas: N S L]
+[saídas: NORTE, SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
@@ -248,7 +247,7 @@ Você se encontra num estacionamento. Não há nenhum carro, o que lhe deixa mui
 
 Tem um envelope marrom no chão.
 
-[saídas: O]
+[saídas: OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
@@ -256,7 +255,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
 > PEGAR ENVELOPE
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS, ENVELOPE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS, ENVELOPE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS, ENVELOPE
@@ -266,7 +265,7 @@ Você está na entrada de uma faculdade. Não é nenhuma Oxford, mas dá para o 
 
 Um vigia está te encarando, rapaz.
 
-[saídas: N S L]
+[saídas: NORTE, SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS, ENVELOPE
@@ -281,7 +280,7 @@ Estamos na secretaria da faculdade. É uma salinha bem mixuruca, caindo aos peda
 
 A secretária “puxa um ronco” sobre sua mesa.
 
-[saídas: N S L O]
+[saídas: NORTE, SUL, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS, ENVELOPE
@@ -297,7 +296,7 @@ Uma borracha está largada no chão.
 
 A secretária “puxa um ronco” sobre sua mesa.
 
-[saídas: N S O]
+[saídas: NORTE, SUL, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS, ENVELOPE
@@ -305,7 +304,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS, ENVELOPE
 > S
 Você está no ginásio de esportes. O lugar está acabado. Na parede, uma pichação: “CHESTER NÃO ESTEVE AQUI”. Você se pergunta até que ponto a degradação humana pode chegar.
 
-[saídas: N L]
+[saídas: NORTE, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS, ENVELOPE
@@ -315,7 +314,7 @@ Esta é a quadra de esportes. Nada de anormal aqui.
 
 Algumas pilhas estão jogadas no chão.
 
-[saídas: O]
+[saídas: OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS, ENVELOPE
@@ -323,7 +322,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS, ENVELOPE
 > PEGAR PILHAS
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELOPE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELOPE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELOPE
@@ -331,7 +330,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELO
 > O
 Você está no ginásio de esportes. O lugar está acabado. Na parede, uma pichação: “CHESTER NÃO ESTEVE AQUI”. Você se pergunta até que ponto a degradação humana pode chegar.
 
-[saídas: N L]
+[saídas: NORTE, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELOPE
@@ -346,7 +345,7 @@ Uma borracha está largada no chão.
 
 A secretária “puxa um ronco” sobre sua mesa.
 
-[saídas: N S O]
+[saídas: NORTE, SUL, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELOPE
@@ -354,7 +353,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELO
 > O
 Este é o Centro de Processamento de Dados da faculdade. Examinando mais profundamente, você observa o poderoso equipamento do pessoal: Um TK82C, conectado a um gravador CCE. Pena que não dá para utilizá-lo, pois ele está sem a fonte.
 
-[saídas: S L]
+[saídas: SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELOPE
@@ -362,7 +361,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELO
 > S
 Você está no almoxarifado. O cheiro do local não é nada agradável, podendo-se dizer o mesmo do seu aspecto.
 
-[saídas: N B]
+[saídas: NORTE, BAIXO]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELOPE
@@ -378,7 +377,7 @@ Você está num depósito de papel.
 
 Uma mala lhe chama a atenção.
 
-[saídas: C]
+[saídas: CIMA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELOPE
@@ -386,7 +385,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, ENVELO
 > PEGAR MALA
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, ENVELOPE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, ENVELOPE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, ENVELOPE
@@ -397,7 +396,7 @@ Você tem $300
 > ABRIR MALA
 Há uma passagem de ônibus nela. Você a pega imediatamente.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, PASSAGEM, ENVELOPE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, PASSAGEM, ENVELOPE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, PASSAGEM, ENVELOPE
@@ -405,7 +404,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > C
 Você está no almoxarifado. O cheiro do local não é nada agradável, podendo-se dizer o mesmo do seu aspecto.
 
-[saídas: N B]
+[saídas: NORTE, BAIXO]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, PASSAGEM, ENVELOPE
@@ -413,7 +412,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > N
 Este é o Centro de Processamento de Dados da faculdade. Examinando mais profundamente, você observa o poderoso equipamento do pessoal: Um TK82C, conectado a um gravador CCE. Pena que não dá para utilizá-lo, pois ele está sem a fonte.
 
-[saídas: S L]
+[saídas: SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, PASSAGEM, ENVELOPE
@@ -425,7 +424,7 @@ Uma borracha está largada no chão.
 
 A secretária “puxa um ronco” sobre sua mesa.
 
-[saídas: N S O]
+[saídas: NORTE, SUL, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, PASSAGEM, ENVELOPE
@@ -435,7 +434,7 @@ Você está na entrada de uma faculdade. Não é nenhuma Oxford, mas dá para o 
 
 Um vigia está te encarando, rapaz.
 
-[saídas: N S L]
+[saídas: NORTE, SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, PASSAGEM, ENVELOPE
@@ -443,7 +442,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > N
 Você está numa viela totalmente deserta.
 
-[saídas: N S L]
+[saídas: NORTE, SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, PASSAGEM, ENVELOPE
@@ -456,7 +455,7 @@ Estamos numa agência de viagens. Todos os guichês estão fechados, e não pare
 
 Há uma porta automática ao leste.
 
-[saídas: O]
+[saídas: OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, PASSAGEM, ENVELOPE
@@ -464,7 +463,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > USAR PASSAGEM
 Você coloca a passagem na abertura ao lado da porta, e ela se abre.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, ENVELOPE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, ENVELOPE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, ENVELOPE
@@ -480,7 +479,7 @@ Eis o final. Você desce, e volta para o jogo, perdido como sempre
 
 Estamos em (mais) uma ruazinha louca, no sentido de norte a sul, que parece ser uma rua central do bairro. A oeste se vê um prédio, enquanto que ao leste há um escritório.
 
-[saídas: N S L O]
+[saídas: NORTE, SUL, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, ENVELOPE
@@ -488,7 +487,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > S
 Estamos no fim da rua. Ao leste se vê um desses quartos baratos, e ao oeste um fliperama.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, ENVELOPE
@@ -496,7 +495,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > L
 Você está num corredor estreito dentro do quarto. Não parece ser uma casa de excelente reputação.
 
-[saídas: L O]
+[saídas: LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, ENVELOPE
@@ -506,7 +505,7 @@ Estamos num quarto. Na cama, um casal faz o que lhe é direito neste local. Gra�
 
 Uma carteira está largada no chão.
 
-[saídas: O]
+[saídas: OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, ENVELOPE
@@ -517,7 +516,7 @@ Você tem $300
 > PEGAR CARTEIRA
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, ENVELOPE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, ENVELOPE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, ENVELOPE
@@ -525,7 +524,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > OLHAR CARTEIRA
 Temos um cartão aqui.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, ENVELOPE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, ENVELOPE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, ENVELOPE
@@ -533,7 +532,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > O
 Você está num corredor estreito dentro do quarto. Não parece ser uma casa de excelente reputação.
 
-[saídas: L O]
+[saídas: LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, ENVELOPE
@@ -541,7 +540,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > O
 Estamos no fim da rua. Ao leste se vê um desses quartos baratos, e ao oeste um fliperama.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, ENVELOPE
@@ -549,7 +548,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > N
 Estamos em (mais) uma ruazinha louca, no sentido de norte a sul, que parece ser uma rua central do bairro. A oeste se vê um prédio, enquanto que ao leste há um escritório.
 
-[saídas: N S L O]
+[saídas: NORTE, SUL, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, ENVELOPE
@@ -557,7 +556,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > O
 Esta é a entrada do prédio. Um local exalando um cheiro nauseante está a oeste, enquanto que ao norte se vê o hall.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, ENVELOPE
@@ -570,7 +569,7 @@ Você está no hall do prédio. Não há onde sentar-se, e mesmo que houvesse, v
 
 Uma figura imponente se destaca do cenário. É um bispo. Todos os que passam olham para este, com aquele olhar que só os muito crentes têm.
 
-[saídas: N S O]
+[saídas: NORTE, SUL, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, ENVELOPE
@@ -578,7 +577,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > PEGAR BISPO
 Você pega o bispo sem constrangimento, pois ninguém daria pela falta de uma peça de xadrez.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE
@@ -588,7 +587,7 @@ Estamos no elevador.
 
 Tem uma noz aqui.
 
-[saídas: S]
+[saídas: SUL]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE
@@ -596,7 +595,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > PEGAR NOZ
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, NOZ]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, NOZ]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, NOZ
@@ -604,7 +603,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > QUEBRAR NOZ
 Você quebra a noz, ansioso para comê-la, mas na verdade só encontra uma chave ali.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, CHAVE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, CHAVE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, CHAVE
@@ -612,7 +611,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > S
 Você está no hall do prédio. Não há onde sentar-se, e mesmo que houvesse, você não tem tempo para isso. O banheiro feminino é a oeste.
 
-[saídas: N S O]
+[saídas: NORTE, SUL, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, CHAVE
@@ -623,7 +622,7 @@ Você tem $300
 > S
 Esta é a entrada do prédio. Um local exalando um cheiro nauseante está a oeste, enquanto que ao norte se vê o hall.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, CHAVE
@@ -631,7 +630,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > L
 Estamos em (mais) uma ruazinha louca, no sentido de norte a sul, que parece ser uma rua central do bairro. A oeste se vê um prédio, enquanto que ao leste há um escritório.
 
-[saídas: N S L O]
+[saídas: NORTE, SUL, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, CHAVE
@@ -639,7 +638,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > S
 Estamos no fim da rua. Ao leste se vê um desses quartos baratos, e ao oeste um fliperama.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, CHAVE
@@ -649,7 +648,7 @@ Estamos numa casa de fliperama. Uma máquina de Street Fighter 2 olha apaixonada
 
 Um velhinho está jogando uma máquina qualquer
 
-[saídas: L]
+[saídas: LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, BISPO, ENVELOPE, CHAVE
@@ -661,7 +660,7 @@ O velhinho percebe que você quer lhe dar a peça. Ele começa a gritar e babar.
 
 Ele lhe dá uma marreta, e sai gritando “BLAAAAAAAGH” ou algo semelhante.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -669,7 +668,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > L
 Estamos no fim da rua. Ao leste se vê um desses quartos baratos, e ao oeste um fliperama.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -680,7 +679,7 @@ Você tem $300
 > N
 Estamos em (mais) uma ruazinha louca, no sentido de norte a sul, que parece ser uma rua central do bairro. A oeste se vê um prédio, enquanto que ao leste há um escritório.
 
-[saídas: N S L O]
+[saídas: NORTE, SUL, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -688,7 +687,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > O
 Esta é a entrada do prédio. Um local exalando um cheiro nauseante está a oeste, enquanto que ao norte se vê o hall.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -696,7 +695,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > N
 Você está no hall do prédio. Não há onde sentar-se, e mesmo que houvesse, você não tem tempo para isso. O banheiro feminino é a oeste.
 
-[saídas: N S O]
+[saídas: NORTE, SUL, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -704,7 +703,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > O
 Entramos no banheiro feminino. A mulherada sai gritando com as saias na mão.
 
-[saídas: L]
+[saídas: LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -714,7 +713,7 @@ Você destrói a parede e pula no buraco. Misteriosamente, um mecanismo coloca o
 
 Você está num poço.
 
-[saídas: B]
+[saídas: BAIXO]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -722,7 +721,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > B
 Estamos num lugar, que, pelo maquinário, parece ser uma fábrica de bebidas clandestina.
 
-[saídas: S L]
+[saídas: SUL, LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -737,7 +736,7 @@ Há um cofre aqui.
 
 Um tubo abaixo de você dá acesso a alguma coisa.
 
-[saídas: N B]
+[saídas: NORTE, BAIXO]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -751,7 +750,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > B
 Caímos numa rede de esgotos. Após tatear muito, encontramos uma saída.
 
-[saídas: O]
+[saídas: OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -759,7 +758,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > O
 Ahá! Uma escadaria.
 
-[saídas: C]
+[saídas: CIMA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -767,7 +766,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > C
 Estamos numa casa de fliperama. Uma máquina de Street Fighter 2 olha apaixonada para você, mas você tem que ir atrás do disquete, e não gastar seu dinheiro com fliperama.
 
-[saídas: L]
+[saídas: LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -775,7 +774,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > L
 Estamos no fim da rua. Ao leste se vê um desses quartos baratos, e ao oeste um fliperama.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -786,7 +785,7 @@ Você tem $5300
 > N
 Estamos em (mais) uma ruazinha louca, no sentido de norte a sul, que parece ser uma rua central do bairro. A oeste se vê um prédio, enquanto que ao leste há um escritório.
 
-[saídas: N S L O]
+[saídas: NORTE, SUL, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -838,7 +837,7 @@ Estamos na frente da BucanoWare INC. Não parece haver outro lugar a ir, senão 
 
 Um taxista está apoiado em seu taxi.
 
-[saídas: N]
+[saídas: NORTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -852,7 +851,7 @@ Você entra na recepçao. A recepcionista sorri e diz:
 
 “Infelizmente, o Sr. L. hoje está muito ocupado. A não ser que seja algo importante, o senhor deveria se retirar...”
 
-[saídas: S]
+[saídas: SUL]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, ENVELOPE, CHAVE
@@ -868,9 +867,8 @@ Você dá o envelope à secretária.
 
 Estamos no hall do edifício. Ao sul está a mesa da secretária, que provavelmente não vai nos deixar voltar se formos até lá. A leste e a oeste temos elevadores.
 
-[saídas: S L O]
-
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE]
+[saídas: SUL, LESTE, OESTE]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE
@@ -878,7 +876,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > O
 Você está num elevador.
 
-[saídas: L]
+[saídas: LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE
@@ -888,7 +886,7 @@ Digite o número do andar:
 
 Estamos na recepção da administração.
 
-[saídas: L O]
+[saídas: LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE
@@ -899,7 +897,7 @@ Você tem $300
 > L
 Estamos numa sala que parece pertencer a alguma secretária.
 
-[saídas: S O]
+[saídas: SUL, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE
@@ -907,7 +905,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > S
 Eis OUTRA sala de secretária.
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE
@@ -915,7 +913,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > S
 Eis MAIS UMA sala de secretária (esse Sr. L é bom mesmo). Pena que o andar parece estar em férias coletivas, caso contrário você nem pensaria mais no disquete...
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE
@@ -925,7 +923,7 @@ Estamos num corredor no sentido de leste a oeste.
 
 Há um grande painel na parede.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE
@@ -935,7 +933,7 @@ Estamos num pequeno lavabo.
 
 Tem uma pia aqui.
 
-[saídas: O]
+[saídas: OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE
@@ -943,7 +941,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > PEGAR BALA
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE, BALA]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE, BALA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE, BALA
@@ -956,7 +954,7 @@ Estamos num corredor no sentido de leste a oeste.
 
 Há um grande painel na parede.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE, BALA
@@ -964,7 +962,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > O
 Estamos em frente a uma porta. Ela está aberta.
 
-[saídas: L O]
+[saídas: LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE, BALA
@@ -978,7 +976,7 @@ Estes documentos aí podem ser importantes.
 
 Tem um CD aqui no chão.
 
-[saídas: L]
+[saídas: LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CHAVE, BALA
@@ -986,7 +984,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > PEGAR CD
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CD, CHAVE, BALA]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CD, CHAVE, BALA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, CD, CHAVE, BALA
@@ -1000,7 +998,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > PEGAR AGENDA
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1011,7 +1009,7 @@ Você tem $300
 > L
 Estamos em frente a uma porta. Ela está aberta.
 
-[saídas: L O]
+[saídas: LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1021,7 +1019,7 @@ Estamos num corredor no sentido de leste a oeste.
 
 Há um grande painel na parede.
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1029,7 +1027,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > N
 Estamos numa salinha pertencente a alguma secretária.
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1037,7 +1035,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > N
 Você está numa (outra) salinha de secretária.
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1045,7 +1043,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > N
 Estamos numa sala que parece pertencer a alguma secretária.
 
-[saídas: S O]
+[saídas: SUL, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1053,7 +1051,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > O
 Estamos na recepção da administração.
 
-[saídas: L O]
+[saídas: LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1064,7 +1062,7 @@ Você tem $300
 > O
 Você está num elevador. Ele desce automaticamente até o térreo.
 
-[saídas: L]
+[saídas: LESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1072,7 +1070,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > L
 Estamos no hall do edifício. Ao sul está a mesa da secretária, que provavelmente não vai nos deixar voltar se formos até lá. A leste e a oeste temos elevadores.
 
-[saídas: S L O]
+[saídas: SUL, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1080,7 +1078,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > S
 Estamos na recepção.
 
-[saídas: S]
+[saídas: SUL]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1090,7 +1088,7 @@ Estamos na frente da BucanoWare INC. Não parece haver outro lugar a ir, senão 
 
 Um taxista está apoiado em seu taxi.
 
-[saídas: N]
+[saídas: NORTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1108,7 +1106,7 @@ Antes de sumir, ele põe a cabeça para fora e grita: “Valeu, mané. A gente s
 
 Estamos num bairro pior do que todos os outros já vistos. Ao norte temos uma danceteria, e a rua vai no sentido de leste a oeste. Mas, sinceramente, eu não recomendaria passear nela. Aliás, eu não recomendaria entrar na danceteria, muito embora ficar aí marcando bobeira não seja uma boa...
 
-[saídas: N L O]
+[saídas: NORTE, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1122,7 +1120,7 @@ Você pega o cartão “emprestado” do cara do quarto e mostra ao rapaz.
 
 “Ah, claro. Desculpe não tê-lo reconhecido antes, Sr. Elbestáquio Josiclélio Alves de Calógeras e Mello. Pode entrar” - diz o engomadinho.
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1135,7 +1133,7 @@ Você está na pista de dança.
 
 Um grupo de dança está fazendo seu showzinho
 
-[saídas: N S L O]
+[saídas: NORTE, SUL, LESTE, OESTE]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CD, CHAVE, BALA
@@ -1143,7 +1141,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > LARGAR CD
 O DJ sai da mesa lá no fundo e vem pegar o CD que você colocou num canto. Antes dele chegar, porém, os dançarinos esmagam o CD. Ele vê qual era o CD e corre até a rua, aonde comete suicídio. Felizmente o tape-deck mantém a música tocando
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, BALA]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, BALA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, BALA
@@ -1151,7 +1149,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > N
 Você está em frente à mesa de som, perto do acesso que dá na sacada.
 
-[saídas: N S C]
+[saídas: NORTE, SUL, CIMA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, BALA
@@ -1205,7 +1203,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > DESROSQUEAR LAMPADA
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA, BALA]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA, BALA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA, BALA
@@ -1213,7 +1211,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > CHUPAR BALA
 Você abre a bala e joga fora o papel. A bala está meio passada, mas mesmo assim a sensação é refrescante.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA
@@ -1224,7 +1222,7 @@ Você tem $5
 > PEGAR EMBALAGEM
 Ok.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA, EMBALAGEM]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA, EMBALAGEM]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA, EMBALAGEM
@@ -1232,7 +1230,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > USAR EMBALAGEM
 Você coloca o papel-alumínio da bala em volta da lâmpada.
 
-[objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA]
+[com você: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA]
 
 > LISTAR
 Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, CARTEIRA, CARTAO, MARRETA, AGENDA, CHAVE, LAMPADA

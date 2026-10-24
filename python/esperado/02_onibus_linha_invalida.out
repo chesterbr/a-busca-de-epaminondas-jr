@@ -16,28 +16,27 @@ Você nota um azulejo solto no chão.
 
 Um grande cofre de metal jaz na parede.
 
-[saídas: N]
-
-[objetos: GRANA, FOSFOROS]
+[saídas: NORTE]
+[com você: GRANA, FOSFOROS]
 
 > N
 Você está na recepção do escritório. Você vê a rua ao norte, o que lhe causa um enorme desejo de sair desta pocilga.
 
 Há uma lista telefônica jogada num canto.
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > PEGAR LISTA
 Ok.
 
-[objetos: LISTA, GRANA, FOSFOROS]
+[com você: LISTA, GRANA, FOSFOROS]
 
 > N
 Você está na calçada de uma rua bastante movimentada. É realmente inacreditável o “coeficiente animal” dos motoristas deste bairro.
 
 Um homem mal-encarado está apoiado num poste.
 
-[saídas: S L]
+[saídas: SUL, LESTE]
 
 > USAR ONIBUS
 Digite o nº da linha do ônibus:
@@ -60,5 +59,5 @@ O ônibus para. Este é o ponto final. Todos descem, inclusive você.
 
 Você está numa viela totalmente deserta.
 
-[saídas: N S L]
+[saídas: NORTE, SUL, LESTE]
 

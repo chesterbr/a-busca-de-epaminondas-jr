@@ -16,9 +16,8 @@ Você nota um azulejo solto no chão.
 
 Um grande cofre de metal jaz na parede.
 
-[saídas: N]
-
-[objetos: GRANA, FOSFOROS]
+[saídas: NORTE]
+[com você: GRANA, FOSFOROS]
 
 > NORTE AZULEJO
 NORTE não combina com AZULEJO
@@ -317,7 +316,7 @@ Não entendo quais são seus planos. Tente fazer algo mais coerente...
 > PEGAR AZULEJO
 Ok.
 
-[objetos: AZULEJO, GRANA, FOSFOROS]
+[com você: AZULEJO, GRANA, FOSFOROS]
 
 > PEGAR COFRE
 Não posso pegar isso.
@@ -331,7 +330,7 @@ Não seja estúpido! Você já tem isso!!!
 > LARGAR AZULEJO
 Ok.
 
-[objetos: GRANA, FOSFOROS]
+[com você: GRANA, FOSFOROS]
 
 > LARGAR COFRE
 Você não pode largar o que não tem...
@@ -347,7 +346,7 @@ Você está na recepção do escritório. Você vê a rua ao norte, o que lhe ca
 
 Há uma lista telefônica jogada num canto.
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > IR LISTA
 Você não pode ir até isso!
@@ -424,19 +423,19 @@ Não entendo quais são seus planos. Tente fazer algo mais coerente...
 > PEGAR LISTA
 Ok.
 
-[objetos: LISTA, GRANA, FOSFOROS]
+[com você: LISTA, GRANA, FOSFOROS]
 
 > LARGAR LISTA
 Ok.
 
-[objetos: GRANA, FOSFOROS]
+[com você: GRANA, FOSFOROS]
 
 > N
 Você está na calçada de uma rua bastante movimentada. É realmente inacreditável o “coeficiente animal” dos motoristas deste bairro.
 
 Um homem mal-encarado está apoiado num poste.
 
-[saídas: S L]
+[saídas: SUL, LESTE]
 
 > IR HOMEM
 Você não pode ir até isso!
@@ -704,7 +703,6 @@ Você nota um azulejo solto no chão.
 
 Um grande cofre de metal jaz na parede.
 
-[saídas: N]
-
-[objetos: GRANA, FOSFOROS]
+[saídas: NORTE]
+[com você: GRANA, FOSFOROS]
 

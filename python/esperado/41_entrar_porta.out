@@ -16,28 +16,27 @@ Você nota um azulejo solto no chão.
 
 Um grande cofre de metal jaz na parede.
 
-[saídas: N]
-
-[objetos: GRANA, FOSFOROS]
+[saídas: NORTE]
+[com você: GRANA, FOSFOROS]
 
 > N
 Você está na recepção do escritório. Você vê a rua ao norte, o que lhe causa um enorme desejo de sair desta pocilga.
 
 Há uma lista telefônica jogada num canto.
 
-[saídas: N S]
+[saídas: NORTE, SUL]
 
 > N
 Você está na calçada de uma rua bastante movimentada. É realmente inacreditável o “coeficiente animal” dos motoristas deste bairro.
 
 Um homem mal-encarado está apoiado num poste.
 
-[saídas: S L]
+[saídas: SUL, LESTE]
 
 > L
 Você se encontra num calçadão. Ao sul pode-se ver um salão bastante bonito (considerando o muquifo de bairro no qual você se encontra...)
 
-[saídas: S O]
+[saídas: SUL, OESTE]
 
 > ENTRAR PORTA
 Estamos na biblioteca. Este é um lugar interessante. As prateleiras dos livros ficam atrás do balcão, e não ao acesso do público..
@@ -46,7 +45,7 @@ Uma linda balconista devora um exemplar da revista “Capricho” atrás do balc
 
 O balcão lhe chama a atenção, pois ocupa metade da biblioteca.
 
-[saídas: N]
+[saídas: NORTE]
 
 > S
 SUA ANTA! Você não pode ir para o sul!!!
@@ -54,7 +53,7 @@ SUA ANTA! Você não pode ir para o sul!!!
 > N
 Você se encontra num calçadão. Ao sul pode-se ver um salão bastante bonito (considerando o muquifo de bairro no qual você se encontra...)
 
-[saídas: S O]
+[saídas: SUL, OESTE]
 
 > IR PORTA
 Estamos na biblioteca. Este é um lugar interessante. As prateleiras dos livros ficam atrás do balcão, e não ao acesso do público..
@@ -63,7 +62,7 @@ Uma linda balconista devora um exemplar da revista “Capricho” atrás do balc
 
 O balcão lhe chama a atenção, pois ocupa metade da biblioteca.
 
-[saídas: N]
+[saídas: NORTE]
 
 > OLHAR PORTA
 Não estou vendo nada parecido aqui.
