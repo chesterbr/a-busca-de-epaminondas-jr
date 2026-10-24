@@ -1930,6 +1930,10 @@ if __name__ == '__main__':
         except EOFError:
             pass
         print()
+    try:  # histórico (seta para cima) e edição da linha; onde não existe (Windows), segue sem
+        import readline  # noqa: F401
+    except ImportError:
+        pass
     j = Jogo(**opcoes)
     j.iniciar()
     while True:
