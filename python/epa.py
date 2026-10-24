@@ -1901,17 +1901,7 @@ def jogar(cmds, **opcoes):
     return j
 
 
-if __name__ == '__main__':
-    opcoes = {}
-    if '--teleporta-ao-beijar-akira' in sys.argv:
-        sys.argv.remove('--teleporta-ao-beijar-akira')
-        opcoes['teleporta_ao_beijar_akira'] = True
-    if '--sem-wrap' in sys.argv:
-        sys.argv.remove('--sem-wrap')
-        opcoes['quebra'] = False
-    if len(sys.argv) > 1:  # python3 epa.py caminhos/00_caminho_feliz.txt: roda os comandos do arquivo (um por linha)
-        jogar(Path(sys.argv[1]).read_text().splitlines(), **opcoes)
-        sys.exit()
+def interativo(opcoes):
     # abertura (só no modo interativo; os textos vêm das telas de ajuda 2 e 3 do original)
     print('╔' + '═' * (LARGURA - 2) + '╗')
     for linha in ('A Busca de Epaminondas Jr. V1.5', '(c) 1992 por CHESTER (Carlos Duarte do Nascimento)',
@@ -1939,7 +1929,8 @@ if __name__ == '__main__':
     while True:
         try:
             c = input('> ')
-        except EOFError:
+        except EOFError:  # Ctrl-D
+            print()
             break
         j.comando(c)
         if j.morreu:
@@ -1948,3 +1939,20 @@ if __name__ == '__main__':
             j.iniciar()
         elif j.saiu:
             break
+
+
+if __name__ == '__main__':
+    opcoes = {}
+    if '--teleporta-ao-beijar-akira' in sys.argv:
+        sys.argv.remove('--teleporta-ao-beijar-akira')
+        opcoes['teleporta_ao_beijar_akira'] = True
+    if '--sem-wrap' in sys.argv:
+        sys.argv.remove('--sem-wrap')
+        opcoes['quebra'] = False
+    if len(sys.argv) > 1:  # python3 epa.py caminhos/00_caminho_feliz.txt: roda os comandos do arquivo (um por linha)
+        jogar(Path(sys.argv[1]).read_text().splitlines(), **opcoes)
+        sys.exit()
+    try:
+        interativo(opcoes)
+    except KeyboardInterrupt:  # Ctrl-C: sai sem traceback
+        print()
