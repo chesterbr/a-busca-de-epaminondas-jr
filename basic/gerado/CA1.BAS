@@ -1,5 +1,5 @@
 10 ' CA1.BAS gerado por basic/gerar.py a partir do CA1.EXE. As linhas `REM ???` s„o instru‡”es ainda sem tradu‡„o.
-20 ' Nomes de vari veis e de r¢tulos s„o nossos (o execut vel n„o guarda nenhum); os n£meros de linha tamb‚m; com --rotulos, Lxxxxx = endere‡o da imagem do .EXE.
+20 ' Nomes de vari veis e de r¢tulos foram adicionados durante a engenharia reversa (o execut vel n„o guarda nenhum); os n£meros de linha tamb‚m; com --rotulos, Lxxxxx = endere‡o da imagem do .EXE.
 30 ' **************************************************************
 40 ' INICIALIZACAO
 50 ' Titulo, mensagens, tabelas (DATA) e estado inicial do jogo.

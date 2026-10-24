@@ -1711,7 +1711,7 @@ def main():
         if txt.startswith('REM ???'):
             c[1] += 1
     cab = [(0, "' CA1.BAS gerado por basic/gerar.py a partir do CA1.EXE. As linhas `REM ???` são instruções ainda sem tradução."),
-           (0, "' Nomes de variáveis e de rótulos são nossos (o executável não guarda nenhum); " + ("os números de linha também; com --rotulos, Lxxxxx = endereço da imagem do .EXE." if not args.nomeados else "o texto das mensagens vem de AVENTURA.MSG (MSG$(n) = linha n-1)." if not args.mensagens_inline else "o texto das mensagens está no fonte."))]
+           (0, "' Nomes de variáveis e de rótulos foram adicionados durante a engenharia reversa (o executável não guarda nenhum); " + ("os números de linha também; com --rotulos, Lxxxxx = endereço da imagem do .EXE." if not args.nomeados else "o texto das mensagens vem de AVENTURA.MSG (MSG$(n) = linha n-1)." if not args.mensagens_inline else "o texto das mensagens está no fonte."))]
     out = cab + [(0, b) for b in BANNER_INICIO] + out
     if args.nomeados:
         out_linhas = nomeia(out)

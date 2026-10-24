@@ -1,7 +1,8 @@
 ' LEGIVEL.BAS: o CA1.BAS escrito para leitura (gerado por basic/gerar.py
-' --legivel a partir do CA1.EXE). Nomes de variáveis, rótulos e comentários são
-' nossos: o executável não guarda nenhum. Os números de salas, verbos e objetos
-' são os do jogo. O texto é UTF-8 (o jogo grava ä ö Ä Ö Å e mostra ã õ Ã Õ Á).
+' --legivel a partir do CA1.EXE). Nomes de variáveis, rótulos e comentários
+' foram adicionados durante a engenharia reversa: o executável não guarda
+' nenhum. Os números de salas, verbos e objetos são os do jogo. O texto é
+' UTF-8 (o jogo grava ä ö Ä Ö Å e mostra ã õ Ã Õ Á).
 
 ' **************************************************************
 ' INICIALIZAÇÃO
