@@ -1,0 +1,14 @@
+* text=auto eol=lf
+# arquivos de 1992 e dumps: bytes intocados (inclusive CRLF e CP437/850)
+original/CA1.EXE binary
+original/CHESTER.EXE binary
+original/AVENTURA.BAT binary
+original/AVENTURA.MSG binary
+original/LEIAME.TXT binary
+original/SHA256SUMS text eol=lf
+*.BIN binary
+*.CA1 binary
+*.png binary
+basic/gerado/*.BAS binary
+*.MSG binary
+basic/gerado/dividido/*.INC binary

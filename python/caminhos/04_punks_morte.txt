@@ -1,0 +1,21 @@
+# Careca na praça vai para o norte e encontra os punks: morte (sala 10).
+# A primeira visita à praça raspa a cabeça; ir mais ao norte é a morte pelos punks.
+# --- começo igual ao caminho completo (linhas 1 a 15) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+S
+CONVERSAR BALCONISTA
+ENTRAR BALCAO
+DESCER
+PEGAR LANTERNA
+SUBIR
+N
+O
+PEGAR ONIBUS
+4283
+# --- a partir daqui, a variação ---
+N
+N

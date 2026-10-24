@@ -1,0 +1,19 @@
+# Pega o ônibus na linha errada: cai no bairro perigoso e morre (sala 20). Antes, lê a lista várias vezes.
+# --- começo igual ao caminho completo (linhas 1 a 0) ---
+# --- a partir daqui, a variação ---
+N
+PEGAR LISTA
+# OLHAR LISTA mostra uma linha por vez, em ciclo de quatro; só a quarta traz o número do ônibus (4283)
+OLHAR LISTA
+OLHAR LISTA
+OLHAR LISTA
+OLHAR LISTA
+OLHAR LISTA
+# LER LISTA não funciona
+LER LISTA
+# fora da rua (sala 3) não há ônibus
+USAR ONIBUS
+N
+# a linha pedida logo depois do USAR ONIBUS é a resposta; 1234 não é a certa
+USAR ONIBUS
+1234

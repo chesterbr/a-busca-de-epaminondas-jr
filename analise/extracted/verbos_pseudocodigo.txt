@@ -1,0 +1,1041 @@
+
+===== verbo  1 @ 09bc9 NORTE/N =====
+09bd3  IF 0 == saidaN THEN (cont) ELSE goto 9beb
+09be2  MSGBUF$ = "SUA ANTA ! Você näo pode ir para o norte !!!"
+09be4  CALL 0xcf33
+09be7  CALL 0xd35a
+09bea  RETURN
+09bf1  SALA = saidaN
+09bf7  RETURN
+
+===== verbo  2 @ 09bf8 SUL/S =====
+09c0c  IF 11(Você está na entrada d) == SALA THEN (cont) ELSE goto 9c2c
+09c2c  IF (11(Você está na entrada d) == SALA AND 0 == visitada[9]) THEN (cont) ELSE goto 9c45
+09c3f  MSGBUF2$ = MSG[0]="O vigia barra seu caminho. 'Esta passagem é apenas para alunos da facu"
+09c41  CALL 0xcfbc
+09c44  RETURN
+09c51  IF 11(Você está na entrada d) == SALA THEN (cont) ELSE goto 9c69
+09c64  MSGBUF2$ = MSG[1]="O vigia olha para você com desprezo e diz 'Pode passar. Com esta carec"
+09c66  CALL 0xcfbc
+09c73  IF 0 == saidaS THEN (cont) ELSE goto 9c8b
+09c82  MSGBUF$ = "SUA ANTA ! Você näo pode ir para o sul !!!"
+09c84  CALL 0xcf33
+09c87  CALL 0xd35a
+09c8a  RETURN
+09c91  SALA = saidaS
+09c97  RETURN
+
+===== verbo  3 @ 09c98 LESTE/L =====
+09ca2  IF 0 == saidaL THEN (cont) ELSE goto 9cba
+09cb1  MSGBUF$ = "SUA ANTA ! Você näo pode ir para o leste !!!"
+09cb3  CALL 0xcf33
+09cb6  CALL 0xd35a
+09cb9  RETURN
+09cc0  SALA = saidaL
+09cc6  RETURN
+
+===== verbo  4 @ 09cc7 OESTE/O =====
+09cd1  IF 0 == saidaO THEN (cont) ELSE goto 9ce9
+09ce0  MSGBUF$ = "SUA ANTA ! Você näo pode ir para o oeste !!!"
+09ce2  CALL 0xcf33
+09ce5  CALL 0xd35a
+09ce8  RETURN
+09cef  SALA = saidaO
+09cf5  RETURN
+
+===== verbo  5 @ 09cf6 IR/ENTRAR =====
+09d30  IF ? == OBJ THEN (cont) ELSE goto 9d4d
+09d4d  IF (? == OBJ AND 4(Você se encontra num c) == SALA) THEN (cont) ELSE goto 9d61
+09d5a  SALA = 5
+09d60  RETURN
+09d6d  IF 19(CIMA) != OBJ THEN (cont) ELSE goto b715
+09d80  IF 20(BAIXO) != OBJ THEN (cont) ELSE goto b744
+09d9b  IF 13(PORTA) == OBJ THEN (cont) ELSE goto 9db8
+09db8  IF NOT((13(PORTA) == OBJ AND 4(Você se encontra num c) == SALA)) THEN (cont) ELSE goto 9bf8
+09dd3  IF 46(TUBO) == OBJ THEN (cont) ELSE goto 9df0
+09df0  IF NOT((46(TUBO) == OBJ AND 35(Estamos numa salinha a) == SALA)) THEN (cont) ELSE goto b744
+09e0b  IF 17(BALCAO) == OBJ THEN (cont) ELSE goto 9e28
+09e28  IF (17(BALCAO) == OBJ AND 5(Estamos na biblioteca.) != SALA) THEN (cont) ELSE goto 9e3d
+09e37  MSGBUF2$ = "Näo posso."
+09e39  CALL 0xcfbc
+09e3c  RETURN
+09e51  IF 17(BALCAO) == OBJ THEN (cont) ELSE goto 9e71
+09e71  IF (17(BALCAO) == OBJ AND 0 != loc[14]) THEN (cont) ELSE goto 9e8a
+09e84  MSGBUF2$ = MSG[2]="'Sinto muito, mas esta área é restrita a funcionários...' - diz a balc"
+09e86  CALL 0xcfbc
+09e89  RETURN
+09e96  IF 17(BALCAO) == OBJ THEN (cont) ELSE goto 9eaa
+09ea3  SALA = 6
+09ea9  RETURN
+09ebe  IF 18(ESCADA) == OBJ THEN (cont) ELSE goto 9edb
+09edb  IF (18(ESCADA) == OBJ AND 6(O balcäo é apertado, m) == SALA) THEN (cont) ELSE goto 9eef
+09ee8  SALA = 7
+09eee  RETURN
+09f03  IF 35(PORTA) == OBJ THEN (cont) ELSE goto 9f20
+09f20  IF (35(PORTA) == OBJ AND 57(Estamos numa agência d) == SALA) THEN (cont) ELSE goto 9f3b
+09f3b  IF ((35(PORTA) == OBJ AND 57(Estamos numa agência d) == SALA) AND 0 == v4e6) THEN (cont) ELSE goto 9f54
+09f4e  MSGBUF2$ = MSG[3]="Ela está fechada..."
+09f50  CALL 0xcfbc
+09f53  RETURN
+09f68  IF 35(PORTA) == OBJ THEN (cont) ELSE goto 9f85
+09f85  IF NOT((35(PORTA) == OBJ AND 57(Estamos numa agência d) == SALA)) THEN (cont) ELSE goto 9c98
+09f98  MSGBUF2$ = MSG[4]="Você näo pode ir até isso !"
+09f9a  CALL 0xcfbc
+09f9d  RETURN
+
+===== verbo  6 @ 09f9e PEGAR/CATAR/APANHAR/TOMAR =====
+09fb2  IF 82(SOQUETE) == OBJ THEN (cont) ELSE goto 9fcf
+09fcf  IF (82(SOQUETE) == OBJ AND 66() == SALA) THEN (cont) ELSE goto 9fe6
+09fde  MSGBUF2$ = "ZZZZZZAAAP !!! Um choque de 220V escurece o local e a você, que morre carbonizado."
+09fe0  CALL 0xcfbc
+09fe3  goto 0x10aae
+09ffa  IF 77(LAMPADA) == OBJ THEN (cont) ELSE goto a017
+0a017  IF (77(LAMPADA) == OBJ AND 66() == SALA) THEN (cont) ELSE goto a039
+0a039  IF ((77(LAMPADA) == OBJ AND 66() == SALA) AND 66 == loc[77]) THEN (cont) ELSE goto a04e
+0a048  MSGBUF2$ = "Tente desrosqueá-la."
+0a04a  CALL 0xcfbc
+0a04d  RETURN
+0a05a  IF 25(ONIBUS) != OBJ THEN (cont) ELSE goto b8cf
+0a06d  IF 58(ARAME) == OBJ THEN (cont) ELSE goto a086
+0a080  MSGBUF2$ = MSG[5]="Näo dá. Ele está firmemente preso ao chäo. A näo ser que você 'dê um j"
+0a082  CALL 0xcfbc
+0a085  RETURN
+0a0b2  IF -999 == loc[OBJ] THEN (cont) ELSE goto a0cb
+0a0c5  MSGBUF2$ = MSG[6]="Näo seja estúpido ! Você já tem isso !!!"
+0a0c7  CALL 0xcfbc
+0a0ca  RETURN
+0a0f5  IF SALA != abs(loc[OBJ]) THEN (cont) ELSE goto a10e
+0a108  MSGBUF2$ = MSG[7]="Este objeto näo está aqui..."
+0a10a  CALL 0xcfbc
+0a10d  RETURN
+0a11a  IF 78(BALA) == OBJ THEN (cont) ELSE goto a12f
+0a12d  txtexam[60] = "Nem pense em fazer nada aí. Esta pia é nojenta."
+0a13b  IF 65(LIXO) == OBJ THEN (cont) ELSE goto a173
+0a14e  MSGBUF2$ = MSG[8]="Nem pense em levar isso. Eu näo sou täo porco assim. Vou apenas tirá-l"
+0a150  CALL 0xcfbc
+0a15d  loc[66] = SALA
+0a170  txtexam[64] = "Tem uma agenda aqui dentro."
+0a172  RETURN
+0a17f  IF 66(AGENDA) == OBJ THEN (cont) ELSE goto a1a2
+0a192  txtaqui[66] = "Tem uma agenda aqui."
+0a1a0  txtexam[64] = "Näo tem nada aqui."
+0a1c4  IF 0 > loc[OBJ] THEN goto a1cb ELSE goto 0xa1dd
+0a1d7  MSGBUF2$ = MSG[9]="Näo posso pegar isso."
+0a1d9  CALL 0xcfbc
+0a1dc  RETURN
+0a1e9  IF 41(BISPO) == OBJ THEN (cont) ELSE goto a201
+0a1fc  MSGBUF2$ = MSG[10]="Você pega o bispo sem constrangimento, pois ninguém daria pela falta d"
+0a1fe  goto 0xa20b
+0a209  MSGBUF2$ = "Ok."
+0a232  loc[OBJ] = -999
+0a237  CALL 0xcfbc
+0a23a  CALL 0xd342
+0a23d  RETURN
+
+===== verbo  7 @ 0a23e LISTAR/INVENTARIO/OBJETOS =====
+0a242  0x47e = 0
+0a24e  fim = 0x4fe
+0a256  v512 = 1
+0a25e  i = 1
+0a264  goto 0xa2f0
+0a293  IF -999 == loc[i] THEN (cont) ELSE goto a2e1
+0a2a3  0x47e = (1 + 0x47e)
+0a2ec  i = (v512 + i)
+0a2f6  IF -999 == loc[i] THEN (cont) ELSE goto a313
+0a309  IF fim < i THEN goto a310 ELSE goto 0xa267
+0a310  goto 0xa326
+0a31f  IF fim > i THEN goto a326 ELSE goto 0xa267
+0a330  IF 0 == 0x47e THEN (cont) ELSE goto a34f
+0a33b  0x47e = 1
+0a34d  inv[1] = "NADA"
+0a353  0x47a = 1
+0a36a  goto 0xa5a1
+0a373  fim = 11
+0a37b  v512 = 1
+0a383  i = 1
+0a389  goto 0xa427
+0a3a5  (runtime 0xc9)
+0a3af  (runtime 0xb8)
+0a3b1  (runtime 0xb2)
+0a3cc  (runtime 0xc9)
+0a3e6  IF ((i + 0x47a) - 1) <= 0x47e THEN goto a3ed ELSE goto 0xa418
+0a412  (runtime 0xb8)
+0a414  (runtime 0xb2)
+0a423  i = (v512 + i)
+0a42d  IF ((i + 0x47a) - 1) == 0x47e THEN (cont) ELSE goto a44a
+0a440  IF fim < i THEN goto a447 ELSE goto 0xa38c
+0a447  goto 0xa45d
+0a456  IF fim > i THEN goto a45d ELSE goto 0xa38c
+0a467  IF 1 == 0x476 THEN (cont) ELSE goto a46f
+0a46e  RETURN
+0a477  (runtime 0xc9)
+0a49a  (runtime 0xb8)
+0a4ab  (runtime 0xb8)
+0a4bf  str@53e = str@570
+0a4d7  goto 0xa4e4
+0a4e0  str@53e = "■"
+0a4e2  goto 0xa4c1
+0a500  goto 0xa517
+0a517  IF (None AND 1 != 0x47a) THEN (cont) ELSE goto a52d
+0a527  0x47a = (0x47a - 1)
+0a549  goto 0xa562
+0a562  IF ((None AND 1 != 0x47a) AND 0x47e > 0x47a) THEN (cont) ELSE goto a578
+0a572  0x47a = (1 + 0x47a)
+0a586  goto 0xa59e
+0a591  (runtime 0xc9)
+0a599  (runtime 0xb8)
+0a59b  (runtime 0xb2)
+0a59d  RETURN
+0a59e  goto 0xa359
+
+===== verbo  8 @ 0a5a1 LARGAR/DEIXAR/SOLTAR =====
+0a5b5  IF 77(LAMPADA) == OBJ THEN (cont) ELSE goto a5e3
+0a5e3  IF (77(LAMPADA) == OBJ AND -999 == loc[77]) THEN (cont) ELSE goto a607
+0a5f2  MSGBUF2$ = "Seu desastrado ! Você largou a lâmpada e ela se espatifou !"
+0a5f4  CALL 0xcfbc
+0a5ff  loc[77] = 0
+0a606  RETURN
+0a61b  IF 49(ENVELOPE) == OBJ THEN (cont) ELSE goto a649
+0a649  IF (49(ENVELOPE) == OBJ AND -999 == loc[49]) THEN (cont) ELSE goto a666
+0a666  IF ((49(ENVELOPE) == OBJ AND -999 == loc[49]) AND 40(Você entra na recepçao) == SALA) THEN (cont) ELSE goto a6df
+0a675  loc[49] = 0
+0a688  MSGBUF2$ = MSG[11]="Você dá o envelope à secretária."
+0a68a  CALL 0xcfbc
+0a68d  CALL 0xd342
+0a69c  MSGBUF2$ = MSG[12]="'Ah, pelo seu estilo capilar logo imaginei que era um office-boy'"
+0a69e  CALL 0xcfbc
+0a6ad  MSGBUF2$ = MSG[13]="(suspiro)"
+0a6af  CALL 0xcfbc
+0a6ba  MSGBUF$ = "Digite qualquer tecla..."
+0a6bc  CALL 0xcf33
+0a6cb  MSGBUF2$ = MSG[14]="'Venha comigo. Vou levá-lo ao hall' - diz ela, tomando-o pelo braço."
+0a6cd  CALL 0xcfbc
+0a6d6  saidaN = 41
+0a6dc  goto 0x9bc9
+0a6eb  IF 31(FOSFOROS) == OBJ THEN (cont) ELSE goto a704
+0a6fe  MSGBUF2$ = MSG[15]="Pra que ? Apesar de você näo fumar, eles podem ser úteis para aquecer,"
+0a700  CALL 0xcfbc
+0a703  RETURN
+0a730  IF -999 != loc[OBJ] THEN (cont) ELSE goto a749
+0a743  MSGBUF2$ = MSG[16]="Você näo pode largar o que näo tem..."
+0a745  CALL 0xcfbc
+0a748  RETURN
+0a75d  IF 71(CD) == OBJ THEN (cont) ELSE goto a77a
+0a77a  IF (71(CD) == OBJ AND 62(Você está em frente à ) == SALA) THEN (cont) ELSE goto a7af
+0a78d  MSGBUF2$ = MSG[17]="Você tira o CD do bolso e, imediatamente, o disk-jockey o apanha."
+0a78f  CALL 0xcfbc
+0a79a  MSGBUF2$ = "'Oh, MUITO OBRIGADO ! DEUS LHE PAGUE !', diz ele."
+0a79c  CALL 0xcfbc
+0a7a7  loc[71] = 0
+0a7ae  RETURN
+0a7c3  IF 71(CD) == OBJ THEN (cont) ELSE goto a7e0
+0a7e0  IF (71(CD) == OBJ AND 59(Você está na pista de ) == SALA) THEN (cont) ELSE goto a81a
+0a7f3  MSGBUF2$ = MSG[18]="O DJ sai da mesa lá no fundo e vem pegar o CD que você colocou num can"
+0a7f5  CALL 0xcfbc
+0a800  loc[71] = 0
+0a80f  loc[72] = 0
+0a816  CALL 0xd342
+0a819  RETURN
+0a826  IF 26(GRANA) == OBJ THEN (cont) ELSE goto a83f
+0a839  MSGBUF2$ = MSG[19]="Sem essa de Papai Noel. Nada feito."
+0a83b  CALL 0xcfbc
+0a83e  RETURN
+0a853  IF 41(BISPO) == OBJ THEN (cont) ELSE goto a870
+0a870  IF (41(BISPO) == OBJ AND 27(Estamos numa casa de f) == SALA) THEN (cont) ELSE goto a8e5
+0a883  MSGBUF2$ = MSG[20]="O velhinho percebe que você quer lhe dar a peça. Ele começa a gritar e"
+0a885  CALL 0xcfbc
+0a894  MSGBUF2$ = MSG[21]="'ACHEI !!! ACHEI !!! AGORA VOU TERMINAR O JOGO !!!!'"
+0a896  CALL 0xcfbc
+0a8a5  MSGBUF2$ = MSG[22]="Ele lhe dá uma marreta, e sai gritando 'BLAAAAAAAGH' ou algo semelhant"
+0a8a7  CALL 0xcfbc
+0a8b2  loc[39] = 0
+0a8c1  loc[41] = 0
+0a8da  loc[42] = -999
+0a8e1  CALL 0xd342
+0a8e4  RETURN
+0a8f9  IF 66(AGENDA) == OBJ THEN (cont) ELSE goto a916
+0a916  IF (66(AGENDA) == OBJ AND 39(Estamos na frente da B) == SALA) THEN (cont) ELSE goto a9b9
+0a929  MSGBUF2$ = MSG[23]="O homem do taxi pega a agenda que você entregou a ele. Ele abre na pág"
+0a92b  CALL 0xcfbc
+0a936  MSGBUF$ = "Digite qualquer tecla..."
+0a938  CALL 0xcf33
+0a947  MSGBUF2$ = MSG[24]="Vocês entram. A viagem näo é longa, pois o cara parece conhecer a cida"
+0a958  MSGBUF2$ = MSGBUF2$ + " língua. Ele seria de grande ajuda..."
+0a95a  CALL 0xcfbc
+0a969  MSGBUF2$ = MSG[25]="O taxi para. Você desce e lhe dá quase todo o seu dinheiro. Ele olha p"
+0a96b  CALL 0xcfbc
+0a974  0x4ea = 5
+0a982  MSGBUF$ = "Digite qualquer tecla..."
+0a984  CALL 0xcf33
+0a993  MSGBUF2$ = MSG[26]="Antes de sumir, ele pöe a cabeça para fora e grita: 'Valeu, mané. A ge"
+0a995  CALL 0xcfbc
+0a9a4  MSGBUF2$ = MSG[27]="(suspiro)"
+0a9a6  CALL 0xcfbc
+0a9a9  CALL 0xcf33
+0a9b2  SALA = 56
+0a9b8  RETURN
+0a9e1  IF (21(LANTERNA) == OBJ OR 22(PILHAS) == OBJ) THEN (cont) ELSE goto a9fe
+0aa00  goto 0xaa11
+0aa0b  MSGBUF2$ = "Desligue a lanterna antes"
+0aa0d  CALL 0xcfbc
+0aa10  RETURN
+0aa30  loc[OBJ] = SALA
+0aa41  MSGBUF2$ = MSG[28]="Ok."
+0aa43  CALL 0xcfbc
+0aa46  CALL 0xd342
+0aa49  RETURN
+
+===== verbo  9 @ 0aa4a OLHAR/VER/EXAMINAR/OBSERVAR/VERIFICAR =====
+0aa5e  IF 44(PAREDE) == OBJ THEN (cont) ELSE goto aa7b
+0aa7b  IF (44(PAREDE) == OBJ AND 31(Entramos no banheiro f) != SALA) THEN (cont) ELSE goto aa90
+0aa8a  MSGBUF2$ = "Nada ali vai lhe ajudar..."
+0aa8c  CALL 0xcfbc
+0aa8f  RETURN
+0aab8  IF (73(TETO) == OBJ OR 19(CIMA) == OBJ) THEN (cont) ELSE goto aad5
+0aad5  IF ((73(TETO) == OBJ OR 19(CIMA) == OBJ) AND 66() == SALA) THEN (cont) ELSE goto aaf7
+0aaf7  IF (((73(TETO) == OBJ OR 19(CIMA) == OBJ) AND 66() == SALA) AND 66 != loc[77]) THEN (cont) ELSE goto ab0c
+0ab06  MSGBUF2$ = "Há um soquete de lâmpada no teto."
+0ab08  CALL 0xcfbc
+0ab0b  RETURN
+0ab34  IF (73(TETO) == OBJ OR 19(CIMA) == OBJ) THEN (cont) ELSE goto ab51
+0ab51  IF ((73(TETO) == OBJ OR 19(CIMA) == OBJ) AND 66() == SALA) THEN (cont) ELSE goto ab6a
+0ab64  MSGBUF2$ = MSG[29]="Tem uma lâmpada no teto."
+0ab66  CALL 0xcfbc
+0ab69  RETURN
+0ab7e  IF NOT(73(TETO) == OBJ) THEN (cont) ELSE goto ab97
+0ab99  IF NOT(75(CHAO) == OBJ) THEN (cont) ELSE goto abb2
+0abb4  IF NOT(19(CIMA) == OBJ) THEN (cont) ELSE goto abcd
+0abcf  IF 20(BAIXO) == OBJ THEN (cont) ELSE goto abfc
+0abf4  MSGBUF2$ = txtexam[341]
+0abf8  CALL 0xcfbc
+0abfb  RETURN
+0ac08  IF 26(GRANA) == OBJ THEN (cont) ELSE goto ac32
+0ac2a  MSGBUF2$ = MSG[30]="Você tem $"
+0ac2e  CALL 0xcfbc
+0ac31  RETURN
+0ac46  IF 12(PLACA) == OBJ THEN (cont) ELSE goto ac63
+0ac63  IF (12(PLACA) == OBJ AND 4(Você se encontra num c) != SALA) THEN (cont) ELSE goto ac7c
+0ac76  MSGBUF2$ = MSG[31]="Näo estou vendo nada parecido aqui."
+0ac78  CALL 0xcfbc
+0ac7b  RETURN
+0ac90  IF NOT(10(LOCAL) == OBJ) THEN (cont) ELSE goto aca9
+0acab  IF NOT(23(SALA) == OBJ) THEN (cont) ELSE goto acc4
+0acc6  IF 24(AREA) == OBJ THEN (cont) ELSE goto acd7
+0accd  CALL 0xd4df
+0acd0  CALL 0xd215
+0acd3  CALL 0xd35a
+0acd6  RETURN
+0ace9  IF 1(NORTE) <= OBJ THEN (cont) ELSE goto ad06
+0ad06  IF (1(NORTE) <= OBJ AND 4(OESTE) >= OBJ) THEN (cont) ELSE goto ad1f
+0ad19  MSGBUF2$ = MSG[32]="Deixe de ser preguiçoso e ande até lá !!!"
+0ad1b  CALL 0xcfbc
+0ad1e  RETURN
+0ad51  IF SALA != abs(loc[OBJ]) THEN (cont) ELSE goto ad96
+0ad96  IF (SALA != abs(loc[OBJ]) AND -999 != loc[OBJ]) THEN (cont) ELSE goto adaf
+0ada9  MSGBUF2$ = MSG[33]="Näo estou vendo nada parecido aqui."
+0adab  CALL 0xcfbc
+0adae  RETURN
+0adc3  IF 19(Você está num depósito) == SALA THEN (cont) ELSE goto ade0
+0ade2  goto 0xae97
+0ae97  IF (None AND (None OR None)) THEN (cont) ELSE goto aeac
+0aea6  MSGBUF2$ = "Näo consigo ver nada."
+0aea8  CALL 0xcfbc
+0aeab  RETURN
+0aec0  IF 5(LISTA) == OBJ THEN (cont) ELSE goto aeee
+0aeee  IF (5(LISTA) == OBJ AND -999 == loc[5]) THEN (cont) ELSE goto af46
+0af1a  0x472 = (1 - (-999 * 0x472))
+0af3e  MSGBUF2$ = MSGBUF2$
+0af42  CALL 0xcfbc
+0af45  RETURN
+0af52  IF 5(LISTA) == OBJ THEN (cont) ELSE goto af6b
+0af65  MSGBUF2$ = MSG[34]="Näo a tenho."
+0af67  CALL 0xcfbc
+0af6a  RETURN
+0af77  IF 9(POSTE) == OBJ THEN (cont) ELSE goto af90
+0af8a  MSGBUF2$ = MSG[35]="É um ponto de ônibus."
+0af8c  CALL 0xcfbc
+0af8f  RETURN
+0afa4  IF 21(LANTERNA) == OBJ THEN (cont) ELSE goto afd2
+0afd2  IF (21(LANTERNA) == OBJ AND -999 == loc[22]) THEN (cont) ELSE goto aff2
+0afec  MSGBUF2$ = MSG[36]="Ela está " + "desligada"
+0afee  CALL 0xcfbc
+0aff1  RETURN
+0b006  IF 35(PORTA) == OBJ THEN (cont) ELSE goto b021
+0b021  IF (35(PORTA) == OBJ AND 1 == v4e6) THEN (cont) ELSE goto b03a
+0b034  MSGBUF2$ = MSG[37]="Ela está aberta."
+0b036  CALL 0xcfbc
+0b039  RETURN
+0b04e  IF 35(PORTA) == OBJ THEN (cont) ELSE goto b069
+0b069  IF (35(PORTA) == OBJ AND 0 == v4e6) THEN (cont) ELSE goto b082
+0b07c  MSGBUF2$ = MSG[38]="Ela está fechada."
+0b07e  CALL 0xcfbc
+0b081  RETURN
+0b096  IF 37(CARTEIRA) == OBJ THEN (cont) ELSE goto b0db
+0b0db  IF (37(CARTEIRA) == OBJ AND -999 == loc[OBJ]) THEN (cont) ELSE goto b0fb
+0b0fb  IF ((37(CARTEIRA) == OBJ AND -999 == loc[OBJ]) AND 0 == loc[38]) THEN (cont) ELSE goto b130
+0b10e  MSGBUF2$ = MSG[39]="Temos um cartäo aqui."
+0b110  CALL 0xcfbc
+0b125  loc[38] = -999
+0b12c  CALL 0xd342
+0b12f  RETURN
+0b144  IF 45(COFRE) == OBJ THEN (cont) ELSE goto b161
+0b161  IF (45(COFRE) == OBJ AND 35(Estamos numa salinha a) == SALA) THEN (cont) ELSE goto b17e
+0b17e  IF ((45(COFRE) == OBJ AND 35(Estamos numa salinha a) == SALA) AND 5000 > 0x4ea) THEN (cont) ELSE goto b1a8
+0b191  MSGBUF2$ = MSG[40]="Temos uns $5000 aqui. Nem precisa mandar pegar o dinheiro."
+0b19e  0x4ea = (5000 + 0x4ea)
+0b1a4  CALL 0xcfbc
+0b1a7  RETURN
+0b1c6  MSGBUF2$ = txtexam[341]
+0b1ca  CALL 0xcfbc
+0b1cd  RETURN
+
+===== verbo 10 @ 0b1ce FALAR/CONVERSAR =====
+0b1f8  IF SALA != abs(loc[OBJ]) THEN (cont) ELSE goto b211
+0b20b  MSGBUF2$ = MSG[41]="Aonde você vê isso ?"
+0b20d  CALL 0xcfbc
+0b210  RETURN
+0b225  IF 72(DJ) == OBJ THEN (cont) ELSE goto b2b1
+0b238  MSGBUF2$ = MSG[42]="'Ei, você conhece este local ?'"
+0b23a  CALL 0xcfbc
+0b249  MSGBUF2$ = MSG[43]="'O quê'"
+0b24b  CALL 0xcfbc
+0b25a  MSGBUF2$ = MSG[44]="'Eu perguntei se você conhece isto aqui ?'"
+0b25c  CALL 0xcfbc
+0b26b  MSGBUF2$ = MSG[45]="'O QUE ?'"
+0b26d  CALL 0xcfbc
+0b278  MSGBUF$ = "Digite qualquer tecla..."
+0b27a  CALL 0xcf33
+0b289  MSGBUF2$ = MSG[46]="'EU PERGUNTEI SE VOCE CONHECE ESTA POCILGA !!!!!!"
+0b28b  CALL 0xcfbc
+0b29a  MSGBUF2$ = MSG[47]="'COMO É ?'"
+0b29c  CALL 0xcfbc
+0b2ab  MSGBUF2$ = MSG[48]="Você desiste. Com este som alto näo vai ter jeito."
+0b2ad  CALL 0xcfbc
+0b2b0  RETURN
+0b2bd  IF 67(GRUPO) == OBJ THEN (cont) ELSE goto b2d6
+0b2d0  MSGBUF2$ = MSG[49]="Eles só se interessam em dançar. Aliás, acho que näo parariam por nada"
+0b2d2  CALL 0xcfbc
+0b2d5  RETURN
+0b2ea  IF 69(BARMAN) == OBJ THEN (cont) ELSE goto b305
+0b305  IF (69(BARMAN) == OBJ AND 1 == 0x4e2) THEN (cont) ELSE goto b31e
+0b318  MSGBUF2$ = MSG[50]="'Nada disso' - diz Moe - 'Você já passou da cota esta noite'"
+0b31a  CALL 0xcfbc
+0b31d  RETURN
+0b332  IF 69(BARMAN) == OBJ THEN (cont) ELSE goto b3dc
+0b345  MSGBUF2$ = MSG[51]="'Olá, Moe (você já supôs que todo garçom de danceteria se chama Moe ou"
+0b347  CALL 0xcfbc
+0b356  MSGBUF2$ = MSG[52]="'E entäo, chefe. Vai o de sempre ?'"
+0b358  CALL 0xcfbc
+0b367  MSGBUF2$ = MSG[53]="'Claro' - você diz, feliz de ter sido confundido com algum dos sócios."
+0b369  CALL 0xcfbc
+0b374  MSGBUF$ = "Digite qualquer tecla..."
+0b376  CALL 0xcf33
+0b385  MSGBUF2$ = MSG[54]="'Aqui está. É por conta da casa, outro dia você acerta...'"
+0b387  CALL 0xcfbc
+0b396  MSGBUF2$ = MSG[55]="'Obrigado'. Ao olhar para a massa no copo, você diz: 'Ei, o que é isso"
+0b398  CALL 0xcfbc
+0b3a7  MSGBUF2$ = MSG[56]="'O seu milk-shake. Como sempre foi seu pedido. Lembro bem do dia em qu"
+0b3a9  CALL 0xcfbc
+0b3ac  CALL 0xcf33
+0b3bb  MSGBUF2$ = MSG[57]="'Grunf', você diz, tomando o milk-shake. Em certo momento, você para e"
+0b3bd  CALL 0xcfbc
+0b3cc  MSGBUF2$ = MSG[58]="'Obrigado', diz Moe, tirando o copo na metade. 'Volte sempre'"
+0b3ce  CALL 0xcfbc
+0b3d5  0x4e2 = 1
+0b3db  RETURN
+0b3e8  IF 8(HOMEM) == OBJ THEN (cont) ELSE goto b401
+0b3fb  MSGBUF2$ = MSG[59]="Talvez isso näo vá fazer muito bem à sua saúde. Ele näo é o que se cha"
+0b3fd  CALL 0xcfbc
+0b400  RETURN
+0b415  IF 27(VIGIA) == OBJ THEN (cont) ELSE goto b450
+0b428  MSGBUF2$ = MSG[60]="'Bom dia. Por favor, eu gostaria de procurar meu disquete por aqui, no"
+0b42a  CALL 0xcfbc
+0b439  MSGBUF2$ = MSG[61]="'E eu com isso ?', diz ele, enquanto começa a roer a unha."
+0b43b  CALL 0xcfbc
+0b44a  MSGBUF2$ = MSG[62]="(suspiro)"
+0b44c  CALL 0xcfbc
+0b44f  RETURN
+0b45c  IF 54(ANALISTAS) == OBJ THEN (cont) ELSE goto b475
+0b46f  MSGBUF2$ = MSG[63]="Você fica falando sozinho, pois todos o ignoram. Afinal de contas, voc"
+0b471  CALL 0xcfbc
+0b474  RETURN
+0b481  IF 55(PROGRAMADORES) == OBJ THEN (cont) ELSE goto b49a
+0b494  MSGBUF2$ = MSG[64]="Inútil. Eles estäo muito ocupados com o jogo."
+0b496  CALL 0xcfbc
+0b499  RETURN
+0b4ae  IF 14(BALCONISTA) == OBJ THEN (cont) ELSE goto b570
+0b4bd  MSGBUF$ = "Digite qualquer tecla..."
+0b4cb  MSGBUF2$ = MSG[65]="'Bom dia. Em que posso servi-lo ?'"
+0b4cd  CALL 0xcfbc
+0b4dc  MSGBUF2$ = MSG[66]="'Seu sorriso já o fez...' - você responde, e ela dá uma risadinha mali"
+0b4de  CALL 0xcfbc
+0b4e1  CALL 0xcf33
+0b4f0  MSGBUF2$ = MSG[67]="'Leve este aqui' - ela diz. Neste momento, um homem adentra a sala e a"
+0b4f2  CALL 0xcfbc
+0b4fd  loc[14] = 0
+0b516  loc[15] = -999
+0b52f  loc[16] = -999
+0b536  CALL 0xd342
+0b545  MSGBUF2$ = MSG[68]="'Mais alguma coisa ?' - ela diz, suspirando quando o homem sai."
+0b547  CALL 0xcfbc
+0b54a  CALL 0xcf33
+0b559  MSGBUF2$ = MSG[69]="'Por enquanto näo. Mas quem sabe em outra oportunidade...' - você diz,"
+0b55b  CALL 0xcfbc
+0b56a  MSGBUF2$ = MSG[70]="'Essa foi boa' - você pensa, enquanto observa ela sair pela porta afor"
+0b56c  CALL 0xcfbc
+0b56f  RETURN
+0b57c  IF 30(SECRETARIA) == OBJ THEN (cont) ELSE goto b595
+0b58f  MSGBUF2$ = MSG[71]="Esquece. Ela näo vai acordar, e mesmo que o fizesse, cinco minutos de "
+0b591  CALL 0xcfbc
+0b594  RETURN
+0b5a9  IF 39(VELHINHO) == OBJ THEN (cont) ELSE goto b5e4
+0b5bc  MSGBUF2$ = MSG[72]="'Bom dia, ó bom velhinho !' - você diz, alegremente."
+0b5be  CALL 0xcfbc
+0b5cd  MSGBUF2$ = MSG[73]="'XADREZZZZZ !' - ele responde - 'Traga o XADREZZZZZ !'"
+0b5cf  CALL 0xcfbc
+0b5de  MSGBUF2$ = MSG[74]="Você o fita por alguns segundos, e ele se vira novamente para a máquin"
+0b5e0  CALL 0xcfbc
+0b5e3  RETURN
+0b5f8  IF 47(TAXISTA) == OBJ THEN (cont) ELSE goto b633
+0b60b  MSGBUF2$ = MSG[75]="'Bom dia. O senhor anda bastante por aqui ?'"
+0b60d  CALL 0xcfbc
+0b61c  MSGBUF2$ = MSG[76]="Ele diz: 'Chucrutz WolksVagen MercedesBens Kibe HeilHitler', ou algo a"
+0b61e  CALL 0xcfbc
+0b62d  MSGBUF2$ = MSG[77]="'É, tio, acho que você näo fala a minha língua...', você diz, virando "
+0b62f  CALL 0xcfbc
+0b632  RETURN
+0b647  IF 50(RECEPCIONISTA) == OBJ THEN (cont) ELSE goto b664
+0b664  IF (50(RECEPCIONISTA) == OBJ AND 40(Você entra na recepçao) == SALA) THEN (cont) ELSE goto b68a
+0b677  MSGBUF2$ = MSG[78]="'Escute, srta., isto é muito importante'"
+0b679  CALL 0xcfbc
+0b684  MSGBUF2$ = "'Isto o QUE ? Você näo tem nada a oferecer ao Sr. L, logo explique-se ou retire-se, por favor.'"
+0b686  CALL 0xcfbc
+0b689  RETURN
+0b69e  IF 41(BISPO) == OBJ THEN (cont) ELSE goto b6ea
+0b6ea  IF (None AND (None OR None)) THEN (cont) ELSE goto b703
+0b6fd  MSGBUF2$ = MSG[79]="Talvez ele näo tenha muito o que falar."
+0b6ff  CALL 0xcfbc
+0b702  RETURN
+0b70f  MSGBUF2$ = MSG[80]="Você deveria se sentir ridículo conversando com isso."
+0b711  CALL 0xcfbc
+0b714  RETURN
+
+===== verbo 11 @ 0b715 CIMA/C/SUBIR =====
+0b71f  IF 0 == saidaC THEN (cont) ELSE goto b737
+0b72e  MSGBUF$ = "SUA ANTA ! Você näo pode ir para cima !!!"
+0b730  CALL 0xcf33
+0b733  CALL 0xd35a
+0b736  RETURN
+0b73d  SALA = saidaC
+0b743  RETURN
+
+===== verbo 12 @ 0b744 BAIXO/B/DESCER =====
+0b74e  IF 0 == saidaB THEN (cont) ELSE goto b766
+0b75d  MSGBUF$ = "SUA ANTA ! Você näo pode ir para baixo !!!"
+0b75f  CALL 0xcf33
+0b762  CALL 0xd35a
+0b765  RETURN
+0b76c  SALA = saidaB
+0b772  RETURN
+
+===== verbo 13 @ 0b773 LER =====
+0b7a5  IF SALA != abs(loc[OBJ]) THEN (cont) ELSE goto b7ea
+0b7ea  IF (SALA != abs(loc[OBJ]) AND -999 != loc[OBJ]) THEN (cont) ELSE goto b803
+0b7fd  MSGBUF2$ = MSG[81]="Aonde está isso ?"
+0b7ff  CALL 0xcfbc
+0b802  RETURN
+0b817  IF 19(Você está num depósito) == SALA THEN (cont) ELSE goto b834
+0b836  goto 0xb847
+0b841  MSGBUF2$ = "O ministério da saúde adverte: Ler no escuro é prejudicial à saúde."
+0b843  CALL 0xcfbc
+0b846  RETURN
+0b85b  IF NOT(12(PLACA) == OBJ) THEN (cont) ELSE goto b874
+0b876  IF NOT(16(PAPEL) == OBJ) THEN (cont) ELSE goto b88f
+0b891  IF NOT(66(AGENDA) == OBJ) THEN (cont) ELSE goto aa4a
+0b8a4  IF 15(LIVRO) == OBJ THEN (cont) ELSE goto b8bd
+0b8b7  MSGBUF2$ = MSG[82]="Cê pirou ? Isso vai levar o mês inteiro, cara, e você tem um jogo para"
+0b8b9  CALL 0xcfbc
+0b8bc  RETURN
+0b8c9  MSGBUF2$ = MSG[83]="Näo posso ler isso"
+0b8cb  CALL 0xcfbc
+0b8ce  RETURN
+
+===== verbo 14 @ 0b8cf LIGAR/USAR/ACENDER =====
+0b8e3  IF 21(LANTERNA) != OBJ THEN (cont) ELSE goto b900
+0b902  goto 0xb913
+0b90d  MSGBUF2$ = "Como diabos você vai ligar isso ?"
+0b90f  CALL 0xcfbc
+0b912  RETURN
+0b91f  IF 60(PIA) != OBJ THEN (cont) ELSE goto aa4a
+0b94e  IF NOT((40(ELEVADOR) == OBJ AND 30(Estamos no elevador.) == SALA)) THEN (cont) ELSE goto b97d
+0b97d  IF NOT((51(ELEVADOR) == OBJ AND 42(Você está num elevador) == SALA)) THEN (cont) ELSE goto b9ac
+0b9ac  IF (52(ELEVADOR) == OBJ AND 43(Você está num elevador) == SALA) THEN (cont) ELSE goto bb3a
+0b9bf  IF 43(Você está num elevador) == SALA THEN (cont) ELSE goto b9d7
+0b9d2  MSGBUF2$ = MSG[84]="Digite o número do sub-solo:"
+0b9d4  goto 0xb9e1
+0b9df  MSGBUF2$ = "Digite o número do andar:"
+0b9e1  CALL 0xcfbc
+0b9e4  CALL 0x8c10
+0b9f3  IF 40(ELEVADOR) == OBJ THEN (cont) ELSE goto ba0c
+0ba06  MSGBUF2$ = MSG[85]="O elevador näo se move."
+0ba08  CALL 0xcfbc
+0ba0b  RETURN
+0ba20  IF 51(ELEVADOR) == OBJ THEN (cont) ELSE goto baa3
+0ba35  RETURN
+0ba40  goto 0xba5c
+0ba55  RETURN
+0ba60  goto 0xba75
+0ba6f  MSGBUF2$ = MSG[86]="O elevador näo se move."
+0ba71  CALL 0xcfbc
+0ba74  RETURN
+0ba88  RETURN
+0ba92  SALA = 43
+0ba9c  0x46a = 1
+0baa2  RETURN
+0bab7  IF 52(ELEVADOR) == OBJ THEN (cont) ELSE goto bb3a
+0bacc  RETURN
+0bad7  goto 0xbaf3
+0baec  RETURN
+0baf7  goto 0xbb0c
+0bb06  MSGBUF2$ = MSG[87]="O elevador näo se move."
+0bb08  CALL 0xcfbc
+0bb0b  RETURN
+0bb1f  RETURN
+0bb29  SALA = 53
+0bb33  0x46a = 1
+0bb39  RETURN
+0bb4e  IF 34(PASSAGEM) == OBJ THEN (cont) ELSE goto bb7c
+0bb7c  IF (34(PASSAGEM) == OBJ AND -999 == loc[34]) THEN (cont) ELSE goto bb99
+0bb99  IF ((34(PASSAGEM) == OBJ AND -999 == loc[34]) AND 57(Estamos numa agência d) == SALA) THEN (cont) ELSE goto bbaf
+0bba6  OBJ = 35
+0bbac  goto 0xbfd9
+0bbc3  IF 21(LANTERNA) == OBJ THEN (cont) ELSE goto bcaf
+0bbe3  IF -999 != loc[21] THEN (cont) ELSE goto bbfc
+0bbf6  MSGBUF2$ = MSG[88]="Näo a tenho."
+0bbf8  CALL 0xcfbc
+0bbfb  RETURN
+0bc15  IF -999 != loc[22] THEN (cont) ELSE goto bc2e
+0bc28  MSGBUF2$ = MSG[89]="Sem pilhas. Nada feito."
+0bc2a  CALL 0xcfbc
+0bc2d  RETURN
+0bc3c  goto 0xbc4d
+0bc47  MSGBUF2$ = "Ela já está ligada, toupeira !"
+0bc49  CALL 0xcfbc
+0bc4c  RETURN
+0bc59  IF 19(Você está num depósito) == SALA THEN (cont) ELSE goto bc6e
+0bc68  MSGBUF2$ = "Está muito escuro. Näo consigo achá-la. Que tal iluminar o local com outra coisa ?"
+0bc6a  CALL 0xcfbc
+0bc6d  RETURN
+0bc7a  IF 17(Você está no almoxarif) != SALA THEN (cont) ELSE goto bc93
+0bc8d  MSGBUF2$ = MSG[90]="Melhor você economizar pilhas. Elas näo duraräo muito. Näo vou acender"
+0bc8f  CALL 0xcfbc
+0bc92  RETURN
+0bc9f  MSGBUF2$ = MSG[91]="Você coloca as pilhas na lanterna e acende."
+0bca1  CALL 0xcfbc
+0bcac  str@55a = "ligada"
+0bcae  RETURN
+0bcc3  IF 31(FOSFOROS) == OBJ THEN (cont) ELSE goto bce0
+0bce0  IF (31(FOSFOROS) == OBJ AND 19(Você está num depósito) == SALA) THEN (cont) ELSE goto bcfb
+0bcf3  MSGBUF2$ = MSG[92]="Muito bem ! O local está mais iluminado. Veja esta caixa à sua frente."
+0bcf5  CALL 0xcfbc
+0bcf8  goto 0x10aae
+0bd0f  IF 31(FOSFOROS) == OBJ THEN (cont) ELSE goto bd2c
+0bd2c  IF (31(FOSFOROS) == OBJ AND 31(Entramos no banheiro f) == SALA) THEN (cont) ELSE goto bd47
+0bd3f  MSGBUF2$ = MSG[93]="Você pöe fogo na madeira. Seria uma boa idéia, se o fogo näo se espalh"
+0bd41  CALL 0xcfbc
+0bd44  goto 0x10aae
+0bd53  IF 31(FOSFOROS) == OBJ THEN (cont) ELSE goto bd6c
+0bd66  MSGBUF2$ = MSG[94]="Você acende um fósforo. Ele deve ser especial, pois ilumina muito bem "
+0bd68  CALL 0xcfbc
+0bd6b  RETURN
+0bd80  IF 42(MARRETA) == OBJ THEN (cont) ELSE goto bd9d
+0bd9d  IF (42(MARRETA) == OBJ AND 31(Entramos no banheiro f) == SALA) THEN (cont) ELSE goto bdcb
+0bdcb  IF ((42(MARRETA) == OBJ AND 31(Entramos no banheiro f) == SALA) AND -999 == loc[42]) THEN (cont) ELSE goto bdf0
+0bdde  MSGBUF2$ = MSG[95]="Você destrói a parede e pula no buraco. Misteriosamente, um mecanismo "
+0bde0  CALL 0xcfbc
+0bde9  SALA = 33
+0bdef  RETURN
+0bdfc  IF 29(MESA) != OBJ THEN (cont) ELSE goto aa4a
+0be17  IF 25(ONIBUS) == OBJ THEN (cont) ELSE goto be34
+0be34  IF (25(ONIBUS) == OBJ AND 3(Você está na calçada d) != SALA) THEN (cont) ELSE goto be4d
+0be47  MSGBUF2$ = MSG[96]="Näo aqui."
+0be49  CALL 0xcfbc
+0be4c  RETURN
+0be61  IF 25(ONIBUS) == OBJ THEN (cont) ELSE goto bf22
+0be74  MSGBUF2$ = MSG[97]="Digite o nº da linha do ônibus:"
+0be76  CALL 0xcfbc
+0be79  CALL 0x8c10
+0be8b  IF ? == 0 THEN (cont) ELSE goto bea4
+0be9e  MSGBUF2$ = MSG[98]="Näo entendi. Nada feito."
+0bea0  CALL 0xcfbc
+0bea3  RETURN
+0beac  MSGBUF$ = "Digite qualquer tecla..."
+0beba  MSGBUF2$ = MSG[99]="Você entra no ônibus. Este meio sem-vergonha de transporte continua ca"
+0bebc  CALL 0xcfbc
+0becb  MSGBUF2$ = MSG[100]="Ao chegar na metade do mesmo, depara com um indivíduo que tenta lhe mo"
+0becd  CALL 0xcfbc
+0bed0  CALL 0xcf33
+0bede  0x4ea = (0x4ea - 200)
+0bef0  MSGBUF2$ = MSG[101]="O ônibus para. Este é o ponto final. Todos descem, inclusive você."
+0bef2  CALL 0xcfbc
+0bf03  goto 0xbf15
+0bf0c  SALA = 20
+0bf12  goto 0xbf21
+0bf1b  SALA = 8
+0bf21  RETURN
+0bf36  IF 79(EMBALAGEM) == OBJ THEN (cont) ELSE goto bf64
+0bf64  IF (79(EMBALAGEM) == OBJ AND -999 == loc[79]) THEN (cont) ELSE goto bf92
+0bf92  IF ((79(EMBALAGEM) == OBJ AND -999 == loc[79]) AND -999 == loc[77]) THEN (cont) ELSE goto bfc7
+0bfa5  MSGBUF2$ = MSG[102]="Você coloca o papel-alumínio da bala em volta da lâmpada."
+0bfa7  CALL 0xcfbc
+0bfb2  loc[79] = 0
+0bfbd  0x4de = 1
+0bfc3  CALL 0xd342
+0bfc6  RETURN
+0bfd3  MSGBUF2$ = MSG[103]="Você näo pode usar isso !"
+0bfd5  CALL 0xcfbc
+0bfd8  RETURN
+
+===== verbo 15 @ 0bfd9 ABRIR =====
+0bfe5  IF 37(CARTEIRA) != OBJ THEN (cont) ELSE goto aa4a
+0bff8  IF 61(PORTA) == OBJ THEN (cont) ELSE goto c011
+0c00b  MSGBUF2$ = MSG[104]="Já está aberta"
+0c00d  CALL 0xcfbc
+0c010  RETURN
+0c025  IF 35(PORTA) == OBJ THEN (cont) ELSE goto c042
+0c042  IF (35(PORTA) == OBJ AND 57(Estamos numa agência d) == SALA) THEN (cont) ELSE goto c05d
+0c05d  IF ((35(PORTA) == OBJ AND 57(Estamos numa agência d) == SALA) AND 1 == v4e6) THEN (cont) ELSE goto c076
+0c070  MSGBUF2$ = MSG[105]="A porta já está aberta."
+0c072  CALL 0xcfbc
+0c075  RETURN
+0c08a  IF 32(MALA) == OBJ THEN (cont) ELSE goto c0b8
+0c0b8  IF (32(MALA) == OBJ AND -999 != loc[32]) THEN (cont) ELSE goto c0cd
+0c0c7  MSGBUF2$ = "Você näo a tem."
+0c0c9  CALL 0xcfbc
+0c0cc  RETURN
+0c0e1  IF 32(MALA) == OBJ THEN (cont) ELSE goto c101
+0c101  IF (32(MALA) == OBJ AND 0 == loc[34]) THEN (cont) ELSE goto c136
+0c114  MSGBUF2$ = MSG[106]="Há uma passagem de ônibus nela. Você a pega imediatamente."
+0c116  CALL 0xcfbc
+0c12b  loc[34] = -999
+0c132  CALL 0xd342
+0c135  RETURN
+0c142  IF 32(MALA) == OBJ THEN (cont) ELSE goto c15b
+0c155  MSGBUF2$ = MSG[107]="Está vazia."
+0c157  CALL 0xcfbc
+0c15a  RETURN
+0c16f  IF 57(Estamos numa agência d) == SALA THEN (cont) ELSE goto c18c
+0c18c  IF (57(Estamos numa agência d) == SALA AND 35(PORTA) == OBJ) THEN (cont) ELSE goto c1ba
+0c1ba  IF ((57(Estamos numa agência d) == SALA AND 35(PORTA) == OBJ) AND -999 == loc[34]) THEN (cont) ELSE goto c208
+0c1cd  MSGBUF2$ = MSG[108]="Você coloca a passagem na abertura ao lado da porta, e ela se abre."
+0c1cf  CALL 0xcfbc
+0c1d6  v4e6 = 1
+0c1e2  saidaL = 67
+0c1fa  loc[34] = -998
+0c201  CALL 0xd342
+0c204  CALL 0xd35a
+0c207  RETURN
+0c21c  IF 57(Estamos numa agência d) == SALA THEN (cont) ELSE goto c239
+0c239  IF (57(Estamos numa agência d) == SALA AND 35(PORTA) == OBJ) THEN (cont) ELSE goto c252
+0c24c  MSGBUF2$ = MSG[109]="Näo dá. Ela é automática, e só abre se você tiver a passagem."
+0c24e  CALL 0xcfbc
+0c251  RETURN
+0c25e  IF 45(COFRE) == OBJ THEN (cont) ELSE goto c277
+0c271  MSGBUF2$ = MSG[110]="Já está aberto."
+0c273  CALL 0xcfbc
+0c276  RETURN
+0c283  MSGBUF2$ = MSG[111]="Näo posso abrir isso."
+0c285  CALL 0xcfbc
+0c288  RETURN
+
+===== verbo 16 @ 0c289 BEIJAR/ABRACAR =====
+0c295  IF 82(SOQUETE) != OBJ THEN (cont) ELSE goto 9f9e
+0c2b0  IF 36000 == OBJ THEN (cont) ELSE goto c344
+0c2c3  MSGBUF2$ = MSG[112]="Muito bem ! Agora digite o número da tela desejada:"
+0c2c5  CALL 0xcfbc
+0c2c8  CALL 0x8c10
+0c2dc  IF ? != 999 THEN (cont) ELSE goto 10af6
+0c303  IF NOT(1 > 0x466) THEN (cont) ELSE goto c31c
+0c31e  IF 66 < 0x466 THEN (cont) ELSE goto c337
+0c331  MSGBUF2$ = MSG[113]="Nada feito."
+0c333  CALL 0xcfbc
+0c336  RETURN
+0c33d  SALA = 0x466
+0c343  RETURN
+0c376  IF SALA != abs(loc[OBJ]) THEN (cont) ELSE goto c3bb
+0c3bb  IF (SALA != abs(loc[OBJ]) AND -999 != loc[OBJ]) THEN (cont) ELSE goto c3d4
+0c3ce  MSGBUF2$ = MSG[114]="Näo está aqui..."
+0c3d0  CALL 0xcfbc
+0c3d3  RETURN
+0c3e8  IF NOT(14(BALCONISTA) == OBJ) THEN (cont) ELSE goto c401
+0c403  IF NOT(30(SECRETARIA) == OBJ) THEN (cont) ELSE goto c41c
+0c41e  IF 50(RECEPCIONISTA) == OBJ THEN (cont) ELSE goto c437
+0c431  MSGBUF2$ = MSG[115]="Vá com calma..."
+0c433  CALL 0xcfbc
+0c436  RETURN
+0c443  MSGBUF2$ = MSG[116]="Freud explica..."
+0c445  CALL 0xcfbc
+0c448  RETURN
+
+===== verbo 17 @ 0c449 MENU =====
+0c451  str@532 = str@570
+0c457  0x462 = 1
+0c465  (runtime 0xc9)
+0c46d  (runtime 0xb8)
+0c477  (runtime 0xc9)
+0c47f  (runtime 0xb8)
+0c497  goto 0xc830
+0c4cb  (runtime 0xc9)
+0c4d2  (runtime 0xb8)
+0c4d4  (runtime 0xb2)
+0c509  (runtime 0xc9)
+0c510  (runtime 0xb8)
+0c512  (runtime 0xb2)
+0c547  (runtime 0xc9)
+0c54e  (runtime 0xb8)
+0c550  (runtime 0xb2)
+0c585  (runtime 0xc9)
+0c58c  (runtime 0xb8)
+0c58e  (runtime 0xb2)
+0c5c3  (runtime 0xc9)
+0c5ca  (runtime 0xb8)
+0c5cc  (runtime 0xb2)
+0c601  (runtime 0xc9)
+0c608  (runtime 0xb8)
+0c60a  (runtime 0xb2)
+0c624  str@532 = " Fim      "
+0c63c  goto 0xc649
+0c645  str@532 = " Reinício "
+0c647  goto 0xc626
+0c704  0x462 = ((0x462 - 65535) + 65535)
+0c75b  0x462 = ((0x462 - 65535) + 65535)
+0c76d  IF 6 < 0x462 THEN goto c774 ELSE goto 0xc785
+0c77f  0x462 = (0x462 - 6)
+0c78f  IF 1 > 0x462 THEN goto c796 ELSE goto 0xc7a7
+0c7a1  0x462 = (6 + 0x462)
+0c7bd  0x45e = 65535
+0c7cd  IF 0 != 0x45e THEN (cont) ELSE goto c7f7
+0c7e7  0x462 = (1 + 0x45e)
+0c7f5  str@532 = str@532
+0c805  goto 0xc82d
+0c810  (runtime 0xc9)
+0c818  (runtime 0xb8)
+0c822  (runtime 0xc9)
+0c82a  (runtime 0xb8)
+0c82c  RETURN
+0c82d  goto 0xc481
+0c838  (runtime 0xc9)
+0c840  (runtime 0xb8)
+0c84a  (runtime 0xc9)
+0c852  (runtime 0xb8)
+0c85e  IF 1 == 0x462 THEN (cont) ELSE goto c868
+0c865  CALL 0xf94a
+0c874  IF 2 == 0x462 THEN (cont) ELSE goto c87e
+0c87b  CALL 0xff31
+0c88a  IF 3 == 0x462 THEN (cont) ELSE goto c894
+0c891  CALL 0x105bf
+0c8a0  IF 4 == 0x462 THEN (cont) ELSE goto c8aa
+0c8a7  CALL 0x1090e
+0c8be  IF 5 == 0x462 THEN (cont) ELSE goto c90a
+0c8cd  MSGBUF$ = "Digite «S» para reinciar ou outra tecla para continuar..."
+0c8cf  CALL 0xcf33
+0c8e8  goto 0xc8fd
+0c901  goto 0xc90a
+0c916  IF 6 == 0x462 THEN (cont) ELSE goto c920
+0c91d  CALL 0xcac1
+0c920  RETURN
+
+===== verbo 18 @ 0c921 CHUPAR =====
+0c94d  IF -999 != loc[OBJ] THEN (cont) ELSE goto c966
+0c960  MSGBUF2$ = MSG[117]="Você näo tem isso !"
+0c962  CALL 0xcfbc
+0c965  RETURN
+0c972  IF 78(BALA) != OBJ THEN (cont) ELSE goto c98b
+0c985  MSGBUF2$ = MSG[118]="Isso pode ser muito perigoso. Melhor evitar..."
+0c987  CALL 0xcfbc
+0c98a  RETURN
+0c997  MSGBUF2$ = MSG[119]="Você abre a bala e joga fora o papel. A bala está meio passada, mas me"
+0c999  CALL 0xcfbc
+0c9a4  loc[78] = 0
+0c9b5  loc[79] = SALA
+0c9bc  CALL 0xd342
+0c9bf  RETURN
+
+===== verbo 19 @ 0c9c0 QUEBRAR/DETONAR/ARREBENTAR/DESTRUIR =====
+0c9e8  IF (43(MADEIRA) == OBJ OR 44(PAREDE) == OBJ) THEN (cont) ELSE goto ca05
+0ca05  IF ((43(MADEIRA) == OBJ OR 44(PAREDE) == OBJ) AND 31(Entramos no banheiro f) == SALA) THEN (cont) ELSE goto ca1a
+0ca14  MSGBUF2$ = "É muito forte para você. Tente usar algum instrumento para isso..."
+0ca16  CALL 0xcfbc
+0ca19  RETURN
+0ca46  IF -999 != loc[OBJ] THEN (cont) ELSE goto ca5f
+0ca59  MSGBUF2$ = MSG[120]="Você näo tem isso !"
+0ca5b  CALL 0xcfbc
+0ca5e  RETURN
+0ca6b  IF 74(NOZ) != OBJ THEN (cont) ELSE goto ca84
+0ca7e  MSGBUF2$ = MSG[121]="Você näo é homem o suficiente..."
+0ca80  CALL 0xcfbc
+0ca83  RETURN
+0ca90  MSGBUF2$ = MSG[122]="Você quebra a noz, ansioso para comê-la, mas na verdade só encontra um"
+0ca92  CALL 0xcfbc
+0ca9d  loc[74] = 0
+0cab6  loc[76] = -999
+0cabd  CALL 0xd342
+0cac0  RETURN
+
+===== verbo 20 @ 0cac1 SAIR/ABANDONAR =====
+0cac9  MSGBUF$ = "Digite «S» para sair ao DOS ou outra tecla para jogar..."
+0cacb  CALL 0xcf33
+0cae4  goto 0xcaf9
+0cafd  goto 0x10d8c
+0cb00  RETURN
+
+===== verbo 21 @ 0cb01 DIZER =====
+0cb0d  IF 81(NI) != OBJ THEN (cont) ELSE goto cb22
+0cb1c  MSGBUF2$ = "Engraçado, ninguém responde..."
+0cb1e  CALL 0xcfbc
+0cb21  RETURN
+0cb2a  MSGBUF2$ = "Oh, mas aonde este mundo foi parar, se nobres cavaleiros ficam dizendo 'ni' a torto e direito por aí..."
+0cb2c  CALL 0xcfbc
+0cb2f  RETURN
+
+===== verbo 22 @ 0cb30 FECHAR/DESLIGAR =====
+0cb44  IF 21(LANTERNA) == OBJ THEN (cont) ELSE goto cb61
+0cb63  goto 0xcb74
+0cb6e  MSGBUF2$ = "Ah, agora que você ligou, deixe assim."
+0cb70  CALL 0xcfbc
+0cb73  RETURN
+0cb7c  MSGBUF2$ = "Näo perca tempo fechando ou desligando as coisas neste jogo. É inútil e muito educado para você."
+0cb7e  CALL 0xcfbc
+0cb81  RETURN
+
+===== verbo 23 @ 0cb82 ROSQUEAR =====
+0cbae  IF -999 != loc[OBJ] THEN (cont) ELSE goto cbc3
+0cbbd  MSGBUF2$ = "Näo posso rosquear o que näo tenho."
+0cbbf  CALL 0xcfbc
+0cbc2  RETURN
+0cbcf  IF 77(LAMPADA) != OBJ THEN (cont) ELSE goto cbe4
+0cbde  MSGBUF2$ = "Cê pirou ?"
+0cbe0  CALL 0xcfbc
+0cbe3  RETURN
+0cbf5  IF 77(LAMPADA) == OBJ THEN (cont) ELSE goto 10af6
+0cc04  MSGBUF2$ = "Ok."
+0cc10  loc[77] = 66
+0cc17  CALL 0xcfbc
+0cc1a  RETURN
+
+===== verbo 24 @ 0cc1b DESROSQUEAR =====
+0cc27  IF 77(LAMPADA) != OBJ THEN (cont) ELSE goto cc3c
+0cc36  MSGBUF2$ = "Como vou desrosquear esta biromba ?"
+0cc38  CALL 0xcfbc
+0cc3b  RETURN
+0cc48  IF 66() != SALA THEN (cont) ELSE goto cc5d
+0cc57  MSGBUF2$ = "Näo está aqui."
+0cc59  CALL 0xcfbc
+0cc5c  RETURN
+0cc89  IF -999 == loc[OBJ] THEN (cont) ELSE goto cc9e
+0cc98  MSGBUF2$ = "Já está desrosqueada e nas suas mäos."
+0cc9a  CALL 0xcfbc
+0cc9d  RETURN
+0ccc0  IF 0 == loc[OBJ] THEN (cont) ELSE goto ccd5
+0cccf  MSGBUF2$ = "Agora é tarde. Você a destruiu, palerma."
+0ccd1  CALL 0xcfbc
+0ccd4  RETURN
+0ccdd  MSGBUF2$ = "Ok."
+0ccf1  loc[77] = -999
+0ccf8  CALL 0xcfbc
+0ccfb  RETURN
+
+===== verbo 25 @ 0ccfc VOAR =====
+0cd04  MSGBUF2$ = "Você sai, livre como um pássaro, atravessa vales e montanhas, mas logo acorda e retorna ao jogo."
+0cd06  CALL 0xcfbc
+0cd09  RETURN
+
+===== verbo 26 @ 0cd0a MORDER/XINGAR/BATER/ESPANCAR/LAMBER =====
+0cd12  MSGBUF2$ = "Você näo é täo animal assim."
+0cd14  CALL 0xcfbc
+0cd17  RETURN
+
+===== verbo 27 @ 0cd18 COMER =====
+0cd44  IF -999 != loc[OBJ] THEN (cont) ELSE goto cd59
+0cd53  MSGBUF2$ = "Näo posso comer o que näo tenho."
+0cd55  CALL 0xcfbc
+0cd58  RETURN
+0cd6d  IF 74(NOZ) == OBJ THEN (cont) ELSE goto cd88
+0cd88  IF (74(NOZ) == OBJ AND 0 == v4ee) THEN (cont) ELSE goto cda7
+0cd97  MSGBUF2$ = "Melhor näo. Ela pode lhe ser útil se você näo a comer."
+0cd9d  v4ee = 1
+0cda3  CALL 0xcfbc
+0cda6  RETURN
+0cdb3  IF 74(NOZ) == OBJ THEN (cont) ELSE goto cdca
+0cdc2  MSGBUF2$ = "Já que você insiste... Você a engole. Ela fica engasgada na sua garganta. Você começa a tossir, e ver o mundo ficar verde, rosa, azul, amarelo, branco com bolinhas vermelhas, e, finalmente, negro..."
+0cdc4  CALL 0xcfbc
+0cdc7  goto 0x10aae
+0cdd2  MSGBUF2$ = "Isso näo é muito digestivo. Talvez com um sal de frutas vá, mas como você näo o tem..."
+0cdd4  CALL 0xcfbc
+0cdd7  RETURN
+
+===== verbo 28 @ 0cdd8 CHEIRAR =====
+0cde4  IF 6(O balcäo é apertado, m) == SALA THEN (cont) ELSE goto cdf9
+0cdf3  MSGBUF2$ = "O aroma é agradável."
+0cdf5  CALL 0xcfbc
+0cdf8  RETURN
+0ce05  IF 32(Este é o banheiro masc) == SALA THEN (cont) ELSE goto ce1a
+0ce14  MSGBUF2$ = "ECA !"
+0ce16  CALL 0xcfbc
+0ce19  RETURN
+0ce22  MSGBUF2$ = "Näo sinto nada de anormal no cheiro."
+0ce24  CALL 0xcfbc
+0ce27  RETURN
+
+===== verbo 29 @ 0ce28 ATRAVESSAR =====
+0ce34  IF 86(RUA) != OBJ THEN (cont) ELSE goto ce49
+0ce43  MSGBUF2$ = "Como vou atravessar isso ?"
+0ce45  CALL 0xcfbc
+0ce48  RETURN
+0ce5d  IF 3(Você está na calçada d) != SALA THEN (cont) ELSE goto ce7a
+0ce7a  IF (3(Você está na calçada d) != SALA AND 56(Estamos num bairro pio) != SALA) THEN (cont) ELSE goto ce8f
+0ce89  MSGBUF2$ = "Näo existe nenhuma rua aqui que possa ser atravessada."
+0ce8b  CALL 0xcfbc
+0ce8e  RETURN
+0ce97  MSGBUF2$ = "Você decide tomar coragem. Após achar a faixa de pedestres e aguardar sua vez no farol, olha para a esquerda. Nada."
+0ce99  CALL 0xcfbc
+0cea4  MSGBUF2$ = "Olhando para a direita, também näo vê nada. É seguro. É tranqüilo. Você se prepara e dá o primeiro passo."
+0cea6  CALL 0xcfbc
+0ceb1  MSGBUF$ = "Digite qualquer tecla..."
+0ceb3  CALL 0xcf33
+0cebe  MSGBUF2$ = "
+	   ■ ² ³ ¹ · ¨ ° ¸ ÷ § ¶ ¾ ‗ ± ­ ´ ¯ Ý ý Ù Û Ú Þ þ µ Õ õ Ò Ô ß Ó ▀ Ì ¦ ▄ █ ┌ ┘ Ï Î Í ı È Ë Ê Ð ð ¤ ╬ ═ ╠ ╦ ╩ ╔ Ã ã ┼ ─ ├ ┬ ┴ └ ┐ ¥ ¢ ╝ ╗ ║ ╣ "
+0cec0  CALL 0xcfbc
+0cecb  MSGBUF2$ = "=Ç	=Ç=Ç=Ç=Ç=Ç=Ç=Ç=Ç=Ç!=Ç$=Ç'=Ç*=Ç-=Ç/=Ç1=FEDCBA@?>=<;:9876543210/.-,+*)('&%$#"! "
+0cecd  CALL 0xcfbc
+0ced8  MSGBUF$ = "Digite qualquer tecla..."
+0ceda  CALL 0xcf33
+0cee5  MSGBUF2$ = "Ç┬<Ç┼<ÇÃ<Ç╔<Ç╠<Ç¤<ÇÊ<Çı<ÇÏ<Ç┌<Ç¦<ÇÓ<ÇÔ<Çõ<Çµ<ÇÞ<ÇÙ<ÇÝ<Ç´<Ç±<Ç¾<Ç§<Ç°<Ç·<Ç³<Ç <Ç=Ç=Ç"
+0cee7  CALL 0xcfbc
+0ceea  goto 0x10aae
+
+===== verbo 30 @ 0ceed PULAR =====
+0cef5  MSGBUF2$ = "`<Çg<Çl<Çm<Çr<Çx<Çy<Ç{<Ç|<Ç}<Çé<Çâ<Çä<Çë<Çè<Çï<ÇÄ<ÇÅ<ÇÉ<Çæ<Çû<Çó<ÇÑ<Ç¿<Ç½<Ç«<Ç▒<Ç┤<ÇÂ<Ç╣<Ç╝<Ç┐<"
+0cef7  CALL 0xcfbc
+0cefa  RETURN
+
+===== verbo 31 @ 0cefb JOGAR/BRINCAR/PASSEAR/DORMIR/CAVALGAR/MASTURBAR =====
+0cf03  MSGBUF2$ = "'<Ç*<Ç+<Ç0<Ç6<Ç<<Ç=<ÇC<
+ÇJ<ÇT<ÇU<Ç[<Ç"
+0cf05  CALL 0xcfbc
+0cf08  RETURN
+
+===== verbo 32 @ 0cf09 ARREMESSAR/LANCAR =====
+0cf11  MSGBUF2$ = "Ç<Ç	<	Ç<Ç<Ç<Ç"
+0cf13  CALL 0xcfbc
+0cf16  RETURN
+
+===== verbo 33 @ 0cf17 SENTAR/DEITAR =====
+0cf1f  MSGBUF2$ = ";ÇÝ;Ç‗;Ç¸;Ç°;Ç·;	Ç■;"
+0cf21  CALL 0xcfbc
+0cf24  RETURN
+
+===== verbo 34 @ 0cf25 APAGAR =====
+0cf2d  MSGBUF2$ = ";Ç½;Ç▒;Ç│;ÇÀ;Ç¥;Ç└;Çã;Ç╚;Ç═;ÇÈ;ÇÏ;Ç┌;Ç▀;Çß;Çõ;ÇÛ;ÇÙ"
+0cf2f  CALL 0xcfbc
+0cf32  RETURN

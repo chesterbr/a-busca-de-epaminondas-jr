@@ -1,0 +1,12 @@
+# Linhas de ônibus inválidas ("Não entendi. Nada feito.") e depois a certa; a viela e a entrada da faculdade.
+# --- começo igual ao caminho completo (linhas 1 a 0) ---
+# --- a partir daqui, a variação ---
+N
+PEGAR LISTA
+N
+USAR ONIBUS
+abc
+USAR ONIBUS
+0
+PEGAR ONIBUS
+4283

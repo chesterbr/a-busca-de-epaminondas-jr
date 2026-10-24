@@ -1,0 +1,16 @@
+# Biblioteca: tenta entrar no balcão antes de conversar com a balconista.
+# --- começo igual ao caminho completo (linhas 1 a 6) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+S
+# --- a partir daqui, a variação ---
+ENTRAR BALCAO
+BEIJAR BALCONISTA
+OLHAR BALCONISTA
+PEGAR BALCONISTA
+CONVERSAR BALCONISTA
+CONVERSAR BALCONISTA
+ENTRAR BALCAO

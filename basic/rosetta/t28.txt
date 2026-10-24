@@ -1,0 +1,6 @@
+Z = I + TOPO
+Z = I + TOPO - 1
+Z = TOPO + I - 1
+IF I + TOPO - 1 <= NINV THEN PRINT INV$(I + TOPO - 1)
+IF TOPO + I - 1 <= NINV THEN PRINT INV$(TOPO + I - 1)
+PRINT INV$(I + TOPO - 1)

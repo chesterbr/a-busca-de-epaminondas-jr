@@ -1,0 +1,11 @@
+N = I + K - 1
+N = (I + K) - 1
+N = I + (K - 1)
+N = I - 1 + K
+N = K - 1 + I
+N = 1 + I + K
+N = I + K + 1
+N = INT((1 + K) / 2)
+N = INT((K + 1) / 2)
+IF I + K - 1 <= M THEN PRINT "x"
+A$ = MID$(B$, I + K - 1, 1)

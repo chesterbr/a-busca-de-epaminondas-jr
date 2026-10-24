@@ -1,0 +1,74 @@
+ 1 | NORTE          | verbo  1 | flag33c 0.0
+ 2 | N              | verbo  1 | flag33c 0.0
+ 3 | SUL            | verbo  2 | flag33c 0.0
+ 4 | S              | verbo  2 | flag33c 0.0
+ 5 | LESTE          | verbo  3 | flag33c 0.0
+ 6 | L              | verbo  3 | flag33c 0.0
+ 7 | OESTE          | verbo  4 | flag33c 0.0
+ 8 | O              | verbo  4 | flag33c 0.0
+ 9 | IR             | verbo  5 | flag33c 2.0
+10 | ENTRAR         | verbo  5 | flag33c 2.0
+11 | PEGAR          | verbo  6 | flag33c 2.0
+12 | CATAR          | verbo  6 | flag33c 2.0
+13 | APANHAR        | verbo  6 | flag33c 2.0
+14 | TOMAR          | verbo  6 | flag33c 2.0
+15 | LISTAR         | verbo  7 | flag33c 0.0
+16 | INVENTARIO     | verbo  7 | flag33c 0.0
+17 | OBJETOS        | verbo  7 | flag33c 0.0
+18 | LARGAR         | verbo  8 | flag33c 2.0
+19 | DEIXAR         | verbo  8 | flag33c 2.0
+20 | SOLTAR         | verbo  8 | flag33c 2.0
+21 | OLHAR          | verbo  9 | flag33c 2.0
+22 | VER            | verbo  9 | flag33c 2.0
+23 | EXAMINAR       | verbo  9 | flag33c 2.0
+24 | OBSERVAR       | verbo  9 | flag33c 2.0
+25 | VERIFICAR      | verbo  9 | flag33c 2.0
+26 | FALAR          | verbo 10 | flag33c 2.0
+27 | CONVERSAR      | verbo 10 | flag33c 2.0
+28 | CIMA           | verbo 11 | flag33c 0.0
+29 | C              | verbo 11 | flag33c 0.0
+30 | SUBIR          | verbo 11 | flag33c 0.0
+31 | BAIXO          | verbo 12 | flag33c 0.0
+32 | B              | verbo 12 | flag33c 0.0
+33 | DESCER         | verbo 12 | flag33c 0.0
+34 | LER            | verbo 13 | flag33c 2.0
+35 | LIGAR          | verbo 14 | flag33c 2.0
+36 | USAR           | verbo 14 | flag33c 2.0
+37 | ACENDER        | verbo 14 | flag33c 2.0
+38 | ABRIR          | verbo 15 | flag33c 2.0
+39 | BEIJAR         | verbo 16 | flag33c 2.0
+40 | ABRACAR        | verbo 16 | flag33c 2.0
+41 | MENU           | verbo 17 | flag33c 0.0
+42 | CHUPAR         | verbo 18 | flag33c 2.0
+43 | QUEBRAR        | verbo 19 | flag33c 2.0
+44 | DETONAR        | verbo 19 | flag33c 2.0
+45 | ARREBENTAR     | verbo 19 | flag33c 2.0
+46 | DESTRUIR       | verbo 19 | flag33c 2.0
+47 | SAIR           | verbo 20 | flag33c 0.0
+48 | ABANDONAR      | verbo 20 | flag33c 0.0
+49 | DIZER          | verbo 21 | flag33c 2.0
+50 | FECHAR         | verbo 22 | flag33c 2.0
+51 | DESLIGAR       | verbo 22 | flag33c 2.0
+52 | ROSQUEAR       | verbo 23 | flag33c 2.0
+53 | DESROSQUEAR    | verbo 24 | flag33c 2.0
+54 | VOAR           | verbo 25 | flag33c 0.0
+55 | MORDER         | verbo 26 | flag33c 2.0
+56 | XINGAR         | verbo 26 | flag33c 2.0
+57 | BATER          | verbo 26 | flag33c 2.0
+58 | ESPANCAR       | verbo 26 | flag33c 2.0
+59 | LAMBER         | verbo 26 | flag33c 2.0
+60 | COMER          | verbo 27 | flag33c 2.0
+61 | CHEIRAR        | verbo 28 | flag33c 0.0
+62 | ATRAVESSAR     | verbo 29 | flag33c 2.0
+63 | PULAR          | verbo 30 | flag33c 1.0
+64 | JOGAR          | verbo 31 | flag33c 1.0
+65 | BRINCAR        | verbo 31 | flag33c 1.0
+66 | PASSEAR        | verbo 31 | flag33c 1.0
+67 | DORMIR         | verbo 31 | flag33c 1.0
+68 | CAVALGAR       | verbo 31 | flag33c 1.0
+69 | MASTURBAR      | verbo 31 | flag33c 1.0
+70 | ARREMESSAR     | verbo 32 | flag33c 2.0
+71 | LANCAR         | verbo 32 | flag33c 2.0
+72 | SENTAR         | verbo 33 | flag33c 1.0
+73 | DEITAR         | verbo 33 | flag33c 1.0
+74 | APAGAR         | verbo 34 | flag33c 2.0

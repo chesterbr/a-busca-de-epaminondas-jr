@@ -1,0 +1,11 @@
+Z = 1
+GOTO ALVO
+GOTO MORTO
+Z = 3
+--
+ALVO:
+Z = 7
+END
+MORTO:
+Z = 9
+END

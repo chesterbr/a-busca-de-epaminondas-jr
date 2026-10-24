@@ -1,0 +1,328 @@
+Você está no escritório do chefe. Não é a primeira vez que você aparece nesta sala, mas você sente que está ferrado.
+De repente, a porta se abre. Aquele cara grandão, que você conhece apenas e tão somente como “O Chefe” aparece na porta.
+“Então é VOCÊ!!!”, ele diz, enquanto você se despede mentalmente do seu emprego. “Nem tente me enrolar. Onde está o disquete?”
+“Que disquete???”, você responde, surpreso por não saber do que ele está falando.
+“Não venha com essa. EU QUERO ESTE DISQUETE. VÁ PROCURÁ-LO AGORA, IMBECIL!!!”
+“Sim, senhor!”, você responde, enquanto o babaca sai e bate a porta.
+Parece que você está bem encrencado agora. Vê se acha este disquete logo. Afinal de contas, este deve ser o objetivo do jogo...
+Você nota um azulejo solto no chão.
+Um grande cofre de metal jaz na parede.
+[saídas: N]
+
+> PEGAR AZULEJO
+Ok.
+
+> N
+Você está na recepção do escritório. Você vê a rua ao norte, o que lhe causa um enorme desejo de sair desta pocilga.
+Há uma lista telefônica jogada num canto.
+[saídas: N S]
+
+> PEGAR LISTA
+Ok.
+
+> N
+Você está na calçada de uma rua bastante movimentada. É realmente inacreditável o “coeficiente animal” dos motoristas deste bairro.
+Um homem mal-encarado está apoiado num poste.
+[saídas: S L]
+
+> L
+Você se encontra num calçadão. Ao sul pode-se ver um salão bastante bonito (considerando o muquifo de bairro no qual você se encontra...)
+[saídas: S O]
+
+> S
+Estamos na biblioteca. Este é um lugar interessante. As prateleiras dos livros ficam atrás do balcão, e não ao acesso do público..
+Uma linda balconista devora um exemplar da revista “Capricho” atrás do balcão.
+O balcão lhe chama a atenção, pois ocupa metade da biblioteca.
+[saídas: N]
+
+> CONVERSAR BALCONISTA
+“Bom dia. Em que posso servi-lo?”
+“Seu sorriso já o fez...” - você responde, e ela dá uma risadinha maliciosa - “O que você tem de interessante aqui?”
+“Leve este aqui” - ela diz. Neste momento, um homem adentra a sala e abraça-a. Ela muda de expressão, confusa. Discretamente, anota qualquer coisa num papel e o coloca dentro do livro.
+“Mais alguma coisa?” - ela diz, suspirando quando o homem sai.
+“Por enquanto não. Mas quem sabe em outra oportunidade...” - você diz, enquanto ela se retira com o eterno sorriso.
+“Essa foi boa” - você pensa, enquanto observa ela sair pela porta afora. Mas você ainda tem um jogo para jogar. Tire esta expressão ridícula do seu rosto, rapaz!!!
+
+> ENTRAR BALCAO
+O balcão é apertado, mas deu para entrar (agora que você se arrepende de não ter feito aquele regime). O perfume da balconista ainda é bastante forte.
+Há uma escada aqui.
+[saídas: N B]
+
+> DESCER
+A escada te levou até um depósito. Agora, basta subir que você pode sair do balcão.
+Uma lanterna está no chão.
+[saídas: C]
+
+> PEGAR LANTERNA
+Ok.
+
+> SUBIR
+Estamos na biblioteca. Este é um lugar interessante. As prateleiras dos livros ficam atrás do balcão, e não ao acesso do público..
+O balcão lhe chama a atenção, pois ocupa metade da biblioteca.
+[saídas: N]
+
+> N
+Você se encontra num calçadão. Ao sul pode-se ver um salão bastante bonito (considerando o muquifo de bairro no qual você se encontra...)
+[saídas: S O]
+
+> O
+Você está na calçada de uma rua bastante movimentada. É realmente inacreditável o “coeficiente animal” dos motoristas deste bairro.
+Um homem mal-encarado está apoiado num poste.
+[saídas: S L]
+
+> PEGAR ONIBUS
+Digite o nº da linha do ônibus:
+Você entra no ônibus. Este meio sem-vergonha de transporte continua cada vez mais sem-vergonha.
+Ao chegar na metade do mesmo, depara com um indivíduo que tenta lhe mostrar exatamente o que comeu no almoço. Você passa direto e paga o motorista.
+O ônibus para. Este é o ponto final. Todos descem, inclusive você.
+Você está numa viela totalmente deserta.
+[saídas: N S L]
+
+> N
+Estamos numa praça. Um fato curioso é que ninguém aqui tem um fio de cabelo, e muitos usam uma argola no nariz.
+De repente, o povo se aglomera à sua volta. Todos começam a gritar.
+“Olá, amigos. Tudo bem com vocês? Mas que dia lindo está hoje, não é mesmo?” - você diz.
+“Ih, moçada, esse mané é Mauricinho. Olha que frufru” - diz um deles aos outros, debochando. Ele fica sério e olha para você.
+“Aí, loque, esse barato é território dos carecas. Que é que cê tá fazendo aqui?”
+“N-N-N-Nada. Só passeando...” - você responde, pensando no seu testamento.
+“Mas, apesar de tudo, gostei de você. Aliás, te achei super-gostosinho. Uma graça. EI, GENTE, QUE TAL SE ELE FOR UM DOS NOSSOS?”
+“YEAH! YEAH! YEAH!” - diz a galera. E o cara continua - “Vamo nessa. Pega a maquininha zero”
+“Ei, o que vocês vão fazer. Espere aí, esse cabelo é meu!!! Meu cabelo! Meu cabelinho!” - você grita, enquanto eles raspam sua cabeça.
+“Muito bem” - diz o grandão, quando o serviço termina - “Agora você também é um careca. Pode circular aqui à vontade”. Ele se retira do local, gritando e pulando.
+[saídas: N S]
+
+> S
+Você está numa viela totalmente deserta.
+[saídas: N S L]
+
+> S
+Você está na entrada de uma faculdade. Não é nenhuma Oxford, mas dá para o gasto. Dá para ver muitos estudantes indo para todos os lados, e eles não devem estar interessados em conversar.
+Um vigia está te encarando, rapaz.
+[saídas: N S L]
+
+> L
+Você se encontra num estacionamento. Não há nenhum carro, o que lhe deixa muito decepcionado.
+Tem um envelope marrom no chão.
+[saídas: O]
+
+> PEGAR ENVELOPE
+Ok.
+
+> O
+Você está na entrada de uma faculdade. Não é nenhuma Oxford, mas dá para o gasto. Dá para ver muitos estudantes indo para todos os lados, e eles não devem estar interessados em conversar.
+Um vigia está te encarando, rapaz.
+[saídas: N S L]
+
+> S
+O vigia olha para você com desprezo e diz “Pode passar. Com esta careca, só pode ser bicho... Que raça abominável!”
+Estamos na secretaria da faculdade. É uma salinha bem mixuruca, caindo aos pedaços.
+A secretária “puxa um ronco” sobre sua mesa.
+[saídas: N S L O]
+
+> L
+Ei, esta é uma sala de aula. Os alunos e o professor olham para você com desprezo.
+De repente, o professor grita: “ATACAR!!!”, e os alunos lançam toda sorte de projéteis sobre você, desde papeis até apontadores de metal. Você sai da classe e o professor tranca a porta.
+Estamos na secretaria da faculdade. É uma salinha bem mixuruca, caindo aos pedaços.
+Uma borracha está largada no chão.
+A secretária “puxa um ronco” sobre sua mesa.
+[saídas: N S O]
+
+> S
+Você está no ginásio de esportes. O lugar está acabado. Na parede, uma pichação: “CHESTER NÃO ESTEVE AQUI”. Você se pergunta até que ponto a degradação humana pode chegar.
+[saídas: N L]
+
+> L
+Esta é a quadra de esportes. Nada de anormal aqui.
+Algumas pilhas estão jogadas no chão.
+[saídas: O]
+
+> PEGAR PILHAS
+Ok.
+
+> O
+Você está no ginásio de esportes. O lugar está acabado. Na parede, uma pichação: “CHESTER NÃO ESTEVE AQUI”. Você se pergunta até que ponto a degradação humana pode chegar.
+[saídas: N L]
+
+> N
+Estamos na secretaria da faculdade. É uma salinha bem mixuruca, caindo aos pedaços.
+Uma borracha está largada no chão.
+A secretária “puxa um ronco” sobre sua mesa.
+[saídas: N S O]
+
+> O
+Este é o Centro de Processamento de Dados da faculdade. Examinando mais profundamente, você observa o poderoso equipamento do pessoal: Um TK82C, conectado a um gravador CCE. Pena que não dá para utilizá-lo, pois ele está sem a fonte.
+[saídas: S L]
+
+> S
+Você está no almoxarifado. O cheiro do local não é nada agradável, podendo-se dizer o mesmo do seu aspecto.
+[saídas: N B]
+
+> USAR LANTERNA
+Você coloca as pilhas na lanterna e acende.
+
+> B
+Você está num depósito de papel.
+Uma mala lhe chama a atenção.
+[saídas: C]
+
+> PEGAR MALA
+Ok.
+
+> ABRIR MALA
+Há uma passagem de ônibus nela. Você a pega imediatamente.
+
+> C
+Você está no almoxarifado. O cheiro do local não é nada agradável, podendo-se dizer o mesmo do seu aspecto.
+[saídas: N B]
+
+> N
+Este é o Centro de Processamento de Dados da faculdade. Examinando mais profundamente, você observa o poderoso equipamento do pessoal: Um TK82C, conectado a um gravador CCE. Pena que não dá para utilizá-lo, pois ele está sem a fonte.
+[saídas: S L]
+
+> L
+Estamos na secretaria da faculdade. É uma salinha bem mixuruca, caindo aos pedaços.
+Uma borracha está largada no chão.
+A secretária “puxa um ronco” sobre sua mesa.
+[saídas: N S O]
+
+> N
+Você está na entrada de uma faculdade. Não é nenhuma Oxford, mas dá para o gasto. Dá para ver muitos estudantes indo para todos os lados, e eles não devem estar interessados em conversar.
+Um vigia está te encarando, rapaz.
+[saídas: N S L]
+
+> N
+Você está numa viela totalmente deserta.
+[saídas: N S L]
+
+> L
+Estamos numa agência de viagens. Todos os guichês estão fechados, e não parece haver ninguém além de você aqui.
+Há uma porta automática ao leste.
+[saídas: O]
+
+> USAR PASSAGEM
+Você coloca a passagem na abertura ao lado da porta, e ela se abre.
+
+> L
+Você atravessa a porta e entra numa garagem, aonde um ônibus de viagem aguarda você.
+O motorista cita algumas passagens da vida da sua mãe, por você estar demorando, e você entra no ônibus, apressado.
+O ônibus segue viagem, e só agora você se pergunta aonde está indo, e volta a pensar no disquete e no seu emprego.
+Eis o final. Você desce, e volta para o jogo, perdido como sempre
+Estamos em (mais) uma ruazinha louca, no sentido de norte a sul, que parece ser uma rua central do bairro. A oeste se vê um prédio, enquanto que ao leste há um escritório.
+[saídas: N S L O]
+
+> S
+Estamos no fim da rua. Ao leste se vê um desses quartos baratos, e ao oeste um fliperama.
+[saídas: N L O]
+
+> L
+Você está num corredor estreito dentro do quarto. Não parece ser uma casa de excelente reputação.
+[saídas: L O]
+
+> L
+Estamos num quarto. Na cama, um casal faz o que lhe é direito neste local. Graças à sua sutileza, eles não notaram. Aliás, acho que não notariam nem um terremoto.
+Uma carteira está largada no chão.
+[saídas: O]
+
+> PEGAR CARTEIRA
+Ok.
+
+> OLHAR CARTEIRA
+Temos um cartão aqui.
+
+> O
+Você está num corredor estreito dentro do quarto. Não parece ser uma casa de excelente reputação.
+[saídas: L O]
+
+> O
+Estamos no fim da rua. Ao leste se vê um desses quartos baratos, e ao oeste um fliperama.
+[saídas: N L O]
+
+> N
+Estamos em (mais) uma ruazinha louca, no sentido de norte a sul, que parece ser uma rua central do bairro. A oeste se vê um prédio, enquanto que ao leste há um escritório.
+[saídas: N S L O]
+
+> O
+Esta é a entrada do prédio. Um local exalando um cheiro nauseante está a oeste, enquanto que ao norte se vê o hall.
+[saídas: N L O]
+
+> N
+Você está no hall do prédio. Não há onde sentar-se, e mesmo que houvesse, você não tem tempo para isso. O banheiro feminino é a oeste.
+Uma figura imponente se destaca do cenário. É um bispo. Todos os que passam olham para este, com aquele olhar que só os muito crentes têm.
+[saídas: N S O]
+
+> PEGAR BISPO
+Você pega o bispo sem constrangimento, pois ninguém daria pela falta de uma peça de xadrez.
+
+> N
+Estamos no elevador.
+Tem uma noz aqui.
+[saídas: S]
+
+> PEGAR NOZ
+Ok.
+
+> QUEBRAR NOZ
+Você quebra a noz, ansioso para comê-la, mas na verdade só encontra uma chave ali.
+
+> S
+Você está no hall do prédio. Não há onde sentar-se, e mesmo que houvesse, você não tem tempo para isso. O banheiro feminino é a oeste.
+[saídas: N S O]
+
+> S
+Esta é a entrada do prédio. Um local exalando um cheiro nauseante está a oeste, enquanto que ao norte se vê o hall.
+[saídas: N L O]
+
+> L
+Estamos em (mais) uma ruazinha louca, no sentido de norte a sul, que parece ser uma rua central do bairro. A oeste se vê um prédio, enquanto que ao leste há um escritório.
+[saídas: N S L O]
+
+> S
+Estamos no fim da rua. Ao leste se vê um desses quartos baratos, e ao oeste um fliperama.
+[saídas: N L O]
+
+> O
+Estamos numa casa de fliperama. Uma máquina de Street Fighter 2 olha apaixonada para você, mas você tem que ir atrás do disquete, e não gastar seu dinheiro com fliperama.
+Um velhinho está jogando uma máquina qualquer
+[saídas: L]
+
+> LARGAR BISPO
+O velhinho percebe que você quer lhe dar a peça. Ele começa a gritar e babar.
+“ACHEI!!! ACHEI!!! AGORA VOU TERMINAR O JOGO!!!!”
+Ele lhe dá uma marreta, e sai gritando “BLAAAAAAAGH” ou algo semelhante.
+
+> L
+Estamos no fim da rua. Ao leste se vê um desses quartos baratos, e ao oeste um fliperama.
+[saídas: N L O]
+
+> N
+Estamos em (mais) uma ruazinha louca, no sentido de norte a sul, que parece ser uma rua central do bairro. A oeste se vê um prédio, enquanto que ao leste há um escritório.
+[saídas: N S L O]
+
+> O
+Esta é a entrada do prédio. Um local exalando um cheiro nauseante está a oeste, enquanto que ao norte se vê o hall.
+[saídas: N L O]
+
+> N
+Você está no hall do prédio. Não há onde sentar-se, e mesmo que houvesse, você não tem tempo para isso. O banheiro feminino é a oeste.
+[saídas: N S O]
+
+> O
+Entramos no banheiro feminino. A mulherada sai gritando com as saias na mão.
+[saídas: L]
+
+> USAR FOSFOROS
+Você põe fogo na madeira. Seria uma boa idéia, se o fogo não se espalhasse e chegasse a você...
+Você falhou em sua missão de recuperar seu emprego. Aliás, você morreu. Mas, como isso é um adventure, este fato é irrelevante. Basta recomeçar ou carregar um jogo gravado.
+Vamos lá! Não se desespere! O Papai Smurf está contando com você! E, afinal de contas, você não quer saber o que raios tem neste disquete? Levante a cabeça...
+
+--- reiniciando o jogo ---
+Você está no escritório do chefe. Não é a primeira vez que você aparece nesta sala, mas você sente que está ferrado.
+De repente, a porta se abre. Aquele cara grandão, que você conhece apenas e tão somente como “O Chefe” aparece na porta.
+“Então é VOCÊ!!!”, ele diz, enquanto você se despede mentalmente do seu emprego. “Nem tente me enrolar. Onde está o disquete?”
+“Que disquete???”, você responde, surpreso por não saber do que ele está falando.
+“Não venha com essa. EU QUERO ESTE DISQUETE. VÁ PROCURÁ-LO AGORA, IMBECIL!!!”
+“Sim, senhor!”, você responde, enquanto o babaca sai e bate a porta.
+Parece que você está bem encrencado agora. Vê se acha este disquete logo. Afinal de contas, este deve ser o objetivo do jogo...
+Você nota um azulejo solto no chão.
+Um grande cofre de metal jaz na parede.
+[saídas: N]

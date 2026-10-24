@@ -1,0 +1,2 @@
+N = N - (N < 6 AND (A$ = " " OR A$ = CHR$(0) + "P" OR A$ = CHR$(9)))
+N = N - (N < 6 AND (A$ = " " OR A$ = CHR$(0) + CHR$(80) OR A$ = CHR$(9)))

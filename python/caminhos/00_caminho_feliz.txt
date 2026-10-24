@@ -1,0 +1,178 @@
+# CAMINHO FELIZ: a solução completa do jogo, com a chave. Roda na reimplementação com
+#   python3 epa.py caminhos/00_caminho_feliz.txt
+# Linhas com # são comentários, linhas vazias são ignoradas. Uma linha com só um número é a resposta
+# que o comando anterior pediu (linha do ônibus, andar do elevador).
+# As outras variações (mortes, finais alternativos, becos sem saída) estão nos outros arquivos desta pasta.
+
+# FASE 1 - escritório, rua e biblioteca
+# Pega o azulejo, sai pela recepção e pega a lista telefônica.
+PEGAR AZULEJO
+N
+PEGAR LISTA
+# OLHAR LISTA mostra uma linha por vez, em ciclo de quatro. Só a quarta traz a linha do ônibus (4283).
+OLHAR LISTA
+OLHAR LISTA
+OLHAR LISTA
+OLHAR LISTA
+N
+
+# Rua (sala 3) -> calçadão (4) -> biblioteca (5).
+L
+S
+
+# Conversar com a balconista a tira do balcão (e você fica com o LIVRO e o PAPEL). Sem isso ENTRAR BALCAO é barrado.
+CONVERSAR BALCONISTA
+
+# Entra no balcão, desce ao depósito (sala 7) e pega a lanterna; sobe e volta à rua.
+ENTRAR BALCAO
+DESCER
+PEGAR LANTERNA
+SUBIR
+N
+O
+
+# Ônibus na rua (sala 3). A linha tem de ser a 4283, qualquer outra mata (sala 20). A linha é digitada na linha seguinte.
+PEGAR ONIBUS
+4283
+
+# FASE 2 - viela, praça dos carecas e faculdade
+# Os carecas (sala 9) raspam a cabeça na primeira visita; sem isso o vigia da faculdade (sala 11) não deixa passar.
+N
+
+# Volta à viela, entra na faculdade (sala 11) e pega o envelope no estacionamento (sala 12).
+S
+S
+L
+PEGAR ENVELOPE
+
+# Secretaria (13), ginásio (16), quadra (15): pilhas. A sala de aula (14, a leste da secretaria) é um ataque de alunos, só acontece uma vez.
+O
+S
+L
+S
+L
+PEGAR PILHAS
+
+# CPD (18) e almoxarifado (17): acende a lanterna com as pilhas e desce ao depósito escuro (19), onde está a mala.
+O
+N
+O
+S
+USAR LANTERNA
+B
+
+# A mala tem a passagem de ônibus para a agência de viagens.
+PEGAR MALA
+ABRIR MALA
+
+# Volta à viela (8) e vai à agência (57): a passagem abre a porta automática e o ônibus leva ao bairro (sala 21).
+C
+N
+L
+N
+N
+L
+USAR PASSAGEM
+L
+
+# FASE 3 - bairro
+# Sala 24 (quarto, fim da rua a leste): a carteira tem um cartão (só aparece olhando a carteira depois de pegá-la).
+S
+L
+L
+PEGAR CARTEIRA
+OLHAR CARTEIRA
+
+# Volta à rua central (21) e vai ao prédio do fliperama (oeste): entrada (28), hall (29), pega o bispo; o elevador (30) tem a noz, que ao ser quebrada dá a chave.
+O
+O
+N
+O
+N
+PEGAR BISPO
+N
+PEGAR NOZ
+QUEBRAR NOZ
+
+# Fliperama (27): o velhinho troca o bispo pela marreta.
+S
+S
+L
+S
+O
+LARGAR BISPO
+
+# De novo no prédio: o banheiro feminino (31); a marreta quebra a parede (poço 33), desce à fábrica (34) e ao cofre (35).
+L
+N
+O
+N
+O
+USAR MARRETA
+B
+S
+
+# OLHAR COFRE dá os $5000 (se tiver menos que isso). Esgoto (36), escadaria (38), fliperama, rua central.
+OLHAR COFRE
+B
+O
+C
+L
+N
+
+# FASE 4 - BucanoWare
+# A loja de autopeças (23) cobra os $5000 e leva à frente do prédio (39).
+L
+
+# Recepção (40): LARGAR ENVELOPE leva ao hall (41). Depois disso a recepção é uma armadilha: não adianta voltar.
+N
+LARGAR ENVELOPE
+
+# Elevador oeste (42): USAR ELEVADOR e a linha seguinte é o andar (3 = administração).
+O
+USAR ELEVADOR
+3
+
+# Administração: secretárias (47, 48, 49), corredor (50), lavabo (51: a bala), a sala do Sr. L (53: CD, lixo, agenda).
+L
+S
+S
+S
+L
+PEGAR BALA
+O
+O
+O
+PEGAR CD
+PEGAR LIXO
+PEGAR AGENDA
+
+# Volta ao elevador, ao hall, à recepção e à frente do prédio (39).
+L
+L
+N
+N
+N
+O
+O
+L
+S
+S
+
+# FASE 5 - danceteria
+# O taxista leva ao bairro pior (56) em troca da agenda. Ao norte, o engomadinho só deixa passar com o cartão (58); pista (59); mesa de som (62).
+LARGAR AGENDA
+N
+N
+
+# O CD na pista (59), não na mesa de som, faz o DJ sair; passa pela porta atrás da mesa (65) e chega à cela (66).
+LARGAR CD
+N
+N
+
+# Cela: desrosqueia a lâmpada, embrulha em papel-alumínio da bala e rosqueia de volta: curto-circuito e final (com a chave).
+DESROSQUEAR LAMPADA
+CHUPAR BALA
+PEGAR EMBALAGEM
+USAR EMBALAGEM
+ROSQUEAR LAMPADA

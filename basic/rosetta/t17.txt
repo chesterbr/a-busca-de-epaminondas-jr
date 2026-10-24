@@ -1,0 +1,4 @@
+RUN "x"
+CLEAR : GOTO 100
+--
+100 PRINT "zz"

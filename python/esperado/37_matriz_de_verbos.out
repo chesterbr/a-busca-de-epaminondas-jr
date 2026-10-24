@@ -1,0 +1,668 @@
+Você está no escritório do chefe. Não é a primeira vez que você aparece nesta sala, mas você sente que está ferrado.
+De repente, a porta se abre. Aquele cara grandão, que você conhece apenas e tão somente como “O Chefe” aparece na porta.
+“Então é VOCÊ!!!”, ele diz, enquanto você se despede mentalmente do seu emprego. “Nem tente me enrolar. Onde está o disquete?”
+“Que disquete???”, você responde, surpreso por não saber do que ele está falando.
+“Não venha com essa. EU QUERO ESTE DISQUETE. VÁ PROCURÁ-LO AGORA, IMBECIL!!!”
+“Sim, senhor!”, você responde, enquanto o babaca sai e bate a porta.
+Parece que você está bem encrencado agora. Vê se acha este disquete logo. Afinal de contas, este deve ser o objetivo do jogo...
+Você nota um azulejo solto no chão.
+Um grande cofre de metal jaz na parede.
+[saídas: N]
+
+> NORTE AZULEJO
+NORTE não combina com AZULEJO
+
+> CIMA AZULEJO
+CIMA não combina com AZULEJO
+
+> IR AZULEJO
+Você não pode ir até isso!
+
+> IR COFRE
+Você não pode ir até isso!
+
+> IR GRANA
+Você não pode ir até isso!
+
+> IR FOSFOROS
+Você não pode ir até isso!
+
+> LISTAR AZULEJO
+LISTAR não combina com AZULEJO
+
+> LISTAR COFRE
+LISTAR não combina com COFRE
+
+> LISTAR GRANA
+LISTAR não combina com GRANA
+
+> LISTAR FOSFOROS
+LISTAR não combina com FOSFOROS
+
+> OLHAR AZULEJO
+O azulejo tem um desenho bastante trabalhado. No verso está escrito algo sobre o estilo, o autor e o material utilizado e aquele blá-blá-blá característico do seu professor de literatura...
+
+> OLHAR COFRE
+Cheio de trancas e travas, este cofre somente pode ser aberto por quem tiver a chave. Não perca tempo. VAI PROCURAR, SEU PULHA!!!
+
+> OLHAR GRANA
+Você tem $500
+
+> OLHAR FOSFOROS
+Cada um dos fósforos consiste em uma haste de madeira e uma concentração de material combustível na ponta. Ao utilizá-los, eles devem acender, e, não antes, nem durante, mas depois, eles devem apagar.
+
+> FALAR AZULEJO
+Você deveria se sentir ridículo conversando com isso.
+
+> FALAR COFRE
+Você deveria se sentir ridículo conversando com isso.
+
+> FALAR GRANA
+Aonde você vê isso?
+
+> FALAR FOSFOROS
+Aonde você vê isso?
+
+> LER AZULEJO
+Não posso ler isso
+
+> LER COFRE
+Não posso ler isso
+
+> LER GRANA
+Não posso ler isso
+
+> LER FOSFOROS
+Não posso ler isso
+
+> LIGAR AZULEJO
+Como diabos você vai ligar isso?
+
+> LIGAR COFRE
+Como diabos você vai ligar isso?
+
+> LIGAR GRANA
+Como diabos você vai ligar isso?
+
+> LIGAR FOSFOROS
+Como diabos você vai ligar isso?
+
+> ABRIR AZULEJO
+Não posso abrir isso.
+
+> ABRIR COFRE
+Não posso abrir isso.
+
+> ABRIR GRANA
+Não posso abrir isso.
+
+> ABRIR FOSFOROS
+Não posso abrir isso.
+
+> BEIJAR AZULEJO
+Freud explica...
+
+> BEIJAR COFRE
+Freud explica...
+
+> BEIJAR GRANA
+Freud explica...
+
+> BEIJAR FOSFOROS
+Freud explica...
+
+> CHUPAR AZULEJO
+Você não tem isso!
+
+> CHUPAR COFRE
+Você não tem isso!
+
+> CHUPAR GRANA
+Isso pode ser muito perigoso. Melhor evitar...
+
+> CHUPAR FOSFOROS
+Isso pode ser muito perigoso. Melhor evitar...
+
+> QUEBRAR AZULEJO
+Você não tem isso!
+
+> QUEBRAR COFRE
+Você não tem isso!
+
+> QUEBRAR GRANA
+Você não é homem o suficiente...
+
+> QUEBRAR FOSFOROS
+Você não é homem o suficiente...
+
+> DIZER AZULEJO
+Oh, mas aonde este mundo foi parar, se nobres cavaleiros ficam dizendo “ni” a torto e direito por aí...
+
+> DIZER COFRE
+Oh, mas aonde este mundo foi parar, se nobres cavaleiros ficam dizendo “ni” a torto e direito por aí...
+
+> DIZER GRANA
+Oh, mas aonde este mundo foi parar, se nobres cavaleiros ficam dizendo “ni” a torto e direito por aí...
+
+> DIZER FOSFOROS
+Oh, mas aonde este mundo foi parar, se nobres cavaleiros ficam dizendo “ni” a torto e direito por aí...
+
+> FECHAR AZULEJO
+Não perca tempo fechando ou desligando as coisas neste jogo. É inútil e muito educado para você.
+
+> FECHAR COFRE
+Não perca tempo fechando ou desligando as coisas neste jogo. É inútil e muito educado para você.
+
+> FECHAR GRANA
+Não perca tempo fechando ou desligando as coisas neste jogo. É inútil e muito educado para você.
+
+> FECHAR FOSFOROS
+Não perca tempo fechando ou desligando as coisas neste jogo. É inútil e muito educado para você.
+
+> ROSQUEAR AZULEJO
+Não posso rosquear o que não tenho.
+
+> ROSQUEAR COFRE
+Não posso rosquear o que não tenho.
+
+> ROSQUEAR GRANA
+Cê pirou?
+
+> ROSQUEAR FOSFOROS
+Cê pirou?
+
+> DESROSQUEAR AZULEJO
+Como vou desrosquear esta biromba?
+
+> DESROSQUEAR COFRE
+Como vou desrosquear esta biromba?
+
+> DESROSQUEAR GRANA
+Como vou desrosquear esta biromba?
+
+> DESROSQUEAR FOSFOROS
+Como vou desrosquear esta biromba?
+
+> VOAR AZULEJO
+VOAR não combina com AZULEJO
+
+> VOAR COFRE
+VOAR não combina com COFRE
+
+> VOAR GRANA
+VOAR não combina com GRANA
+
+> VOAR FOSFOROS
+VOAR não combina com FOSFOROS
+
+> MORDER AZULEJO
+Você não é tão animal assim.
+
+> MORDER COFRE
+Você não é tão animal assim.
+
+> MORDER GRANA
+Você não é tão animal assim.
+
+> MORDER FOSFOROS
+Você não é tão animal assim.
+
+> COMER AZULEJO
+Não posso comer o que não tenho.
+
+> COMER COFRE
+Não posso comer o que não tenho.
+
+> COMER GRANA
+Isso não é muito digestivo. Talvez com um sal de frutas vá, mas como você não o tem...
+
+> COMER FOSFOROS
+Isso não é muito digestivo. Talvez com um sal de frutas vá, mas como você não o tem...
+
+> CHEIRAR AZULEJO
+CHEIRAR não combina com AZULEJO
+
+> CHEIRAR COFRE
+CHEIRAR não combina com COFRE
+
+> CHEIRAR GRANA
+CHEIRAR não combina com GRANA
+
+> CHEIRAR FOSFOROS
+CHEIRAR não combina com FOSFOROS
+
+> ATRAVESSAR AZULEJO
+Como vou atravessar isso?
+
+> ATRAVESSAR COFRE
+Como vou atravessar isso?
+
+> ATRAVESSAR GRANA
+Como vou atravessar isso?
+
+> ATRAVESSAR FOSFOROS
+Como vou atravessar isso?
+
+> PULAR AZULEJO
+Você pensa em pular, como um cervo alegre e radiante atravessando campos e plantações, mas deixa de frescura e desiste da idéia
+
+> PULAR COFRE
+Você pensa em pular, como um cervo alegre e radiante atravessando campos e plantações, mas deixa de frescura e desiste da idéia
+
+> PULAR GRANA
+Você pensa em pular, como um cervo alegre e radiante atravessando campos e plantações, mas deixa de frescura e desiste da idéia
+
+> PULAR FOSFOROS
+Você pensa em pular, como um cervo alegre e radiante atravessando campos e plantações, mas deixa de frescura e desiste da idéia
+
+> JOGAR AZULEJO
+Não estou com disposição para isso por enquanto.
+
+> JOGAR COFRE
+Não estou com disposição para isso por enquanto.
+
+> JOGAR GRANA
+Não estou com disposição para isso por enquanto.
+
+> JOGAR FOSFOROS
+Não estou com disposição para isso por enquanto.
+
+> ARREMESSAR AZULEJO
+Não é uma boa idéia...
+
+> ARREMESSAR COFRE
+Não é uma boa idéia...
+
+> ARREMESSAR GRANA
+Não é uma boa idéia...
+
+> ARREMESSAR FOSFOROS
+Não é uma boa idéia...
+
+> SENTAR AZULEJO
+Aqui? Nada feito, chapa.
+
+> SENTAR COFRE
+Aqui? Nada feito, chapa.
+
+> SENTAR GRANA
+Aqui? Nada feito, chapa.
+
+> SENTAR FOSFOROS
+Aqui? Nada feito, chapa.
+
+> APAGAR AZULEJO
+Não entendo quais são seus planos. Tente fazer algo mais coerente...
+
+> APAGAR COFRE
+Não entendo quais são seus planos. Tente fazer algo mais coerente...
+
+> APAGAR GRANA
+Não entendo quais são seus planos. Tente fazer algo mais coerente...
+
+> APAGAR FOSFOROS
+Não entendo quais são seus planos. Tente fazer algo mais coerente...
+
+> PEGAR AZULEJO
+Ok.
+
+> PEGAR COFRE
+Não posso pegar isso.
+
+> PEGAR GRANA
+Não seja estúpido! Você já tem isso!!!
+
+> PEGAR FOSFOROS
+Não seja estúpido! Você já tem isso!!!
+
+> LARGAR AZULEJO
+Ok.
+
+> LARGAR COFRE
+Você não pode largar o que não tem...
+
+> LARGAR GRANA
+Sem essa de Papai Noel. Nada feito.
+
+> LARGAR FOSFOROS
+Pra que? Apesar de você não fumar, eles podem ser úteis para aquecer, iluminar, etc.
+
+> N
+Você está na recepção do escritório. Você vê a rua ao norte, o que lhe causa um enorme desejo de sair desta pocilga.
+Há uma lista telefônica jogada num canto.
+[saídas: N S]
+
+> IR LISTA
+Você não pode ir até isso!
+
+> LISTAR LISTA
+LISTAR não combina com LISTA
+
+> OLHAR LISTA
+Não a tenho.
+
+> FALAR LISTA
+Você deveria se sentir ridículo conversando com isso.
+
+> LER LISTA
+Não posso ler isso
+
+> LIGAR LISTA
+Como diabos você vai ligar isso?
+
+> ABRIR LISTA
+Não posso abrir isso.
+
+> BEIJAR LISTA
+Freud explica...
+
+> CHUPAR LISTA
+Você não tem isso!
+
+> QUEBRAR LISTA
+Você não tem isso!
+
+> DIZER LISTA
+Oh, mas aonde este mundo foi parar, se nobres cavaleiros ficam dizendo “ni” a torto e direito por aí...
+
+> FECHAR LISTA
+Não perca tempo fechando ou desligando as coisas neste jogo. É inútil e muito educado para você.
+
+> ROSQUEAR LISTA
+Não posso rosquear o que não tenho.
+
+> DESROSQUEAR LISTA
+Como vou desrosquear esta biromba?
+
+> VOAR LISTA
+VOAR não combina com LISTA
+
+> MORDER LISTA
+Você não é tão animal assim.
+
+> COMER LISTA
+Não posso comer o que não tenho.
+
+> CHEIRAR LISTA
+CHEIRAR não combina com LISTA
+
+> ATRAVESSAR LISTA
+Como vou atravessar isso?
+
+> PULAR LISTA
+Você pensa em pular, como um cervo alegre e radiante atravessando campos e plantações, mas deixa de frescura e desiste da idéia
+
+> JOGAR LISTA
+Não estou com disposição para isso por enquanto.
+
+> ARREMESSAR LISTA
+Não é uma boa idéia...
+
+> SENTAR LISTA
+Aqui? Nada feito, chapa.
+
+> APAGAR LISTA
+Não entendo quais são seus planos. Tente fazer algo mais coerente...
+
+> PEGAR LISTA
+Ok.
+
+> LARGAR LISTA
+Ok.
+
+> N
+Você está na calçada de uma rua bastante movimentada. É realmente inacreditável o “coeficiente animal” dos motoristas deste bairro.
+Um homem mal-encarado está apoiado num poste.
+[saídas: S L]
+
+> IR HOMEM
+Você não pode ir até isso!
+
+> IR POSTE
+Você não pode ir até isso!
+
+> IR RUA
+Você não pode ir até isso!
+
+> LISTAR HOMEM
+LISTAR não combina com HOMEM
+
+> LISTAR POSTE
+LISTAR não combina com POSTE
+
+> LISTAR RUA
+LISTAR não combina com RUA
+
+> OLHAR HOMEM
+“Qualé, nunca viu, ô palhaço?”, ele diz, enquanto polui a calçada cuspindo algo extremamente nojento para que possa ser descrito neste jogo.
+
+> OLHAR POSTE
+É um ponto de ônibus.
+
+> OLHAR RUA
+Está bastante movimentada, com todos os tipos de veículos imagináveis. Nem pense em atravessá-la.
+
+> FALAR HOMEM
+Talvez isso não vá fazer muito bem à sua saúde. Ele não é o que se chamaria de “tipo amigável”.
+
+> FALAR POSTE
+Você deveria se sentir ridículo conversando com isso.
+
+> FALAR RUA
+Você deveria se sentir ridículo conversando com isso.
+
+> LER HOMEM
+Não posso ler isso
+
+> LER POSTE
+Não posso ler isso
+
+> LER RUA
+Não posso ler isso
+
+> LIGAR HOMEM
+Como diabos você vai ligar isso?
+
+> LIGAR POSTE
+Como diabos você vai ligar isso?
+
+> LIGAR RUA
+Como diabos você vai ligar isso?
+
+> ABRIR HOMEM
+Não posso abrir isso.
+
+> ABRIR POSTE
+Não posso abrir isso.
+
+> ABRIR RUA
+Não posso abrir isso.
+
+> BEIJAR HOMEM
+Freud explica...
+
+> BEIJAR POSTE
+Freud explica...
+
+> BEIJAR RUA
+Freud explica...
+
+> CHUPAR HOMEM
+Você não tem isso!
+
+> CHUPAR POSTE
+Você não tem isso!
+
+> CHUPAR RUA
+Você não tem isso!
+
+> QUEBRAR HOMEM
+Você não tem isso!
+
+> QUEBRAR POSTE
+Você não tem isso!
+
+> QUEBRAR RUA
+Você não tem isso!
+
+> DIZER HOMEM
+Oh, mas aonde este mundo foi parar, se nobres cavaleiros ficam dizendo “ni” a torto e direito por aí...
+
+> DIZER POSTE
+Oh, mas aonde este mundo foi parar, se nobres cavaleiros ficam dizendo “ni” a torto e direito por aí...
+
+> DIZER RUA
+Oh, mas aonde este mundo foi parar, se nobres cavaleiros ficam dizendo “ni” a torto e direito por aí...
+
+> FECHAR HOMEM
+Não perca tempo fechando ou desligando as coisas neste jogo. É inútil e muito educado para você.
+
+> FECHAR POSTE
+Não perca tempo fechando ou desligando as coisas neste jogo. É inútil e muito educado para você.
+
+> FECHAR RUA
+Não perca tempo fechando ou desligando as coisas neste jogo. É inútil e muito educado para você.
+
+> ROSQUEAR HOMEM
+Não posso rosquear o que não tenho.
+
+> ROSQUEAR POSTE
+Não posso rosquear o que não tenho.
+
+> ROSQUEAR RUA
+Não posso rosquear o que não tenho.
+
+> DESROSQUEAR HOMEM
+Como vou desrosquear esta biromba?
+
+> DESROSQUEAR POSTE
+Como vou desrosquear esta biromba?
+
+> DESROSQUEAR RUA
+Como vou desrosquear esta biromba?
+
+> VOAR HOMEM
+VOAR não combina com HOMEM
+
+> VOAR POSTE
+VOAR não combina com POSTE
+
+> VOAR RUA
+VOAR não combina com RUA
+
+> MORDER HOMEM
+Você não é tão animal assim.
+
+> MORDER POSTE
+Você não é tão animal assim.
+
+> MORDER RUA
+Você não é tão animal assim.
+
+> COMER HOMEM
+Não posso comer o que não tenho.
+
+> COMER POSTE
+Não posso comer o que não tenho.
+
+> COMER RUA
+Não posso comer o que não tenho.
+
+> CHEIRAR HOMEM
+CHEIRAR não combina com HOMEM
+
+> CHEIRAR POSTE
+CHEIRAR não combina com POSTE
+
+> CHEIRAR RUA
+CHEIRAR não combina com RUA
+
+> ATRAVESSAR HOMEM
+Como vou atravessar isso?
+
+> ATRAVESSAR POSTE
+Como vou atravessar isso?
+
+> PULAR HOMEM
+Você pensa em pular, como um cervo alegre e radiante atravessando campos e plantações, mas deixa de frescura e desiste da idéia
+
+> PULAR POSTE
+Você pensa em pular, como um cervo alegre e radiante atravessando campos e plantações, mas deixa de frescura e desiste da idéia
+
+> PULAR RUA
+Você pensa em pular, como um cervo alegre e radiante atravessando campos e plantações, mas deixa de frescura e desiste da idéia
+
+> JOGAR HOMEM
+Não estou com disposição para isso por enquanto.
+
+> JOGAR POSTE
+Não estou com disposição para isso por enquanto.
+
+> JOGAR RUA
+Não estou com disposição para isso por enquanto.
+
+> ARREMESSAR HOMEM
+Não é uma boa idéia...
+
+> ARREMESSAR POSTE
+Não é uma boa idéia...
+
+> ARREMESSAR RUA
+Não é uma boa idéia...
+
+> SENTAR HOMEM
+Aqui? Nada feito, chapa.
+
+> SENTAR POSTE
+Aqui? Nada feito, chapa.
+
+> SENTAR RUA
+Aqui? Nada feito, chapa.
+
+> APAGAR HOMEM
+Não entendo quais são seus planos. Tente fazer algo mais coerente...
+
+> APAGAR POSTE
+Não entendo quais são seus planos. Tente fazer algo mais coerente...
+
+> APAGAR RUA
+Não entendo quais são seus planos. Tente fazer algo mais coerente...
+
+> PEGAR HOMEM
+Não posso pegar isso.
+
+> PEGAR POSTE
+Não posso pegar isso.
+
+> PEGAR RUA
+Não posso pegar isso.
+
+> LARGAR HOMEM
+Você não pode largar o que não tem...
+
+> LARGAR POSTE
+Você não pode largar o que não tem...
+
+> LARGAR RUA
+Você não pode largar o que não tem...
+
+> ATRAVESSAR RUA
+Você decide tomar coragem. Após achar a faixa de pedestres e aguardar sua vez no farol, olha para a esquerda. Nada.
+Olhando para a direita, também não vê nada. É seguro. É tranqüilo. Você se prepara e dá o primeiro passo.
+Neste instante, uma JAMANTA 246 avança sobre você. Você sai numa corrida desenfreada, e cai na outra mão. Na outra mão, o ônibus Terminal São Mateus (vulgo “Trovão Azul”) o persegue, deixando-o sem saída.
+Você pula num bueiro, derrubando a placa de “HOMENS TRABALHANDO”. Ufa, que alívio! Você escapou da morte nas mãos de motoristas irresponsáveis.
+Mas, infelizmente, você foi mordido por um rato e morreu de peste bubônica, instantaneamente (?!?!?). É a vida...
+Você falhou em sua missão de recuperar seu emprego. Aliás, você morreu. Mas, como isso é um adventure, este fato é irrelevante. Basta recomeçar ou carregar um jogo gravado.
+Vamos lá! Não se desespere! O Papai Smurf está contando com você! E, afinal de contas, você não quer saber o que raios tem neste disquete? Levante a cabeça...
+
+--- reiniciando o jogo ---
+Você está no escritório do chefe. Não é a primeira vez que você aparece nesta sala, mas você sente que está ferrado.
+De repente, a porta se abre. Aquele cara grandão, que você conhece apenas e tão somente como “O Chefe” aparece na porta.
+“Então é VOCÊ!!!”, ele diz, enquanto você se despede mentalmente do seu emprego. “Nem tente me enrolar. Onde está o disquete?”
+“Que disquete???”, você responde, surpreso por não saber do que ele está falando.
+“Não venha com essa. EU QUERO ESTE DISQUETE. VÁ PROCURÁ-LO AGORA, IMBECIL!!!”
+“Sim, senhor!”, você responde, enquanto o babaca sai e bate a porta.
+Parece que você está bem encrencado agora. Vê se acha este disquete logo. Afinal de contas, este deve ser o objetivo do jogo...
+Você nota um azulejo solto no chão.
+Um grande cofre de metal jaz na parede.
+[saídas: N]

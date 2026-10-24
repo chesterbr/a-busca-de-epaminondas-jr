@@ -1,0 +1,8 @@
+# OLHAR CHAO/TETO/CIMA/BAIXO mostram o texto de exame do objeto em qualquer sala (0xab6b do original).
+OLHAR CHAO
+OLHAR TETO
+OLHAR CIMA
+OLHAR BAIXO
+OLHAR PAREDE
+OLHAR GRANA
+ENTRAR BALCAO

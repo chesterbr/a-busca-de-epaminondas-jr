@@ -1,0 +1,18 @@
+@ echo off
+echo off
+cls
+chester
+cls
+ca1
+cls
+echo A Busca de Epaminondas Jr. V1.5
+echo (c) 1989-1992 por CHESTER (Carlos Duarte)               Stone Age Scanners (tm)
+echo.
+echo Este é um programa de domínio público. A cópia é livre e autorizada.
+echo Também, se não fosse, eu sei que você não está nem ai com isso.
+echo.
+echo Digite LEIAME para obter maiores informações sobre o jogo.
+echo.
+
+
+

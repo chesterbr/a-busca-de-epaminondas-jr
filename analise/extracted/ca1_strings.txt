@@ -1,0 +1,86 @@
+# Printable runs from CA1.EXE image offsets 0x12000-0x16000 (offsets are relative to the image, after the 32-byte MZ header).
+# Decoded as CP850; 0x84 shows as 'ä' where the game means 'ã' (custom accent mapping, to confirm).
+# Adjacent strings are concatenated in the file with no separator, so boundaries need the length bytes/tables.
+
+0x1202d  Ç1=F
+
+0x122ca  lquer 
+
+0x122e6  Digite qualquer tecla para ir ao DOS...Näo esquente com isso. Acontece nas melhores famílias. De qualquer forma, você já tem algo para contar aos seus netinhos. Adiós !!!Digite qualquer tecla para recomeçar...Digite qualquer tecla para reiniciar o jogo...Obs. (Final): Para acessar a documentaçäo, digite LEIAME quando estiver no DOS. E boa sorte...Eu até diria que, para entrar no programa, basta digitar AVENTURA <ENTER>, mas se você está lendo isto, é óbvio que já sabe. Se você quiser pular a abertura e ir direto ao jogo, digite CA1 <ENTER> no nosso querido e iconográfico prompt do DOS.Obs. (4): Se você, como eu, näo gostar da música de abertura, ou tiver um XT barulhento como o meu, basta manter a tecla <ALT> pressionada até que a abertura se inicie.Obs. (3): Qualquer semelhança entre algum diálogo deste jogo e algum filme (Monty Pyton) e/ou desenho animado NÄO é mera coincidência...Obs. (2): O programa é um pouco mal-educado, jogue por sua conta e risco. Näo me processem se sentirem-se ofendidos. Estäo avisados.Obs.: É verdade que faltam neste adventure algumas características interessantes, mas eu queria que ele rodasse bem, mesmo no XT monocromático (ergh !).Ao Fábio (F.M.K.), pelas sugestöes finais, pelo help na música e por tambem testar, e a todos os que também testaram e ajudaram a criar o programa.Aos Stone Age Scanners, pelo incentivo a este e outros programas, bem como pelos beta-testes.Ao Ken Williams, ao Al Lowe e à toda a equipe da Sierra-On-Line, por todos os adventures que já fizeram e vierem a fazer.Agradecimentos:A única coisa que deverá ser observada é que, para dar um objeto a alguém, ex., o dinheiro ao caixa, use DEIXAR DINHEIRO. O caixa 'entenderá' que você quer entregar a ele, e näo larga-lo no chäo.Este programa foi desenvolvido em Turbo Basic, e é bastante propenso a 'dar pau' em certas configuraçöes. Vá por sua própria conta e risco...Digite qualquer tecla para jogarO resto é por sua conta. Procure examinar tudo, e raciocinar as pistas dadas pelo jogo.A janela de Objetos mostra tudo o que você está carregando. Quando ela näo couber mais na tela, digite LISTAR e use as setas 
+
+0x12b43   para 'passear' nela.
+
+0x12b6a   TELA DE AJUDA  6 
+
+0x12b8e   Fim:
+
+0x12ba0  jogo. Reinício:
+
+0x12bb0  Começa
+
+0x12bb7  novamente
+
+0x12bc3  jogo. Notas:
+
+0x12bd3  Observaçöes
+
+0x12bdf  desta
+
+0x12be5  versäo. Ajuda:
+
+0x12bf7  Esta
+
+0x12bfc  tela.
+
+0x12c10   Carregar:
+
+0x12c22  situaçäo
+
+0x12c2e  gravada.Gravar:
+
+0x12c40  Salva
+
+0x12c48  situaçäo
+
+0x12c54  jogo
+
+0x12c5c  disco.
+
+0x12c74   TELA DE AJUDA  5 
+
+0x12cae  ESC novamente retorna à janela de Comando.  Neste aqui, o personagem é Epaminondas. O objetivo, você já deve ter visto (se näo, recomece o jogo).Digite uma tecla p/ outra tela, ou ESC para jogar... ! OPERAÇÄO CANCELADA.ERRO DE DISCO.CA1Digite o nome do arquivo: corrigí-la logo, logo...Estamos num fétido local que sugere um esconderijo. É realmente nauseante o cheiro do local.SACADABARPISTAPORTARIAAGENCIA embora ficar aí marcando bobeira näo seja uma boa...BAIRROGARAGEMLAVABOVocê está numa (outra) salinha de secretária. Ele sobe automaticamente até o térreo. Ele desce automaticamente até o térreo.ESCADARIAESGOTOSFABRICAPOCOEstamos no banheiro feminino.HALLENTRADAFLIPERAMAFIM DA RUACORREDORQUARTO poderosa de países inimagináveis, que pertenceu a pouquíssima gente, com marchas poderosas...' paus.LOJABECOCPDALMOXARIFADOGINASIOQUADRAESTACIONAMENTOFACULDADEPRACAVIELADEPOSITOBIBLIOTECACALCADAOCALCADARECEPCAOESCRITORIOXNäo entendo quais säo seus planos. Tente fazer algo mais coerente...Aqui ? Nada feito, chapa.Näo é uma boa idéia...Näo estou com disposiçäo para isso por enquanto.Você pensa em pular, como um cervo alegre e radiante atravessando campos e plantaçöes, mas deixa de frescura e desiste da idéiaMas, infelizmente, você foi mordido por um rato e morreu de peste bubônica, instantaneamente (?!?!?). É a vida...Você pula num bueiro, derrubando a placa de 'HOMENS TRABALHANDO'. Ufa, que alívio ! Você escapou da morte nas mäos de motoristas irresponsáveis.Neste instante, uma JAMANTA 246 avança sobre você. Você sai numa corrida desenfreada, e cai na outra mäo. Na outra mäo, o ônibus Terminal Säo Mateus (vulgo 'Troväo Azul') o persegue, deixando-o sem saída.Olhando para a direita, também näo vê nada. É seguro. É tranqüilo. Você se prepara e dá o primeiro passo.Você decide tomar coragem. Após achar a faixa de pedestres e aguardar sua vez no farol, olha para a esquerda. Nada.Näo existe nenhuma rua aqui que possa ser atravessada.Como vou atravessar isso ?Näo sinto nada de anormal no cheiro.ECA !O aroma é agradável.Isso näo é muito digestivo. Talvez com um sal de frutas vá, mas como você näo o tem...Já que você insiste... Você a engole. Ela fica engasgada na sua garganta. Você começa a tossir, e ver o mundo ficar verde, rosa, azul, amarelo, branco com bolinhas vermelhas, e, finalmente, negro...Melhor näo. Ela pode lhe ser útil se você näo a comer.Näo posso comer o que näo tenho.Você näo é täo animal assim.Você sai, livre como um pássaro, atravessa vales e montanhas, mas logo acorda e retorna ao jogo.Agora é tarde. Você a destruiu, palerma.Já está desrosqueada e nas suas mäos.Näo está aqui.Como vou desrosquear esta biromba ?Cê pirou ?Näo posso rosquear o que näo tenho.Näo perca tempo fechando ou desligando as coisas neste jogo. É inútil e muito educado para você.Ah, agora que você ligou, deixe assim.Oh, mas aonde este mundo foi parar, se nobres cavaleiros ficam dizendo 'ni' a torto e direito por aí...Engraçado, ninguém responde...Digite 
+
+0x13851   para sair ao DOS ou outra tecla para jogar...É muito forte para você. Tente usar algum instrumento para isso...sDigite 
+
+0x138cc   para reinciar ou outra tecla para continuar...GgCcAaNnRrFfKMHP Fim       Reinício  Notas     Ajuda     Carregar  Gravar   Você näo a tem.4283Está muito escuro. Näo consigo achá-la. Que tal iluminar o local com outra coisa ?Ela já está ligada, toupeira !123Digite o número do andar:Como diabos você vai ligar isso ?O ministério da saúde adverte: Ler no escuro é prejudicial à saúde.SUA ANTA ! Você näo pode ir para baixo !!!SUA ANTA ! Você näo pode ir para cima !!!'Isto o QUE ? Você näo tem nada a oferecer ao Sr. L, logo explique-se ou retire-se, por favor.'Näo consigo ver nada.Há um soquete de lâmpada no teto.Nada ali vai lhe ajudar...Desligue a lanterna antesligada língua. Ele seria de grande ajuda...'Oh, MUITO OBRIGADO ! DEUS LHE PAGUE !', diz ele.Digite qualquer tecla...Seu desastrado ! Você largou a lâmpada e ela se espatifou ! p/ ver objetos ou ENTER p/ continuar... e Digite NADAOk.Näo tem nada aqui.Tem uma agenda aqui.Tem uma agenda aqui dentro.Nem pense em fazer nada aí. Esta pia é nojenta.Tente desrosqueá-la.ZZZZZZAAAP !!! Um choque de 220V escurece o local e a você, que morre carbonizado.Näo posso.SUA ANTA ! Você näo pode ir para o oeste !!!SUA ANTA ! Você näo pode ir para o leste !!!SUA ANTA ! Você näo pode ir para o sul !!!SUA ANTA ! Você näo pode ir para o norte !!! Avisos e Extras  Comando  Direçöes  Objetos  Mensagens     
+
+0x13e18             S     B 
+
+0x13e31   O   L 
+
+0x13e3a      N     C        
+
+0x13e59      
+
+0x13e5f      
+
+0x13e66     näo combina com  ?O que você quer dizer com LUGARDINHEIROLISTA TELEFONICA O QUE ?Näo entendi o verbo Você näo deveria ser täo mal-educado com um jogo como este.Seja mais educado na próxima vez...ERRO INTERNO # 143 ! FALTA DE BONS COSTUMES ! ABORTAR...O2L2CzaDigite um comando, ou 
+
+0x13f86   para menu... 
+
+0x13f95  É melhor sair da portaria, antes que o engomadinho venha lhe encher o saco de novo.desligadaOpa, um guia de 'Itinerário de ônibus'. Interessante é que a frase 'Linha 4283 - Vila Inhangózinho' está sublinhada. Hum...Olhe só, um mapa de ruas. Pena estar todo esburacado. Mas já é mais interessante...Outra coisa quase interessante na lista: 'Como adquirir seu telefone'.Existem muitas informaçöes nesta lista. Uma delas é 'Acesso ao VideoTexto'. Você passa batido.CUZAOFODA-SEFODASE FODERPUTABUCETABOCETACACETEVIADOVEADOBICHAPORRACARALHOCUBOSTAMERDA DO  NA  NO  EM  UMAS  UNS  UMA  UM  AS  OS  ATE  AO  QUE  PRO  PRA  POR  DE  PARA  O  A  COM Como você já deve ter suposto, ele näo funciona. Nem tente levá-lo.GRAVADOREstá firmemente preso à mesa. Uma preciosidade dessas näo pode ser levada täo facilmente.-18COMPUTADOREstá bastante movimentada, com todos os tipos de veículos imagináveis. Nem pense em atravessá-la.RUASäo muitos volumes, mas näo dá para alcançá-los.LIVROSBANHEIROTalvez isso seja um pouco difícil...PERFUMEGeralmente é utilizado para segurar lâmpadas no teto, impedindo que elas caiam.-66SOQUETENIAtrás da mesa de som (e do DJ, obviamente) tem uma porta. Mas näo dá para passar sem que o DJ saia de láA embalagem da bala é de papel-alumínioHá uma embalagem de bala no chäo.EMBALAGEMÉ uma bala comum.51BALAA lâmpada faz parte de uma ligaçäo elétrica bastante ruim.LAMPADAParece ser uma chave de cofre...Tem uma chave aqui.CHAVELevante a cabeça, rapaz !!!CHAOÉ uma noz comum.Tem uma noz aqui.NOZNada ali em cima vai lhe ajudarTETOEle parece curtir o que faz.O DJ vai selecionando as músicas.-62DJÉ um disco laser do Bomb the BassTem um CD aqui no chäo.CDEstäo todas ocupadas, e o pessoal parece näo querer ser incomodado. Nem tente mexer com eles.As mesas estäo espalhadas pelo lugar-60MESASA única funçäo dele é servir bebidas. Ele näo serve para mais nada.O Barman está olhando para você.BARMANNäo há ninguém no balcäo.-61O grupo é organizado, mas nada de incrívelUm grupo de dança está fazendo seu showzinho-59GRUPOVejamos as anotaçöes recentes... A caligrafia é boa, mas näo dá para entender uma palavra. Hmm...AGENDAO que você espera encontrar ?LIXOEle está cheio de lixo.CESTONada que lhe fascine. Apenas coisas corriqueiras da firma, como subornos, transaçöes ilícitas e tudo o que se encontra numa firma assim.Estes documentos aí podem ser importantes.53DOCUMENTOSNäo prima muito pela organizaçäo. As coisas estäo caindo pelos cantos, quando näo väo parar no cesto de lixo, caem no chäo e ali ficam para sempre.A mesa do Sr. L. está cheia de coisinhas.-53-52Olhe, alguém deixou uma bala aqui...Tem uma pia aqui.-51PIAUm desenho bastante incrementado, e uma frase do Laerte: 'Neste local, quem näo vive para servir näo serve para viver.'Há um grande painel na parede.-50PAINELIsso pode ser útil num adventure, especialmente quando você precisar de uma corda...ARAMEAgora você vê o que eles estäo fazendo. É melhor näo incomodá-los. Afinal, quem seria täo cruel a ponto de interromper uma partida de 'Leisure Suit Larry' ?Os computadores estäo todos sendo usados por eles.COMPUTADORESHum... vejamos... imagens digitalizadas... Space Quest III... Digger (amasse este)... Nenhum deles é o nosso disquete. Mas mesmo que fosse, eles foram presos ao chäo com arame farpado, o que os inutilizou.Há uma pilha de disquetes bem presa ao chäo.-55DISQUETESEles parecem muito interessados no que estäo fazendoAlguns programadores estäo com o nariz colado nos monitores.-45PROGRAMADORESNäo parecem ser as pessoas mais amigáveis do mundo, nem as mais trabalhadoras, pois muitos estäo massageando seus órgäos genitais (com pomadinha Hippolgrós, é claro).Alguns analistas de sistemas passam por você.-44ANALISTASÉ uma tabela que diz: 
+
+0x14e31  1ºAndar.........................Analistas 
+
+0x14e5c  2ºAndar............................C.P.D. 
+
+0x14e87  3ºAndar..........................GerênciaEle só conduz aos sub-solos inferiores (1 e 2)-43Näo é o que se possa chamar de 'estado-da-arte' em termos de elevadores, mas você já viu coisa pior. Há uma placa nele.-42Ela é muito bonita, mas precisa de um bom truque para ser dobrada e nos deixar passar.-40RECEPCIONISTAO envelope é daqueles comerciais, que costumam conter documentos importantes. Infelizmente, este está vazio.Tem um envelope marrom no chäo.ENVELOPENäo é o MACH 5, mas depois do carro do vendedor, qualquer eca serve.TAXIO cara näo parece ser daqui.Um taxista está apoiado em seu taxi.-39TAXISTAEstá bem escuro lá embaixo.Um tubo abaixo de você dá acesso a alguma coisa.TUBOEstá vazio.Há um cofre aqui.-35É feita de madeira.PAREDEÉ apenas madeira.-31MADEIRANäo pode destruir uma parede, mas quem sabe algo menos forte...Eis uma marreta no chäo.MARRETAÉ um bispo como outro qualquer.Uma figura imponente se destaca do cenário. É um bispo. Todos os que passam olham para este, com aquele olhar que só os muito crentes têm.BISPO-30ELEVADOREle é, sem dúvida, um bom velhinho.Um velhinho está jogando uma máquina qualquer-27VELHINHOEle diz: 'JADER DANCING POINT - 
+
+0x1531d   Danceteria - Permanente'Há um cartäo aqui.CARTAONada de especial.Uma carteira está largada no chäo.CARTEIRAAKIRAHá uma porta automática ao leste.-57'Destino: Bazárgada'Uma passagem perdida repousa no chäo.PASSAGEMSäo apenas papéis em brancoHá um bolo de papéis aqui.PAPEISDeve haver algo interessante dentro dela.Uma mala lhe chama a atençäo.MALACada um dos fósforos consiste em uma haste de madeira e uma concentraçäo de material combustível na ponta. Ao utilizá-los, eles devem acender, e, näo antes, nem durante, mas depois, eles devem apagar.FOSFOROSEla näo é nada de que se diga 'OH, mas que secretária SUPIMPA', mas näo é de se jogar foraA secretária 'puxa um ronco' sobre sua mesa.SECRETARIANem pense em mexer nela. Você poderia acordar a secretária, e ser preso por invasäo e roubo. Você já tem problemas demais, como, por exemplo, AQUELE disquete (lembra?). PROCURE-O !!!-13MESANada de especial nelaUma borracha está largada no chäo.BORRACHAO homem näo é täo forte para exercer a profissäo de vigia, mas sua autoridade se concentra num 
+
+0x15734  38 que ele tem na cintura.Um vigia está te encarando, rapaz.-11VIGIA-999GRANAVários deles passam por aqui, e PEGAR um ONIBUS seria uma idéia bastante interessante...ONIBUSAREASALAAs pilhas servem bem na lanterna.Algumas pilhas estäo jogadas no chäo.PILHASEla está sem pilhasUma lanterna está no chäo.LANTERNANada de novo que chame a atençäo.Nada a declarar.Nada de especial nela.Há uma escada aqui.-6ESCADAA única coisa notável é que só se pode pegar livros de dentro dele.O balcäo lhe chama a atençäo, pois ocupa metade da biblioteca.BALCAOAli diz: '
+
+0x1595c   442-8093 
+
+0x15967  '.PAPELÉ um exemplar de 'Operaçäo Cavalo de Tróia III'.Um livro atrapalha a passagemLIVROEla é totalmente DEMAIS. Ela nota seu olhar insistente, e responde da mesma forma.Uma linda balconista devora um exemplar da revista 'Capricho' atrás do balcäo.-5BALCONISTAEla está aberta.PORTAEla diz: 'BIBLIOTECA'PLACAA porta está aberta. Há uma placa no topo da mesma-4SALAOLOCALAli diz: 'PONTO DE ôNIBUS'POSTE'Qualé, nunca viu, ô palhaço ?', ele diz, enquanto polui a calçada cuspindo algo extremamente nojento para que possa ser descrito neste jogo.Um homem mal-encarado está apoiado num poste.-3HOMEMCheio de trancas e travas, este cofre somente pode ser aberto por quem tiver a chave. Näo perca tempo. VAI PROCURAR, SEU PULHA !!!Um grande cofre de metal jaz na parede.-1COFREO azulejo tem um desenho bastante trabalhado. No verso está escrito algo sobre o estilo, o autor e o material utilizado e aquele blá-blá-blá característico do seu professor de literatura...Você nota um azulejo solto no chäo.AZULEJOHá uma lista telefônica jogada num canto.LISTAAPAGARDEITAR33SENTARLANCAR32ARREMESSARMASTURBARCAVALGARDORMIRPASSEARBRINCAR31JOGAR30PULAR29ATRAVESSAR28CHEIRAR27COMERLAMBERESPANCARBATERXINGAR26MORDER25VOAR24DESROSQUEAR23ROSQUEARDESLIGAR22FECHAR21DIZERABANDONAR20SAIRDESTRUIRARREBENTARDETONAR19QUEBRAR18CHUPAR17MENUABRACAR16BEIJAR15ABRIRACENDERUSAR14LIGAR13LERDESCERB12BAIXOSUBIRC11CIMACONVERSAR10FALARVERIFICAROBSERVAREXAMINARVER9OLHARSOLTARDEIXAR8LARGAROBJETOSINVENTARIO7LISTARTOMARAPANHARCATAR6PEGARENTRAR5IRO4OESTEL3LESTES2SULN01NORTEAVENTURA.MSG1701841811631821329517717216817315596871221361341191157916015692978870135756484767811459721399855137118129127124125814311110940104105120121693
+

@@ -1,0 +1,124 @@
+# Pega a carteira mas não olha dentro: sem o cartão o engomadinho chuta o jogador de volta à rua. Olha a carteira e passa.
+# Igual ao caminho completo, exceto que a linha 47 (OLHAR CARTEIRA) fica para depois.
+# --- começo igual ao caminho completo (linhas 1 a 105 sem 47) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+S
+CONVERSAR BALCONISTA
+ENTRAR BALCAO
+DESCER
+PEGAR LANTERNA
+SUBIR
+N
+O
+PEGAR ONIBUS
+4283
+N
+S
+S
+L
+PEGAR ENVELOPE
+O
+S
+L
+S
+L
+PEGAR PILHAS
+O
+N
+O
+S
+USAR LANTERNA
+B
+PEGAR MALA
+ABRIR MALA
+C
+N
+L
+N
+N
+L
+USAR PASSAGEM
+L
+S
+L
+L
+PEGAR CARTEIRA
+O
+O
+N
+O
+N
+PEGAR BISPO
+N
+PEGAR NOZ
+QUEBRAR NOZ
+S
+S
+L
+S
+O
+LARGAR BISPO
+L
+N
+O
+N
+O
+USAR MARRETA
+B
+S
+OLHAR COFRE
+B
+O
+C
+L
+N
+L
+N
+LARGAR ENVELOPE
+O
+USAR ELEVADOR
+3
+L
+S
+S
+S
+L
+PEGAR BALA
+O
+O
+O
+PEGAR CD
+PEGAR LIXO
+PEGAR AGENDA
+L
+L
+N
+N
+N
+O
+O
+L
+S
+S
+LARGAR AGENDA
+# --- a partir daqui, a variação ---
+# sem o cartão da danceteria o engomadinho (sala 58) expulsa duas vezes
+N
+N
+# o cartão estava dentro da carteira
+OLHAR CARTEIRA
+
+N
+N
+LARGAR CD
+N
+N
+DESROSQUEAR LAMPADA
+CHUPAR BALA
+PEGAR EMBALAGEM
+USAR EMBALAGEM
+ROSQUEAR LAMPADA

@@ -1,0 +1,7 @@
+X = (A$ = N$ OR A$ = "LUGAR") AND Y = 0
+X = (A$ = "LUGAR" OR A$ = N$) AND Y = 0
+X = (A$ = N$ OR A$ = "LUGAR")
+X = (A$ = "LUGAR" OR A$ = N$)
+X = (A$ = "A" OR A$ = "B")
+X = (Y = M OR Y = 5)
+X = (Y = 5 OR Y = M)

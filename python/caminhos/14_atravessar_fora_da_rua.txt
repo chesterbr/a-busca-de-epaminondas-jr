@@ -1,0 +1,11 @@
+# Atravessar a rua fora das salas 3 e 56 não faz nada.
+# Prefixo: até o calçadão (sala 4).
+# --- começo igual ao caminho completo (linhas 1 a 5) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+# --- a partir daqui, a variação ---
+ATRAVESSAR RUA
+ATRAVESSAR CALCADAO

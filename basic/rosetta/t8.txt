@@ -1,0 +1,3 @@
+A$ = "abc" + "def"
+A$ = "abc" + B$ + "def"
+PRINT "abc" + "def"

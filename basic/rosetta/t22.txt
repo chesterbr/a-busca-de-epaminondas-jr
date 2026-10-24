@@ -1,0 +1,6 @@
+K = 1 : M = 2
+IF K > M THEN PRINT "x"
+IF M < K THEN PRINT "x"
+IF K = M THEN PRINT "x"
+IF K + 1 > M THEN PRINT "x"
+IF M > K + 1 THEN PRINT "x"

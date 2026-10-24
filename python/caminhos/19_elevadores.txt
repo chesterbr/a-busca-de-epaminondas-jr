@@ -1,0 +1,109 @@
+# Elevadores da BucanoWare: andares válidos e inválidos, o elevador que volta sozinho, o dos sub-solos.
+# Prefixo: até o hall (sala 41); oeste é o elevador dos andares, leste o dos sub-solos.
+# --- começo igual ao caminho completo (linhas 1 a 79) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+S
+CONVERSAR BALCONISTA
+ENTRAR BALCAO
+DESCER
+PEGAR LANTERNA
+SUBIR
+N
+O
+PEGAR ONIBUS
+4283
+N
+S
+S
+L
+PEGAR ENVELOPE
+O
+S
+L
+S
+L
+PEGAR PILHAS
+O
+N
+O
+S
+USAR LANTERNA
+B
+PEGAR MALA
+ABRIR MALA
+C
+N
+L
+N
+N
+L
+USAR PASSAGEM
+L
+S
+L
+L
+PEGAR CARTEIRA
+OLHAR CARTEIRA
+O
+O
+N
+O
+N
+PEGAR BISPO
+N
+PEGAR NOZ
+QUEBRAR NOZ
+S
+S
+L
+S
+O
+LARGAR BISPO
+L
+N
+O
+N
+O
+USAR MARRETA
+B
+S
+OLHAR COFRE
+B
+O
+C
+L
+N
+L
+N
+LARGAR ENVELOPE
+# --- a partir daqui, a variação ---
+O
+OLHAR PLACA
+LER PLACA
+USAR ELEVADOR
+9
+USAR ELEVADOR
+1
+OLHAR LOCAL
+O
+USAR ELEVADOR
+2
+OLHAR LOCAL
+O
+L
+L
+OLHAR LOCAL
+USAR ELEVADOR
+1
+OLHAR LOCAL
+L
+USAR ELEVADOR
+2
+OLHAR LOCAL
+L
+USAR ELEVADOR
+7

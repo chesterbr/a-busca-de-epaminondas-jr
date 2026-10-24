@@ -1,0 +1,11 @@
+# ENTRAR/IR PORTA no calçadão (sala 4) funciona como SUL e leva à biblioteca (0x9db8 do original). O mesmo vale
+# para a porta automática da agência (sala 57) depois de aberta (leste) e, fechada, responde "Ela está fechada..."
+# (mensagem 3, não coberto aqui: precisa chegar à sala 57).
+N
+N
+L
+ENTRAR PORTA
+S
+N
+IR PORTA
+OLHAR PORTA

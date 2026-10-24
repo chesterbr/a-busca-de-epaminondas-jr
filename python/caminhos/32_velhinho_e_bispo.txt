@@ -1,0 +1,75 @@
+# O velhinho do fliperama (sala 27) e o bispo: largar o bispo fora do lugar não adianta; só ao velhinho.
+# Prefixo: até a entrada do prédio (sala 28), já com o bispo, a noz e a chave.
+# --- começo igual ao caminho completo (linhas 1 a 58) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+S
+CONVERSAR BALCONISTA
+ENTRAR BALCAO
+DESCER
+PEGAR LANTERNA
+SUBIR
+N
+O
+PEGAR ONIBUS
+4283
+N
+S
+S
+L
+PEGAR ENVELOPE
+O
+S
+L
+S
+L
+PEGAR PILHAS
+O
+N
+O
+S
+USAR LANTERNA
+B
+PEGAR MALA
+ABRIR MALA
+C
+N
+L
+N
+N
+L
+USAR PASSAGEM
+L
+S
+L
+L
+PEGAR CARTEIRA
+OLHAR CARTEIRA
+O
+O
+N
+O
+N
+PEGAR BISPO
+N
+PEGAR NOZ
+QUEBRAR NOZ
+S
+S
+# --- a partir daqui, a variação ---
+# no hall de entrada com o bispo na mão; larga na rua central e pega de volta
+L
+LARGAR BISPO
+PEGAR BISPO
+S
+O
+FALAR VELHINHO
+OLHAR VELHINHO
+BEIJAR VELHINHO
+LARGAR GRANA
+LARGAR CHAVE
+LARGAR NOZ
+LARGAR BISPO

@@ -1,0 +1,10 @@
+N = LEN(A$) + K
+N = K + LEN(A$)
+N = LEN(A$) + K - 1
+N = K + LEN(A$) - 1
+N = K - 1 + LEN(A$)
+N = LEN(A$) * K
+N = K * LEN(A$)
+N = LEN(A$) - K
+N = K - LEN(A$)
+A$ = MID$(B$, LEN(A$) + K - 1)

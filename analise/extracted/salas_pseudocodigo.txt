@@ -1,0 +1,1077 @@
+
+===== sala 1 @ 0d807 =====
+0d80f  SALANOME$ = ?
+0d83b  IF 0 == visitada[SALA] THEN (cont) ELSE goto d8cf
+0d84a  MSGBUF$ = "Digite qualquer tecla..."
+0d858  MSGBUF2$ = MSG[123]="Você está no escritório do chefe. Näo é a primeira vez que você aparec"
+0d85a  CALL 0xcfbc
+0d869  MSGBUF2$ = MSG[124]="De repente, a porta se abre. Aquele cara grandäo, que você conhece ape"
+0d86b  CALL 0xcfbc
+0d86e  CALL 0xcf33
+0d87d  MSGBUF2$ = MSG[125]="'Entäo é VOCE !!!', ele diz, enquanto você se despede mentalmente do s"
+0d87f  CALL 0xcfbc
+0d88e  MSGBUF2$ = MSG[126]="'Que disquete ???', você responde, surpreso por näo saber do que ele e"
+0d890  CALL 0xcfbc
+0d89f  MSGBUF2$ = MSG[127]="'Näo venha com essa. EU QUERO ESTE DISQUETE. VÅ PROCURÅ-LO AGORA, IMBE"
+0d8a1  CALL 0xcfbc
+0d8a4  CALL 0xcf33
+0d8b3  MSGBUF2$ = MSG[128]="'Sim, senhor !', você responde, enquanto o babaca sai e bate a porta."
+0d8b5  CALL 0xcfbc
+0d8c4  MSGBUF2$ = MSG[129]="Parece que você está bem encrencado agora. Vê se acha este disquete lo"
+0d8c6  CALL 0xcfbc
+0d8c9  CALL 0xcf33
+0d8cc  goto 0xd8e0
+0d8db  MSGBUF2$ = MSG[130]="Você está no escritório do chefe."
+0d8dd  CALL 0xcfbc
+0d8e6  saidaN = 2
+0d8f0  saidaS = 0
+0d8fa  saidaL = 0
+0d904  saidaO = 0
+0d90e  saidaC = 0
+0d918  saidaB = 0
+0d91e  RETURN
+
+===== sala 2 @ 0d91f =====
+0d927  SALANOME$ = "
+ÇÅ;ÇÖ;"
+0d935  MSGBUF2$ = MSG[131]="Você está na recepçäo do escritório. Você vê a rua ao norte, o que lhe"
+0d937  CALL 0xcfbc
+0d940  saidaN = 3
+0d94a  saidaS = 1
+0d954  saidaL = 0
+0d95e  saidaO = 0
+0d968  saidaC = 0
+0d972  saidaB = 0
+0d978  RETURN
+
+===== sala 3 @ 0d979 =====
+0d981  SALANOME$ = "Çâ;Çç;"
+0d98f  MSGBUF2$ = MSG[132]="Você está na calçada de uma rua bastante movimentada. E' realmente ina"
+0d991  CALL 0xcfbc
+0d998  saidaN = 0
+0d9a4  saidaS = 2
+0d9b0  saidaL = 4
+0d9ba  saidaO = 0
+0d9c4  saidaC = 0
+0d9ce  saidaB = 0
+0d9d4  RETURN
+
+===== sala 4 @ 0d9d5 =====
+0d9dd  SALANOME$ = "Çx;Çü;"
+0d9eb  MSGBUF2$ = MSG[133]="Você se encontra num calçadäo. Ao sul pode-se ver um saläo bastante bo"
+0d9ed  CALL 0xcfbc
+0d9f4  saidaN = 0
+0da00  saidaS = 5
+0da0a  saidaL = 0
+0da16  saidaO = 3
+0da20  saidaC = 0
+0da2a  saidaB = 0
+0da30  RETURN
+
+===== sala 5 @ 0da31 =====
+0da39  SALANOME$ = ";Çq;Çs;	"
+0da47  MSGBUF2$ = MSG[134]="Estamos na biblioteca. Este é um lugar interessante. As prateleiras do"
+0da49  CALL 0xcfbc
+0da52  saidaN = 4
+0da5c  saidaS = 0
+0da66  saidaL = 0
+0da70  saidaO = 0
+0da7a  saidaC = 0
+0da84  saidaB = 0
+0da8a  RETURN
+
+===== sala 6 @ 0da8b =====
+0da93  SALANOME$ = "BALCAO"
+0daa1  MSGBUF2$ = MSG[135]="O balcäo é apertado, mas deu para entrar (agora que você se arrepende "
+0daa3  CALL 0xcfbc
+0daac  saidaN = 5
+0dab6  saidaS = 0
+0dac0  saidaL = 0
+0daca  saidaO = 0
+0dad4  saidaC = 0
+0dae0  saidaB = 7
+0dae6  RETURN
+
+===== sala 7 @ 0dae7 =====
+0daef  SALANOME$ = ";Çi;Çk"
+0dafd  MSGBUF2$ = MSG[136]="A escada te levou até um depósito. Agora, basta subir que você pode sa"
+0daff  CALL 0xcfbc
+0db06  saidaN = 0
+0db10  saidaS = 0
+0db1a  saidaL = 0
+0db24  saidaO = 0
+0db30  saidaC = 5
+0db3a  saidaB = 0
+0db40  RETURN
+
+===== sala 8 @ 0db41 =====
+0db49  SALANOME$ = "Y;Ça"
+0db57  MSGBUF2$ = MSG[137]="Você está numa viela totalmente deserta."
+0db59  CALL 0xcfbc
+0db62  saidaN = 9
+0db6e  saidaS = 11
+0db7a  saidaL = 57
+0db84  saidaO = 0
+0db8e  saidaC = 0
+0db98  saidaB = 0
+0db9e  RETURN
+
+===== sala 9 @ 0db9f =====
+0dba7  SALANOME$ = "ÇW;Ç"
+0dbc0  IF 0 == visitada[9] THEN (cont) ELSE goto dc9b
+0dbcf  MSGBUF$ = "Digite qualquer tecla..."
+0dbdd  MSGBUF2$ = MSG[138]="Estamos numa praça. Um fato curioso é que ninguém aqui tem um fio de c"
+0dbdf  CALL 0xcfbc
+0dbee  MSGBUF2$ = MSG[139]="De repente, o povo se aglomera à sua volta. Todos começam a gritar."
+0dbf0  CALL 0xcfbc
+0dbf3  CALL 0xcf33
+0dc02  MSGBUF2$ = MSG[140]="'Olá, amigos. Tudo bem com vocês ? Mas que dia lindo está hoje, näo é "
+0dc04  CALL 0xcfbc
+0dc13  MSGBUF2$ = MSG[141]="'Ih, moçada, esse mané é Mauricinho. Olha que frufru' - diz um deles a"
+0dc15  CALL 0xcfbc
+0dc18  CALL 0xcf33
+0dc27  MSGBUF2$ = MSG[142]="'Aí, loque, esse barato é território dos carecas. Que é que cê tá faze"
+0dc29  CALL 0xcfbc
+0dc38  MSGBUF2$ = MSG[143]="'N-N-N-Nada. Só passeando...' - você responde, pensando no seu testame"
+0dc3a  CALL 0xcfbc
+0dc3d  CALL 0xcf33
+0dc4c  MSGBUF2$ = MSG[144]="'Mas, apesar de tudo, gostei de você. Aliás, te achei super-gostosinho"
+0dc4e  CALL 0xcfbc
+0dc5d  MSGBUF2$ = MSG[145]="'YEAH ! YEAH ! YEAH !' - diz a galera. E o cara continua - 'Vamo nessa"
+0dc5f  CALL 0xcfbc
+0dc62  CALL 0xcf33
+0dc71  MSGBUF2$ = MSG[146]="'Ei, o que vocês väo fazer. Espere aí, esse cabelo é meu !!! Meu cabel"
+0dc73  CALL 0xcfbc
+0dc82  MSGBUF2$ = MSG[147]="'Muito bem' - diz o grandäo, quando o serviço termina - 'Agora você ta"
+0dc84  CALL 0xcfbc
+0dc87  CALL 0xcf33
+0dc96  MSGBUF2$ = MSG[148]="Você olha para o chäo e vê aquilo que um dia foi seu cabelo. Mas ainda"
+0dc98  goto 0xdcac
+0dca7  MSGBUF2$ = MSG[149]="Você está na praça dos carecas. Seus últimos momentos aqui näo foram m"
+0dca9  CALL 0xcfbc
+0dcb2  saidaN = 10
+0dcbe  saidaS = 8
+0dcc8  saidaL = 0
+0dcd2  saidaO = 0
+0dcdc  saidaC = 0
+0dce6  saidaB = 0
+0dcec  RETURN
+
+===== sala 10 @ 0dced =====
+0dcf5  MSGBUF$ = "Digite qualquer tecla..."
+0dd03  MSGBUF2$ = MSG[150]="Estamos em outra praça. Mais tipos estranhos aparecem, näo exatamente "
+0dd05  CALL 0xcfbc
+0dd14  MSGBUF2$ = MSG[151]="Muito feliz por ser um deles, você começa a pular e gritar: 'EI, GENTE"
+0dd16  CALL 0xcfbc
+0dd19  CALL 0xcf33
+0dd28  MSGBUF2$ = MSG[152]="A multidäo vem eufórica em sua direçäo, e você delira por estar täo a "
+0dd2a  CALL 0xcfbc
+0dd39  MSGBUF2$ = MSG[153]="'Você é um dos carecas, mesmo ?', e você responde: 'Sim ! E vocês, irm"
+0dd3b  CALL 0xcfbc
+0dd3e  CALL 0xcf33
+0dd4d  MSGBUF2$ = MSG[154]="'SOMOS PUNKS. NóS ODIAMOS OS CARECAS !!!!!!' - grita a multidäo, enqua"
+0dd4f  CALL 0xcfbc
+0dd52  goto 0x10aae
+
+===== sala 11 @ 0dd55 =====
+0dd5d  SALANOME$ = "ÇJ;ÇL;"
+0dd6b  MSGBUF2$ = MSG[155]="Você está na entrada de uma faculdade. Näo é nenhuma Oxford, mas dá pa"
+0dd6d  CALL 0xcfbc
+0dd76  saidaN = 8
+0dd82  saidaS = 13
+0dd8e  saidaL = 12
+0dd98  saidaO = 0
+0dda2  saidaC = 0
+0ddac  saidaB = 0
+0ddb2  RETURN
+
+===== sala 12 @ 0ddb3 =====
+0ddbb  SALANOME$ = "<;Ç>;ÇD;ÇF;"
+0ddc9  MSGBUF2$ = MSG[156]="Você se encontra num estacionamento. Näo há nenhum carro, o que lhe de"
+0ddcb  CALL 0xcfbc
+0ddd2  saidaN = 0
+0dddc  saidaS = 0
+0dde6  saidaL = 0
+0ddf2  saidaO = 11
+0ddfc  saidaC = 0
+0de06  saidaB = 0
+0de0c  RETURN
+
+===== sala 13 @ 0de0d =====
+0de15  SALANOME$ = ""
+0de23  MSGBUF2$ = MSG[157]="Estamos na secretaria da faculdade. É uma salinha bem mixuruca, caindo"
+0de25  CALL 0xcfbc
+0de48  saidaL = 14
+0de4e  goto 0xde5b
+0de55  saidaL = 0
+0de61  saidaN = 11
+0de6d  saidaS = 16
+0de79  saidaO = 18
+0de83  saidaC = 0
+0de8d  saidaB = 0
+0de93  RETURN
+
+===== sala 14 @ 0de94 =====
+0dea0  MSGBUF2$ = MSG[158]="Ei, esta é uma sala de aula. Os alunos e o professor olham para você c"
+0dea2  CALL 0xcfbc
+0deb1  MSGBUF2$ = MSG[159]="De repente, o professor grita: 'ATACAR !!!', e os alunos lançam toda s"
+0deb3  CALL 0xcfbc
+0debe  MSGBUF$ = "Digite qualquer tecla..."
+0dec0  CALL 0xcf33
+0ded1  0x456 = -1
+0dee1  loc[28] = 13
+0deee  SALA = 13
+0def4  goto 0xde0d
+
+===== sala 15 @ 0def7 =====
+0deff  SALANOME$ = "Ç6;Ç"
+0df0d  MSGBUF2$ = MSG[160]="Esta é a quadra de esportes. Nada de anormal aqui."
+0df0f  CALL 0xcfbc
+0df16  saidaN = 0
+0df20  saidaS = 0
+0df2a  saidaL = 0
+0df36  saidaO = 16
+0df40  saidaC = 0
+0df4a  saidaB = 0
+0df50  RETURN
+
+===== sala 16 @ 0df51 =====
+0df59  SALANOME$ = "Ç);Ç1;"
+0df67  MSGBUF2$ = MSG[161]="Você está no ginásio de esportes. O lugar está acabado. Na parede, uma"
+0df69  CALL 0xcfbc
+0df72  saidaN = 13
+0df7c  saidaS = 0
+0df88  saidaL = 15
+0df92  saidaO = 0
+0df9c  saidaC = 0
+0dfa6  saidaB = 0
+0dfac  RETURN
+
+===== sala 17 @ 0dfad =====
+0dfb5  SALANOME$ = "Ç;Ç;Ç#;"
+0dfc3  MSGBUF2$ = MSG[162]="Você está no almoxarifado. O cheiro do local näo é nada agradável, pod"
+0dfc5  CALL 0xcfbc
+0dfce  saidaN = 18
+0dfd8  saidaS = 0
+0dfe2  saidaL = 0
+0dfec  saidaO = 0
+0dff6  saidaC = 0
+0e002  saidaB = 19
+0e008  RETURN
+
+===== sala 18 @ 0e009 =====
+0e011  SALANOME$ = ";"
+0e01f  MSGBUF2$ = MSG[163]="Este é o Centro de Processamento de Dados da faculdade. Examinando mai"
+0e021  CALL 0xcfbc
+0e028  saidaN = 0
+0e034  saidaS = 17
+0e040  saidaL = 13
+0e04a  saidaO = 0
+0e054  saidaC = 0
+0e05e  saidaB = 0
+0e064  RETURN
+
+===== sala 19 @ 0e065 =====
+0e06d  SALANOME$ = ""
+0e073  saidaN = 0
+0e07d  saidaS = 0
+0e087  saidaL = 0
+0e091  saidaO = 0
+0e09d  saidaC = 17
+0e0a7  saidaB = 0
+0e0c3  goto 0xe0ed
+0e0ed  IF (None AND -999 == loc[21]) THEN (cont) ELSE goto e11b
+0e11b  IF ((None AND -999 == loc[21]) AND -999 == loc[22]) THEN (cont) ELSE goto e165
+0e12a  SALANOME$ = ";Çi;Çk"
+0e138  MSGBUF2$ = MSG[164]="Você está num depósito de papel."
+0e13a  CALL 0xcfbc
+0e14c  IF 0 == loc[32] THEN (cont) ELSE goto e164
+0e15d  loc[32] = 19
+0e164  RETURN
+0e171  MSGBUF2$ = MSG[165]="Estamos num lugar escuro, muito escuro. Näo dá nem para enxergar as sa"
+0e173  CALL 0xcfbc
+0e17a  saidaC = 0
+0e180  RETURN
+
+===== sala 20 @ 0e181 =====
+0e18d  MSGBUF2$ = MSG[167]="Meu Deus, que lugar horrível. Näo dá para andar um minuto sem que um m"
+0e18f  CALL 0xcfbc
+0e19e  MSGBUF2$ = MSG[168]="Um corrózinho vem lhe pedir uma grana. Você dá a ele tudo o que suas p"
+0e1a0  CALL 0xcfbc
+0e1a3  goto 0x10aae
+
+===== sala 21 @ 0e1a6 =====
+0e1ae  SALANOME$ = "RUA"
+0e1bc  MSGBUF2$ = MSG[169]="Estamos em (mais) uma ruazinha louca, no sentido de norte a sul, que p"
+0e1be  CALL 0xcfbc
+0e1c7  saidaN = 22
+0e1d3  saidaS = 26
+0e1df  saidaL = 23
+0e1eb  saidaO = 28
+0e1f5  saidaC = 0
+0e1ff  saidaB = 0
+0e205  RETURN
+
+===== sala 22 @ 0e206 =====
+0e20e  SALANOME$ = ";Ç"
+0e21c  MSGBUF2$ = MSG[170]="Estamos num beco sem saída."
+0e21e  CALL 0xcfbc
+0e225  saidaN = 0
+0e231  saidaS = 21
+0e23b  saidaL = 0
+0e245  saidaO = 0
+0e24f  saidaC = 0
+0e259  saidaB = 0
+0e25f  RETURN
+
+===== sala 23 @ 0e260 =====
+0e268  SALANOME$ = "	;Ç"
+0e272  MSGBUF$ = "Digite qualquer tecla..."
+0e29e  IF 0 == visitada[SALA] THEN (cont) ELSE goto e3e7
+0e2c2  visitada[SALA] = 1
+0e2d3  MSGBUF2$ = MSG[171]="Você entra na loja, que parece negociar peças de automóveis. Um vended"
+0e2d5  CALL 0xcfbc
+0e2e4  MSGBUF2$ = MSG[172]="'Em que posso servi-lo ?' - ele pergunta."
+0e2e6  CALL 0xcfbc
+0e2f5  MSGBUF2$ = MSG[173]="'Bem, eu gostaria de saber aonde procurar um disquete roubado...' - vo"
+0e2f7  CALL 0xcfbc
+0e2fa  CALL 0xcf33
+0e309  MSGBUF2$ = MSG[174]="'Oh, mas isso é óBVIO ! Procure o Sr. L !!!"
+0e30b  CALL 0xcfbc
+0e31a  MSGBUF2$ = MSG[175]="'SR. L ? Quem é o tipo ?"
+0e31c  CALL 0xcfbc
+0e32b  MSGBUF2$ = MSG[176]="'Ele está há tempos tentando controlar os negócios da cidade ilegalmen"
+0e32d  CALL 0xcfbc
+0e330  CALL 0xcf33
+0e33f  MSGBUF2$ = MSG[177]="'BELEZA ! Vou atrás do salafrário !!!' - você diz, eufórico."
+0e341  CALL 0xcfbc
+0e350  MSGBUF2$ = MSG[178]="'Calma aí, rapaz' - ele diz - 'Em primeiro lugar, você precisa achá-lo"
+0e352  CALL 0xcfbc
+0e361  MSGBUF2$ = MSG[179]="'Hmm...'"
+0e363  CALL 0xcfbc
+0e366  CALL 0xcf33
+0e375  MSGBUF2$ = MSG[180]="'Mas eu posso levá-lo até a sede das Indústrias L & L Ltda...'"
+0e377  CALL 0xcfbc
+0e386  MSGBUF2$ = MSG[181]="'MESMO ???':GOSUB P"
+0e394  MSGBUF2$ = MSG[182]="'...mediante um módico preço.'"
+0e396  CALL 0xcfbc
+0e3b6  MSGBUF2$ = MSG[183]="'Hmm...' - você diz, abrindo sua carteira e exibindo seus" + "Ç;
+Ç"
+0e3ba  CALL 0xcfbc
+0e3bd  CALL 0xcf33
+0e3cc  IF 5000 > 0x4ea THEN goto e3d3 ELSE goto 0xe427
+0e3df  MSGBUF2$ = MSG[184]="'Ei, isso näo dá nem pro cheiro. Nada feito.' - Ele diz, e lhe aponta "
+0e3e1  CALL 0xcfbc
+0e3e4  goto 0xe4ea
+0e3f3  MSGBUF2$ = MSG[185]="Estamos na loja de autopeças. O vendedor nos aborda."
+0e3f5  CALL 0xcfbc
+0e40c  IF 5000 > 0x4ea THEN (cont) ELSE goto e427
+0e41f  MSGBUF2$ = MSG[186]="'Trouxe a grana ?' - ele diz, ao que você responde negativamente - 'En"
+0e421  CALL 0xcfbc
+0e424  goto 0xe4ea
+0e433  MSGBUF2$ = MSG[187]="'Ah, vejo que sua carteira está recheada' - ele diz, nos tomando a car"
+0e435  CALL 0xcfbc
+0e443  0x4ea = (0x4ea - 5000)
+0e455  MSGBUF2$ = MSG[188]="'Vai me levar agora ?' - você diz, nervoso por perder toda aquela gran"
+0e457  CALL 0xcfbc
+0e466  MSGBUF2$ = MSG[189]="'Claro. Venha comigo'"
+0e468  CALL 0xcfbc
+0e46b  CALL 0xcf33
+0e47a  MSGBUF2$ = MSG[190]="Vocês se dirigem a uma garagem no fundo da loja, enquanto ele lhe ench"
+0e48b  MSGBUF2$ = MSGBUF2$ + "Çk9ÇÆ9Çö9¢ÇÖ9#ÇV:Çy:)ÇÇ:Ç®:Ç«:Ç┤:Ç║:Ç╝:Ç┬:Ç╚:
+Ç╩:	ÇÈ:Ç¦:ÇÕ:ÇÙ:Ç‗:Ç¨:Ç¹:Ç ;Ç;"
+0e48d  CALL 0xcfbc
+0e49c  MSGBUF2$ = MSG[191]="Finalmente ele chega ao falado carro. Ele lhe lembra vagamente o desen"
+0e49e  CALL 0xcfbc
+0e4a1  CALL 0xcf33
+0e4b0  MSGBUF2$ = MSG[192]="O carro vai, sacolejando, enquanto você imagina se, em caso de acident"
+0e4b2  CALL 0xcfbc
+0e4c1  MSGBUF2$ = MSG[193]="'Aqui', ele diz, apontando para o prédio aonde vocês param, 'é o seu l"
+0e4c3  CALL 0xcfbc
+0e4c6  CALL 0xcf33
+0e4d5  MSGBUF2$ = MSG[194]="Você sai do carro, e ele vai embora, cantando os pneus (ou melhor, o e"
+0e4d7  CALL 0xcfbc
+0e4e0  SALA = 39
+0e4e6  CALL 0xcf33
+0e4e9  RETURN
+0e4f0  SALA = 21
+0e502  MSGBUF2$ = MSG[195]="Estamos de volta à rua central."
+0e504  CALL 0xcfbc
+0e50d  saidaN = 22
+0e519  saidaS = 26
+0e525  saidaL = 23
+0e531  saidaO = 28
+0e53b  saidaC = 0
+0e545  saidaB = 0
+0e54b  RETURN
+
+===== sala 24 @ 0e54c =====
+0e554  SALANOME$ = "8éÇÚ8'"
+0e562  MSGBUF2$ = MSG[196]="Estamos num quarto. Na cama, um casal faz o que lhe é direito neste lo"
+0e564  CALL 0xcfbc
+0e56b  saidaN = 0
+0e575  saidaS = 0
+0e57f  saidaL = 0
+0e58b  saidaO = 25
+0e595  saidaC = 0
+0e59f  saidaB = 0
+0e5a5  RETURN
+
+===== sala 25 @ 0e5a6 =====
+0e5ae  SALANOME$ = "8ÇÔ8Çõ"
+0e5bc  MSGBUF2$ = MSG[197]="Você está num corredor estreito dentro do quarto. Näo parece ser uma c"
+0e5be  CALL 0xcfbc
+0e5c5  saidaN = 0
+0e5cf  saidaS = 0
+0e5db  saidaO = 26
+0e5e7  saidaL = 24
+0e5f1  saidaC = 0
+0e5fb  saidaB = 0
+0e601  RETURN
+
+===== sala 26 @ 0e602 =====
+0e60a  SALANOME$ = "Ç#8ìÇ(8-ÇÁ"
+0e618  MSGBUF2$ = MSG[198]="Estamos no fim da rua. Ao leste se vê um desses quartos baratos, e ao "
+0e61a  CALL 0xcfbc
+0e623  saidaN = 21
+0e62d  saidaS = 0
+0e639  saidaL = 25
+0e645  saidaO = 27
+0e64f  saidaC = 0
+0e659  saidaB = 0
+0e65f  RETURN
+
+===== sala 27 @ 0e660 =====
+0e668  SALANOME$ = "Ç8Ç	8"
+0e676  MSGBUF2$ = MSG[199]="Estamos numa casa de fliperama. Uma máquina de Street Fighter 2 olha a"
+0e678  CALL 0xcfbc
+0e67f  saidaN = 0
+0e689  saidaS = 0
+0e695  saidaL = 26
+0e69f  saidaO = 0
+0e6a9  saidaC = 0
+0e6b3  saidaB = 0
+0e6b9  RETURN
+
+===== sala 28 @ 0e6ba =====
+0e6c2  SALANOME$ = "Ç²7Ç 7"
+0e6d0  MSGBUF2$ = MSG[200]="Esta é a entrada do prédio. Um local exalando um cheiro nauseante está"
+0e6d2  CALL 0xcfbc
+0e6db  saidaN = 29
+0e6e5  saidaS = 0
+0e6f1  saidaL = 21
+0e6fd  saidaO = 32
+0e707  saidaC = 0
+0e711  saidaB = 0
+0e717  RETURN
+
+===== sala 29 @ 0e718 =====
+0e720  SALANOME$ = "Ç╦7"
+0e731  IF 0 != visitada[31] THEN (cont) ELSE goto e74c
+0e744  MSGBUF2$ = MSG[201]="A mulherada que havia saído do banheiro avança sobre você, e o lincha "
+0e746  CALL 0xcfbc
+0e749  goto 0x10aae
+0e758  MSGBUF2$ = MSG[202]="Você está no hall do prédio. Näo há onde sentar-se, e mesmo que houves"
+0e75a  CALL 0xcfbc
+0e763  saidaN = 30
+0e76f  saidaS = 28
+0e779  saidaL = 0
+0e785  saidaO = 31
+0e78f  saidaC = 0
+0e799  saidaB = 0
+0e79f  RETURN
+
+===== sala 30 @ 0e7a0 =====
+0e7ac  MSGBUF2$ = MSG[203]="Estamos no elevador."
+0e7ae  CALL 0xcfbc
+0e7b5  saidaN = 0
+0e7c1  saidaS = 29
+0e7cb  saidaL = 0
+0e7d5  saidaO = 0
+0e7df  saidaC = 0
+0e7e9  saidaB = 0
+0e7ef  RETURN
+
+===== sala 31 @ 0e7f0 =====
+0e7f8  SALANOME$ = "BANHEIRO"
+0e811  IF 0 == visitada[31] THEN (cont) ELSE goto e829
+0e824  MSGBUF2$ = MSG[204]="Entramos no banheiro feminino. A mulherada sai gritando com as saias n"
+0e826  goto 0xe833
+0e831  MSGBUF2$ = "NÇB7ÇÉ7
+ÇÆ7Ç£7Ç¼7Ç▒7Çã72"
+0e833  CALL 0xcfbc
+0e83a  saidaN = 0
+0e844  saidaS = 0
+0e850  saidaL = 29
+0e85a  saidaO = 0
+0e864  saidaC = 0
+0e86e  saidaB = 0
+0e874  RETURN
+
+===== sala 32 @ 0e875 =====
+0e87d  SALANOME$ = "BANHEIRO"
+0e88b  MSGBUF2$ = MSG[205]="Este é o banheiro masculino. Nem pense em fazer nada aqui, pois o luga"
+0e88d  CALL 0xcfbc
+0e894  saidaN = 0
+0e89e  saidaS = 0
+0e8aa  saidaL = 28
+0e8b4  saidaO = 0
+0e8be  saidaC = 0
+0e8c8  saidaB = 0
+0e8ce  RETURN
+
+===== sala 33 @ 0e8cf =====
+0e8d7  SALANOME$ = "RÇ­6"
+0e8e5  MSGBUF2$ = MSG[206]="Você está num poço."
+0e8e7  CALL 0xcfbc
+0e8ee  saidaN = 0
+0e8f8  saidaS = 0
+0e902  saidaL = 0
+0e90c  saidaO = 0
+0e916  saidaC = 0
+0e922  saidaB = 34
+0e928  RETURN
+
+===== sala 34 @ 0e929 =====
+0e931  SALANOME$ = "Ç╬6ÇÙ6"
+0e93f  MSGBUF2$ = MSG[207]="Estamos num lugar, que, pelo maquinário, parece ser uma fábrica de beb"
+0e941  CALL 0xcfbc
+0e948  saidaN = 0
+0e954  saidaS = 35
+0e960  saidaL = 37
+0e96a  saidaO = 0
+0e974  saidaC = 0
+0e97e  saidaB = 0
+0e984  RETURN
+
+===== sala 35 @ 0e985 =====
+0e991  MSGBUF2$ = MSG[208]="Estamos numa salinha apertada."
+0e993  CALL 0xcfbc
+0e99c  saidaN = 34
+0e9a6  saidaS = 0
+0e9b0  saidaL = 0
+0e9ba  saidaO = 0
+0e9c4  saidaC = 0
+0e9d0  saidaB = 36
+0e9d6  RETURN
+
+===== sala 36 @ 0e9d7 =====
+0e9df  SALANOME$ = "Ö60Ç×6"
+0e9ed  MSGBUF2$ = MSG[209]="Caímos numa rede de esgotos. Após tatear muito, encontramos uma saída."
+0e9ef  CALL 0xcfbc
+0e9f6  saidaN = 0
+0ea00  saidaS = 0
+0ea0a  saidaL = 0
+0ea16  saidaO = 38
+0ea20  saidaC = 0
+0ea2a  saidaB = 0
+0ea30  RETURN
+
+===== sala 37 @ 0ea31 =====
+0ea3d  MSGBUF2$ = MSG[210]="Abrimos uma portinhola e eis o que aparece: metade do elenco de 'O Pod"
+0ea3f  CALL 0xcfbc
+0ea4e  MSGBUF2$ = MSG[211]="'¿ Como te chamas ?'"
+0ea50  CALL 0xcfbc
+0ea5f  MSGBUF2$ = MSG[212]="'E-E-Epaminondas.'."
+0ea61  CALL 0xcfbc
+0ea70  MSGBUF2$ = MSG[213]="'TE CHAMABAS !!!!' - dizem todos eles, ao fuzilá-lo."
+0ea72  CALL 0xcfbc
+0ea75  goto 0x10aae
+
+===== sala 38 @ 0ea78 =====
+0ea80  SALANOME$ = "Ç{6Çü6Ç"
+0ea8e  MSGBUF2$ = MSG[214]="Ahá ! Uma escadaria."
+0ea90  CALL 0xcfbc
+0ea97  saidaN = 0
+0eaa1  saidaS = 0
+0eaab  saidaL = 0
+0eab5  saidaO = 0
+0eac1  saidaC = 27
+0eacb  saidaB = 0
+0ead1  RETURN
+
+===== sala 39 @ 0ead2 =====
+0eade  MSGBUF2$ = MSG[215]="Estamos na frente da BucanoWare INC. Näo parece haver outro lugar a ir"
+0eae0  CALL 0xcfbc
+0eae9  saidaN = 40
+0eaf3  saidaS = 0
+0eafd  saidaL = 0
+0eb07  saidaO = 0
+0eb11  saidaC = 0
+0eb1b  saidaB = 0
+0eb29  visitada[40] = 0
+0eb30  RETURN
+
+===== sala 40 @ 0eb31 =====
+0eb39  SALANOME$ = "
+ÇÅ;ÇÖ;"
+0eb52  IF 0 == visitada[40] THEN (cont) ELSE goto ebad
+0eb65  MSGBUF2$ = MSG[216]="Você entra na recepçao. A recepcionista sorri e diz:"
+0eb67  CALL 0xcfbc
+0eb76  MSGBUF2$ = MSG[217]="'Bom dia. O que o senhor deseja ?'"
+0eb78  CALL 0xcfbc
+0eb87  MSGBUF2$ = MSG[218]="'Bem, eu, aham, precisava conversar com o Sr. L'"
+0eb89  CALL 0xcfbc
+0eb98  MSGBUF2$ = MSG[219]="'Infelizmente, o Sr. L. hoje está muito ocupado. A näo ser que seja al"
+0eb9a  CALL 0xcfbc
+0eba5  MSGBUF$ = "Digite qualquer tecla..."
+0eba7  CALL 0xcf33
+0ebaa  goto 0xebbe
+0ebb9  MSGBUF2$ = MSG[220]="Estamos na recepçäo."
+0ebbb  CALL 0xcfbc
+0ebc2  saidaN = 0
+0ebce  saidaS = 39
+0ebd8  saidaL = 0
+0ebe2  saidaO = 0
+0ebec  saidaC = 0
+0ebf6  saidaB = 0
+0ebfc  RETURN
+
+===== sala 41 @ 0ebfd =====
+0ec05  SALANOME$ = "Ç╦7"
+0ec13  MSGBUF2$ = MSG[221]="Estamos no hall do edifício. Ao sul está a mesa da secretária, que pro"
+0ec15  CALL 0xcfbc
+0ec1c  saidaN = 0
+0ec28  saidaS = 40
+0ec34  saidaL = 43
+0ec40  saidaO = 42
+0ec4a  saidaC = 0
+0ec54  saidaB = 0
+0ec5a  RETURN
+
+===== sala 42 @ 0ec5b =====
+0ec63  SALANOME$ = "ELEVADOR"
+0ec71  MSGBUF2$ = MSG[222]="Você está num elevador."
+0ec9a  MSGBUF2$ = MSGBUF2$ + "Çv5ÇÉ5!Çÿ5Ç╣5Ç╔5Ç▀5Ç‗5Ç¶5CÇ·5>Ç=6"
+0eca0  0x46a = 0
+0eca6  CALL 0xcfbc
+0ecad  saidaN = 0
+0ecb7  saidaS = 0
+0ecc3  saidaL = 41
+0eccd  saidaO = 0
+0ecd7  saidaC = 0
+0ece1  saidaB = 0
+0ece7  RETURN
+
+===== sala 43 @ 0ece8 =====
+0ecf0  SALANOME$ = "ELEVADOR"
+0ecfe  MSGBUF2$ = MSG[223]="Você está num elevador."
+0ed27  MSGBUF2$ = MSGBUF2$ + "¿4Ç¼4XÇ▒4Ç	5Ç5Ç5!Ç5%Ç85Ç]5Çc5"
+0ed2d  0x46a = 0
+0ed33  CALL 0xcfbc
+0ed3a  saidaN = 0
+0ed44  saidaS = 0
+0ed4e  saidaL = 0
+0ed5a  saidaO = 41
+0ed64  saidaC = 0
+0ed6e  saidaB = 0
+0ed74  RETURN
+
+===== sala 44 @ 0ed75 =====
+0ed7d  SALANOME$ = "Çá;Çó;Ç"
+0ed8b  MSGBUF2$ = MSG[224]="Ao sair do elevador, você chegou num belíssimo escritório com móveis d"
+0ed8d  CALL 0xcfbc
+0ed94  saidaN = 0
+0ed9e  saidaS = 0
+0eda8  saidaL = 0
+0edb4  saidaO = 42
+0edbe  saidaC = 0
+0edc8  saidaB = 0
+0edce  RETURN
+
+===== sala 45 @ 0edcf =====
+0edd7  SALANOME$ = ";"
+0ede5  MSGBUF2$ = MSG[225]="Você está no CPD da firma. Ninguém nota sua chegada."
+0ede7  CALL 0xcfbc
+0edee  saidaN = 0
+0edf8  saidaS = 0
+0ee02  saidaL = 0
+0ee0e  saidaO = 42
+0ee18  saidaC = 0
+0ee22  saidaB = 0
+0ee28  RETURN
+
+===== sala 46 @ 0ee29 =====
+0ee31  SALANOME$ = "
+ÇÅ;ÇÖ;"
+0ee3f  MSGBUF2$ = MSG[226]="Estamos na recepçäo da administraçäo."
+0ee41  CALL 0xcfbc
+0ee48  saidaN = 0
+0ee52  saidaS = 0
+0ee5e  saidaL = 47
+0ee6a  saidaO = 42
+0ee74  saidaC = 0
+0ee7e  saidaB = 0
+0ee84  RETURN
+
+===== sala 47 @ 0ee85 =====
+0ee8d  SALANOME$ = "SALA"
+0ee9b  MSGBUF2$ = MSG[227]="Estamos numa sala que parece pertencer a alguma secretária."
+0ee9d  CALL 0xcfbc
+0eea4  saidaN = 0
+0eeb0  saidaS = 48
+0eeba  saidaL = 0
+0eec6  saidaO = 46
+0eed0  saidaC = 0
+0eeda  saidaB = 0
+0eee0  RETURN
+
+===== sala 48 @ 0eee1 =====
+0eee9  SALANOME$ = "SALA"
+0ef0d  IF 0 == visitada[SALA] THEN (cont) ELSE goto ef25
+0ef20  MSGBUF2$ = MSG[228]="Eis OUTRA sala de secretária."
+0ef22  goto 0xef2f
+0ef2d  MSGBUF2$ = "Ç■2ÂÇ3Ç¥3Ç┴3Ç┼3"Ç┌3Ç³3zÇ4"Ç~4Çá4Çú4Ç"
+0ef2f  CALL 0xcfbc
+0ef38  saidaN = 47
+0ef44  saidaS = 49
+0ef4e  saidaL = 0
+0ef58  saidaO = 0
+0ef62  saidaC = 0
+0ef6c  saidaB = 0
+0ef72  RETURN
+
+===== sala 49 @ 0ef73 =====
+0ef7b  SALANOME$ = "SALA"
+0efa7  IF 0 == visitada[SALA] THEN (cont) ELSE goto efbf
+0efba  MSGBUF2$ = MSG[229]="Eis MAIS UMA sala de secretária (esse Sr. L é bom mesmo). Pena que o a"
+0efbc  goto 0xefcd
+0efcb  MSGBUF2$ = MSG[230]="Estamos numa salinha pertencente a alguma secretária."
+0efcd  CALL 0xcfbc
+0efd6  saidaN = 48
+0efe2  saidaS = 50
+0efec  saidaL = 0
+0eff6  saidaO = 0
+0f000  saidaC = 0
+0f00a  saidaB = 0
+0f010  RETURN
+
+===== sala 50 @ 0f011 =====
+0f019  SALANOME$ = "8ÇÔ8Çõ"
+0f027  MSGBUF2$ = MSG[231]="Estamos num corredor no sentido de leste a oeste."
+0f029  CALL 0xcfbc
+0f032  saidaN = 49
+0f03c  saidaS = 0
+0f048  saidaL = 51
+0f054  saidaO = 52
+0f05e  saidaC = 0
+0f068  saidaB = 0
+0f06e  RETURN
+
+===== sala 51 @ 0f06f =====
+0f077  SALANOME$ = "2,ÇÊ2
+"
+0f085  MSGBUF2$ = MSG[232]="Estamos num pequeno lavabo."
+0f087  CALL 0xcfbc
+0f08e  saidaN = 0
+0f098  saidaS = 0
+0f0a2  saidaL = 0
+0f0ae  saidaO = 50
+0f0b8  saidaC = 0
+0f0c2  saidaB = 0
+0f0c8  RETURN
+
+===== sala 52 @ 0f0c9 =====
+0f0d5  MSGBUF2$ = MSG[233]="Estamos em frente a uma porta. Ela está aberta."
+0f0d7  CALL 0xcfbc
+0f0de  saidaN = 0
+0f0e8  saidaS = 0
+0f0f4  saidaL = 50
+0f100  saidaO = 53
+0f10a  saidaC = 0
+0f114  saidaB = 0
+0f11a  RETURN
+
+===== sala 53 @ 0f11b =====
+0f123  SALANOME$ = "SALA"
+0f131  MSGBUF2$ = MSG[234]="Estamos na sala do Sr. L. O local é bastante incrementado, o que mostr"
+0f133  CALL 0xcfbc
+0f13a  saidaN = 0
+0f144  saidaS = 0
+0f150  saidaL = 52
+0f15a  saidaO = 0
+0f164  saidaC = 0
+0f16e  saidaB = 0
+0f174  RETURN
+
+===== sala 54 @ 0f175 =====
+0f17d  SALANOME$ = "Çp2ZÇx"
+0f18b  MSGBUF2$ = MSG[235]="Estamos na garagem do edifício."
+0f18d  CALL 0xcfbc
+0f194  saidaN = 0
+0f19e  saidaS = 0
+0f1aa  saidaL = 43
+0f1b4  saidaO = 0
+0f1be  saidaC = 0
+0f1c8  saidaB = 0
+0f1ce  RETURN
+
+===== sala 55 @ 0f1cf =====
+0f1d7  SALANOME$ = "Ç;Ç;Ç#;"
+0f1e5  MSGBUF2$ = MSG[236]="Estamos no almoxarifado. Valendo-se de sua inteligência superior, você"
+0f1e7  CALL 0xcfbc
+0f1ee  saidaN = 0
+0f1f8  saidaS = 0
+0f204  saidaL = 43
+0f20e  saidaO = 0
+0f218  saidaC = 0
+0f222  saidaB = 0
+0f228  RETURN
+
+===== sala 56 @ 0f229 =====
+0f231  SALANOME$ = "ñ1╚Ç¿1"
+0f23f  MSGBUF2$ = MSG[237]="Estamos num bairro pior do que todos os outros já vistos. Ao norte tem"
+0f250  MSGBUF2$ = MSGBUF2$ + "ÇÅ0Ç▒0Ç╣0!Ç¥0Ç▀0ÇÔ0%Ç÷0Ç1Ç#1Ç>1ÇX1)Ç^1Çç1Ç"
+0f252  CALL 0xcfbc
+0f25b  saidaN = 58
+0f265  saidaS = 0
+0f271  saidaL = 20
+0f27d  saidaO = 20
+0f287  saidaC = 0
+0f291  saidaB = 0
+0f297  RETURN
+
+===== sala 57 @ 0f298 =====
+0f2a0  SALANOME$ = "x0Ç~0""
+0f2ae  MSGBUF2$ = MSG[238]="Estamos numa agência de viagens. Todos os guichês estäo fechados, e nä"
+0f2b0  CALL 0xcfbc
+0f2b7  saidaN = 0
+0f2c1  saidaS = 0
+0f2cb  saidaL = 0
+0f2d7  saidaO = 8
+0f2e1  saidaC = 0
+0f2eb  saidaB = 0
+0f30f  saidaL = 67
+0f315  RETURN
+
+===== sala 58 @ 0f316 =====
+0f31e  SALANOME$ = "*0Çf0Ç"
+0f337  IF 0 != visitada[59] THEN (cont) ELSE goto f352
+0f34a  MSGBUF2$ = MSG[239]="'Boa noite, cavalheiro', lhe diz o engomadinho, enquanto você passa pe"
+0f34c  CALL 0xcfbc
+0f34f  goto 0xf435
+0f35e  MSGBUF2$ = MSG[240]="Entramos numa passagem. Um indivíduo engravatadinho e engomadinho, pro"
+0f360  CALL 0xcfbc
+0f36f  MSGBUF2$ = MSG[241]="'Você é sócio ?'"
+0f371  CALL 0xcfbc
+0f37c  MSGBUF$ = "Digite qualquer tecla..."
+0f37e  CALL 0xcf33
+0f3a2  IF -999 != loc[38] THEN (cont) ELSE goto f413
+0f3b5  MSGBUF2$ = MSG[242]="'Näo, mas...'"
+0f3b7  CALL 0xcfbc
+0f3c6  MSGBUF2$ = MSG[243]="'Entäo terá que comprar o convite.'"
+0f3c8  CALL 0xcfbc
+0f3d7  MSGBUF2$ = MSG[244]="Você mostra a ele seus $5, e ele dá uma risadinha. 'Ah, claro' - ele d"
+0f3d9  CALL 0xcfbc
+0f3e8  MSGBUF2$ = MSG[245]="'Sim, claro' - você diz, virando-se para a janela ao sul - 'Por quê ?'"
+0f3ea  CALL 0xcfbc
+0f3ed  CALL 0xcf33
+0f3fc  MSGBUF2$ = MSG[246]="'VAI NESSA, PALHAÇO !!!' - diz ele, chutando o seu traseiro e te coloc"
+0f3fe  CALL 0xcfbc
+0f407  SALA = 56
+0f40d  goto 0xf229
+0f410  goto 0xf435
+0f41f  MSGBUF2$ = MSG[247]="Você pega o cartäo 'emprestado' do cara do quarto e mostra ao rapaz."
+0f421  CALL 0xcfbc
+0f430  MSGBUF2$ = MSG[248]="'Ah, claro. Desculpe näo tê-lo reconhecido antes, Sr. Elbestáquio Josi"
+0f432  CALL 0xcfbc
+0f43b  saidaN = 59
+0f447  saidaS = 56
+0f451  saidaL = 0
+0f45b  saidaO = 0
+0f465  saidaC = 0
+0f46f  saidaB = 0
+0f475  RETURN
+
+===== sala 59 @ 0f476 =====
+0f47e  SALANOME$ = "Ç"0<Ç"
+0f48c  MSGBUF2$ = MSG[249]="Você está na pista de dança."
+0f48e  CALL 0xcfbc
+0f497  saidaN = 62
+0f4a3  saidaS = 58
+0f4af  saidaL = 61
+0f4bb  saidaO = 60
+0f4c5  saidaC = 0
+0f4cf  saidaB = 0
+0f4d5  RETURN
+
+===== sala 60 @ 0f4d6 =====
+0f4de  SALANOME$ = "AREA"
+0f4ec  MSGBUF2$ = MSG[250]="Você está no que se pode chamar de 'área privada' da danceteria."
+0f4ee  CALL 0xcfbc
+0f4f5  saidaN = 0
+0f4ff  saidaS = 0
+0f50b  saidaL = 59
+0f515  saidaO = 0
+0f51f  saidaC = 0
+0f529  saidaB = 0
+0f52f  RETURN
+
+===== sala 61 @ 0f530 =====
+0f538  SALANOME$ = "0"
+0f546  MSGBUF2$ = MSG[251]="Você está no bar."
+0f548  CALL 0xcfbc
+0f54f  saidaN = 0
+0f559  saidaS = 0
+0f563  saidaL = 0
+0f56f  saidaO = 59
+0f579  saidaC = 0
+0f583  saidaB = 0
+0f589  RETURN
+
+===== sala 62 @ 0f58a =====
+0f592  SALANOME$ = "MESA"
+0f5a0  MSGBUF2$ = MSG[252]="Você está em frente à mesa de som, perto do acesso que dá na sacada."
+0f5a2  CALL 0xcfbc
+0f5a9  saidaN = 0
+0f5b5  saidaS = 59
+0f5bf  saidaL = 0
+0f5c9  saidaO = 0
+0f5d5  saidaC = 63
+0f5df  saidaB = 0
+0f5f4  IF 0 == loc[72] THEN (cont) ELSE goto f607
+0f601  saidaN = 65
+0f607  RETURN
+
+===== sala 63 @ 0f608 =====
+0f610  SALANOME$ = "-Ç‗/Ç"
+0f61e  MSGBUF2$ = MSG[253]="Esta é a sacada. Daqui dá para ver todo o movimento do local."
+0f620  CALL 0xcfbc
+0f629  saidaN = 64
+0f633  saidaS = 0
+0f63d  saidaL = 0
+0f647  saidaO = 0
+0f651  saidaC = 0
+0f65d  saidaB = 62
+0f663  RETURN
+
+===== sala 64 @ 0f664 =====
+0f66c  SALANOME$ = "BANHEIRO"
+0f67a  MSGBUF2$ = MSG[254]="Estamos no banheiro masculino (poderíamos ter entrado no feminino, mas"
+0f67c  CALL 0xcfbc
+0f683  saidaN = 0
+0f68f  saidaS = 63
+0f699  saidaL = 0
+0f6a3  saidaO = 0
+0f6ad  saidaC = 0
+0f6b7  saidaB = 0
+0f6bd  RETURN
+
+===== sala 65 @ 0f6be =====
+0f6ca  MSGBUF2$ = MSG[255]="Ao dar a volta pela mesa de som, você entrou neste lugar sombrio. Chei"
+0f6cc  CALL 0xcfbc
+0f6db  MSGBUF2$ = MSG[256]="Um silêncio sepulcral assola o local, até que uma voz se faz ouvir ao "
+0f6dd  CALL 0xcfbc
+0f6e8  MSGBUF$ = "Digite qualquer tecla..."
+0f6ea  CALL 0xcf33
+0f6f9  MSGBUF2$ = MSG[257]="'Ei, Mike, que história é essa de abrir a passagem com a danceteria ab"
+0f6fb  CALL 0xcfbc
+0f70a  MSGBUF2$ = MSG[258]="Você se vira para a saída, mas eis que de repente a passagem se fecha."
+0f70c  CALL 0xcfbc
+0f70f  CALL 0xcf33
+0f71e  MSGBUF2$ = MSG[259]="'Ahá ! Vejo que temos um espiäo aqui ! NÄO SE MOVA, MALDITO !!!"
+0f720  CALL 0xcfbc
+0f72f  MSGBUF2$ = MSG[260]="Mas você näo vai se entregar sem luta ! Agora você se lembra de todos "
+0f731  CALL 0xcfbc
+0f734  CALL 0xcf33
+0f743  MSGBUF2$ = MSG[261]="...você escorrega numa casca de banana (isso mesmo, numa casca de bana"
+0f745  CALL 0xcfbc
+0f74e  SALA = 66
+0f754  goto 0xf757
+
+===== sala 66 @ 0f757 =====
+0f763  MSGBUF2$ = MSG[262]=""
+0f774  IF 0 == visitada[66] THEN (cont) ELSE goto f789
+0f787  MSGBUF2$ = MSG[263]="Você recupera lentamente a consciência. "
+0f798  MSGBUF2$ = MSGBUF2$ + "$ÇÞ-Ç.Ç.Ç.0Ç1.Ça.Çe.Çp.Çü.Çä.Çù.ÇØ.Ç«.Ç▒.?Ç©.Ç¸.Ç/Ç/èÇ5/Ç┐/Ç─/ÇÃ/#Ç¤/"
+0f79a  CALL 0xcfbc
+0f7b4  IF 0 == visitada[66] THEN (cont) ELSE goto f8aa
+0f7bb  CALL 0xcf33
+0f7ca  MSGBUF2$ = MSG[264]="A porta se abre, rangendo. Uma figura, que você vê vagamente, vai se a"
+0f7cc  CALL 0xcfbc
+0f7db  MSGBUF2$ = MSG[265]="'Eu já vi idiotas de todo tipo, Epaminondas, mas você me surpreende.'"
+0f7dd  CALL 0xcfbc
+0f7e0  CALL 0xcf33
+0f7ef  MSGBUF2$ = MSG[266]="'Como você sabe o meu...' - você diz, mas imagina que ele deve ter vis"
+0f7f1  CALL 0xcfbc
+0f800  MSGBUF2$ = MSG[267]="Você pensa em atacar, mas o instrumento metálico nas maös do seu antag"
+0f802  CALL 0xcfbc
+0f805  CALL 0xcf33
+0f814  MSGBUF2$ = MSG[268]="'Achei que você se mataria na cidade para encontrar o disquete. Mas vo"
+0f816  CALL 0xcfbc
+0f825  MSGBUF2$ = MSG[269]="'Ei, cara, que tal fazermos um trato ? Eu nem quero saber deste disque"
+0f827  CALL 0xcfbc
+0f82a  CALL 0xcf33
+0f839  MSGBUF2$ = MSG[270]="'CHEGA ! Näo há motivos para mais mistérios !' - diz ele, acendendo a "
+0f83b  CALL 0xcfbc
+0f84a  MSGBUF2$ = MSG[271]="'Chefinho, entäo você trabalha para o Sr. L ????"
+0f84c  CALL 0xcfbc
+0f85b  MSGBUF2$ = MSG[272]="'NÄO, SEU IDIOTA !!! Eu SOU o Sr. L. ! HAHAHAHAHAAAA !!!'"
+0f85d  CALL 0xcfbc
+0f860  CALL 0xcf33
+0f86f  MSGBUF2$ = MSG[273]="'Mas... por quê roubar seu próprio disquete ? E o que EU tenho a ver c"
+0f871  CALL 0xcfbc
+0f880  MSGBUF2$ = MSG[274]="'Você ia descobrir, mais cedo ou mais tarde. Ia mexer nas minhas coisa"
+0f891  MSGBUF2$ = MSGBUF2$ + ",lÇ±,Ç]-Ç|-DÇä-Ç╚-Ç╠-"
+0f893  CALL 0xcfbc
+0f896  CALL 0xcf33
+0f8a5  MSGBUF2$ = MSG[275]="Ele sai da sala, gargalhando, mas näo fecha a porta. Em vez disso, enc"
+0f8a7  CALL 0xcfbc
+0f8ae  saidaN = 0
+0f8b8  saidaS = 0
+0f8c2  saidaL = 0
+0f8cc  saidaO = 0
+0f8d6  saidaC = 0
+0f8e0  saidaB = 0
+0f8e6  RETURN
+
+===== sala 67 @ 0f8e7 =====
+0f8ef  MSGBUF$ = "Digite qualquer tecla..."
+0f8fd  MSGBUF2$ = MSG[276]="Você atravessa a porta e entra numa garagem, aonde um ônibus de viagem"
+0f8ff  CALL 0xcfbc
+0f90e  MSGBUF2$ = MSG[277]="O motorista cita algumas passagens da vida da sua mäe, por você estar "
+0f910  CALL 0xcfbc
+0f913  CALL 0xcf33
+0f922  MSGBUF2$ = MSG[278]="O ônibus segue viagem, e só agora você se pergunta aonde está indo, e "
+0f924  CALL 0xcfbc
+0f933  MSGBUF2$ = MSG[279]="Eis o final. Você desce, e volta para o jogo, perdido como sempre"
+0f935  CALL 0xcfbc
+0f938  CALL 0xcf33
+0f941  SALA = 21
+0f947  goto 0xe1a6
+0f952  (runtime 0xc9)
+0f959  (runtime 0xb8)
+0f95b  (runtime 0xb2)
+0f965  str@552 = str@570
+0f96f  str@522 = str@570
+0f987  goto 0xfb83
+0f992  (runtime 0xc9)
+0f9a3  (runtime 0xb8)
+0f9b4  (runtime 0xb8)
+0f9c5  (runtime 0xb8)
+0f9e2  (runtime 0xc9)
+0f9ec  str@552 = str@570
+0fa04  goto 0xfa11
+0fa0d  str@552 = str@522
+0fa0f  goto 0xf9ee
+0fa27  goto 0xfa40
+0fa42  goto 0xfa5a
+0fa58  str@552 = str@552
+0fad4  goto 0xfaf6
+0fae9  RETURN
+0faf8  goto 0xfb0c
+0fb0a  str@522 = str@522 + str@552
+0fb22  goto 0xfb3b
+0fb3d  goto 0xfb5b
+0fb53  RETURN
+0fb59  str@522 = str@522
+0fb69  goto 0xfb80
+0fb74  str@552 = str@552
+0fb7e  str@522 = str@570
+0fb80  goto 0xf971
+0fb8b  (runtime 0xc9)
+0fb93  (runtime 0xb8)
+0fba3  goto 0xfba7
+0fba6  RETURN
+0fbda  CALL 0xd56d
+0fbe4  i = 1

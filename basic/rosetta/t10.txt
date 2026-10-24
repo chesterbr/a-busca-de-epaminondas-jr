@@ -1,0 +1,7 @@
+IF ASC(A$) >= ASC("0") THEN PRINT "x"
+IF ASC(A$) >= 48 THEN PRINT "x"
+N = ASC("0")
+WHILE 1
+WEND
+WHILE 1 = 1
+WEND

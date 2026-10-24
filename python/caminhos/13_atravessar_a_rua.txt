@@ -1,0 +1,10 @@
+# Atravessar a rua na calçada (sala 3) mata.
+# Prefixo: até a calçada (sala 3).
+# --- começo igual ao caminho completo (linhas 1 a 4) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+# --- a partir daqui, a variação ---
+ATRAVESSAR PORTA
+ATRAVESSAR RUA

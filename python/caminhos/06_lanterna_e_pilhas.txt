@@ -1,0 +1,48 @@
+# Lanterna sem pilhas, pilhas fora do almoxarifado, lanterna ligada que não desliga nem se larga.
+# Prefixo: até pegar a lanterna e chegar ao ginásio (sala 15, onde estão as pilhas).
+# --- começo igual ao caminho completo (linhas 1 a 25) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+S
+CONVERSAR BALCONISTA
+ENTRAR BALCAO
+DESCER
+PEGAR LANTERNA
+SUBIR
+N
+O
+PEGAR ONIBUS
+4283
+N
+S
+S
+L
+PEGAR ENVELOPE
+O
+S
+L
+S
+L
+# --- a partir daqui, a variação ---
+# lanterna na mão, mas ainda sem pilhas
+USAR LANTERNA
+PEGAR PILHAS
+# pilhas na mão, mas aqui não é o lugar de acender (só no almoxarifado, sala 17)
+USAR LANTERNA
+O
+N
+O
+S
+# sala 17: acende
+USAR LANTERNA
+OLHAR LANTERNA
+# depois de ligada não há como desligar nem largar
+DESLIGAR LANTERNA
+LARGAR LANTERNA
+LARGAR PILHAS
+USAR LANTERNA
+B
+USAR LANTERNA

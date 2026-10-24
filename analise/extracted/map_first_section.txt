@@ -1,0 +1,9 @@
+# First section of the game map, as recalled by the author (Chester) while playing.
+# MSG line = line number in aventura_msg_numbered.txt of the room's description (my matching, to verify).
+130 escritorio do chefe : N -> recepcao
+131 recepcao           : S -> escritorio do chefe, N -> rua
+132 rua                : S -> recepcao, L -> calcadao
+133 calcadao           : O -> rua, S -> biblioteca
+134 biblioteca         : N -> rua, (ENTRAR BALCAO -> balcao; special case, maybe B in the data)
+135 balcao             : N -> biblioteca, B -> deposito
+136 deposito           : C -> biblioteca (author unsure; MSG 136 says going up leads out of the balcao)

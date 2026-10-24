@@ -1,0 +1,4876 @@
+
+===== verbo  1 @ 09bc9 NORTE/N =====
+09bca fldz
+09bcd fcomp saidaN
+09bd1 int    0x93
+09bd3 int    0x81
+09bd5 je     0x9bda
+09bd7 jmp    0x9beb
+09bda si=0x7f0
+09bdd int    0x96
+09bdf si=0x53a (MSGBUF$)
+09be2 int    0x9a
+09be4 call   0xcf33
+09be7 call   0xd35a
+09bea ret
+09bec fld saidaN
+09bf1 fstp SALA
+09bf5 int    0x81
+09bf7 ret
+
+
+===== verbo  2 @ 09bf8 SUL/S =====
+09bf9 LOAD_INT 11
+09bfe fcomp SALA
+09c02 int    0x93
+09c04 mov    ax, 0xffff
+09c07 je     0x9c0a
+09c09 inc    ax
+09c0a or     ax, ax
+09c0c int    0x81
+09c0e jne    0x9c13
+09c10 jmp    0x9c2c
+09c14 fldz
+09c16 ES=arr3de
+09c1b fcomp arr3de[9]
+09c20 int    0x93
+09c22 mov    bx, ax
+09c24 mov    ax, 0xffff
+09c27 je     0x9c2a
+09c29 inc    ax
+09c2a and    ax, bx
+09c2c int    0x81
+09c2e jne    0x9c33
+09c30 jmp    0x9c45
+09c33 ES=MSG
+09c37 si=4 [0:O vigia barra seu caminho. 'Esta passagem é apenas]
+09c3a int    0x97
+09c3c si=0x556 (MSGBUF2$)
+09c3f int    0x9a
+09c41 call   0xcfbc
+09c44 ret
+09c46 LOAD_INT 11
+09c4b fcomp SALA
+09c4f int    0x93
+09c51 int    0x81
+09c53 je     0x9c58
+09c55 jmp    0x9c69
+09c58 ES=MSG
+09c5c si=8 [1:O vigia olha para você com desprezo e diz 'Pode pa]
+09c5f int    0x97
+09c61 si=0x556 (MSGBUF2$)
+09c64 int    0x9a
+09c66 call   0xcfbc
+09c6a fldz
+09c6d fcomp saidaS
+09c71 int    0x93
+09c73 int    0x81
+09c75 je     0x9c7a
+09c77 jmp    0x9c8b
+09c7a si=0x7ec [506:?]
+09c7d int    0x96
+09c7f si=0x53a (MSGBUF$)
+09c82 int    0x9a
+09c84 call   0xcf33
+09c87 call   0xd35a
+09c8a ret
+09c8c fld saidaS
+09c91 fstp SALA
+09c95 int    0x81
+09c97 ret
+
+
+===== verbo  3 @ 09c98 LESTE/L =====
+09c99 fldz
+09c9c fcomp saidaL
+09ca0 int    0x93
+09ca2 int    0x81
+09ca4 je     0x9ca9
+09ca6 jmp    0x9cba
+09ca9 si=0x7e8
+09cac int    0x96
+09cae si=0x53a (MSGBUF$)
+09cb1 int    0x9a
+09cb3 call   0xcf33
+09cb6 call   0xd35a
+09cb9 ret
+09cbb fld saidaL
+09cc0 fstp SALA
+09cc4 int    0x81
+09cc6 ret
+
+
+===== verbo  4 @ 09cc7 OESTE/O =====
+09cc8 fldz
+09ccb fcomp saidaO
+09ccf int    0x93
+09cd1 int    0x81
+09cd3 je     0x9cd8
+09cd5 jmp    0x9ce9
+09cd8 si=0x7e4
+09cdb int    0x96
+09cdd si=0x53a (MSGBUF$)
+09ce0 int    0x9a
+09ce2 call   0xcf33
+09ce5 call   0xd35a
+09ce8 ret
+09cea fld saidaO
+09cef fstp SALA
+09cf3 int    0x81
+09cf5 ret
+
+
+===== verbo  5 @ 09cf6 IR/ENTRAR =====
+09cf7 fld OBJ
+09cfc fistp  word ptr [0x2c]
+09d02 mov    ax, word ptr [0x2c]
+09d05 int    0xec
+09d07 jb     0x9d0d
+09d09 add    byte ptr [bx + di], cl
+09d0b sbb    word ptr [bx + si], ax
+09d0d add    byte ptr [bx + si], bh
+09d0f sbb    word ptr [bx + si], ax
+09d11 add    al, bl
+09d13 sbb    word ptr [bx + si], ax
+09d15 add    byte ptr [bx], al
+09d17 sbb    al, byte ptr [bx + si]
+09d19 add    ch, cl
+09d1b adc    word ptr [bx + si + 0x6df], 0x11c8
+09d22 fcomp OBJ
+09d26 int    0x93
+09d28 mov    ax, 0xffff
+09d2b je     0x9d2e
+09d2d inc    ax
+09d2e or     ax, ax
+09d30 int    0x81
+09d32 jne    0x9d37
+09d34 jmp    0x9d4d
+09d38 LOAD_INT 4
+09d3d fcomp SALA
+09d41 int    0x93
+09d43 mov    bx, ax
+09d45 mov    ax, 0xffff
+09d48 je     0x9d4b
+09d4a inc    ax
+09d4b and    ax, bx
+09d4d int    0x81
+09d4f jne    0x9d54
+09d51 jmp    0x9d61
+09d55 LOAD_INT 5
+09d5a fstp SALA
+09d5e int    0x81
+09d60 ret
+09d62 LOAD_INT 19
+09d67 fcomp OBJ
+09d6b int    0x93
+09d6d int    0x81
+09d6f jne    0x9d74
+09d71 jmp    0xb715
+09d75 LOAD_INT 20
+09d7a fcomp OBJ
+09d7e int    0x93
+09d80 int    0x81
+09d82 jne    0x9d87
+09d84 jmp    0xb744
+09d88 LOAD_INT 13
+09d8d fcomp OBJ
+09d91 int    0x93
+09d93 mov    ax, 0xffff
+09d96 je     0x9d99
+09d98 inc    ax
+09d99 or     ax, ax
+09d9b int    0x81
+09d9d jne    0x9da2
+09d9f jmp    0x9db8
+09da3 LOAD_INT 4
+09da8 fcomp SALA
+09dac int    0x93
+09dae mov    bx, ax
+09db0 mov    ax, 0xffff
+09db3 je     0x9db6
+09db5 inc    ax
+09db6 and    ax, bx
+09db8 int    0x81
+09dba je     0x9dbf
+09dbc jmp    0x9bf8
+09dc0 LOAD_INT 46
+09dc5 fcomp OBJ
+09dc9 int    0x93
+09dcb mov    ax, 0xffff
+09dce je     0x9dd1
+09dd0 inc    ax
+09dd1 or     ax, ax
+09dd3 int    0x81
+09dd5 jne    0x9dda
+09dd7 jmp    0x9df0
+09ddb LOAD_INT 35
+09de0 fcomp SALA
+09de4 int    0x93
+09de6 mov    bx, ax
+09de8 mov    ax, 0xffff
+09deb je     0x9dee
+09ded inc    ax
+09dee and    ax, bx
+09df0 int    0x81
+09df2 je     0x9df7
+09df4 jmp    0xb744
+09df8 LOAD_INT 17
+09dfd fcomp OBJ
+09e01 int    0x93
+09e03 mov    ax, 0xffff
+09e06 je     0x9e09
+09e08 inc    ax
+09e09 or     ax, ax
+09e0b int    0x81
+09e0d jne    0x9e12
+09e0f jmp    0x9e28
+09e13 LOAD_INT 5
+09e18 fcomp SALA
+09e1c int    0x93
+09e1e mov    bx, ax
+09e20 mov    ax, 0xffff
+09e23 jne    0x9e26
+09e25 inc    ax
+09e26 and    ax, bx
+09e28 int    0x81
+09e2a jne    0x9e2f
+09e2c jmp    0x9e3d
+09e2f si=0x7e0
+09e32 int    0x96
+09e34 si=0x556 (MSGBUF2$)
+09e37 int    0x9a
+09e39 call   0xcfbc
+09e3c ret
+09e3e LOAD_INT 17
+09e43 fcomp OBJ
+09e47 int    0x93
+09e49 mov    ax, 0xffff
+09e4c je     0x9e4f
+09e4e inc    ax
+09e4f or     ax, ax
+09e51 int    0x81
+09e53 jne    0x9e58
+09e55 jmp    0x9e71
+09e59 fldz
+09e5b ES=loc
+09e60 fcomp loc[14]
+09e65 int    0x93
+09e67 mov    bx, ax
+09e69 mov    ax, 0xffff
+09e6c jne    0x9e6f
+09e6e inc    ax
+09e6f and    ax, bx
+09e71 int    0x81
+09e73 jne    0x9e78
+09e75 jmp    0x9e8a
+09e78 ES=MSG
+09e7c si=0xc [2:'Sinto muito, mas esta área é restrita a funcionár]
+09e7f int    0x97
+09e81 si=0x556 (MSGBUF2$)
+09e84 int    0x9a
+09e86 call   0xcfbc
+09e89 ret
+09e8b LOAD_INT 17
+09e90 fcomp OBJ
+09e94 int    0x93
+09e96 int    0x81
+09e98 je     0x9e9d
+09e9a jmp    0x9eaa
+09e9e LOAD_INT 6
+09ea3 fstp SALA
+09ea7 int    0x81
+09ea9 ret
+09eab LOAD_INT 18
+09eb0 fcomp OBJ
+09eb4 int    0x93
+09eb6 mov    ax, 0xffff
+09eb9 je     0x9ebc
+09ebb inc    ax
+09ebc or     ax, ax
+09ebe int    0x81
+09ec0 jne    0x9ec5
+09ec2 jmp    0x9edb
+09ec6 LOAD_INT 6
+09ecb fcomp SALA
+09ecf int    0x93
+09ed1 mov    bx, ax
+09ed3 mov    ax, 0xffff
+09ed6 je     0x9ed9
+09ed8 inc    ax
+09ed9 and    ax, bx
+09edb int    0x81
+09edd jne    0x9ee2
+09edf jmp    0x9eef
+09ee3 LOAD_INT 7
+09ee8 fstp SALA
+09eec int    0x81
+09eee ret
+09ef0 LOAD_INT 35
+09ef5 fcomp OBJ
+09ef9 int    0x93
+09efb mov    ax, 0xffff
+09efe je     0x9f01
+09f00 inc    ax
+09f01 or     ax, ax
+09f03 int    0x81
+09f05 jne    0x9f0a
+09f07 jmp    0x9f20
+09f0b LOAD_INT 57
+09f10 fcomp SALA
+09f14 int    0x93
+09f16 mov    bx, ax
+09f18 mov    ax, 0xffff
+09f1b je     0x9f1e
+09f1d inc    ax
+09f1e and    ax, bx
+09f20 int    0x81
+09f22 jne    0x9f27
+09f24 jmp    0x9f3b
+09f28 fldz
+09f2b fcomp v4e6
+09f2f int    0x93
+09f31 mov    bx, ax
+09f33 mov    ax, 0xffff
+09f36 je     0x9f39
+09f38 inc    ax
+09f39 and    ax, bx
+09f3b int    0x81
+09f3d jne    0x9f42
+09f3f jmp    0x9f54
+09f42 ES=MSG
+09f46 si=0x10 [3:Ela está fechada...]
+09f49 int    0x97
+09f4b si=0x556 (MSGBUF2$)
+09f4e int    0x9a
+09f50 call   0xcfbc
+09f53 ret
+09f55 LOAD_INT 35
+09f5a fcomp OBJ
+09f5e int    0x93
+09f60 mov    ax, 0xffff
+09f63 je     0x9f66
+09f65 inc    ax
+09f66 or     ax, ax
+09f68 int    0x81
+09f6a jne    0x9f6f
+09f6c jmp    0x9f85
+09f70 LOAD_INT 57
+09f75 fcomp SALA
+09f79 int    0x93
+09f7b mov    bx, ax
+09f7d mov    ax, 0xffff
+09f80 je     0x9f83
+09f82 inc    ax
+09f83 and    ax, bx
+09f85 int    0x81
+09f87 je     0x9f8c
+09f89 jmp    0x9c98
+09f8c ES=MSG
+09f90 si=0x14 [4:Você näo pode ir até isso !]
+09f93 int    0x97
+09f95 si=0x556 (MSGBUF2$)
+09f98 int    0x9a
+09f9a call   0xcfbc
+09f9d ret
+
+
+===== verbo  6 @ 09f9e PEGAR/CATAR/APANHAR/TOMAR =====
+09f9f LOAD_INT 82
+09fa4 fcomp OBJ
+09fa8 int    0x93
+09faa mov    ax, 0xffff
+09fad je     0x9fb0
+09faf inc    ax
+09fb0 or     ax, ax
+09fb2 int    0x81
+09fb4 jne    0x9fb9
+09fb6 jmp    0x9fcf
+09fba LOAD_INT 66
+09fbf fcomp SALA
+09fc3 int    0x93
+09fc5 mov    bx, ax
+09fc7 mov    ax, 0xffff
+09fca je     0x9fcd
+09fcc inc    ax
+09fcd and    ax, bx
+09fcf int    0x81
+09fd1 jne    0x9fd6
+09fd3 jmp    0x9fe6
+09fd6 si=0x7dc
+09fd9 int    0x96
+09fdb si=0x556 (MSGBUF2$)
+09fde int    0x9a
+09fe0 call   0xcfbc
+09fe3 jmp    0x10aae
+09fe7 LOAD_INT 77
+09fec fcomp OBJ
+09ff0 int    0x93
+09ff2 mov    ax, 0xffff
+09ff5 je     0x9ff8
+09ff7 inc    ax
+09ff8 or     ax, ax
+09ffa int    0x81
+09ffc jne    0xa001
+09ffe jmp    0xa017
+0a002 LOAD_INT 66
+0a007 fcomp SALA
+0a00b int    0x93
+0a00d mov    bx, ax
+0a00f mov    ax, 0xffff
+0a012 je     0xa015
+0a014 inc    ax
+0a015 and    ax, bx
+0a017 int    0x81
+0a019 jne    0xa01e
+0a01b jmp    0xa039
+0a01f LOAD_INT 66
+0a023 ES=loc
+0a028 fcomp loc[77]
+0a02d int    0x93
+0a02f mov    bx, ax
+0a031 mov    ax, 0xffff
+0a034 je     0xa037
+0a036 inc    ax
+0a037 and    ax, bx
+0a039 int    0x81
+0a03b jne    0xa040
+0a03d jmp    0xa04e
+0a040 si=0x7d8
+0a043 int    0x96
+0a045 si=0x556 (MSGBUF2$)
+0a048 int    0x9a
+0a04a call   0xcfbc
+0a04d ret
+0a04f LOAD_INT 25
+0a054 fcomp OBJ
+0a058 int    0x93
+0a05a int    0x81
+0a05c jne    0xa061
+0a05e jmp    0xb8cf
+0a062 LOAD_INT 58
+0a067 fcomp OBJ
+0a06b int    0x93
+0a06d int    0x81
+0a06f je     0xa074
+0a071 jmp    0xa086
+0a074 ES=MSG
+0a078 si=0x18 [5:Näo dá. Ele está firmemente preso ao chäo. A näo s]
+0a07b int    0x97
+0a07d si=0x556 (MSGBUF2$)
+0a080 int    0x9a
+0a082 call   0xcfbc
+0a085 ret
+0a086 mov    ax, 0x3e7
+0a089 neg    ax
+0a08b mov    word ptr [0x2c], ax
+0a08f LOAD_INT 1
+0a094 fld OBJ
+0a099 fistp  word ptr [0x2c]
+0a09f mov    ax, word ptr [0x2c]
+0a0a2 mov    si, ax
+0a0a4 shl    si, 1
+0a0a6 shl    si, 1
+0a0a8 ES=loc
+0a0ad fcomp loc[si]
+0a0b0 int    0x93
+0a0b2 int    0x81
+0a0b4 je     0xa0b9
+0a0b6 jmp    0xa0cb
+0a0b9 ES=MSG
+0a0bd si=0x1c [6:Näo seja estúpido ! Você já tem isso !!!]
+0a0c0 int    0x97
+0a0c2 si=0x556 (MSGBUF2$)
+0a0c5 int    0x9a
+0a0c7 call   0xcfbc
+0a0ca ret
+0a0cc fld SALA
+0a0d1 fld OBJ
+0a0d6 fistp  word ptr [0x2c]
+0a0dc mov    ax, word ptr [0x2c]
+0a0df mov    si, ax
+0a0e1 shl    si, 1
+0a0e3 shl    si, 1
+0a0e5 ES=loc
+0a0ea fld loc[si]
+0a0ee fabs
+0a0f1 fcompp
+0a0f3 int    0x93
+0a0f5 int    0x81
+0a0f7 jne    0xa0fc
+0a0f9 jmp    0xa10e
+0a0fc ES=MSG
+0a100 si=0x20 [7:Este objeto näo está aqui...]
+0a103 int    0x97
+0a105 si=0x556 (MSGBUF2$)
+0a108 int    0x9a
+0a10a call   0xcfbc
+0a10d ret
+0a10f LOAD_INT 78
+0a114 fcomp OBJ
+0a118 int    0x93
+0a11a int    0x81
+0a11c je     0xa121
+0a11e jmp    0xa12f
+0a121 si=0x7d4 [500:?]
+0a124 int    0x96
+0a126 ES=txtexam
+0a12a si=0xf0
+0a12d int    0x9b
+0a130 LOAD_INT 65
+0a135 fcomp OBJ
+0a139 int    0x93
+0a13b int    0x81
+0a13d je     0xa142
+0a13f jmp    0xa173
+0a142 ES=MSG
+0a146 si=0x24 [8:Nem pense em levar isso. Eu näo sou täo porco assi]
+0a149 int    0x97
+0a14b si=0x556 (MSGBUF2$)
+0a14e int    0x9a
+0a150 call   0xcfbc
+0a154 fld SALA
+0a158 ES=loc
+0a15d fstp loc[66]
+0a162 int    0x81
+0a164 si=0x7d0
+0a167 int    0x96
+0a169 ES=txtexam
+0a16d si=0x100
+0a170 int    0x9b
+0a172 ret
+0a174 LOAD_INT 66
+0a179 fcomp OBJ
+0a17d int    0x93
+0a17f int    0x81
+0a181 je     0xa186
+0a183 jmp    0xa1a2
+0a186 si=0x7cc
+0a189 int    0x96
+0a18b ES=txtaqui
+0a18f si=0x108
+0a192 int    0x9b
+0a194 si=0x7c8
+0a197 int    0x96
+0a199 ES=txtexam
+0a19d si=0x100
+0a1a0 int    0x9b
+0a1a3 fldz
+0a1a6 fld OBJ
+0a1ab fistp  word ptr [0x2c]
+0a1b1 mov    ax, word ptr [0x2c]
+0a1b4 mov    si, ax
+0a1b6 shl    si, 1
+0a1b8 shl    si, 1
+0a1ba ES=loc
+0a1bf fcomp loc[si]
+0a1c2 int    0x93
+0a1c4 int    0x81
+0a1c6 ja     0xa1cb
+0a1c8 jmp    0xa1dd
+0a1cb ES=MSG
+0a1cf si=0x28 [9:Näo posso pegar isso.]
+0a1d2 int    0x97
+0a1d4 si=0x556 (MSGBUF2$)
+0a1d7 int    0x9a
+0a1d9 call   0xcfbc
+0a1dc ret
+0a1de LOAD_INT 41
+0a1e3 fcomp OBJ
+0a1e7 int    0x93
+0a1e9 int    0x81
+0a1eb je     0xa1f0
+0a1ed jmp    0xa201
+0a1f0 ES=MSG
+0a1f4 si=0x2c [10:Você pega o bispo sem constrangimento, pois ningué]
+0a1f7 int    0x97
+0a1f9 si=0x556 (MSGBUF2$)
+0a1fc int    0x9a
+0a1fe jmp    0xa20b
+0a201 si=0x7c4 [496:?]
+0a204 int    0x96
+0a206 si=0x556 (MSGBUF2$)
+0a209 int    0x9a
+0a20b mov    ax, 0x3e7
+0a20e neg    ax
+0a210 mov    word ptr [0x2c], ax
+0a214 LOAD_INT 1
+0a219 fld OBJ
+0a21e fistp  word ptr [0x2c]
+0a224 mov    ax, word ptr [0x2c]
+0a227 mov    si, ax
+0a229 shl    si, 1
+0a22b shl    si, 1
+0a22d ES=loc
+0a232 fstp loc[si]
+0a235 int    0x81
+0a237 call   0xcfbc
+0a23a call   0xd342
+0a23d ret
+
+
+===== verbo  7 @ 0a23e LISTAR/INVENTARIO/OBJETOS =====
+0a23f fldz
+0a242 fstp 0x47e
+0a246 int    0x81
+0a249 fld 0x4fe
+0a24e fstp fim
+0a253 fld1
+0a256 fstp v512
+0a25b fld1
+0a25e fstp i
+0a262 int    0x81
+0a264 jmp    0xa2f0
+0a267 mov    ax, 0x3e7
+0a26a neg    ax
+0a26c mov    word ptr [0x2c], ax
+0a270 LOAD_INT 1
+0a275 fld i
+0a27a fistp  word ptr [0x2c]
+0a280 mov    ax, word ptr [0x2c]
+0a283 mov    si, ax
+0a285 shl    si, 1
+0a287 shl    si, 1
+0a289 ES=loc
+0a28e fcomp loc[si]
+0a291 int    0x93
+0a293 int    0x81
+0a295 je     0xa29a
+0a297 jmp    0xa2e1
+0a29b fld1
+0a29e fadd 0x47e
+0a2a3 fstp 0x47e
+0a2a7 int    0x81
+0a2aa fld i
+0a2af fistp  word ptr [0x2c]
+0a2b5 mov    ax, word ptr [0x2c]
+0a2b8 mov    si, ax
+0a2ba shl    si, 1
+0a2bc shl    si, 1
+0a2be ES=vocab
+0a2c2 int    0x97
+0a2c5 fld 0x47e
+0a2ca fistp  word ptr [0x2c]
+0a2d0 mov    ax, word ptr [0x2c]
+0a2d3 mov    si, ax
+0a2d5 shl    si, 1
+0a2d7 shl    si, 1
+0a2d9 ES=inv
+0a2dd int    0x9b
+0a2df int    0x81
+0a2e2 fld v512
+0a2e7 fadd i
+0a2ec fstp i
+0a2f0 test   word ptr [0x514], 0x8000
+0a2f6 int    0x81
+0a2f8 je     0xa2fd
+0a2fa jmp    0xa313
+0a2fe fld fim
+0a303 fcomp i
+0a307 int    0x93
+0a309 int    0x81
+0a30b jb     0xa310
+0a30d jmp    0xa267
+0a310 jmp    0xa326
+0a314 fld fim
+0a319 fcomp i
+0a31d int    0x93
+0a31f int    0x81
+0a321 ja     0xa326
+0a323 jmp    0xa267
+0a327 fldz
+0a32a fcomp 0x47e
+0a32e int    0x93
+0a330 int    0x81
+0a332 je     0xa337
+0a334 jmp    0xa34f
+0a338 fld1
+0a33b fstp 0x47e
+0a33f int    0x81
+0a341 si=0x7c0
+0a344 int    0x96
+0a346 ES=inv
+0a34a si=4
+0a34d int    0x9b
+0a350 fld1
+0a353 fstp 0x47a
+0a357 int    0x81
+0a359 mov    ax, 1
+0a35c cmp    ax, word ptr [0x11e8]
+0a360 mov    ax, 0xffff
+0a363 je     0xa366
+0a365 inc    ax
+0a366 or     ax, ax
+0a368 jne    0xa36d
+0a36a jmp    0xa5a1
+0a36e LOAD_INT 11
+0a373 fstp fim
+0a378 fld1
+0a37b fstp v512
+0a380 fld1
+0a383 fstp i
+0a387 int    0x81
+0a389 jmp    0xa427
+0a38d fld i
+0a392 fiadd  word ptr [0x11d6]
+0a397 fistp  word ptr [0x2c]
+0a39d mov    ax, word ptr [0x2c]
+0a3a0 mov    bx, ax
+0a3a2 mov    ax, 0x3e
+0a3a5 int    0xc9
+0a3a7 int    0x81
+0a3a9 mov    ax, 0x10
+0a3ac int    0xee
+0a3ae push   ds
+0a3af int    0xb8
+0a3b1 int    0xb2
+0a3b4 fld i
+0a3b9 fiadd  word ptr [0x11d6]
+0a3be fistp  word ptr [0x2c]
+0a3c4 mov    ax, word ptr [0x2c]
+0a3c7 mov    bx, ax
+0a3c9 mov    ax, 0x3e
+0a3cc int    0xc9
+0a3ce int    0x81
+0a3d1 fld i
+0a3d6 fadd 0x47a
+0a3db fisub  word ptr [0x11e8]
+0a3e0 fcomp 0x47e
+0a3e4 int    0x93
+0a3e6 int    0x81
+0a3e8 jbe    0xa3ed
+0a3ea jmp    0xa418
+0a3ee fld i
+0a3f3 fadd 0x47a
+0a3f8 fisub  word ptr [0x11e8]
+0a3fd fistp  word ptr [0x2c]
+0a403 mov    ax, word ptr [0x2c]
+0a406 mov    si, ax
+0a408 shl    si, 1
+0a40a shl    si, 1
+0a40c ES=inv
+0a410 int    0x97
+0a412 int    0xb8
+0a414 int    0xb2
+0a416 int    0x81
+0a419 fld v512
+0a41e fadd i
+0a423 fstp i
+0a427 test   word ptr [0x514], 0x8000
+0a42d int    0x81
+0a42f je     0xa434
+0a431 jmp    0xa44a
+0a435 fld fim
+0a43a fcomp i
+0a43e int    0x93
+0a440 int    0x81
+0a442 jb     0xa447
+0a444 jmp    0xa38c
+0a447 jmp    0xa45d
+0a44b fld fim
+0a450 fcomp i
+0a454 int    0x93
+0a456 int    0x81
+0a458 ja     0xa45d
+0a45a jmp    0xa38c
+0a45e fld1
+0a461 fcomp 0x476
+0a465 int    0x93
+0a467 int    0x81
+0a469 je     0xa46e
+0a46b jmp    0xa46f
+0a46e ret
+0a46f mov    ax, 0x15
+0a472 mov    bx, ax
+0a474 mov    ax, 0x10
+0a477 int    0xc9
+0a479 si=0x7bc
+0a47c int    0x96
+0a47e mov    ax, 0x18
+0a481 int    0xad
+0a483 int    0x95
+0a485 si=0x7b8
+0a488 int    0x96
+0a48a int    0x95
+0a48c mov    ax, 0x19
+0a48f int    0xad
+0a491 int    0x95
+0a493 si=0x7b4
+0a496 int    0x96
+0a498 int    0x95
+0a49a int    0xb8
+0a49c mov    word ptr [0x88], 0x1f
+0a4a2 int    0xec
+0a4a4 and    al, byte ptr [si]
+0a4a6 si=0x89c
+0a4a9 int    0x96
+0a4ab int    0xb8
+0a4ad mov    word ptr [0x88], 0xb
+0a4b3 int    0xec
+0a4b5 and    al, byte ptr [si]
+0a4b7 si=0x570
+0a4ba int    0x96
+0a4bc si=0x53e
+0a4bf int    0x9a
+0a4c1 si=0x53e
+0a4c4 int    0x96
+0a4c6 si=0x570
+0a4c9 int    0x96
+0a4cb int    0x94
+0a4cd mov    ax, 0xffff
+0a4d0 je     0xa4d3
+0a4d2 inc    ax
+0a4d3 or     ax, ax
+0a4d5 jne    0xa4da
+0a4d7 jmp    0xa4e4
+0a4da int    0xee
+0a4dc push   cs
+0a4dd si=0x53e
+0a4e0 int    0x9a
+0a4e2 jmp    0xa4c1
+0a4e4 si=0x53e
+0a4e7 int    0x96
+0a4e9 xor    ax, ax
+0a4eb int    0xad
+0a4ed mov    ax, 0x48
+0a4f0 int    0xad
+0a4f2 int    0x95
+0a4f4 int    0x94
+0a4f6 mov    ax, 0xffff
+0a4f9 je     0xa4fc
+0a4fb inc    ax
+0a4fc or     ax, ax
+0a4fe jne    0xa503
+0a500 jmp    0xa517
+0a504 fld1
+0a507 fcomp 0x47a
+0a50b int    0x93
+0a50d mov    bx, ax
+0a50f mov    ax, 0xffff
+0a512 jne    0xa515
+0a514 inc    ax
+0a515 and    ax, bx
+0a517 int    0x81
+0a519 jne    0xa51e
+0a51b jmp    0xa52d
+0a51f fld1
+0a522 fsubr  dword ptr [0x47a]
+0a527 fstp 0x47a
+0a52b int    0x81
+0a52d si=0x53e
+0a530 int    0x96
+0a532 xor    ax, ax
+0a534 int    0xad
+0a536 mov    ax, 0x50
+0a539 int    0xad
+0a53b int    0x95
+0a53d int    0x94
+0a53f mov    ax, 0xffff
+0a542 je     0xa545
+0a544 inc    ax
+0a545 or     ax, ax
+0a547 jne    0xa54c
+0a549 jmp    0xa562
+0a54d fld 0x47e
+0a552 fcomp 0x47a
+0a556 int    0x93
+0a558 mov    bx, ax
+0a55a mov    ax, 0xffff
+0a55d ja     0xa560
+0a55f inc    ax
+0a560 and    ax, bx
+0a562 int    0x81
+0a564 jne    0xa569
+0a566 jmp    0xa578
+0a56a fld1
+0a56d fadd 0x47a
+0a572 fstp 0x47a
+0a576 int    0x81
+0a578 si=0x53e
+0a57b int    0x96
+0a57d mov    ax, 0xd
+0a580 int    0xad
+0a582 int    0x94
+0a584 je     0xa589
+0a586 jmp    0xa59e
+0a589 mov    ax, 0x15
+0a58c mov    bx, ax
+0a58e mov    ax, 0x10
+0a591 int    0xc9
+0a593 mov    ax, 0x36
+0a596 int    0xee
+0a598 push   ds
+0a599 int    0xb8
+0a59b int    0xb2
+0a59d ret
+0a59e jmp    0xa359
+
+
+===== verbo  8 @ 0a5a1 LARGAR/DEIXAR/SOLTAR =====
+0a5a2 LOAD_INT 77
+0a5a7 fcomp OBJ
+0a5ab int    0x93
+0a5ad mov    ax, 0xffff
+0a5b0 je     0xa5b3
+0a5b2 inc    ax
+0a5b3 or     ax, ax
+0a5b5 int    0x81
+0a5b7 jne    0xa5bc
+0a5b9 jmp    0xa5e3
+0a5bc mov    bx, ax
+0a5be mov    ax, 0x3e7
+0a5c1 neg    ax
+0a5c3 mov    word ptr [0x2c], ax
+0a5c7 LOAD_INT 1
+0a5cb mov    ax, bx
+0a5cd ES=loc
+0a5d2 fcomp loc[77]
+0a5d7 int    0x93
+0a5d9 mov    bx, ax
+0a5db mov    ax, 0xffff
+0a5de je     0xa5e1
+0a5e0 inc    ax
+0a5e1 and    ax, bx
+0a5e3 int    0x81
+0a5e5 jne    0xa5ea
+0a5e7 jmp    0xa607
+0a5ea si=0x7b0
+0a5ed int    0x96
+0a5ef si=0x556 (MSGBUF2$)
+0a5f2 int    0x9a
+0a5f4 call   0xcfbc
+0a5f8 fldz
+0a5fa ES=loc
+0a5ff fstp loc[77]
+0a604 int    0x81
+0a606 ret
+0a608 LOAD_INT 49
+0a60d fcomp OBJ
+0a611 int    0x93
+0a613 mov    ax, 0xffff
+0a616 je     0xa619
+0a618 inc    ax
+0a619 or     ax, ax
+0a61b int    0x81
+0a61d jne    0xa622
+0a61f jmp    0xa649
+0a622 mov    bx, ax
+0a624 mov    ax, 0x3e7
+0a627 neg    ax
+0a629 mov    word ptr [0x2c], ax
+0a62d LOAD_INT 1
+0a631 mov    ax, bx
+0a633 ES=loc
+0a638 fcomp loc[49]
+0a63d int    0x93
+0a63f mov    bx, ax
+0a641 mov    ax, 0xffff
+0a644 je     0xa647
+0a646 inc    ax
+0a647 and    ax, bx
+0a649 int    0x81
+0a64b jne    0xa650
+0a64d jmp    0xa666
+0a651 LOAD_INT 40
+0a656 fcomp SALA
+0a65a int    0x93
+0a65c mov    bx, ax
+0a65e mov    ax, 0xffff
+0a661 je     0xa664
+0a663 inc    ax
+0a664 and    ax, bx
+0a666 int    0x81
+0a668 jne    0xa66d
+0a66a jmp    0xa6df
+0a66e fldz
+0a670 ES=loc
+0a675 fstp loc[49]
+0a67a int    0x81
+0a67c ES=MSG
+0a680 si=0x30 [11:Você dá o envelope à secretária.]
+0a683 int    0x97
+0a685 si=0x556 (MSGBUF2$)
+0a688 int    0x9a
+0a68a call   0xcfbc
+0a68d call   0xd342
+0a690 ES=MSG
+0a694 si=0x34 [12:'Ah, pelo seu estilo capilar logo imaginei que era]
+0a697 int    0x97
+0a699 si=0x556 (MSGBUF2$)
+0a69c int    0x9a
+0a69e call   0xcfbc
+0a6a1 ES=MSG
+0a6a5 si=0x38 [13:(suspiro)]
+0a6a8 int    0x97
+0a6aa si=0x556 (MSGBUF2$)
+0a6ad int    0x9a
+0a6af call   0xcfbc
+0a6b2 si=0x7ac [490:?]
+0a6b5 int    0x96
+0a6b7 si=0x53a (MSGBUF$)
+0a6ba int    0x9a
+0a6bc call   0xcf33
+0a6bf ES=MSG
+0a6c3 si=0x3c [14:'Venha comigo. Vou levá-lo ao hall' - diz ela, tom]
+0a6c6 int    0x97
+0a6c8 si=0x556 (MSGBUF2$)
+0a6cb int    0x9a
+0a6cd call   0xcfbc
+0a6d1 LOAD_INT 41
+0a6d6 fstp saidaN
+0a6da int    0x81
+0a6dc jmp    0x9bc9
+0a6e0 LOAD_INT 31
+0a6e5 fcomp OBJ
+0a6e9 int    0x93
+0a6eb int    0x81
+0a6ed je     0xa6f2
+0a6ef jmp    0xa704
+0a6f2 ES=MSG
+0a6f6 si=0x40 [15:Pra que ? Apesar de você näo fumar, eles podem ser]
+0a6f9 int    0x97
+0a6fb si=0x556 (MSGBUF2$)
+0a6fe int    0x9a
+0a700 call   0xcfbc
+0a703 ret
+0a704 mov    ax, 0x3e7
+0a707 neg    ax
+0a709 mov    word ptr [0x2c], ax
+0a70d LOAD_INT 1
+0a712 fld OBJ
+0a717 fistp  word ptr [0x2c]
+0a71d mov    ax, word ptr [0x2c]
+0a720 mov    si, ax
+0a722 shl    si, 1
+0a724 shl    si, 1
+0a726 ES=loc
+0a72b fcomp loc[si]
+0a72e int    0x93
+0a730 int    0x81
+0a732 jne    0xa737
+0a734 jmp    0xa749
+0a737 ES=MSG
+0a73b si=0x44 [16:Você näo pode largar o que näo tem...]
+0a73e int    0x97
+0a740 si=0x556 (MSGBUF2$)
+0a743 int    0x9a
+0a745 call   0xcfbc
+0a748 ret
+0a74a LOAD_INT 71
+0a74f fcomp OBJ
+0a753 int    0x93
+0a755 mov    ax, 0xffff
+0a758 je     0xa75b
+0a75a inc    ax
+0a75b or     ax, ax
+0a75d int    0x81
+0a75f jne    0xa764
+0a761 jmp    0xa77a
+0a765 LOAD_INT 62
+0a76a fcomp SALA
+0a76e int    0x93
+0a770 mov    bx, ax
+0a772 mov    ax, 0xffff
+0a775 je     0xa778
+0a777 inc    ax
+0a778 and    ax, bx
+0a77a int    0x81
+0a77c jne    0xa781
+0a77e jmp    0xa7af
+0a781 ES=MSG
+0a785 si=0x48 [17:Você tira o CD do bolso e, imediatamente, o disk-j]
+0a788 int    0x97
+0a78a si=0x556 (MSGBUF2$)
+0a78d int    0x9a
+0a78f call   0xcfbc
+0a792 si=0x7a8 [489:?]
+0a795 int    0x96
+0a797 si=0x556 (MSGBUF2$)
+0a79a int    0x9a
+0a79c call   0xcfbc
+0a7a0 fldz
+0a7a2 ES=loc
+0a7a7 fstp loc[71]
+0a7ac int    0x81
+0a7ae ret
+0a7b0 LOAD_INT 71
+0a7b5 fcomp OBJ
+0a7b9 int    0x93
+0a7bb mov    ax, 0xffff
+0a7be je     0xa7c1
+0a7c0 inc    ax
+0a7c1 or     ax, ax
+0a7c3 int    0x81
+0a7c5 jne    0xa7ca
+0a7c7 jmp    0xa7e0
+0a7cb LOAD_INT 59
+0a7d0 fcomp SALA
+0a7d4 int    0x93
+0a7d6 mov    bx, ax
+0a7d8 mov    ax, 0xffff
+0a7db je     0xa7de
+0a7dd inc    ax
+0a7de and    ax, bx
+0a7e0 int    0x81
+0a7e2 jne    0xa7e7
+0a7e4 jmp    0xa81a
+0a7e7 ES=MSG
+0a7eb si=0x4c [18:O DJ sai da mesa lá no fundo e vem pegar o CD que ]
+0a7ee int    0x97
+0a7f0 si=0x556 (MSGBUF2$)
+0a7f3 int    0x9a
+0a7f5 call   0xcfbc
+0a7f9 fldz
+0a7fb ES=loc
+0a800 fstp loc[71]
+0a805 int    0x81
+0a808 fldz
+0a80a ES=loc
+0a80f fstp loc[72]
+0a814 int    0x81
+0a816 call   0xd342
+0a819 ret
+0a81b LOAD_INT 26
+0a820 fcomp OBJ
+0a824 int    0x93
+0a826 int    0x81
+0a828 je     0xa82d
+0a82a jmp    0xa83f
+0a82d ES=MSG
+0a831 si=0x50 [19:Sem essa de Papai Noel. Nada feito.]
+0a834 int    0x97
+0a836 si=0x556 (MSGBUF2$)
+0a839 int    0x9a
+0a83b call   0xcfbc
+0a83e ret
+0a840 LOAD_INT 41
+0a845 fcomp OBJ
+0a849 int    0x93
+0a84b mov    ax, 0xffff
+0a84e je     0xa851
+0a850 inc    ax
+0a851 or     ax, ax
+0a853 int    0x81
+0a855 jne    0xa85a
+0a857 jmp    0xa870
+0a85b LOAD_INT 27
+0a860 fcomp SALA
+0a864 int    0x93
+0a866 mov    bx, ax
+0a868 mov    ax, 0xffff
+0a86b je     0xa86e
+0a86d inc    ax
+0a86e and    ax, bx
+0a870 int    0x81
+0a872 jne    0xa877
+0a874 jmp    0xa8e5
+0a877 ES=MSG
+0a87b si=0x54 [20:O velhinho percebe que você quer lhe dar a peça. E]
+0a87e int    0x97
+0a880 si=0x556 (MSGBUF2$)
+0a883 int    0x9a
+0a885 call   0xcfbc
+0a888 ES=MSG
+0a88c si=0x58 [21:'ACHEI !!! ACHEI !!! AGORA VOU TERMINAR O JOGO !!!]
+0a88f int    0x97
+0a891 si=0x556 (MSGBUF2$)
+0a894 int    0x9a
+0a896 call   0xcfbc
+0a899 ES=MSG
+0a89d si=0x5c [22:Ele lhe dá uma marreta, e sai gritando 'BLAAAAAAAG]
+0a8a0 int    0x97
+0a8a2 si=0x556 (MSGBUF2$)
+0a8a5 int    0x9a
+0a8a7 call   0xcfbc
+0a8ab fldz
+0a8ad ES=loc
+0a8b2 fstp loc[39]
+0a8b7 int    0x81
+0a8ba fldz
+0a8bc ES=loc
+0a8c1 fstp loc[41]
+0a8c6 int    0x81
+0a8c8 mov    ax, 0x3e7
+0a8cb neg    ax
+0a8cd mov    word ptr [0x2c], ax
+0a8d1 LOAD_INT 1
+0a8d5 ES=loc
+0a8da fstp loc[42]
+0a8df int    0x81
+0a8e1 call   0xd342
+0a8e4 ret
+0a8e6 LOAD_INT 66
+0a8eb fcomp OBJ
+0a8ef int    0x93
+0a8f1 mov    ax, 0xffff
+0a8f4 je     0xa8f7
+0a8f6 inc    ax
+0a8f7 or     ax, ax
+0a8f9 int    0x81
+0a8fb jne    0xa900
+0a8fd jmp    0xa916
+0a901 LOAD_INT 39
+0a906 fcomp SALA
+0a90a int    0x93
+0a90c mov    bx, ax
+0a90e mov    ax, 0xffff
+0a911 je     0xa914
+0a913 inc    ax
+0a914 and    ax, bx
+0a916 int    0x81
+0a918 jne    0xa91d
+0a91a jmp    0xa9b9
+0a91d ES=MSG
+0a921 si=0x60 [23:O homem do taxi pega a agenda que você entregou a ]
+0a924 int    0x97
+0a926 si=0x556 (MSGBUF2$)
+0a929 int    0x9a
+0a92b call   0xcfbc
+0a92e si=0x7ac [490:?]
+0a931 int    0x96
+0a933 si=0x53a (MSGBUF$)
+0a936 int    0x9a
+0a938 call   0xcf33
+0a93b ES=MSG
+0a93f si=0x64 [24:Vocês entram. A viagem näo é longa, pois o cara pa]
+0a942 int    0x97
+0a944 si=0x556 (MSGBUF2$)
+0a947 int    0x9a
+0a949 si=0x556 (MSGBUF2$)
+0a94c int    0x96
+0a94e si=0x7a4 [488:?]
+0a951 int    0x96
+0a953 int    0x95
+0a955 si=0x556 (MSGBUF2$)
+0a958 int    0x9a
+0a95a call   0xcfbc
+0a95d ES=MSG
+0a961 si=0x68 [25:O taxi para. Você desce e lhe dá quase todo o seu ]
+0a964 int    0x97
+0a966 si=0x556 (MSGBUF2$)
+0a969 int    0x9a
+0a96b call   0xcfbc
+0a96f LOAD_INT 5
+0a974 fstp 0x4ea
+0a978 int    0x81
+0a97a si=0x7ac [490:?]
+0a97d int    0x96
+0a97f si=0x53a (MSGBUF$)
+0a982 int    0x9a
+0a984 call   0xcf33
+0a987 ES=MSG
+0a98b si=0x6c [26:Antes de sumir, ele pöe a cabeça para fora e grita]
+0a98e int    0x97
+0a990 si=0x556 (MSGBUF2$)
+0a993 int    0x9a
+0a995 call   0xcfbc
+0a998 ES=MSG
+0a99c si=0x70 [27:(suspiro)]
+0a99f int    0x97
+0a9a1 si=0x556 (MSGBUF2$)
+0a9a4 int    0x9a
+0a9a6 call   0xcfbc
+0a9a9 call   0xcf33
+0a9ad LOAD_INT 56
+0a9b2 fstp SALA
+0a9b6 int    0x81
+0a9b8 ret
+0a9ba LOAD_INT 21
+0a9bf fcomp OBJ
+0a9c3 int    0x93
+0a9c5 mov    ax, 0xffff
+0a9c8 je     0xa9cb
+0a9ca inc    ax
+0a9cc LOAD_INT 22
+0a9d1 fcomp OBJ
+0a9d5 int    0x93
+0a9d7 mov    bx, ax
+0a9d9 mov    ax, 0xffff
+0a9dc je     0xa9df
+0a9de inc    ax
+0a9df or     ax, bx
+0a9e1 int    0x81
+0a9e3 jne    0xa9e8
+0a9e5 jmp    0xa9fe
+0a9e8 si=0x55a
+0a9eb int    0x96
+0a9ed si=0x7a0 [487:?]
+0a9f0 int    0x96
+0a9f2 int    0x94
+0a9f4 mov    bx, ax
+0a9f6 mov    ax, 0xffff
+0a9f9 je     0xa9fc
+0a9fb inc    ax
+0a9fc and    ax, bx
+0a9fe jne    0xaa03
+0aa00 jmp    0xaa11
+0aa03 si=0x79c [486:?]
+0aa06 int    0x96
+0aa08 si=0x556 (MSGBUF2$)
+0aa0b int    0x9a
+0aa0d call   0xcfbc
+0aa10 ret
+0aa12 fld SALA
+0aa17 fld OBJ
+0aa1c fistp  word ptr [0x2c]
+0aa22 mov    ax, word ptr [0x2c]
+0aa25 mov    si, ax
+0aa27 shl    si, 1
+0aa29 shl    si, 1
+0aa2b ES=loc
+0aa30 fstp loc[si]
+0aa33 int    0x81
+0aa35 ES=MSG
+0aa39 si=0x74 [28:Ok.]
+0aa3c int    0x97
+0aa3e si=0x556 (MSGBUF2$)
+0aa41 int    0x9a
+0aa43 call   0xcfbc
+0aa46 call   0xd342
+0aa49 ret
+
+
+===== verbo  9 @ 0aa4a OLHAR/VER/EXAMINAR/OBSERVAR/VERIFICAR =====
+0aa4b LOAD_INT 44
+0aa50 fcomp OBJ
+0aa54 int    0x93
+0aa56 mov    ax, 0xffff
+0aa59 je     0xaa5c
+0aa5b inc    ax
+0aa5c or     ax, ax
+0aa5e int    0x81
+0aa60 jne    0xaa65
+0aa62 jmp    0xaa7b
+0aa66 LOAD_INT 31
+0aa6b fcomp SALA
+0aa6f int    0x93
+0aa71 mov    bx, ax
+0aa73 mov    ax, 0xffff
+0aa76 jne    0xaa79
+0aa78 inc    ax
+0aa79 and    ax, bx
+0aa7b int    0x81
+0aa7d jne    0xaa82
+0aa7f jmp    0xaa90
+0aa82 si=0x798
+0aa85 int    0x96
+0aa87 si=0x556 (MSGBUF2$)
+0aa8a int    0x9a
+0aa8c call   0xcfbc
+0aa8f ret
+0aa91 LOAD_INT 73
+0aa96 fcomp OBJ
+0aa9a int    0x93
+0aa9c mov    ax, 0xffff
+0aa9f je     0xaaa2
+0aaa1 inc    ax
+0aaa3 LOAD_INT 19
+0aaa8 fcomp OBJ
+0aaac int    0x93
+0aaae mov    bx, ax
+0aab0 mov    ax, 0xffff
+0aab3 je     0xaab6
+0aab5 inc    ax
+0aab6 or     ax, bx
+0aab8 int    0x81
+0aaba jne    0xaabf
+0aabc jmp    0xaad5
+0aac0 LOAD_INT 66
+0aac5 fcomp SALA
+0aac9 int    0x93
+0aacb mov    bx, ax
+0aacd mov    ax, 0xffff
+0aad0 je     0xaad3
+0aad2 inc    ax
+0aad3 and    ax, bx
+0aad5 int    0x81
+0aad7 jne    0xaadc
+0aad9 jmp    0xaaf7
+0aadd LOAD_INT 66
+0aae1 ES=loc
+0aae6 fcomp loc[77]
+0aaeb int    0x93
+0aaed mov    bx, ax
+0aaef mov    ax, 0xffff
+0aaf2 jne    0xaaf5
+0aaf4 inc    ax
+0aaf5 and    ax, bx
+0aaf7 int    0x81
+0aaf9 jne    0xaafe
+0aafb jmp    0xab0c
+0aafe si=0x794
+0ab01 int    0x96
+0ab03 si=0x556 (MSGBUF2$)
+0ab06 int    0x9a
+0ab08 call   0xcfbc
+0ab0b ret
+0ab0d LOAD_INT 73
+0ab12 fcomp OBJ
+0ab16 int    0x93
+0ab18 mov    ax, 0xffff
+0ab1b je     0xab1e
+0ab1d inc    ax
+0ab1f LOAD_INT 19
+0ab24 fcomp OBJ
+0ab28 int    0x93
+0ab2a mov    bx, ax
+0ab2c mov    ax, 0xffff
+0ab2f je     0xab32
+0ab31 inc    ax
+0ab32 or     ax, bx
+0ab34 int    0x81
+0ab36 jne    0xab3b
+0ab38 jmp    0xab51
+0ab3c LOAD_INT 66
+0ab41 fcomp SALA
+0ab45 int    0x93
+0ab47 mov    bx, ax
+0ab49 mov    ax, 0xffff
+0ab4c je     0xab4f
+0ab4e inc    ax
+0ab4f and    ax, bx
+0ab51 int    0x81
+0ab53 jne    0xab58
+0ab55 jmp    0xab6a
+0ab58 ES=MSG
+0ab5c si=0x78 [29:Tem uma lâmpada no teto.]
+0ab5f int    0x97
+0ab61 si=0x556 (MSGBUF2$)
+0ab64 int    0x9a
+0ab66 call   0xcfbc
+0ab69 ret
+0ab6b LOAD_INT 73
+0ab70 fcomp OBJ
+0ab74 int    0x93
+0ab76 mov    ax, 0xffff
+0ab79 je     0xab7c
+0ab7b inc    ax
+0ab7c or     ax, ax
+0ab7e int    0x81
+0ab80 je     0xab85
+0ab82 jmp    0xab97
+0ab86 LOAD_INT 75
+0ab8b fcomp OBJ
+0ab8f int    0x93
+0ab91 mov    ax, 0xffff
+0ab94 je     0xab97
+0ab96 inc    ax
+0ab97 or     ax, ax
+0ab99 int    0x81
+0ab9b je     0xaba0
+0ab9d jmp    0xabb2
+0aba1 LOAD_INT 19
+0aba6 fcomp OBJ
+0abaa int    0x93
+0abac mov    ax, 0xffff
+0abaf je     0xabb2
+0abb1 inc    ax
+0abb2 or     ax, ax
+0abb4 int    0x81
+0abb6 je     0xabbb
+0abb8 jmp    0xabcd
+0abbc LOAD_INT 20
+0abc1 fcomp OBJ
+0abc5 int    0x93
+0abc7 mov    ax, 0xffff
+0abca je     0xabcd
+0abcc inc    ax
+0abcd or     ax, ax
+0abcf int    0x81
+0abd1 jne    0xabd6
+0abd3 jmp    0xabfc
+0abd7 fld OBJ
+0abdc fistp  word ptr [0x2c]
+0abe2 mov    ax, word ptr [0x2c]
+0abe5 mov    si, ax
+0abe7 shl    si, 1
+0abe9 shl    si, 1
+0abeb ES=txtexam
+0abef int    0x97
+0abf1 si=0x556 (MSGBUF2$)
+0abf4 int    0x9a
+0abf6 int    0x81
+0abf8 call   0xcfbc
+0abfb ret
+0abfd LOAD_INT 26
+0ac02 fcomp OBJ
+0ac06 int    0x93
+0ac08 int    0x81
+0ac0a je     0xac0f
+0ac0c jmp    0xac32
+0ac0f ES=MSG
+0ac13 si=0x7c [30:Você tem $]
+0ac16 int    0x97
+0ac19 fld 0x4ea
+0ac1d int    0xee
+0ac1f and    byte ptr [bx + si + 2], bh
+0ac23 int    0xaa
+0ac25 int    0x95
+0ac27 si=0x556 (MSGBUF2$)
+0ac2a int    0x9a
+0ac2c int    0x81
+0ac2e call   0xcfbc
+0ac31 ret
+0ac33 LOAD_INT 12
+0ac38 fcomp OBJ
+0ac3c int    0x93
+0ac3e mov    ax, 0xffff
+0ac41 je     0xac44
+0ac43 inc    ax
+0ac44 or     ax, ax
+0ac46 int    0x81
+0ac48 jne    0xac4d
+0ac4a jmp    0xac63
+0ac4e LOAD_INT 4
+0ac53 fcomp SALA
+0ac57 int    0x93
+0ac59 mov    bx, ax
+0ac5b mov    ax, 0xffff
+0ac5e jne    0xac61
+0ac60 inc    ax
+0ac61 and    ax, bx
+0ac63 int    0x81
+0ac65 jne    0xac6a
+0ac67 jmp    0xac7c
+0ac6a ES=MSG
+0ac6e si=0x80 [31:Näo estou vendo nada parecido aqui.]
+0ac71 int    0x97
+0ac73 si=0x556 (MSGBUF2$)
+0ac76 int    0x9a
+0ac78 call   0xcfbc
+0ac7b ret
+0ac7d LOAD_INT 10
+0ac82 fcomp OBJ
+0ac86 int    0x93
+0ac88 mov    ax, 0xffff
+0ac8b je     0xac8e
+0ac8d inc    ax
+0ac8e or     ax, ax
+0ac90 int    0x81
+0ac92 je     0xac97
+0ac94 jmp    0xaca9
+0ac98 LOAD_INT 23
+0ac9d fcomp OBJ
+0aca1 int    0x93
+0aca3 mov    ax, 0xffff
+0aca6 je     0xaca9
+0aca8 inc    ax
+0aca9 or     ax, ax
+0acab int    0x81
+0acad je     0xacb2
+0acaf jmp    0xacc4
+0acb3 LOAD_INT 24
+0acb8 fcomp OBJ
+0acbc int    0x93
+0acbe mov    ax, 0xffff
+0acc1 je     0xacc4
+0acc3 inc    ax
+0acc4 or     ax, ax
+0acc6 int    0x81
+0acc8 jne    0xaccd
+0acca jmp    0xacd7
+0accd call   0xd4df
+0acd0 call   0xd215
+0acd3 call   0xd35a
+0acd6 ret
+0acd8 fld1
+0acdb fcomp OBJ
+0acdf int    0x93
+0ace1 mov    ax, 0xffff
+0ace4 jbe    0xace7
+0ace6 inc    ax
+0ace7 or     ax, ax
+0ace9 int    0x81
+0aceb jne    0xacf0
+0aced jmp    0xad06
+0acf1 LOAD_INT 4
+0acf6 fcomp OBJ
+0acfa int    0x93
+0acfc mov    bx, ax
+0acfe mov    ax, 0xffff
+0ad01 jae    0xad04
+0ad03 inc    ax
+0ad04 and    ax, bx
+0ad06 int    0x81
+0ad08 jne    0xad0d
+0ad0a jmp    0xad1f
+0ad0d ES=MSG
+0ad11 si=0x84 [32:Deixe de ser preguiçoso e ande até lá !!!]
+0ad14 int    0x97
+0ad16 si=0x556 (MSGBUF2$)
+0ad19 int    0x9a
+0ad1b call   0xcfbc
+0ad1e ret
+0ad20 fld SALA
+0ad25 fld OBJ
+0ad2a fistp  word ptr [0x2c]
+0ad30 mov    ax, word ptr [0x2c]
+0ad33 mov    si, ax
+0ad35 shl    si, 1
+0ad37 shl    si, 1
+0ad39 ES=loc
+0ad3e fld loc[si]
+0ad42 fabs
+0ad45 fcompp
+0ad47 int    0x93
+0ad49 mov    ax, 0xffff
+0ad4c jne    0xad4f
+0ad4e inc    ax
+0ad4f or     ax, ax
+0ad51 int    0x81
+0ad53 jne    0xad58
+0ad55 jmp    0xad96
+0ad58 mov    bx, ax
+0ad5a mov    ax, 0x3e7
+0ad5d neg    ax
+0ad5f mov    word ptr [0x2c], ax
+0ad63 LOAD_INT 1
+0ad67 mov    ax, bx
+0ad6a fld OBJ
+0ad6f fistp  word ptr [0x2c]
+0ad73 mov    bx, ax
+0ad77 mov    ax, word ptr [0x2c]
+0ad7a mov    si, ax
+0ad7c mov    ax, bx
+0ad7e shl    si, 1
+0ad80 shl    si, 1
+0ad82 ES=loc
+0ad87 fcomp loc[si]
+0ad8a int    0x93
+0ad8c mov    bx, ax
+0ad8e mov    ax, 0xffff
+0ad91 jne    0xad94
+0ad93 inc    ax
+0ad94 and    ax, bx
+0ad96 int    0x81
+0ad98 jne    0xad9d
+0ad9a jmp    0xadaf
+0ad9d ES=MSG
+0ada1 si=0x88 [33:Näo estou vendo nada parecido aqui.]
+0ada4 int    0x97
+0ada6 si=0x556 (MSGBUF2$)
+0ada9 int    0x9a
+0adab call   0xcfbc
+0adae ret
+0adb0 LOAD_INT 19
+0adb5 fcomp SALA
+0adb9 int    0x93
+0adbb mov    ax, 0xffff
+0adbe je     0xadc1
+0adc0 inc    ax
+0adc1 or     ax, ax
+0adc3 int    0x81
+0adc5 jne    0xadca
+0adc7 jmp    0xade0
+0adca si=0x536 (SALANOME$)
+0adcd int    0x96
+0adcf si=0x828 [521:?]
+0add2 int    0x96
+0add4 int    0x94
+0add6 mov    bx, ax
+0add8 mov    ax, 0xffff
+0addb je     0xadde
+0addd inc    ax
+0adde and    ax, bx
+0ade0 jne    0xade5
+0ade2 jmp    0xae97
+0ade6 LOAD_INT 5
+0adeb fcomp OBJ
+0adef int    0x93
+0adf1 mov    bx, ax
+0adf3 mov    ax, 0xffff
+0adf6 je     0xadf9
+0adf8 inc    ax
+0adfa LOAD_INT 6
+0adff fcomp OBJ
+0ae03 int    0x93
+0ae05 mov    cx, bx
+0ae07 mov    bx, ax
+0ae09 mov    ax, 0xffff
+0ae0c je     0xae0f
+0ae0e inc    ax
+0ae0f or     ax, bx
+0ae11 mov    bx, cx
+0ae14 LOAD_INT 15
+0ae19 fcomp OBJ
+0ae1d int    0x93
+0ae1f mov    cx, bx
+0ae21 mov    bx, ax
+0ae23 mov    ax, 0xffff
+0ae26 je     0xae29
+0ae28 inc    ax
+0ae29 or     ax, bx
+0ae2b mov    bx, cx
+0ae2e LOAD_INT 16
+0ae33 fcomp OBJ
+0ae37 int    0x93
+0ae39 mov    cx, bx
+0ae3b mov    bx, ax
+0ae3d mov    ax, 0xffff
+0ae40 je     0xae43
+0ae42 inc    ax
+0ae43 or     ax, bx
+0ae45 mov    bx, cx
+0ae48 LOAD_INT 26
+0ae4d fcomp OBJ
+0ae51 int    0x93
+0ae53 mov    cx, bx
+0ae55 mov    bx, ax
+0ae57 mov    ax, 0xffff
+0ae5a je     0xae5d
+0ae5c inc    ax
+0ae5d or     ax, bx
+0ae5f mov    bx, cx
+0ae62 LOAD_INT 49
+0ae67 fcomp OBJ
+0ae6b int    0x93
+0ae6d mov    cx, bx
+0ae6f mov    bx, ax
+0ae71 mov    ax, 0xffff
+0ae74 je     0xae77
+0ae76 inc    ax
+0ae77 or     ax, bx
+0ae79 mov    bx, cx
+0ae7c LOAD_INT 28
+0ae81 fcomp OBJ
+0ae85 int    0x93
+0ae87 mov    cx, bx
+0ae89 mov    bx, ax
+0ae8b mov    ax, 0xffff
+0ae8e je     0xae91
+0ae90 inc    ax
+0ae91 or     ax, bx
+0ae93 mov    bx, cx
+0ae95 and    ax, bx
+0ae97 int    0x81
+0ae99 jne    0xae9e
+0ae9b jmp    0xaeac
+0ae9e si=0x790 [483:?]
+0aea1 int    0x96
+0aea3 si=0x556 (MSGBUF2$)
+0aea6 int    0x9a
+0aea8 call   0xcfbc
+0aeab ret
+0aead LOAD_INT 5
+0aeb2 fcomp OBJ
+0aeb6 int    0x93
+0aeb8 mov    ax, 0xffff
+0aebb je     0xaebe
+0aebd inc    ax
+0aebe or     ax, ax
+0aec0 int    0x81
+0aec2 jne    0xaec7
+0aec4 jmp    0xaeee
+0aec7 mov    bx, ax
+0aec9 mov    ax, 0x3e7
+0aecc neg    ax
+0aece mov    word ptr [0x2c], ax
+0aed2 LOAD_INT 1
+0aed6 mov    ax, bx
+0aed8 ES=loc
+0aedd fcomp loc[5]
+0aee2 int    0x93
+0aee4 mov    bx, ax
+0aee6 mov    ax, 0xffff
+0aee9 je     0xaeec
+0aeeb inc    ax
+0aeec and    ax, bx
+0aeee int    0x81
+0aef0 jne    0xaef5
+0aef2 jmp    0xaf46
+0aef6 LOAD_INT 4
+0aefb fcomp 0x472
+0aeff int    0x93
+0af01 mov    ax, 0xffff
+0af04 jne    0xaf07
+0af06 inc    ax
+0af07 mov    word ptr [0x2c], ax
+0af0b LOAD_INT 1
+0af10 fmul   dword ptr [0x472]
+0af15 fisubr word ptr [0x11e8]
+0af1a fstp 0x472
+0af1e int    0x81
+0af21 fld 0x472
+0af26 fistp  word ptr [0x2c]
+0af2c mov    ax, word ptr [0x2c]
+0af2f mov    si, ax
+0af31 shl    si, 1
+0af33 shl    si, 1
+0af35 add    si, 0x11f0
+0af39 int    0x96
+0af3b si=0x556 (MSGBUF2$)
+0af3e int    0x9a
+0af40 int    0x81
+0af42 call   0xcfbc
+0af45 ret
+0af47 LOAD_INT 5
+0af4c fcomp OBJ
+0af50 int    0x93
+0af52 int    0x81
+0af54 je     0xaf59
+0af56 jmp    0xaf6b
+0af59 ES=MSG
+0af5d si=0x8c [34:Näo a tenho.]
+0af60 int    0x97
+0af62 si=0x556 (MSGBUF2$)
+0af65 int    0x9a
+0af67 call   0xcfbc
+0af6a ret
+0af6c LOAD_INT 9
+0af71 fcomp OBJ
+0af75 int    0x93
+0af77 int    0x81
+0af79 je     0xaf7e
+0af7b jmp    0xaf90
+0af7e ES=MSG
+0af82 si=0x90 [35:É um ponto de ônibus.]
+0af85 int    0x97
+0af87 si=0x556 (MSGBUF2$)
+0af8a int    0x9a
+0af8c call   0xcfbc
+0af8f ret
+0af91 LOAD_INT 21
+0af96 fcomp OBJ
+0af9a int    0x93
+0af9c mov    ax, 0xffff
+0af9f je     0xafa2
+0afa1 inc    ax
+0afa2 or     ax, ax
+0afa4 int    0x81
+0afa6 jne    0xafab
+0afa8 jmp    0xafd2
+0afab mov    bx, ax
+0afad mov    ax, 0x3e7
+0afb0 neg    ax
+0afb2 mov    word ptr [0x2c], ax
+0afb6 LOAD_INT 1
+0afba mov    ax, bx
+0afbc ES=loc
+0afc1 fcomp loc[22]
+0afc6 int    0x93
+0afc8 mov    bx, ax
+0afca mov    ax, 0xffff
+0afcd je     0xafd0
+0afcf inc    ax
+0afd0 and    ax, bx
+0afd2 int    0x81
+0afd4 jne    0xafd9
+0afd6 jmp    0xaff2
+0afd9 ES=MSG
+0afdd si=0x94 [36:Ela está ]
+0afe0 int    0x97
+0afe2 si=0x55a
+0afe5 int    0x96
+0afe7 int    0x95
+0afe9 si=0x556 (MSGBUF2$)
+0afec int    0x9a
+0afee call   0xcfbc
+0aff1 ret
+0aff3 LOAD_INT 35
+0aff8 fcomp OBJ
+0affc int    0x93
+0affe mov    ax, 0xffff
+0b001 je     0xb004
+0b003 inc    ax
+0b004 or     ax, ax
+0b006 int    0x81
+0b008 jne    0xb00d
+0b00a jmp    0xb021
+0b00e fld1
+0b011 fcomp v4e6
+0b015 int    0x93
+0b017 mov    bx, ax
+0b019 mov    ax, 0xffff
+0b01c je     0xb01f
+0b01e inc    ax
+0b01f and    ax, bx
+0b021 int    0x81
+0b023 jne    0xb028
+0b025 jmp    0xb03a
+0b028 ES=MSG
+0b02c si=0x98 [37:Ela está aberta.]
+0b02f int    0x97
+0b031 si=0x556 (MSGBUF2$)
+0b034 int    0x9a
+0b036 call   0xcfbc
+0b039 ret
+0b03b LOAD_INT 35
+0b040 fcomp OBJ
+0b044 int    0x93
+0b046 mov    ax, 0xffff
+0b049 je     0xb04c
+0b04b inc    ax
+0b04c or     ax, ax
+0b04e int    0x81
+0b050 jne    0xb055
+0b052 jmp    0xb069
+0b056 fldz
+0b059 fcomp v4e6
+0b05d int    0x93
+0b05f mov    bx, ax
+0b061 mov    ax, 0xffff
+0b064 je     0xb067
+0b066 inc    ax
+0b067 and    ax, bx
+0b069 int    0x81
+0b06b jne    0xb070
+0b06d jmp    0xb082
+0b070 ES=MSG
+0b074 si=0x9c [38:Ela está fechada.]
+0b077 int    0x97
+0b079 si=0x556 (MSGBUF2$)
+0b07c int    0x9a
+0b07e call   0xcfbc
+0b081 ret
+0b083 LOAD_INT 37
+0b088 fcomp OBJ
+0b08c int    0x93
+0b08e mov    ax, 0xffff
+0b091 je     0xb094
+0b093 inc    ax
+0b094 or     ax, ax
+0b096 int    0x81
+0b098 jne    0xb09d
+0b09a jmp    0xb0db
+0b09d mov    bx, ax
+0b09f mov    ax, 0x3e7
+0b0a2 neg    ax
+0b0a4 mov    word ptr [0x2c], ax
+0b0a8 LOAD_INT 1
+0b0ac mov    ax, bx
+0b0af fld OBJ
+0b0b4 fistp  word ptr [0x2c]
+0b0b8 mov    bx, ax
+0b0bc mov    ax, word ptr [0x2c]
+0b0bf mov    si, ax
+0b0c1 mov    ax, bx
+0b0c3 shl    si, 1
+0b0c5 shl    si, 1
+0b0c7 ES=loc
+0b0cc fcomp loc[si]
+0b0cf int    0x93
+0b0d1 mov    bx, ax
+0b0d3 mov    ax, 0xffff
+0b0d6 je     0xb0d9
+0b0d8 inc    ax
+0b0d9 and    ax, bx
+0b0db int    0x81
+0b0dd jne    0xb0e2
+0b0df jmp    0xb0fb
+0b0e3 fldz
+0b0e5 ES=loc
+0b0ea fcomp loc[38]
+0b0ef int    0x93
+0b0f1 mov    bx, ax
+0b0f3 mov    ax, 0xffff
+0b0f6 je     0xb0f9
+0b0f8 inc    ax
+0b0f9 and    ax, bx
+0b0fb int    0x81
+0b0fd jne    0xb102
+0b0ff jmp    0xb130
+0b102 ES=MSG
+0b106 si=0xa0 [39:Temos um cartäo aqui.]
+0b109 int    0x97
+0b10b si=0x556 (MSGBUF2$)
+0b10e int    0x9a
+0b110 call   0xcfbc
+0b113 mov    ax, 0x3e7
+0b116 neg    ax
+0b118 mov    word ptr [0x2c], ax
+0b11c LOAD_INT 1
+0b120 ES=loc
+0b125 fstp loc[38]
+0b12a int    0x81
+0b12c call   0xd342
+0b12f ret
+0b131 LOAD_INT 45
+0b136 fcomp OBJ
+0b13a int    0x93
+0b13c mov    ax, 0xffff
+0b13f je     0xb142
+0b141 inc    ax
+0b142 or     ax, ax
+0b144 int    0x81
+0b146 jne    0xb14b
+0b148 jmp    0xb161
+0b14c LOAD_INT 35
+0b151 fcomp SALA
+0b155 int    0x93
+0b157 mov    bx, ax
+0b159 mov    ax, 0xffff
+0b15c je     0xb15f
+0b15e inc    ax
+0b15f and    ax, bx
+0b161 int    0x81
+0b163 jne    0xb168
+0b165 jmp    0xb17e
+0b169 LOAD_INT 5000
+0b16e fcomp 0x4ea
+0b172 int    0x93
+0b174 mov    bx, ax
+0b176 mov    ax, 0xffff
+0b179 ja     0xb17c
+0b17b inc    ax
+0b17c and    ax, bx
+0b17e int    0x81
+0b180 jne    0xb185
+0b182 jmp    0xb1a8
+0b185 ES=MSG
+0b189 si=0xa4 [40:Temos uns $5000 aqui. Nem precisa mandar pegar o d]
+0b18c int    0x97
+0b18e si=0x556 (MSGBUF2$)
+0b191 int    0x9a
+0b194 LOAD_INT 5000
+0b199 fadd 0x4ea
+0b19e fstp 0x4ea
+0b1a2 int    0x81
+0b1a4 call   0xcfbc
+0b1a7 ret
+0b1a9 fld OBJ
+0b1ae fistp  word ptr [0x2c]
+0b1b4 mov    ax, word ptr [0x2c]
+0b1b7 mov    si, ax
+0b1b9 shl    si, 1
+0b1bb shl    si, 1
+0b1bd ES=txtexam
+0b1c1 int    0x97
+0b1c3 si=0x556 (MSGBUF2$)
+0b1c6 int    0x9a
+0b1c8 int    0x81
+0b1ca call   0xcfbc
+0b1cd ret
+
+
+===== verbo 10 @ 0b1ce FALAR/CONVERSAR =====
+0b1cf fld SALA
+0b1d4 fld OBJ
+0b1d9 fistp  word ptr [0x2c]
+0b1df mov    ax, word ptr [0x2c]
+0b1e2 mov    si, ax
+0b1e4 shl    si, 1
+0b1e6 shl    si, 1
+0b1e8 ES=loc
+0b1ed fld loc[si]
+0b1f1 fabs
+0b1f4 fcompp
+0b1f6 int    0x93
+0b1f8 int    0x81
+0b1fa jne    0xb1ff
+0b1fc jmp    0xb211
+0b1ff ES=MSG
+0b203 si=0xa8 [41:Aonde você vê isso ?]
+0b206 int    0x97
+0b208 si=0x556 (MSGBUF2$)
+0b20b int    0x9a
+0b20d call   0xcfbc
+0b210 ret
+0b212 LOAD_INT 72
+0b217 fcomp OBJ
+0b21b int    0x93
+0b21d mov    ax, 0xffff
+0b220 je     0xb223
+0b222 inc    ax
+0b223 or     ax, ax
+0b225 int    0x81
+0b227 jne    0xb22c
+0b229 jmp    0xb2b1
+0b22c ES=MSG
+0b230 si=0xac [42:'Ei, você conhece este local ?']
+0b233 int    0x97
+0b235 si=0x556 (MSGBUF2$)
+0b238 int    0x9a
+0b23a call   0xcfbc
+0b23d ES=MSG
+0b241 si=0xb0 [43:'O quê']
+0b244 int    0x97
+0b246 si=0x556 (MSGBUF2$)
+0b249 int    0x9a
+0b24b call   0xcfbc
+0b24e ES=MSG
+0b252 si=0xb4 [44:'Eu perguntei se você conhece isto aqui ?']
+0b255 int    0x97
+0b257 si=0x556 (MSGBUF2$)
+0b25a int    0x9a
+0b25c call   0xcfbc
+0b25f ES=MSG
+0b263 si=0xb8 [45:'O QUE ?']
+0b266 int    0x97
+0b268 si=0x556 (MSGBUF2$)
+0b26b int    0x9a
+0b26d call   0xcfbc
+0b270 si=0x7ac [490:?]
+0b273 int    0x96
+0b275 si=0x53a (MSGBUF$)
+0b278 int    0x9a
+0b27a call   0xcf33
+0b27d ES=MSG
+0b281 si=0xbc [46:'EU PERGUNTEI SE VOCE CONHECE ESTA POCILGA !!!!!!]
+0b284 int    0x97
+0b286 si=0x556 (MSGBUF2$)
+0b289 int    0x9a
+0b28b call   0xcfbc
+0b28e ES=MSG
+0b292 si=0xc0 [47:'COMO É ?']
+0b295 int    0x97
+0b297 si=0x556 (MSGBUF2$)
+0b29a int    0x9a
+0b29c call   0xcfbc
+0b29f ES=MSG
+0b2a3 si=0xc4 [48:Você desiste. Com este som alto näo vai ter jeito.]
+0b2a6 int    0x97
+0b2a8 si=0x556 (MSGBUF2$)
+0b2ab int    0x9a
+0b2ad call   0xcfbc
+0b2b0 ret
+0b2b2 LOAD_INT 67
+0b2b7 fcomp OBJ
+0b2bb int    0x93
+0b2bd int    0x81
+0b2bf je     0xb2c4
+0b2c1 jmp    0xb2d6
+0b2c4 ES=MSG
+0b2c8 si=0xc8 [49:Eles só se interessam em dançar. Aliás, acho que n]
+0b2cb int    0x97
+0b2cd si=0x556 (MSGBUF2$)
+0b2d0 int    0x9a
+0b2d2 call   0xcfbc
+0b2d5 ret
+0b2d7 LOAD_INT 69
+0b2dc fcomp OBJ
+0b2e0 int    0x93
+0b2e2 mov    ax, 0xffff
+0b2e5 je     0xb2e8
+0b2e7 inc    ax
+0b2e8 or     ax, ax
+0b2ea int    0x81
+0b2ec jne    0xb2f1
+0b2ee jmp    0xb305
+0b2f2 fld1
+0b2f5 fcomp 0x4e2
+0b2f9 int    0x93
+0b2fb mov    bx, ax
+0b2fd mov    ax, 0xffff
+0b300 je     0xb303
+0b302 inc    ax
+0b303 and    ax, bx
+0b305 int    0x81
+0b307 jne    0xb30c
+0b309 jmp    0xb31e
+0b30c ES=MSG
+0b310 si=0xcc [50:'Nada disso' - diz Moe - 'Você já passou da cota e]
+0b313 int    0x97
+0b315 si=0x556 (MSGBUF2$)
+0b318 int    0x9a
+0b31a call   0xcfbc
+0b31d ret
+0b31f LOAD_INT 69
+0b324 fcomp OBJ
+0b328 int    0x93
+0b32a mov    ax, 0xffff
+0b32d je     0xb330
+0b32f inc    ax
+0b330 or     ax, ax
+0b332 int    0x81
+0b334 jne    0xb339
+0b336 jmp    0xb3dc
+0b339 ES=MSG
+0b33d si=0xd0 [51:'Olá, Moe (você já supôs que todo garçom de dancet]
+0b340 int    0x97
+0b342 si=0x556 (MSGBUF2$)
+0b345 int    0x9a
+0b347 call   0xcfbc
+0b34a ES=MSG
+0b34e si=0xd4 [52:'E entäo, chefe. Vai o de sempre ?']
+0b351 int    0x97
+0b353 si=0x556 (MSGBUF2$)
+0b356 int    0x9a
+0b358 call   0xcfbc
+0b35b ES=MSG
+0b35f si=0xd8 [53:'Claro' - você diz, feliz de ter sido confundido c]
+0b362 int    0x97
+0b364 si=0x556 (MSGBUF2$)
+0b367 int    0x9a
+0b369 call   0xcfbc
+0b36c si=0x7ac [490:?]
+0b36f int    0x96
+0b371 si=0x53a (MSGBUF$)
+0b374 int    0x9a
+0b376 call   0xcf33
+0b379 ES=MSG
+0b37d si=0xdc [54:'Aqui está. É por conta da casa, outro dia você ac]
+0b380 int    0x97
+0b382 si=0x556 (MSGBUF2$)
+0b385 int    0x9a
+0b387 call   0xcfbc
+0b38a ES=MSG
+0b38e si=0xe0 [55:'Obrigado'. Ao olhar para a massa no copo, você di]
+0b391 int    0x97
+0b393 si=0x556 (MSGBUF2$)
+0b396 int    0x9a
+0b398 call   0xcfbc
+0b39b ES=MSG
+0b39f si=0xe4 [56:'O seu milk-shake. Como sempre foi seu pedido. Lem]
+0b3a2 int    0x97
+0b3a4 si=0x556 (MSGBUF2$)
+0b3a7 int    0x9a
+0b3a9 call   0xcfbc
+0b3ac call   0xcf33
+0b3af ES=MSG
+0b3b3 si=0xe8 [57:'Grunf', você diz, tomando o milk-shake. Em certo ]
+0b3b6 int    0x97
+0b3b8 si=0x556 (MSGBUF2$)
+0b3bb int    0x9a
+0b3bd call   0xcfbc
+0b3c0 ES=MSG
+0b3c4 si=0xec [58:'Obrigado', diz Moe, tirando o copo na metade. 'Vo]
+0b3c7 int    0x97
+0b3c9 si=0x556 (MSGBUF2$)
+0b3cc int    0x9a
+0b3ce call   0xcfbc
+0b3d2 fld1
+0b3d5 fstp 0x4e2
+0b3d9 int    0x81
+0b3db ret
+0b3dd LOAD_INT 8
+0b3e2 fcomp OBJ
+0b3e6 int    0x93
+0b3e8 int    0x81
+0b3ea je     0xb3ef
+0b3ec jmp    0xb401
+0b3ef ES=MSG
+0b3f3 si=0xf0 [59:Talvez isso näo vá fazer muito bem à sua saúde. El]
+0b3f6 int    0x97
+0b3f8 si=0x556 (MSGBUF2$)
+0b3fb int    0x9a
+0b3fd call   0xcfbc
+0b400 ret
+0b402 LOAD_INT 27
+0b407 fcomp OBJ
+0b40b int    0x93
+0b40d mov    ax, 0xffff
+0b410 je     0xb413
+0b412 inc    ax
+0b413 or     ax, ax
+0b415 int    0x81
+0b417 jne    0xb41c
+0b419 jmp    0xb450
+0b41c ES=MSG
+0b420 si=0xf4 [60:'Bom dia. Por favor, eu gostaria de procurar meu d]
+0b423 int    0x97
+0b425 si=0x556 (MSGBUF2$)
+0b428 int    0x9a
+0b42a call   0xcfbc
+0b42d ES=MSG
+0b431 si=0xf8 [61:'E eu com isso ?', diz ele, enquanto começa a roer]
+0b434 int    0x97
+0b436 si=0x556 (MSGBUF2$)
+0b439 int    0x9a
+0b43b call   0xcfbc
+0b43e ES=MSG
+0b442 si=0xfc [62:(suspiro)]
+0b445 int    0x97
+0b447 si=0x556 (MSGBUF2$)
+0b44a int    0x9a
+0b44c call   0xcfbc
+0b44f ret
+0b451 LOAD_INT 54
+0b456 fcomp OBJ
+0b45a int    0x93
+0b45c int    0x81
+0b45e je     0xb463
+0b460 jmp    0xb475
+0b463 ES=MSG
+0b467 si=0x100 [63:Você fica falando sozinho, pois todos o ignoram. A]
+0b46a int    0x97
+0b46c si=0x556 (MSGBUF2$)
+0b46f int    0x9a
+0b471 call   0xcfbc
+0b474 ret
+0b476 LOAD_INT 55
+0b47b fcomp OBJ
+0b47f int    0x93
+0b481 int    0x81
+0b483 je     0xb488
+0b485 jmp    0xb49a
+0b488 ES=MSG
+0b48c si=0x104 [64:Inútil. Eles estäo muito ocupados com o jogo.]
+0b48f int    0x97
+0b491 si=0x556 (MSGBUF2$)
+0b494 int    0x9a
+0b496 call   0xcfbc
+0b499 ret
+0b49b LOAD_INT 14
+0b4a0 fcomp OBJ
+0b4a4 int    0x93
+0b4a6 mov    ax, 0xffff
+0b4a9 je     0xb4ac
+0b4ab inc    ax
+0b4ac or     ax, ax
+0b4ae int    0x81
+0b4b0 jne    0xb4b5
+0b4b2 jmp    0xb570
+0b4b5 si=0x7ac [490:?]
+0b4b8 int    0x96
+0b4ba si=0x53a (MSGBUF$)
+0b4bd int    0x9a
+0b4bf ES=MSG
+0b4c3 si=0x108 [65:'Bom dia. Em que posso servi-lo ?']
+0b4c6 int    0x97
+0b4c8 si=0x556 (MSGBUF2$)
+0b4cb int    0x9a
+0b4cd call   0xcfbc
+0b4d0 ES=MSG
+0b4d4 si=0x10c [66:'Seu sorriso já o fez...' - você responde, e ela d]
+0b4d7 int    0x97
+0b4d9 si=0x556 (MSGBUF2$)
+0b4dc int    0x9a
+0b4de call   0xcfbc
+0b4e1 call   0xcf33
+0b4e4 ES=MSG
+0b4e8 si=0x110 [67:'Leve este aqui' - ela diz. Neste momento, um home]
+0b4eb int    0x97
+0b4ed si=0x556 (MSGBUF2$)
+0b4f0 int    0x9a
+0b4f2 call   0xcfbc
+0b4f6 fldz
+0b4f8 ES=loc
+0b4fd fstp loc[14]
+0b502 int    0x81
+0b504 mov    ax, 0x3e7
+0b507 neg    ax
+0b509 mov    word ptr [0x2c], ax
+0b50d LOAD_INT 1
+0b511 ES=loc
+0b516 fstp loc[15]
+0b51b int    0x81
+0b51d mov    ax, 0x3e7
+0b520 neg    ax
+0b522 mov    word ptr [0x2c], ax
+0b526 LOAD_INT 1
+0b52a ES=loc
+0b52f fstp loc[16]
+0b534 int    0x81
+0b536 call   0xd342
+0b539 ES=MSG
+0b53d si=0x114 [68:'Mais alguma coisa ?' - ela diz, suspirando quando]
+0b540 int    0x97
+0b542 si=0x556 (MSGBUF2$)
+0b545 int    0x9a
+0b547 call   0xcfbc
+0b54a call   0xcf33
+0b54d ES=MSG
+0b551 si=0x118 [69:'Por enquanto näo. Mas quem sabe em outra oportuni]
+0b554 int    0x97
+0b556 si=0x556 (MSGBUF2$)
+0b559 int    0x9a
+0b55b call   0xcfbc
+0b55e ES=MSG
+0b562 si=0x11c [70:'Essa foi boa' - você pensa, enquanto observa ela ]
+0b565 int    0x97
+0b567 si=0x556 (MSGBUF2$)
+0b56a int    0x9a
+0b56c call   0xcfbc
+0b56f ret
+0b571 LOAD_INT 30
+0b576 fcomp OBJ
+0b57a int    0x93
+0b57c int    0x81
+0b57e je     0xb583
+0b580 jmp    0xb595
+0b583 ES=MSG
+0b587 si=0x120 [71:Esquece. Ela näo vai acordar, e mesmo que o fizess]
+0b58a int    0x97
+0b58c si=0x556 (MSGBUF2$)
+0b58f int    0x9a
+0b591 call   0xcfbc
+0b594 ret
+0b596 LOAD_INT 39
+0b59b fcomp OBJ
+0b59f int    0x93
+0b5a1 mov    ax, 0xffff
+0b5a4 je     0xb5a7
+0b5a6 inc    ax
+0b5a7 or     ax, ax
+0b5a9 int    0x81
+0b5ab jne    0xb5b0
+0b5ad jmp    0xb5e4
+0b5b0 ES=MSG
+0b5b4 si=0x124 [72:'Bom dia, ó bom velhinho !' - você diz, alegrement]
+0b5b7 int    0x97
+0b5b9 si=0x556 (MSGBUF2$)
+0b5bc int    0x9a
+0b5be call   0xcfbc
+0b5c1 ES=MSG
+0b5c5 si=0x128 [73:'XADREZZZZZ !' - ele responde - 'Traga o XADREZZZZ]
+0b5c8 int    0x97
+0b5ca si=0x556 (MSGBUF2$)
+0b5cd int    0x9a
+0b5cf call   0xcfbc
+0b5d2 ES=MSG
+0b5d6 si=0x12c [74:Você o fita por alguns segundos, e ele se vira nov]
+0b5d9 int    0x97
+0b5db si=0x556 (MSGBUF2$)
+0b5de int    0x9a
+0b5e0 call   0xcfbc
+0b5e3 ret
+0b5e5 LOAD_INT 47
+0b5ea fcomp OBJ
+0b5ee int    0x93
+0b5f0 mov    ax, 0xffff
+0b5f3 je     0xb5f6
+0b5f5 inc    ax
+0b5f6 or     ax, ax
+0b5f8 int    0x81
+0b5fa jne    0xb5ff
+0b5fc jmp    0xb633
+0b5ff ES=MSG
+0b603 si=0x130 [75:'Bom dia. O senhor anda bastante por aqui ?']
+0b606 int    0x97
+0b608 si=0x556 (MSGBUF2$)
+0b60b int    0x9a
+0b60d call   0xcfbc
+0b610 ES=MSG
+0b614 si=0x134 [76:Ele diz: 'Chucrutz WolksVagen MercedesBens Kibe He]
+0b617 int    0x97
+0b619 si=0x556 (MSGBUF2$)
+0b61c int    0x9a
+0b61e call   0xcfbc
+0b621 ES=MSG
+0b625 si=0x138 [77:'É, tio, acho que você näo fala a minha língua...']
+0b628 int    0x97
+0b62a si=0x556 (MSGBUF2$)
+0b62d int    0x9a
+0b62f call   0xcfbc
+0b632 ret
+0b634 LOAD_INT 50
+0b639 fcomp OBJ
+0b63d int    0x93
+0b63f mov    ax, 0xffff
+0b642 je     0xb645
+0b644 inc    ax
+0b645 or     ax, ax
+0b647 int    0x81
+0b649 jne    0xb64e
+0b64b jmp    0xb664
+0b64f LOAD_INT 40
+0b654 fcomp SALA
+0b658 int    0x93
+0b65a mov    bx, ax
+0b65c mov    ax, 0xffff
+0b65f je     0xb662
+0b661 inc    ax
+0b662 and    ax, bx
+0b664 int    0x81
+0b666 jne    0xb66b
+0b668 jmp    0xb68a
+0b66b ES=MSG
+0b66f si=0x13c [78:'Escute, srta., isto é muito importante']
+0b672 int    0x97
+0b674 si=0x556 (MSGBUF2$)
+0b677 int    0x9a
+0b679 call   0xcfbc
+0b67c si=0x78c [482:?]
+0b67f int    0x96
+0b681 si=0x556 (MSGBUF2$)
+0b684 int    0x9a
+0b686 call   0xcfbc
+0b689 ret
+0b68b LOAD_INT 41
+0b690 fcomp OBJ
+0b694 int    0x93
+0b696 mov    ax, 0xffff
+0b699 je     0xb69c
+0b69b inc    ax
+0b69c or     ax, ax
+0b69e int    0x81
+0b6a0 jne    0xb6a5
+0b6a2 jmp    0xb6ea
+0b6a6 LOAD_INT 29
+0b6ab fcomp SALA
+0b6af int    0x93
+0b6b1 mov    bx, ax
+0b6b3 mov    ax, 0xffff
+0b6b6 je     0xb6b9
+0b6b8 inc    ax
+0b6b9 mov    cx, bx
+0b6bb mov    bx, ax
+0b6bd mov    ax, 0x3e7
+0b6c0 neg    ax
+0b6c2 mov    word ptr [0x2c], ax
+0b6c6 LOAD_INT 1
+0b6ca mov    ax, bx
+0b6cc mov    bx, cx
+0b6ce ES=loc
+0b6d3 fcomp loc[41]
+0b6d8 int    0x93
+0b6da mov    cx, bx
+0b6dc mov    bx, ax
+0b6de mov    ax, 0xffff
+0b6e1 je     0xb6e4
+0b6e3 inc    ax
+0b6e4 or     ax, bx
+0b6e6 mov    bx, cx
+0b6e8 and    ax, bx
+0b6ea int    0x81
+0b6ec jne    0xb6f1
+0b6ee jmp    0xb703
+0b6f1 ES=MSG
+0b6f5 si=0x140 [79:Talvez ele näo tenha muito o que falar.]
+0b6f8 int    0x97
+0b6fa si=0x556 (MSGBUF2$)
+0b6fd int    0x9a
+0b6ff call   0xcfbc
+0b702 ret
+0b703 ES=MSG
+0b707 si=0x144 [80:Você deveria se sentir ridículo conversando com is]
+0b70a int    0x97
+0b70c si=0x556 (MSGBUF2$)
+0b70f int    0x9a
+0b711 call   0xcfbc
+0b714 ret
+
+
+===== verbo 11 @ 0b715 CIMA/C/SUBIR =====
+0b716 fldz
+0b719 fcomp saidaC
+0b71d int    0x93
+0b71f int    0x81
+0b721 je     0xb726
+0b723 jmp    0xb737
+0b726 si=0x788
+0b729 int    0x96
+0b72b si=0x53a (MSGBUF$)
+0b72e int    0x9a
+0b730 call   0xcf33
+0b733 call   0xd35a
+0b736 ret
+0b738 fld saidaC
+0b73d fstp SALA
+0b741 int    0x81
+0b743 ret
+
+
+===== verbo 12 @ 0b744 BAIXO/B/DESCER =====
+0b745 fldz
+0b748 fcomp saidaB
+0b74c int    0x93
+0b74e int    0x81
+0b750 je     0xb755
+0b752 jmp    0xb766
+0b755 si=0x784
+0b758 int    0x96
+0b75a si=0x53a (MSGBUF$)
+0b75d int    0x9a
+0b75f call   0xcf33
+0b762 call   0xd35a
+0b765 ret
+0b767 fld saidaB
+0b76c fstp SALA
+0b770 int    0x81
+0b772 ret
+
+
+===== verbo 13 @ 0b773 LER =====
+0b774 fld SALA
+0b779 fld OBJ
+0b77e fistp  word ptr [0x2c]
+0b784 mov    ax, word ptr [0x2c]
+0b787 mov    si, ax
+0b789 shl    si, 1
+0b78b shl    si, 1
+0b78d ES=loc
+0b792 fld loc[si]
+0b796 fabs
+0b799 fcompp
+0b79b int    0x93
+0b79d mov    ax, 0xffff
+0b7a0 jne    0xb7a3
+0b7a2 inc    ax
+0b7a3 or     ax, ax
+0b7a5 int    0x81
+0b7a7 jne    0xb7ac
+0b7a9 jmp    0xb7ea
+0b7ac mov    bx, ax
+0b7ae mov    ax, 0x3e7
+0b7b1 neg    ax
+0b7b3 mov    word ptr [0x2c], ax
+0b7b7 LOAD_INT 1
+0b7bb mov    ax, bx
+0b7be fld OBJ
+0b7c3 fistp  word ptr [0x2c]
+0b7c7 mov    bx, ax
+0b7cb mov    ax, word ptr [0x2c]
+0b7ce mov    si, ax
+0b7d0 mov    ax, bx
+0b7d2 shl    si, 1
+0b7d4 shl    si, 1
+0b7d6 ES=loc
+0b7db fcomp loc[si]
+0b7de int    0x93
+0b7e0 mov    bx, ax
+0b7e2 mov    ax, 0xffff
+0b7e5 jne    0xb7e8
+0b7e7 inc    ax
+0b7e8 and    ax, bx
+0b7ea int    0x81
+0b7ec jne    0xb7f1
+0b7ee jmp    0xb803
+0b7f1 ES=MSG
+0b7f5 si=0x148 [81:Aonde está isso ?]
+0b7f8 int    0x97
+0b7fa si=0x556 (MSGBUF2$)
+0b7fd int    0x9a
+0b7ff call   0xcfbc
+0b802 ret
+0b804 LOAD_INT 19
+0b809 fcomp SALA
+0b80d int    0x93
+0b80f mov    ax, 0xffff
+0b812 je     0xb815
+0b814 inc    ax
+0b815 or     ax, ax
+0b817 int    0x81
+0b819 jne    0xb81e
+0b81b jmp    0xb834
+0b81e si=0x536 (SALANOME$)
+0b821 int    0x96
+0b823 si=0x828 [521:?]
+0b826 int    0x96
+0b828 int    0x94
+0b82a mov    bx, ax
+0b82c mov    ax, 0xffff
+0b82f je     0xb832
+0b831 inc    ax
+0b832 and    ax, bx
+0b834 jne    0xb839
+0b836 jmp    0xb847
+0b839 si=0x780 [479:?]
+0b83c int    0x96
+0b83e si=0x556 (MSGBUF2$)
+0b841 int    0x9a
+0b843 call   0xcfbc
+0b846 ret
+0b848 LOAD_INT 12
+0b84d fcomp OBJ
+0b851 int    0x93
+0b853 mov    ax, 0xffff
+0b856 je     0xb859
+0b858 inc    ax
+0b859 or     ax, ax
+0b85b int    0x81
+0b85d je     0xb862
+0b85f jmp    0xb874
+0b863 LOAD_INT 16
+0b868 fcomp OBJ
+0b86c int    0x93
+0b86e mov    ax, 0xffff
+0b871 je     0xb874
+0b873 inc    ax
+0b874 or     ax, ax
+0b876 int    0x81
+0b878 je     0xb87d
+0b87a jmp    0xb88f
+0b87e LOAD_INT 66
+0b883 fcomp OBJ
+0b887 int    0x93
+0b889 mov    ax, 0xffff
+0b88c je     0xb88f
+0b88e inc    ax
+0b88f or     ax, ax
+0b891 int    0x81
+0b893 je     0xb898
+0b895 jmp    0xaa4a
+0b899 LOAD_INT 15
+0b89e fcomp OBJ
+0b8a2 int    0x93
+0b8a4 int    0x81
+0b8a6 je     0xb8ab
+0b8a8 jmp    0xb8bd
+0b8ab ES=MSG
+0b8af si=0x14c [82:Cê pirou ? Isso vai levar o mês inteiro, cara, e v]
+0b8b2 int    0x97
+0b8b4 si=0x556 (MSGBUF2$)
+0b8b7 int    0x9a
+0b8b9 call   0xcfbc
+0b8bc ret
+0b8bd ES=MSG
+0b8c1 si=0x150 [83:Näo posso ler isso]
+0b8c4 int    0x97
+0b8c6 si=0x556 (MSGBUF2$)
+0b8c9 int    0x9a
+0b8cb call   0xcfbc
+0b8ce ret
+
+
+===== verbo 14 @ 0b8cf LIGAR/USAR/ACENDER =====
+0b8d0 LOAD_INT 21
+0b8d5 fcomp OBJ
+0b8d9 int    0x93
+0b8db mov    ax, 0xffff
+0b8de jne    0xb8e1
+0b8e0 inc    ax
+0b8e1 or     ax, ax
+0b8e3 int    0x81
+0b8e5 jne    0xb8ea
+0b8e7 jmp    0xb900
+0b8ea si=0x546 (S546$)
+0b8ed int    0x96
+0b8ef si=0xda8
+0b8f2 int    0x96
+0b8f4 int    0x94
+0b8f6 mov    bx, ax
+0b8f8 mov    ax, 0xffff
+0b8fb je     0xb8fe
+0b8fd inc    ax
+0b8fe and    ax, bx
+0b900 jne    0xb905
+0b902 jmp    0xb913
+0b905 si=0x77c
+0b908 int    0x96
+0b90a si=0x556 (MSGBUF2$)
+0b90d int    0x9a
+0b90f call   0xcfbc
+0b912 ret
+0b914 LOAD_INT 60
+0b919 fcomp OBJ
+0b91d int    0x93
+0b91f int    0x81
+0b921 jne    0xb926
+0b923 jmp    0xaa4a
+0b927 LOAD_INT 40
+0b92c fcomp OBJ
+0b930 int    0x93
+0b932 mov    ax, 0xffff
+0b935 je     0xb938
+0b937 inc    ax
+0b939 LOAD_INT 30
+0b93e fcomp SALA
+0b942 int    0x93
+0b944 mov    bx, ax
+0b946 mov    ax, 0xffff
+0b949 je     0xb94c
+0b94b inc    ax
+0b94c and    ax, bx
+0b94e int    0x81
+0b950 je     0xb955
+0b952 jmp    0xb97d
+0b956 LOAD_INT 51
+0b95b fcomp OBJ
+0b95f int    0x93
+0b961 mov    ax, 0xffff
+0b964 je     0xb967
+0b966 inc    ax
+0b968 LOAD_INT 42
+0b96d fcomp SALA
+0b971 int    0x93
+0b973 mov    bx, ax
+0b975 mov    ax, 0xffff
+0b978 je     0xb97b
+0b97a inc    ax
+0b97b and    ax, bx
+0b97d int    0x81
+0b97f je     0xb984
+0b981 jmp    0xb9ac
+0b985 LOAD_INT 52
+0b98a fcomp OBJ
+0b98e int    0x93
+0b990 mov    ax, 0xffff
+0b993 je     0xb996
+0b995 inc    ax
+0b997 LOAD_INT 43
+0b99c fcomp SALA
+0b9a0 int    0x93
+0b9a2 mov    bx, ax
+0b9a4 mov    ax, 0xffff
+0b9a7 je     0xb9aa
+0b9a9 inc    ax
+0b9aa and    ax, bx
+0b9ac int    0x81
+0b9ae jne    0xb9b3
+0b9b0 jmp    0xbb3a
+0b9b4 LOAD_INT 43
+0b9b9 fcomp SALA
+0b9bd int    0x93
+0b9bf int    0x81
+0b9c1 je     0xb9c6
+0b9c3 jmp    0xb9d7
+0b9c6 ES=MSG
+0b9ca si=0x154 [84:Digite o número do sub-solo:]
+0b9cd int    0x97
+0b9cf si=0x556 (MSGBUF2$)
+0b9d2 int    0x9a
+0b9d4 jmp    0xb9e1
+0b9d7 si=0x778 [477:?]
+0b9da int    0x96
+0b9dc si=0x556 (MSGBUF2$)
+0b9df int    0x9a
+0b9e1 call   0xcfbc
+0b9e4 call   0x8c10
+0b9e8 LOAD_INT 40
+0b9ed fcomp OBJ
+0b9f1 int    0x93
+0b9f3 int    0x81
+0b9f5 je     0xb9fa
+0b9f7 jmp    0xba0c
+0b9fa ES=MSG
+0b9fe si=0x158 [85:O elevador näo se move.]
+0ba01 int    0x97
+0ba03 si=0x556 (MSGBUF2$)
+0ba06 int    0x9a
+0ba08 call   0xcfbc
+0ba0b ret
+0ba0d LOAD_INT 51
+0ba12 fcomp OBJ
+0ba16 int    0x93
+0ba18 mov    ax, 0xffff
+0ba1b je     0xba1e
+0ba1d inc    ax
+0ba1e or     ax, ax
+0ba20 int    0x81
+0ba22 jne    0xba27
+0ba24 jmp    0xbaa3
+0ba27 mov    ax, 1
+0ba2a si=0x54e
+0ba2d int    0x96
+0ba2f mov    bx, ax
+0ba31 int    0xed
+0ba33 and    bh, byte ptr [bp + di]
+0ba35 ret
+0ba36 mov    ax, 0xffff
+0ba39 jne    0xba3c
+0ba3b inc    ax
+0ba3c or     ax, ax
+0ba3e je     0xba43
+0ba40 jmp    0xba5c
+0ba43 xor    ax, ax
+0ba45 si=0x774 [476:?]
+0ba48 int    0x96
+0ba4a si=0x54e
+0ba4d int    0x96
+0ba4f mov    bx, ax
+0ba51 int    0xed
+0ba53 sbb    al, 0x3b
+0ba55 ret
+0ba56 mov    ax, 0xffff
+0ba59 je     0xba5c
+0ba5b inc    ax
+0ba5c or     ax, ax
+0ba5e jne    0xba63
+0ba60 jmp    0xba75
+0ba63 ES=MSG
+0ba67 si=0x15c [86:O elevador näo se move.]
+0ba6a int    0x97
+0ba6c si=0x556 (MSGBUF2$)
+0ba6f int    0x9a
+0ba71 call   0xcfbc
+0ba74 ret
+0ba75 mov    ax, 0x2b
+0ba78 si=0x774 [476:?]
+0ba7b int    0x96
+0ba7d si=0x54e
+0ba80 int    0x96
+0ba82 mov    bx, ax
+0ba84 int    0xed
+0ba86 sbb    al, 3
+0ba88 ret
+0ba89 mov    word ptr [0x2c], ax
+0ba8d LOAD_INT 1
+0ba92 fstp SALA
+0ba96 int    0x81
+0ba99 fld1
+0ba9c fstp 0x46a
+0baa0 int    0x81
+0baa2 ret
+0baa4 LOAD_INT 52
+0baa9 fcomp OBJ
+0baad int    0x93
+0baaf mov    ax, 0xffff
+0bab2 je     0xbab5
+0bab4 inc    ax
+0bab5 or     ax, ax
+0bab7 int    0x81
+0bab9 jne    0xbabe
+0babb jmp    0xbb3a
+0babe mov    ax, 1
+0bac1 si=0x54e
+0bac4 int    0x96
+0bac6 mov    bx, ax
+0bac8 int    0xed
+0baca and    bh, byte ptr [bp + di]
+0bacc ret
+0bacd mov    ax, 0xffff
+0bad0 jne    0xbad3
+0bad2 inc    ax
+0bad3 or     ax, ax
+0bad5 je     0xbada
+0bad7 jmp    0xbaf3
+0bada xor    ax, ax
+0badc si=0xdbc [878:?]
+0badf int    0x96
+0bae1 si=0x54e
+0bae4 int    0x96
+0bae6 mov    bx, ax
+0bae8 int    0xed
+0baea sbb    al, 0x3b
+0baec ret
+0baed mov    ax, 0xffff
+0baf0 je     0xbaf3
+0baf2 inc    ax
+0baf3 or     ax, ax
+0baf5 jne    0xbafa
+0baf7 jmp    0xbb0c
+0bafa ES=MSG
+0bafe si=0x160 [87:O elevador näo se move.]
+0bb01 int    0x97
+0bb03 si=0x556 (MSGBUF2$)
+0bb06 int    0x9a
+0bb08 call   0xcfbc
+0bb0b ret
+0bb0c mov    ax, 0x35
+0bb0f si=0xdbc [878:?]
+0bb12 int    0x96
+0bb14 si=0x54e
+0bb17 int    0x96
+0bb19 mov    bx, ax
+0bb1b int    0xed
+0bb1d sbb    al, 3
+0bb1f ret
+0bb20 mov    word ptr [0x2c], ax
+0bb24 LOAD_INT 1
+0bb29 fstp SALA
+0bb2d int    0x81
+0bb30 fld1
+0bb33 fstp 0x46a
+0bb37 int    0x81
+0bb39 ret
+0bb3b LOAD_INT 34
+0bb40 fcomp OBJ
+0bb44 int    0x93
+0bb46 mov    ax, 0xffff
+0bb49 je     0xbb4c
+0bb4b inc    ax
+0bb4c or     ax, ax
+0bb4e int    0x81
+0bb50 jne    0xbb55
+0bb52 jmp    0xbb7c
+0bb55 mov    bx, ax
+0bb57 mov    ax, 0x3e7
+0bb5a neg    ax
+0bb5c mov    word ptr [0x2c], ax
+0bb60 LOAD_INT 1
+0bb64 mov    ax, bx
+0bb66 ES=loc
+0bb6b fcomp loc[34]
+0bb70 int    0x93
+0bb72 mov    bx, ax
+0bb74 mov    ax, 0xffff
+0bb77 je     0xbb7a
+0bb79 inc    ax
+0bb7a and    ax, bx
+0bb7c int    0x81
+0bb7e jne    0xbb83
+0bb80 jmp    0xbb99
+0bb84 LOAD_INT 57
+0bb89 fcomp SALA
+0bb8d int    0x93
+0bb8f mov    bx, ax
+0bb91 mov    ax, 0xffff
+0bb94 je     0xbb97
+0bb96 inc    ax
+0bb97 and    ax, bx
+0bb99 int    0x81
+0bb9b jne    0xbba0
+0bb9d jmp    0xbbaf
+0bba1 LOAD_INT 35
+0bba6 fstp OBJ
+0bbaa int    0x81
+0bbac jmp    0xbfd9
+0bbb0 LOAD_INT 21
+0bbb5 fcomp OBJ
+0bbb9 int    0x93
+0bbbb mov    ax, 0xffff
+0bbbe je     0xbbc1
+0bbc0 inc    ax
+0bbc1 or     ax, ax
+0bbc3 int    0x81
+0bbc5 jne    0xbbca
+0bbc7 jmp    0xbcaf
+0bbca mov    ax, 0x3e7
+0bbcd neg    ax
+0bbcf mov    word ptr [0x2c], ax
+0bbd3 LOAD_INT 1
+0bbd7 ES=loc
+0bbdc fcomp loc[21]
+0bbe1 int    0x93
+0bbe3 int    0x81
+0bbe5 jne    0xbbea
+0bbe7 jmp    0xbbfc
+0bbea ES=MSG
+0bbee si=0x164 [88:Näo a tenho.]
+0bbf1 int    0x97
+0bbf3 si=0x556 (MSGBUF2$)
+0bbf6 int    0x9a
+0bbf8 call   0xcfbc
+0bbfb ret
+0bbfc mov    ax, 0x3e7
+0bbff neg    ax
+0bc01 mov    word ptr [0x2c], ax
+0bc05 LOAD_INT 1
+0bc09 ES=loc
+0bc0e fcomp loc[22]
+0bc13 int    0x93
+0bc15 int    0x81
+0bc17 jne    0xbc1c
+0bc19 jmp    0xbc2e
+0bc1c ES=MSG
+0bc20 si=0x168 [89:Sem pilhas. Nada feito.]
+0bc23 int    0x97
+0bc25 si=0x556 (MSGBUF2$)
+0bc28 int    0x9a
+0bc2a call   0xcfbc
+0bc2d ret
+0bc2e si=0x55a
+0bc31 int    0x96
+0bc33 si=0x7a0 [487:?]
+0bc36 int    0x96
+0bc38 int    0x94
+0bc3a je     0xbc3f
+0bc3c jmp    0xbc4d
+0bc3f si=0x770 [475:?]
+0bc42 int    0x96
+0bc44 si=0x556 (MSGBUF2$)
+0bc47 int    0x9a
+0bc49 call   0xcfbc
+0bc4c ret
+0bc4e LOAD_INT 19
+0bc53 fcomp SALA
+0bc57 int    0x93
+0bc59 int    0x81
+0bc5b je     0xbc60
+0bc5d jmp    0xbc6e
+0bc60 si=0x76c [474:?]
+0bc63 int    0x96
+0bc65 si=0x556 (MSGBUF2$)
+0bc68 int    0x9a
+0bc6a call   0xcfbc
+0bc6d ret
+0bc6f LOAD_INT 17
+0bc74 fcomp SALA
+0bc78 int    0x93
+0bc7a int    0x81
+0bc7c jne    0xbc81
+0bc7e jmp    0xbc93
+0bc81 ES=MSG
+0bc85 si=0x16c [90:Melhor você economizar pilhas. Elas näo duraräo mu]
+0bc88 int    0x97
+0bc8a si=0x556 (MSGBUF2$)
+0bc8d int    0x9a
+0bc8f call   0xcfbc
+0bc92 ret
+0bc93 ES=MSG
+0bc97 si=0x170 [91:Você coloca as pilhas na lanterna e acende.]
+0bc9a int    0x97
+0bc9c si=0x556 (MSGBUF2$)
+0bc9f int    0x9a
+0bca1 call   0xcfbc
+0bca4 si=0x7a0 [487:?]
+0bca7 int    0x96
+0bca9 si=0x55a
+0bcac int    0x9a
+0bcae ret
+0bcb0 LOAD_INT 31
+0bcb5 fcomp OBJ
+0bcb9 int    0x93
+0bcbb mov    ax, 0xffff
+0bcbe je     0xbcc1
+0bcc0 inc    ax
+0bcc1 or     ax, ax
+0bcc3 int    0x81
+0bcc5 jne    0xbcca
+0bcc7 jmp    0xbce0
+0bccb LOAD_INT 19
+0bcd0 fcomp SALA
+0bcd4 int    0x93
+0bcd6 mov    bx, ax
+0bcd8 mov    ax, 0xffff
+0bcdb je     0xbcde
+0bcdd inc    ax
+0bcde and    ax, bx
+0bce0 int    0x81
+0bce2 jne    0xbce7
+0bce4 jmp    0xbcfb
+0bce7 ES=MSG
+0bceb si=0x174 [92:Muito bem ! O local está mais iluminado. Veja esta]
+0bcee int    0x97
+0bcf0 si=0x556 (MSGBUF2$)
+0bcf3 int    0x9a
+0bcf5 call   0xcfbc
+0bcf8 jmp    0x10aae
+0bcfc LOAD_INT 31
+0bd01 fcomp OBJ
+0bd05 int    0x93
+0bd07 mov    ax, 0xffff
+0bd0a je     0xbd0d
+0bd0c inc    ax
+0bd0d or     ax, ax
+0bd0f int    0x81
+0bd11 jne    0xbd16
+0bd13 jmp    0xbd2c
+0bd17 LOAD_INT 31
+0bd1c fcomp SALA
+0bd20 int    0x93
+0bd22 mov    bx, ax
+0bd24 mov    ax, 0xffff
+0bd27 je     0xbd2a
+0bd29 inc    ax
+0bd2a and    ax, bx
+0bd2c int    0x81
+0bd2e jne    0xbd33
+0bd30 jmp    0xbd47
+0bd33 ES=MSG
+0bd37 si=0x178 [93:Você pöe fogo na madeira. Seria uma boa idéia, se ]
+0bd3a int    0x97
+0bd3c si=0x556 (MSGBUF2$)
+0bd3f int    0x9a
+0bd41 call   0xcfbc
+0bd44 jmp    0x10aae
+0bd48 LOAD_INT 31
+0bd4d fcomp OBJ
+0bd51 int    0x93
+0bd53 int    0x81
+0bd55 je     0xbd5a
+0bd57 jmp    0xbd6c
+0bd5a ES=MSG
+0bd5e si=0x17c [94:Você acende um fósforo. Ele deve ser especial, poi]
+0bd61 int    0x97
+0bd63 si=0x556 (MSGBUF2$)
+0bd66 int    0x9a
+0bd68 call   0xcfbc
+0bd6b ret
+0bd6d LOAD_INT 42
+0bd72 fcomp OBJ
+0bd76 int    0x93
+0bd78 mov    ax, 0xffff
+0bd7b je     0xbd7e
+0bd7d inc    ax
+0bd7e or     ax, ax
+0bd80 int    0x81
+0bd82 jne    0xbd87
+0bd84 jmp    0xbd9d
+0bd88 LOAD_INT 31
+0bd8d fcomp SALA
+0bd91 int    0x93
+0bd93 mov    bx, ax
+0bd95 mov    ax, 0xffff
+0bd98 je     0xbd9b
+0bd9a inc    ax
+0bd9b and    ax, bx
+0bd9d int    0x81
+0bd9f jne    0xbda4
+0bda1 jmp    0xbdcb
+0bda4 mov    bx, ax
+0bda6 mov    ax, 0x3e7
+0bda9 neg    ax
+0bdab mov    word ptr [0x2c], ax
+0bdaf LOAD_INT 1
+0bdb3 mov    ax, bx
+0bdb5 ES=loc
+0bdba fcomp loc[42]
+0bdbf int    0x93
+0bdc1 mov    bx, ax
+0bdc3 mov    ax, 0xffff
+0bdc6 je     0xbdc9
+0bdc8 inc    ax
+0bdc9 and    ax, bx
+0bdcb int    0x81
+0bdcd jne    0xbdd2
+0bdcf jmp    0xbdf0
+0bdd2 ES=MSG
+0bdd6 si=0x180 [95:Você destrói a parede e pula no buraco. Misteriosa]
+0bdd9 int    0x97
+0bddb si=0x556 (MSGBUF2$)
+0bdde int    0x9a
+0bde0 call   0xcfbc
+0bde4 LOAD_INT 33
+0bde9 fstp SALA
+0bded int    0x81
+0bdef ret
+0bdf1 LOAD_INT 29
+0bdf6 fcomp OBJ
+0bdfa int    0x93
+0bdfc int    0x81
+0bdfe jne    0xbe03
+0be00 jmp    0xaa4a
+0be04 LOAD_INT 25
+0be09 fcomp OBJ
+0be0d int    0x93
+0be0f mov    ax, 0xffff
+0be12 je     0xbe15
+0be14 inc    ax
+0be15 or     ax, ax
+0be17 int    0x81
+0be19 jne    0xbe1e
+0be1b jmp    0xbe34
+0be1f LOAD_INT 3
+0be24 fcomp SALA
+0be28 int    0x93
+0be2a mov    bx, ax
+0be2c mov    ax, 0xffff
+0be2f jne    0xbe32
+0be31 inc    ax
+0be32 and    ax, bx
+0be34 int    0x81
+0be36 jne    0xbe3b
+0be38 jmp    0xbe4d
+0be3b ES=MSG
+0be3f si=0x184 [96:Näo aqui.]
+0be42 int    0x97
+0be44 si=0x556 (MSGBUF2$)
+0be47 int    0x9a
+0be49 call   0xcfbc
+0be4c ret
+0be4e LOAD_INT 25
+0be53 fcomp OBJ
+0be57 int    0x93
+0be59 mov    ax, 0xffff
+0be5c je     0xbe5f
+0be5e inc    ax
+0be5f or     ax, ax
+0be61 int    0x81
+0be63 jne    0xbe68
+0be65 jmp    0xbf22
+0be68 ES=MSG
+0be6c si=0x188 [97:Digite o nº da linha do ônibus:]
+0be6f int    0x97
+0be71 si=0x556 (MSGBUF2$)
+0be74 int    0x9a
+0be76 call   0xcfbc
+0be79 call   0x8c10
+0be7d fldz
+0be7f si=0x54e
+0be82 int    0x96
+0be84 int    0xa6
+0be87 fcompp
+0be89 int    0x93
+0be8b int    0x81
+0be8d je     0xbe92
+0be8f jmp    0xbea4
+0be92 ES=MSG
+0be96 si=0x18c [98:Näo entendi. Nada feito.]
+0be99 int    0x97
+0be9b si=0x556 (MSGBUF2$)
+0be9e int    0x9a
+0bea0 call   0xcfbc
+0bea3 ret
+0bea4 si=0x7ac [490:?]
+0bea7 int    0x96
+0bea9 si=0x53a (MSGBUF$)
+0beac int    0x9a
+0beae ES=MSG
+0beb2 si=0x190 [99:Você entra no ônibus. Este meio sem-vergonha de tr]
+0beb5 int    0x97
+0beb7 si=0x556 (MSGBUF2$)
+0beba int    0x9a
+0bebc call   0xcfbc
+0bebf ES=MSG
+0bec3 si=0x194 [100:Ao chegar na metade do mesmo, depara com um indiví]
+0bec6 int    0x97
+0bec8 si=0x556 (MSGBUF2$)
+0becb int    0x9a
+0becd call   0xcfbc
+0bed0 call   0xcf33
+0bed4 LOAD_INT 200
+0bed9 fsubr  dword ptr [0x4ea]
+0bede fstp 0x4ea
+0bee2 int    0x81
+0bee4 ES=MSG
+0bee8 si=0x198 [101:O ônibus para. Este é o ponto final. Todos descem,]
+0beeb int    0x97
+0beed si=0x556 (MSGBUF2$)
+0bef0 int    0x9a
+0bef2 call   0xcfbc
+0bef5 si=0x54e
+0bef8 int    0x96
+0befa si=0x768 [473:?]
+0befd int    0x96
+0beff int    0x94
+0bf01 jne    0xbf06
+0bf03 jmp    0xbf15
+0bf07 LOAD_INT 20
+0bf0c fstp SALA
+0bf10 int    0x81
+0bf12 jmp    0xbf21
+0bf16 LOAD_INT 8
+0bf1b fstp SALA
+0bf1f int    0x81
+0bf21 ret
+0bf23 LOAD_INT 79
+0bf28 fcomp OBJ
+0bf2c int    0x93
+0bf2e mov    ax, 0xffff
+0bf31 je     0xbf34
+0bf33 inc    ax
+0bf34 or     ax, ax
+0bf36 int    0x81
+0bf38 jne    0xbf3d
+0bf3a jmp    0xbf64
+0bf3d mov    bx, ax
+0bf3f mov    ax, 0x3e7
+0bf42 neg    ax
+0bf44 mov    word ptr [0x2c], ax
+0bf48 LOAD_INT 1
+0bf4c mov    ax, bx
+0bf4e ES=loc
+0bf53 fcomp loc[79]
+0bf58 int    0x93
+0bf5a mov    bx, ax
+0bf5c mov    ax, 0xffff
+0bf5f je     0xbf62
+0bf61 inc    ax
+0bf62 and    ax, bx
+0bf64 int    0x81
+0bf66 jne    0xbf6b
+0bf68 jmp    0xbf92
+0bf6b mov    bx, ax
+0bf6d mov    ax, 0x3e7
+0bf70 neg    ax
+0bf72 mov    word ptr [0x2c], ax
+0bf76 LOAD_INT 1
+0bf7a mov    ax, bx
+0bf7c ES=loc
+0bf81 fcomp loc[77]
+0bf86 int    0x93
+0bf88 mov    bx, ax
+0bf8a mov    ax, 0xffff
+0bf8d je     0xbf90
+0bf8f inc    ax
+0bf90 and    ax, bx
+0bf92 int    0x81
+0bf94 jne    0xbf99
+0bf96 jmp    0xbfc7
+0bf99 ES=MSG
+0bf9d si=0x19c [102:Você coloca o papel-alumínio da bala em volta da l]
+0bfa0 int    0x97
+0bfa2 si=0x556 (MSGBUF2$)
+0bfa5 int    0x9a
+0bfa7 call   0xcfbc
+0bfab fldz
+0bfad ES=loc
+0bfb2 fstp loc[79]
+0bfb7 int    0x81
+0bfba fld1
+0bfbd fstp 0x4de
+0bfc1 int    0x81
+0bfc3 call   0xd342
+0bfc6 ret
+0bfc7 ES=MSG
+0bfcb si=0x1a0 [103:Você näo pode usar isso !]
+0bfce int    0x97
+0bfd0 si=0x556 (MSGBUF2$)
+0bfd3 int    0x9a
+0bfd5 call   0xcfbc
+0bfd8 ret
+
+
+===== verbo 15 @ 0bfd9 ABRIR =====
+0bfda LOAD_INT 37
+0bfdf fcomp OBJ
+0bfe3 int    0x93
+0bfe5 int    0x81
+0bfe7 jne    0xbfec
+0bfe9 jmp    0xaa4a
+0bfed LOAD_INT 61
+0bff2 fcomp OBJ
+0bff6 int    0x93
+0bff8 int    0x81
+0bffa je     0xbfff
+0bffc jmp    0xc011
+0bfff ES=MSG
+0c003 si=0x1a4 [104:Já está aberta]
+0c006 int    0x97
+0c008 si=0x556 (MSGBUF2$)
+0c00b int    0x9a
+0c00d call   0xcfbc
+0c010 ret
+0c012 LOAD_INT 35
+0c017 fcomp OBJ
+0c01b int    0x93
+0c01d mov    ax, 0xffff
+0c020 je     0xc023
+0c022 inc    ax
+0c023 or     ax, ax
+0c025 int    0x81
+0c027 jne    0xc02c
+0c029 jmp    0xc042
+0c02d LOAD_INT 57
+0c032 fcomp SALA
+0c036 int    0x93
+0c038 mov    bx, ax
+0c03a mov    ax, 0xffff
+0c03d je     0xc040
+0c03f inc    ax
+0c040 and    ax, bx
+0c042 int    0x81
+0c044 jne    0xc049
+0c046 jmp    0xc05d
+0c04a fld1
+0c04d fcomp v4e6
+0c051 int    0x93
+0c053 mov    bx, ax
+0c055 mov    ax, 0xffff
+0c058 je     0xc05b
+0c05a inc    ax
+0c05b and    ax, bx
+0c05d int    0x81
+0c05f jne    0xc064
+0c061 jmp    0xc076
+0c064 ES=MSG
+0c068 si=0x1a8 [105:A porta já está aberta.]
+0c06b int    0x97
+0c06d si=0x556 (MSGBUF2$)
+0c070 int    0x9a
+0c072 call   0xcfbc
+0c075 ret
+0c077 LOAD_INT 32
+0c07c fcomp OBJ
+0c080 int    0x93
+0c082 mov    ax, 0xffff
+0c085 je     0xc088
+0c087 inc    ax
+0c088 or     ax, ax
+0c08a int    0x81
+0c08c jne    0xc091
+0c08e jmp    0xc0b8
+0c091 mov    bx, ax
+0c093 mov    ax, 0x3e7
+0c096 neg    ax
+0c098 mov    word ptr [0x2c], ax
+0c09c LOAD_INT 1
+0c0a0 mov    ax, bx
+0c0a2 ES=loc
+0c0a7 fcomp loc[32]
+0c0ac int    0x93
+0c0ae mov    bx, ax
+0c0b0 mov    ax, 0xffff
+0c0b3 jne    0xc0b6
+0c0b5 inc    ax
+0c0b6 and    ax, bx
+0c0b8 int    0x81
+0c0ba jne    0xc0bf
+0c0bc jmp    0xc0cd
+0c0bf si=0x764
+0c0c2 int    0x96
+0c0c4 si=0x556 (MSGBUF2$)
+0c0c7 int    0x9a
+0c0c9 call   0xcfbc
+0c0cc ret
+0c0ce LOAD_INT 32
+0c0d3 fcomp OBJ
+0c0d7 int    0x93
+0c0d9 mov    ax, 0xffff
+0c0dc je     0xc0df
+0c0de inc    ax
+0c0df or     ax, ax
+0c0e1 int    0x81
+0c0e3 jne    0xc0e8
+0c0e5 jmp    0xc101
+0c0e9 fldz
+0c0eb ES=loc
+0c0f0 fcomp loc[34]
+0c0f5 int    0x93
+0c0f7 mov    bx, ax
+0c0f9 mov    ax, 0xffff
+0c0fc je     0xc0ff
+0c0fe inc    ax
+0c0ff and    ax, bx
+0c101 int    0x81
+0c103 jne    0xc108
+0c105 jmp    0xc136
+0c108 ES=MSG
+0c10c si=0x1ac [106:Há uma passagem de ônibus nela. Você a pega imedia]
+0c10f int    0x97
+0c111 si=0x556 (MSGBUF2$)
+0c114 int    0x9a
+0c116 call   0xcfbc
+0c119 mov    ax, 0x3e7
+0c11c neg    ax
+0c11e mov    word ptr [0x2c], ax
+0c122 LOAD_INT 1
+0c126 ES=loc
+0c12b fstp loc[34]
+0c130 int    0x81
+0c132 call   0xd342
+0c135 ret
+0c137 LOAD_INT 32
+0c13c fcomp OBJ
+0c140 int    0x93
+0c142 int    0x81
+0c144 je     0xc149
+0c146 jmp    0xc15b
+0c149 ES=MSG
+0c14d si=0x1b0 [107:Está vazia.]
+0c150 int    0x97
+0c152 si=0x556 (MSGBUF2$)
+0c155 int    0x9a
+0c157 call   0xcfbc
+0c15a ret
+0c15c LOAD_INT 57
+0c161 fcomp SALA
+0c165 int    0x93
+0c167 mov    ax, 0xffff
+0c16a je     0xc16d
+0c16c inc    ax
+0c16d or     ax, ax
+0c16f int    0x81
+0c171 jne    0xc176
+0c173 jmp    0xc18c
+0c177 LOAD_INT 35
+0c17c fcomp OBJ
+0c180 int    0x93
+0c182 mov    bx, ax
+0c184 mov    ax, 0xffff
+0c187 je     0xc18a
+0c189 inc    ax
+0c18a and    ax, bx
+0c18c int    0x81
+0c18e jne    0xc193
+0c190 jmp    0xc1ba
+0c193 mov    bx, ax
+0c195 mov    ax, 0x3e7
+0c198 neg    ax
+0c19a mov    word ptr [0x2c], ax
+0c19e LOAD_INT 1
+0c1a2 mov    ax, bx
+0c1a4 ES=loc
+0c1a9 fcomp loc[34]
+0c1ae int    0x93
+0c1b0 mov    bx, ax
+0c1b2 mov    ax, 0xffff
+0c1b5 je     0xc1b8
+0c1b7 inc    ax
+0c1b8 and    ax, bx
+0c1ba int    0x81
+0c1bc jne    0xc1c1
+0c1be jmp    0xc208
+0c1c1 ES=MSG
+0c1c5 si=0x1b4 [108:Você coloca a passagem na abertura ao lado da port]
+0c1c8 int    0x97
+0c1ca si=0x556 (MSGBUF2$)
+0c1cd int    0x9a
+0c1cf call   0xcfbc
+0c1d3 fld1
+0c1d6 fstp v4e6
+0c1da int    0x81
+0c1dd LOAD_INT 67
+0c1e2 fstp saidaL
+0c1e6 int    0x81
+0c1e8 mov    ax, 0x3e6
+0c1eb neg    ax
+0c1ed mov    word ptr [0x2c], ax
+0c1f1 LOAD_INT 1
+0c1f5 ES=loc
+0c1fa fstp loc[34]
+0c1ff int    0x81
+0c201 call   0xd342
+0c204 call   0xd35a
+0c207 ret
+0c209 LOAD_INT 57
+0c20e fcomp SALA
+0c212 int    0x93
+0c214 mov    ax, 0xffff
+0c217 je     0xc21a
+0c219 inc    ax
+0c21a or     ax, ax
+0c21c int    0x81
+0c21e jne    0xc223
+0c220 jmp    0xc239
+0c224 LOAD_INT 35
+0c229 fcomp OBJ
+0c22d int    0x93
+0c22f mov    bx, ax
+0c231 mov    ax, 0xffff
+0c234 je     0xc237
+0c236 inc    ax
+0c237 and    ax, bx
+0c239 int    0x81
+0c23b jne    0xc240
+0c23d jmp    0xc252
+0c240 ES=MSG
+0c244 si=0x1b8 [109:Näo dá. Ela é automática, e só abre se você tiver ]
+0c247 int    0x97
+0c249 si=0x556 (MSGBUF2$)
+0c24c int    0x9a
+0c24e call   0xcfbc
+0c251 ret
+0c253 LOAD_INT 45
+0c258 fcomp OBJ
+0c25c int    0x93
+0c25e int    0x81
+0c260 je     0xc265
+0c262 jmp    0xc277
+0c265 ES=MSG
+0c269 si=0x1bc [110:Já está aberto.]
+0c26c int    0x97
+0c26e si=0x556 (MSGBUF2$)
+0c271 int    0x9a
+0c273 call   0xcfbc
+0c276 ret
+0c277 ES=MSG
+0c27b si=0x1c0 [111:Näo posso abrir isso.]
+0c27e int    0x97
+0c280 si=0x556 (MSGBUF2$)
+0c283 int    0x9a
+0c285 call   0xcfbc
+0c288 ret
+
+
+===== verbo 16 @ 0c289 BEIJAR/ABRACAR =====
+0c28a LOAD_INT 82
+0c28f fcomp OBJ
+0c293 int    0x93
+0c295 int    0x81
+0c297 jne    0xc29c
+0c299 jmp    0x9f9e
+0c29d fild   dword ptr [0x10f6]
+0c2a2 fcomp OBJ
+0c2a6 int    0x93
+0c2a8 mov    ax, 0xffff
+0c2ab je     0xc2ae
+0c2ad inc    ax
+0c2ae or     ax, ax
+0c2b0 int    0x81
+0c2b2 jne    0xc2b7
+0c2b4 jmp    0xc344
+0c2b7 ES=MSG
+0c2bb si=0x1c4 [112:Muito bem ! Agora digite o número da tela desejada]
+0c2be int    0x97
+0c2c0 si=0x556 (MSGBUF2$)
+0c2c3 int    0x9a
+0c2c5 call   0xcfbc
+0c2c8 call   0x8c10
+0c2cc LOAD_INT 999
+0c2d0 si=0x54e
+0c2d3 int    0x96
+0c2d5 int    0xa6
+0c2d8 fcompp
+0c2da int    0x93
+0c2dc int    0x81
+0c2de jne    0xc2e3
+0c2e0 jmp    0x10af6
+0c2e3 si=0x54e
+0c2e6 int    0x96
+0c2e8 int    0xa6
+0c2eb fstp 0x466
+0c2ef int    0x81
+0c2f2 fld1
+0c2f5 fcomp 0x466
+0c2f9 int    0x93
+0c2fb mov    ax, 0xffff
+0c2fe ja     0xc301
+0c300 inc    ax
+0c301 or     ax, ax
+0c303 int    0x81
+0c305 je     0xc30a
+0c307 jmp    0xc31c
+0c30b LOAD_INT 66
+0c310 fcomp 0x466
+0c314 int    0x93
+0c316 mov    ax, 0xffff
+0c319 jb     0xc31c
+0c31b inc    ax
+0c31c or     ax, ax
+0c31e int    0x81
+0c320 jne    0xc325
+0c322 jmp    0xc337
+0c325 ES=MSG
+0c329 si=0x1c8 [113:Nada feito.]
+0c32c int    0x97
+0c32e si=0x556 (MSGBUF2$)
+0c331 int    0x9a
+0c333 call   0xcfbc
+0c336 ret
+0c338 fld 0x466
+0c33d fstp SALA
+0c341 int    0x81
+0c343 ret
+0c345 fld SALA
+0c34a fld OBJ
+0c34f fistp  word ptr [0x2c]
+0c355 mov    ax, word ptr [0x2c]
+0c358 mov    si, ax
+0c35a shl    si, 1
+0c35c shl    si, 1
+0c35e ES=loc
+0c363 fld loc[si]
+0c367 fabs
+0c36a fcompp
+0c36c int    0x93
+0c36e mov    ax, 0xffff
+0c371 jne    0xc374
+0c373 inc    ax
+0c374 or     ax, ax
+0c376 int    0x81
+0c378 jne    0xc37d
+0c37a jmp    0xc3bb
+0c37d mov    bx, ax
+0c37f mov    ax, 0x3e7
+0c382 neg    ax
+0c384 mov    word ptr [0x2c], ax
+0c388 LOAD_INT 1
+0c38c mov    ax, bx
+0c38f fld OBJ
+0c394 fistp  word ptr [0x2c]
+0c398 mov    bx, ax
+0c39c mov    ax, word ptr [0x2c]
+0c39f mov    si, ax
+0c3a1 mov    ax, bx
+0c3a3 shl    si, 1
+0c3a5 shl    si, 1
+0c3a7 ES=loc
+0c3ac fcomp loc[si]
+0c3af int    0x93
+0c3b1 mov    bx, ax
+0c3b3 mov    ax, 0xffff
+0c3b6 jne    0xc3b9
+0c3b8 inc    ax
+0c3b9 and    ax, bx
+0c3bb int    0x81
+0c3bd jne    0xc3c2
+0c3bf jmp    0xc3d4
+0c3c2 ES=MSG
+0c3c6 si=0x1cc [114:Näo está aqui...]
+0c3c9 int    0x97
+0c3cb si=0x556 (MSGBUF2$)
+0c3ce int    0x9a
+0c3d0 call   0xcfbc
+0c3d3 ret
+0c3d5 LOAD_INT 14
+0c3da fcomp OBJ
+0c3de int    0x93
+0c3e0 mov    ax, 0xffff
+0c3e3 je     0xc3e6
+0c3e5 inc    ax
+0c3e6 or     ax, ax
+0c3e8 int    0x81
+0c3ea je     0xc3ef
+0c3ec jmp    0xc401
+0c3f0 LOAD_INT 30
+0c3f5 fcomp OBJ
+0c3f9 int    0x93
+0c3fb mov    ax, 0xffff
+0c3fe je     0xc401
+0c400 inc    ax
+0c401 or     ax, ax
+0c403 int    0x81
+0c405 je     0xc40a
+0c407 jmp    0xc41c
+0c40b LOAD_INT 50
+0c410 fcomp OBJ
+0c414 int    0x93
+0c416 mov    ax, 0xffff
+0c419 je     0xc41c
+0c41b inc    ax
+0c41c or     ax, ax
+0c41e int    0x81
+0c420 jne    0xc425
+0c422 jmp    0xc437
+0c425 ES=MSG
+0c429 si=0x1d0 [115:Vá com calma...]
+0c42c int    0x97
+0c42e si=0x556 (MSGBUF2$)
+0c431 int    0x9a
+0c433 call   0xcfbc
+0c436 ret
+0c437 ES=MSG
+0c43b si=0x1d4 [116:Freud explica...]
+0c43e int    0x97
+0c440 si=0x556 (MSGBUF2$)
+0c443 int    0x9a
+0c445 call   0xcfbc
+0c448 ret
+
+
+===== verbo 17 @ 0c449 MENU =====
+0c449 si=0x570
+0c44c int    0x96
+0c44e si=0x532
+0c451 int    0x9a
+0c454 fld1
+0c457 fstp 0x462
+0c45b int    0x81
+0c45d mov    ax, 0x15
+0c460 mov    bx, ax
+0c462 mov    ax, 0x10
+0c465 int    0xc9
+0c467 mov    ax, 0x40
+0c46a int    0xee
+0c46c push   ds
+0c46d int    0xb8
+0c46f mov    ax, 0x16
+0c472 mov    bx, ax
+0c474 mov    ax, 0x10
+0c477 int    0xc9
+0c479 mov    ax, 0x40
+0c47c int    0xee
+0c47e push   ds
+0c47f int    0xb8
+0c481 si=0x532
+0c484 int    0x96
+0c486 mov    ax, 0xd
+0c489 int    0xad
+0c48b int    0x94
+0c48d mov    ax, 0xffff
+0c490 jne    0xc493
+0c492 inc    ax
+0c493 or     ax, ax
+0c495 jne    0xc49a
+0c497 jmp    0xc830
+0c49a mov    word ptr [0x88], 0xf
+0c4a0 mov    ax, 0xa
+0c4a3 neg    ax
+0c4a6 fld1
+0c4a9 fcomp 0x462
+0c4ad int    0x93
+0c4af mov    bx, ax
+0c4b1 mov    ax, 0xffff
+0c4b4 jne    0xc4b7
+0c4b6 inc    ax
+0c4b7 imul   bx
+0c4b9 mov    word ptr [0x94], ax
+0c4bd int    0xec
+0c4bf and    al, byte ptr [0x81cd]
+0c4c3 mov    ax, 0x15
+0c4c6 mov    bx, ax
+0c4c8 mov    ax, 0x10
+0c4cb int    0xc9
+0c4cd si=0x760
+0c4d0 int    0x96
+0c4d2 int    0xb8
+0c4d4 int    0xb2
+0c4d6 mov    word ptr [0x88], 0xf
+0c4dc mov    ax, 0xa
+0c4df neg    ax
+0c4e2 LOAD_INT 2
+0c4e7 fcomp 0x462
+0c4eb int    0x93
+0c4ed mov    bx, ax
+0c4ef mov    ax, 0xffff
+0c4f2 jne    0xc4f5
+0c4f4 inc    ax
+0c4f5 imul   bx
+0c4f7 mov    word ptr [0x94], ax
+0c4fb int    0xec
+0c4fd and    al, byte ptr [0x81cd]
+0c501 mov    ax, 0x16
+0c504 mov    bx, ax
+0c506 mov    ax, 0x10
+0c509 int    0xc9
+0c50b si=0x75c
+0c50e int    0x96
+0c510 int    0xb8
+0c512 int    0xb2
+0c514 mov    word ptr [0x88], 0xf
+0c51a mov    ax, 0xa
+0c51d neg    ax
+0c520 LOAD_INT 3
+0c525 fcomp 0x462
+0c529 int    0x93
+0c52b mov    bx, ax
+0c52d mov    ax, 0xffff
+0c530 jne    0xc533
+0c532 inc    ax
+0c533 imul   bx
+0c535 mov    word ptr [0x94], ax
+0c539 int    0xec
+0c53b and    al, byte ptr [0x81cd]
+0c53f mov    ax, 0x15
+0c542 mov    bx, ax
+0c544 mov    ax, 0x24
+0c547 int    0xc9
+0c549 si=0x758
+0c54c int    0x96
+0c54e int    0xb8
+0c550 int    0xb2
+0c552 mov    word ptr [0x88], 0xf
+0c558 mov    ax, 0xa
+0c55b neg    ax
+0c55e LOAD_INT 4
+0c563 fcomp 0x462
+0c567 int    0x93
+0c569 mov    bx, ax
+0c56b mov    ax, 0xffff
+0c56e jne    0xc571
+0c570 inc    ax
+0c571 imul   bx
+0c573 mov    word ptr [0x94], ax
+0c577 int    0xec
+0c579 and    al, byte ptr [0x81cd]
+0c57d mov    ax, 0x16
+0c580 mov    bx, ax
+0c582 mov    ax, 0x24
+0c585 int    0xc9
+0c587 si=0x754
+0c58a int    0x96
+0c58c int    0xb8
+0c58e int    0xb2
+0c590 mov    word ptr [0x88], 0xf
+0c596 mov    ax, 0xa
+0c599 neg    ax
+0c59c LOAD_INT 5
+0c5a1 fcomp 0x462
+0c5a5 int    0x93
+0c5a7 mov    bx, ax
+0c5a9 mov    ax, 0xffff
+0c5ac jne    0xc5af
+0c5ae inc    ax
+0c5af imul   bx
+0c5b1 mov    word ptr [0x94], ax
+0c5b5 int    0xec
+0c5b7 and    al, byte ptr [0x81cd]
+0c5bb mov    ax, 0x15
+0c5be mov    bx, ax
+0c5c0 mov    ax, 0x38
+0c5c3 int    0xc9
+0c5c5 si=0x750
+0c5c8 int    0x96
+0c5ca int    0xb8
+0c5cc int    0xb2
+0c5ce mov    word ptr [0x88], 0xf
+0c5d4 mov    ax, 0xa
+0c5d7 neg    ax
+0c5da LOAD_INT 6
+0c5df fcomp 0x462
+0c5e3 int    0x93
+0c5e5 mov    bx, ax
+0c5e7 mov    ax, 0xffff
+0c5ea jne    0xc5ed
+0c5ec inc    ax
+0c5ed imul   bx
+0c5ef mov    word ptr [0x94], ax
+0c5f3 int    0xec
+0c5f5 and    al, byte ptr [0x81cd]
+0c5f9 mov    ax, 0x16
+0c5fc mov    bx, ax
+0c5fe mov    ax, 0x38
+0c601 int    0xc9
+0c603 si=0x74c
+0c606 int    0x96
+0c608 int    0xb8
+0c60a int    0xb2
+0c60c mov    word ptr [0x88], 0xf
+0c612 mov    word ptr [0x94], 0xa
+0c618 int    0xec
+0c61a and    al, byte ptr [0x70be]
+0c61e add    ax, 0x96cd
+0c621 si=0x532
+0c624 int    0x9a
+0c626 si=0x532
+0c629 int    0x96
+0c62b si=0x570
+0c62e int    0x96
+0c630 int    0x94
+0c632 mov    ax, 0xffff
+0c635 je     0xc638
+0c637 inc    ax
+0c638 or     ax, ax
+0c63a jne    0xc63f
+0c63c jmp    0xc649
+0c63f int    0xee
+0c641 push   cs
+0c642 si=0x532
+0c645 int    0x9a
+0c647 jmp    0xc626
+0c64a LOAD_INT 6
+0c64f fcomp 0x462
+0c653 int    0x93
+0c655 mov    ax, 0xffff
+0c658 ja     0xc65b
+0c65a inc    ax
+0c65b si=0x532
+0c65e int    0x96
+0c660 si=0x898
+0c663 int    0x96
+0c665 int    0x94
+0c667 mov    bx, ax
+0c669 mov    ax, 0xffff
+0c66c je     0xc66f
+0c66e inc    ax
+0c66f si=0x532
+0c672 int    0x96
+0c674 mov    cx, bx
+0c676 mov    bx, ax
+0c678 xor    ax, ax
+0c67a int    0xad
+0c67c mov    ax, bx
+0c67e mov    bx, cx
+0c680 si=0x748
+0c683 int    0x96
+0c685 int    0x95
+0c687 int    0x94
+0c689 mov    cx, bx
+0c68b mov    bx, ax
+0c68d mov    ax, 0xffff
+0c690 je     0xc693
+0c692 inc    ax
+0c693 or     ax, bx
+0c695 mov    bx, cx
+0c697 si=0x532
+0c69a int    0x96
+0c69c mov    cx, bx
+0c69e mov    bx, ax
+0c6a0 mov    ax, 9
+0c6a3 int    0xad
+0c6a5 mov    ax, bx
+0c6a7 mov    bx, cx
+0c6a9 int    0x94
+0c6ab mov    cx, bx
+0c6ad mov    bx, ax
+0c6af mov    ax, 0xffff
+0c6b2 je     0xc6b5
+0c6b4 inc    ax
+0c6b5 or     ax, bx
+0c6b7 mov    bx, cx
+0c6b9 and    ax, bx
+0c6bb mov    word ptr [0x2c], ax
+0c6bf LOAD_INT 1
+0c6c4 fsubr  dword ptr [0x462]
+0c6c9 fld1
+0c6cc fcomp 0x462
+0c6d0 int    0x93
+0c6d2 mov    ax, 0xffff
+0c6d5 jb     0xc6d8
+0c6d7 inc    ax
+0c6d8 si=0x532
+0c6db int    0x96
+0c6dd mov    bx, ax
+0c6df xor    ax, ax
+0c6e1 int    0xad
+0c6e3 mov    ax, bx
+0c6e5 si=0x744
+0c6e8 int    0x96
+0c6ea int    0x95
+0c6ec int    0x94
+0c6ee mov    bx, ax
+0c6f0 mov    ax, 0xffff
+0c6f3 je     0xc6f6
+0c6f5 inc    ax
+0c6f6 and    ax, bx
+0c6f8 mov    word ptr [0x2c], ax
+0c6fc LOAD_INT 1
+0c701 faddp  st(1)
+0c704 fstp 0x462
+0c708 int    0x81
+0c70a si=0x532
+0c70d int    0x96
+0c70f xor    ax, ax
+0c711 int    0xad
+0c713 si=0x740
+0c716 int    0x96
+0c718 int    0x95
+0c71a int    0x94
+0c71c mov    ax, 0xffff
+0c71f je     0xc722
+0c721 inc    ax
+0c722 imul   word ptr [0x11da]
+0c726 mov    word ptr [0x2c], ax
+0c72a LOAD_INT 1
+0c72f fsubr  dword ptr [0x462]
+0c733 si=0x532
+0c736 int    0x96
+0c738 xor    ax, ax
+0c73a int    0xad
+0c73c si=0x73c
+0c73f int    0x96
+0c741 int    0x95
+0c743 int    0x94
+0c745 mov    ax, 0xffff
+0c748 je     0xc74b
+0c74a inc    ax
+0c74b imul   word ptr [0x11da]
+0c74f mov    word ptr [0x2c], ax
+0c753 LOAD_INT 1
+0c758 faddp  st(1)
+0c75b fstp 0x462
+0c75f int    0x81
+0c762 LOAD_INT 6
+0c767 fcomp 0x462
+0c76b int    0x93
+0c76d int    0x81
+0c76f jb     0xc774
+0c771 jmp    0xc785
+0c775 LOAD_INT 6
+0c77a fsubr  dword ptr [0x462]
+0c77f fstp 0x462
+0c783 int    0x81
+0c786 fld1
+0c789 fcomp 0x462
+0c78d int    0x93
+0c78f int    0x81
+0c791 ja     0xc796
+0c793 jmp    0xc7a7
+0c797 LOAD_INT 6
+0c79c fadd 0x462
+0c7a1 fstp 0x462
+0c7a5 int    0x81
+0c7a7 si=0x738
+0c7aa int    0x96
+0c7ac si=0x532
+0c7af int    0x96
+0c7b1 int    0xed
+0c7b3 sbb    al, 0xa3
+0c7b5 sub    al, 0
+0c7b8 LOAD_INT 1
+0c7bd fstp 0x45e
+0c7c1 int    0x81
+0c7c4 fldz
+0c7c7 fcomp 0x45e
+0c7cb int    0x93
+0c7cd int    0x81
+0c7cf jne    0xc7d4
+0c7d1 jmp    0xc7f7
+0c7d5 LOAD_INT 2
+0c7da fld1
+0c7dd fadd 0x45e
+0c7e2 fdivrp st(1)
+0c7e4 int    0xa5
+0c7e7 fstp 0x462
+0c7eb int    0x81
+0c7ed mov    ax, 0xd
+0c7f0 int    0xad
+0c7f2 si=0x532
+0c7f5 int    0x9a
+0c7f7 si=0x532
+0c7fa int    0x96
+0c7fc mov    ax, 0x1b
+0c7ff int    0xad
+0c801 int    0x94
+0c803 je     0xc808
+0c805 jmp    0xc82d
+0c808 mov    ax, 0x15
+0c80b mov    bx, ax
+0c80d mov    ax, 0x10
+0c810 int    0xc9
+0c812 mov    ax, 0x40
+0c815 int    0xee
+0c817 push   ds
+0c818 int    0xb8
+0c81a mov    ax, 0x16
+0c81d mov    bx, ax
+0c81f mov    ax, 0x10
+0c822 int    0xc9
+0c824 mov    ax, 0x40
+0c827 int    0xee
+0c829 push   ds
+0c82a int    0xb8
+0c82c ret
+0c82d jmp    0xc481
+0c830 mov    ax, 0x15
+0c833 mov    bx, ax
+0c835 mov    ax, 0x10
+0c838 int    0xc9
+0c83a mov    ax, 0x40
+0c83d int    0xee
+0c83f push   ds
+0c840 int    0xb8
+0c842 mov    ax, 0x16
+0c845 mov    bx, ax
+0c847 mov    ax, 0x10
+0c84a int    0xc9
+0c84c mov    ax, 0x40
+0c84f int    0xee
+0c851 push   ds
+0c852 int    0xb8
+0c855 fld1
+0c858 fcomp 0x462
+0c85c int    0x93
+0c85e int    0x81
+0c860 je     0xc865
+0c862 jmp    0xc868
+0c865 call   0xf94a
+0c869 LOAD_INT 2
+0c86e fcomp 0x462
+0c872 int    0x93
+0c874 int    0x81
+0c876 je     0xc87b
+0c878 jmp    0xc87e
+0c87b call   0xff31
+0c87f LOAD_INT 3
+0c884 fcomp 0x462
+0c888 int    0x93
+0c88a int    0x81
+0c88c je     0xc891
+0c88e jmp    0xc894
+0c891 call   0x105bf
+0c895 LOAD_INT 4
+0c89a fcomp 0x462
+0c89e int    0x93
+0c8a0 int    0x81
+0c8a2 je     0xc8a7
+0c8a4 jmp    0xc8aa
+0c8a7 call   0x1090e
+0c8ab LOAD_INT 5
+0c8b0 fcomp 0x462
+0c8b4 int    0x93
+0c8b6 mov    ax, 0xffff
+0c8b9 je     0xc8bc
+0c8bb inc    ax
+0c8bc or     ax, ax
+0c8be int    0x81
+0c8c0 jne    0xc8c5
+0c8c2 jmp    0xc90a
+0c8c5 si=0x734
+0c8c8 int    0x96
+0c8ca si=0x53a (MSGBUF$)
+0c8cd int    0x9a
+0c8cf call   0xcf33
+0c8d2 si=0x552
+0c8d5 int    0x96
+0c8d7 si=0xe50
+0c8da int    0x96
+0c8dc int    0x94
+0c8de mov    ax, 0xffff
+0c8e1 je     0xc8e4
+0c8e3 inc    ax
+0c8e4 or     ax, ax
+0c8e6 je     0xc8eb
+0c8e8 jmp    0xc8fd
+0c8eb si=0x552
+0c8ee int    0x96
+0c8f0 si=0x730
+0c8f3 int    0x96
+0c8f5 int    0x94
+0c8f7 mov    ax, 0xffff
+0c8fa je     0xc8fd
+0c8fc inc    ax
+0c8fd or     ax, ax
+0c8ff jne    0xc904
+0c901 jmp    0xc90a
+0c904 int    0xec
+0c906 adc    al, 0xe9
+0c908 mov    cx, 0x90b9
+0c90b LOAD_INT 6
+0c910 fcomp 0x462
+0c914 int    0x93
+0c916 int    0x81
+0c918 je     0xc91d
+0c91a jmp    0xc920
+0c91d call   0xcac1
+0c920 ret
+
+
+===== verbo 18 @ 0c921 CHUPAR =====
+0c921 mov    ax, 0x3e7
+0c924 neg    ax
+0c926 mov    word ptr [0x2c], ax
+0c92a LOAD_INT 1
+0c92f fld OBJ
+0c934 fistp  word ptr [0x2c]
+0c93a mov    ax, word ptr [0x2c]
+0c93d mov    si, ax
+0c93f shl    si, 1
+0c941 shl    si, 1
+0c943 ES=loc
+0c948 fcomp loc[si]
+0c94b int    0x93
+0c94d int    0x81
+0c94f jne    0xc954
+0c951 jmp    0xc966
+0c954 ES=MSG
+0c958 si=0x1d8 [117:Você näo tem isso !]
+0c95b int    0x97
+0c95d si=0x556 (MSGBUF2$)
+0c960 int    0x9a
+0c962 call   0xcfbc
+0c965 ret
+0c967 LOAD_INT 78
+0c96c fcomp OBJ
+0c970 int    0x93
+0c972 int    0x81
+0c974 jne    0xc979
+0c976 jmp    0xc98b
+0c979 ES=MSG
+0c97d si=0x1dc [118:Isso pode ser muito perigoso. Melhor evitar...]
+0c980 int    0x97
+0c982 si=0x556 (MSGBUF2$)
+0c985 int    0x9a
+0c987 call   0xcfbc
+0c98a ret
+0c98b ES=MSG
+0c98f si=0x1e0 [119:Você abre a bala e joga fora o papel. A bala está ]
+0c992 int    0x97
+0c994 si=0x556 (MSGBUF2$)
+0c997 int    0x9a
+0c999 call   0xcfbc
+0c99d fldz
+0c99f ES=loc
+0c9a4 fstp loc[78]
+0c9a9 int    0x81
+0c9ac fld SALA
+0c9b0 ES=loc
+0c9b5 fstp loc[79]
+0c9ba int    0x81
+0c9bc call   0xd342
+0c9bf ret
+
+
+===== verbo 19 @ 0c9c0 QUEBRAR/DETONAR/ARREBENTAR/DESTRUIR =====
+0c9c1 LOAD_INT 43
+0c9c6 fcomp OBJ
+0c9ca int    0x93
+0c9cc mov    ax, 0xffff
+0c9cf je     0xc9d2
+0c9d1 inc    ax
+0c9d3 LOAD_INT 44
+0c9d8 fcomp OBJ
+0c9dc int    0x93
+0c9de mov    bx, ax
+0c9e0 mov    ax, 0xffff
+0c9e3 je     0xc9e6
+0c9e5 inc    ax
+0c9e6 or     ax, bx
+0c9e8 int    0x81
+0c9ea jne    0xc9ef
+0c9ec jmp    0xca05
+0c9f0 LOAD_INT 31
+0c9f5 fcomp SALA
+0c9f9 int    0x93
+0c9fb mov    bx, ax
+0c9fd mov    ax, 0xffff
+0ca00 je     0xca03
+0ca02 inc    ax
+0ca03 and    ax, bx
+0ca05 int    0x81
+0ca07 jne    0xca0c
+0ca09 jmp    0xca1a
+0ca0c si=0x72c
+0ca0f int    0x96
+0ca11 si=0x556 (MSGBUF2$)
+0ca14 int    0x9a
+0ca16 call   0xcfbc
+0ca19 ret
+0ca1a mov    ax, 0x3e7
+0ca1d neg    ax
+0ca1f mov    word ptr [0x2c], ax
+0ca23 LOAD_INT 1
+0ca28 fld OBJ
+0ca2d fistp  word ptr [0x2c]
+0ca33 mov    ax, word ptr [0x2c]
+0ca36 mov    si, ax
+0ca38 shl    si, 1
+0ca3a shl    si, 1
+0ca3c ES=loc
+0ca41 fcomp loc[si]
+0ca44 int    0x93
+0ca46 int    0x81
+0ca48 jne    0xca4d
+0ca4a jmp    0xca5f
+0ca4d ES=MSG
+0ca51 si=0x1e4 [120:Você näo tem isso !]
+0ca54 int    0x97
+0ca56 si=0x556 (MSGBUF2$)
+0ca59 int    0x9a
+0ca5b call   0xcfbc
+0ca5e ret
+0ca60 LOAD_INT 74
+0ca65 fcomp OBJ
+0ca69 int    0x93
+0ca6b int    0x81
+0ca6d jne    0xca72
+0ca6f jmp    0xca84
+0ca72 ES=MSG
+0ca76 si=0x1e8 [121:Você näo é homem o suficiente...]
+0ca79 int    0x97
+0ca7b si=0x556 (MSGBUF2$)
+0ca7e int    0x9a
+0ca80 call   0xcfbc
+0ca83 ret
+0ca84 ES=MSG
+0ca88 si=0x1ec [122:Você quebra a noz, ansioso para comê-la, mas na ve]
+0ca8b int    0x97
+0ca8d si=0x556 (MSGBUF2$)
+0ca90 int    0x9a
+0ca92 call   0xcfbc
+0ca96 fldz
+0ca98 ES=loc
+0ca9d fstp loc[74]
+0caa2 int    0x81
+0caa4 mov    ax, 0x3e7
+0caa7 neg    ax
+0caa9 mov    word ptr [0x2c], ax
+0caad LOAD_INT 1
+0cab1 ES=loc
+0cab6 fstp loc[76]
+0cabb int    0x81
+0cabd call   0xd342
+0cac0 ret
+
+
+===== verbo 20 @ 0cac1 SAIR/ABANDONAR =====
+0cac1 si=0x728
+0cac4 int    0x96
+0cac6 si=0x53a (MSGBUF$)
+0cac9 int    0x9a
+0cacb call   0xcf33
+0cace si=0x552
+0cad1 int    0x96
+0cad3 si=0xe50
+0cad6 int    0x96
+0cad8 int    0x94
+0cada mov    ax, 0xffff
+0cadd je     0xcae0
+0cadf inc    ax
+0cae0 or     ax, ax
+0cae2 je     0xcae7
+0cae4 jmp    0xcaf9
+0cae7 si=0x552
+0caea int    0x96
+0caec si=0x730
+0caef int    0x96
+0caf1 int    0x94
+0caf3 mov    ax, 0xffff
+0caf6 je     0xcaf9
+0caf8 inc    ax
+0caf9 or     ax, ax
+0cafb je     0xcb00
+0cafd jmp    0x10d8c
+0cb00 ret
+
+
+===== verbo 21 @ 0cb01 DIZER =====
+0cb02 LOAD_INT 81
+0cb07 fcomp OBJ
+0cb0b int    0x93
+0cb0d int    0x81
+0cb0f jne    0xcb14
+0cb11 jmp    0xcb22
+0cb14 si=0x724
+0cb17 int    0x96
+0cb19 si=0x556 (MSGBUF2$)
+0cb1c int    0x9a
+0cb1e call   0xcfbc
+0cb21 ret
+0cb22 si=0x720
+0cb25 int    0x96
+0cb27 si=0x556 (MSGBUF2$)
+0cb2a int    0x9a
+0cb2c call   0xcfbc
+0cb2f ret
+
+
+===== verbo 22 @ 0cb30 FECHAR/DESLIGAR =====
+0cb31 LOAD_INT 21
+0cb36 fcomp OBJ
+0cb3a int    0x93
+0cb3c mov    ax, 0xffff
+0cb3f je     0xcb42
+0cb41 inc    ax
+0cb42 or     ax, ax
+0cb44 int    0x81
+0cb46 jne    0xcb4b
+0cb48 jmp    0xcb61
+0cb4b si=0x55a
+0cb4e int    0x96
+0cb50 si=0x7a0
+0cb53 int    0x96
+0cb55 int    0x94
+0cb57 mov    bx, ax
+0cb59 mov    ax, 0xffff
+0cb5c je     0xcb5f
+0cb5e inc    ax
+0cb5f and    ax, bx
+0cb61 jne    0xcb66
+0cb63 jmp    0xcb74
+0cb66 si=0x71c
+0cb69 int    0x96
+0cb6b si=0x556 (MSGBUF2$)
+0cb6e int    0x9a
+0cb70 call   0xcfbc
+0cb73 ret
+0cb74 si=0x718
+0cb77 int    0x96
+0cb79 si=0x556 (MSGBUF2$)
+0cb7c int    0x9a
+0cb7e call   0xcfbc
+0cb81 ret
+
+
+===== verbo 23 @ 0cb82 ROSQUEAR =====
+0cb82 mov    ax, 0x3e7
+0cb85 neg    ax
+0cb87 mov    word ptr [0x2c], ax
+0cb8b LOAD_INT 1
+0cb90 fld OBJ
+0cb95 fistp  word ptr [0x2c]
+0cb9b mov    ax, word ptr [0x2c]
+0cb9e mov    si, ax
+0cba0 shl    si, 1
+0cba2 shl    si, 1
+0cba4 ES=loc
+0cba9 fcomp loc[si]
+0cbac int    0x93
+0cbae int    0x81
+0cbb0 jne    0xcbb5
+0cbb2 jmp    0xcbc3
+0cbb5 si=0x714
+0cbb8 int    0x96
+0cbba si=0x556 (MSGBUF2$)
+0cbbd int    0x9a
+0cbbf call   0xcfbc
+0cbc2 ret
+0cbc4 LOAD_INT 77
+0cbc9 fcomp OBJ
+0cbcd int    0x93
+0cbcf int    0x81
+0cbd1 jne    0xcbd6
+0cbd3 jmp    0xcbe4
+0cbd6 si=0x710
+0cbd9 int    0x96
+0cbdb si=0x556 (MSGBUF2$)
+0cbde int    0x9a
+0cbe0 call   0xcfbc
+0cbe3 ret
+0cbe5 fld 0x4de
+0cbea fistp  word ptr [0x2c]
+0cbf0 mov    ax, word ptr [0x2c]
+0cbf3 or     ax, ax
+0cbf5 int    0x81
+0cbf7 je     0xcbfc
+0cbf9 jmp    0x10af6
+0cbfc si=0x7c4
+0cbff int    0x96
+0cc01 si=0x556 (MSGBUF2$)
+0cc04 int    0x9a
+0cc07 LOAD_INT 66
+0cc0b ES=loc
+0cc10 fstp loc[77]
+0cc15 int    0x81
+0cc17 call   0xcfbc
+0cc1a ret
+
+
+===== verbo 24 @ 0cc1b DESROSQUEAR =====
+0cc1c LOAD_INT 77
+0cc21 fcomp OBJ
+0cc25 int    0x93
+0cc27 int    0x81
+0cc29 jne    0xcc2e
+0cc2b jmp    0xcc3c
+0cc2e si=0x70c
+0cc31 int    0x96
+0cc33 si=0x556 (MSGBUF2$)
+0cc36 int    0x9a
+0cc38 call   0xcfbc
+0cc3b ret
+0cc3d LOAD_INT 66
+0cc42 fcomp SALA
+0cc46 int    0x93
+0cc48 int    0x81
+0cc4a jne    0xcc4f
+0cc4c jmp    0xcc5d
+0cc4f si=0x708
+0cc52 int    0x96
+0cc54 si=0x556 (MSGBUF2$)
+0cc57 int    0x9a
+0cc59 call   0xcfbc
+0cc5c ret
+0cc5d mov    ax, 0x3e7
+0cc60 neg    ax
+0cc62 mov    word ptr [0x2c], ax
+0cc66 LOAD_INT 1
+0cc6b fld OBJ
+0cc70 fistp  word ptr [0x2c]
+0cc76 mov    ax, word ptr [0x2c]
+0cc79 mov    si, ax
+0cc7b shl    si, 1
+0cc7d shl    si, 1
+0cc7f ES=loc
+0cc84 fcomp loc[si]
+0cc87 int    0x93
+0cc89 int    0x81
+0cc8b je     0xcc90
+0cc8d jmp    0xcc9e
+0cc90 si=0x704
+0cc93 int    0x96
+0cc95 si=0x556 (MSGBUF2$)
+0cc98 int    0x9a
+0cc9a call   0xcfbc
+0cc9d ret
+0cc9f fldz
+0cca2 fld OBJ
+0cca7 fistp  word ptr [0x2c]
+0ccad mov    ax, word ptr [0x2c]
+0ccb0 mov    si, ax
+0ccb2 shl    si, 1
+0ccb4 shl    si, 1
+0ccb6 ES=loc
+0ccbb fcomp loc[si]
+0ccbe int    0x93
+0ccc0 int    0x81
+0ccc2 je     0xccc7
+0ccc4 jmp    0xccd5
+0ccc7 si=0x700
+0ccca int    0x96
+0cccc si=0x556 (MSGBUF2$)
+0cccf int    0x9a
+0ccd1 call   0xcfbc
+0ccd4 ret
+0ccd5 si=0x7c4
+0ccd8 int    0x96
+0ccda si=0x556 (MSGBUF2$)
+0ccdd int    0x9a
+0ccdf mov    ax, 0x3e7
+0cce2 neg    ax
+0cce4 mov    word ptr [0x2c], ax
+0cce8 LOAD_INT 1
+0ccec ES=loc
+0ccf1 fstp loc[77]
+0ccf6 int    0x81
+0ccf8 call   0xcfbc
+0ccfb ret
+
+
+===== verbo 25 @ 0ccfc VOAR =====
+0ccfc si=0x6fc
+0ccff int    0x96
+0cd01 si=0x556 (MSGBUF2$)
+0cd04 int    0x9a
+0cd06 call   0xcfbc
+0cd09 ret
+
+
+===== verbo 26 @ 0cd0a MORDER/XINGAR/BATER/ESPANCAR/LAMBER =====
+0cd0a si=0x6f8
+0cd0d int    0x96
+0cd0f si=0x556 (MSGBUF2$)
+0cd12 int    0x9a
+0cd14 call   0xcfbc
+0cd17 ret
+
+
+===== verbo 27 @ 0cd18 COMER =====
+0cd18 mov    ax, 0x3e7
+0cd1b neg    ax
+0cd1d mov    word ptr [0x2c], ax
+0cd21 LOAD_INT 1
+0cd26 fld OBJ
+0cd2b fistp  word ptr [0x2c]
+0cd31 mov    ax, word ptr [0x2c]
+0cd34 mov    si, ax
+0cd36 shl    si, 1
+0cd38 shl    si, 1
+0cd3a ES=loc
+0cd3f fcomp loc[si]
+0cd42 int    0x93
+0cd44 int    0x81
+0cd46 jne    0xcd4b
+0cd48 jmp    0xcd59
+0cd4b si=0x6f4
+0cd4e int    0x96
+0cd50 si=0x556 (MSGBUF2$)
+0cd53 int    0x9a
+0cd55 call   0xcfbc
+0cd58 ret
+0cd5a LOAD_INT 74
+0cd5f fcomp OBJ
+0cd63 int    0x93
+0cd65 mov    ax, 0xffff
+0cd68 je     0xcd6b
+0cd6a inc    ax
+0cd6b or     ax, ax
+0cd6d int    0x81
+0cd6f jne    0xcd74
+0cd71 jmp    0xcd88
+0cd75 fldz
+0cd78 fcomp v4ee
+0cd7c int    0x93
+0cd7e mov    bx, ax
+0cd80 mov    ax, 0xffff
+0cd83 je     0xcd86
+0cd85 inc    ax
+0cd86 and    ax, bx
+0cd88 int    0x81
+0cd8a jne    0xcd8f
+0cd8c jmp    0xcda7
+0cd8f si=0x6f0
+0cd92 int    0x96
+0cd94 si=0x556 (MSGBUF2$)
+0cd97 int    0x9a
+0cd9a fld1
+0cd9d fstp v4ee
+0cda1 int    0x81
+0cda3 call   0xcfbc
+0cda6 ret
+0cda8 LOAD_INT 74
+0cdad fcomp OBJ
+0cdb1 int    0x93
+0cdb3 int    0x81
+0cdb5 je     0xcdba
+0cdb7 jmp    0xcdca
+0cdba si=0x6ec
+0cdbd int    0x96
+0cdbf si=0x556 (MSGBUF2$)
+0cdc2 int    0x9a
+0cdc4 call   0xcfbc
+0cdc7 jmp    0x10aae
+0cdca si=0x6e8
+0cdcd int    0x96
+0cdcf si=0x556 (MSGBUF2$)
+0cdd2 int    0x9a
+0cdd4 call   0xcfbc
+0cdd7 ret
+
+
+===== verbo 28 @ 0cdd8 CHEIRAR =====
+0cdd9 LOAD_INT 6
+0cdde fcomp SALA
+0cde2 int    0x93
+0cde4 int    0x81
+0cde6 je     0xcdeb
+0cde8 jmp    0xcdf9
+0cdeb si=0x6e4
+0cdee int    0x96
+0cdf0 si=0x556 (MSGBUF2$)
+0cdf3 int    0x9a
+0cdf5 call   0xcfbc
+0cdf8 ret
+0cdfa LOAD_INT 32
+0cdff fcomp SALA
+0ce03 int    0x93
+0ce05 int    0x81
+0ce07 je     0xce0c
+0ce09 jmp    0xce1a
+0ce0c si=0x6e0
+0ce0f int    0x96
+0ce11 si=0x556 (MSGBUF2$)
+0ce14 int    0x9a
+0ce16 call   0xcfbc
+0ce19 ret
+0ce1a si=0x6dc
+0ce1d int    0x96
+0ce1f si=0x556 (MSGBUF2$)
+0ce22 int    0x9a
+0ce24 call   0xcfbc
+0ce27 ret
+
+
+===== verbo 29 @ 0ce28 ATRAVESSAR =====
+0ce29 LOAD_INT 86
+0ce2e fcomp OBJ
+0ce32 int    0x93
+0ce34 int    0x81
+0ce36 jne    0xce3b
+0ce38 jmp    0xce49
+0ce3b si=0x6d8
+0ce3e int    0x96
+0ce40 si=0x556 (MSGBUF2$)
+0ce43 int    0x9a
+0ce45 call   0xcfbc
+0ce48 ret
+0ce4a LOAD_INT 3
+0ce4f fcomp SALA
+0ce53 int    0x93
+0ce55 mov    ax, 0xffff
+0ce58 jne    0xce5b
+0ce5a inc    ax
+0ce5b or     ax, ax
+0ce5d int    0x81
+0ce5f jne    0xce64
+0ce61 jmp    0xce7a
+0ce65 LOAD_INT 56
+0ce6a fcomp SALA
+0ce6e int    0x93
+0ce70 mov    bx, ax
+0ce72 mov    ax, 0xffff
+0ce75 jne    0xce78
+0ce77 inc    ax
+0ce78 and    ax, bx
+0ce7a int    0x81
+0ce7c jne    0xce81
+0ce7e jmp    0xce8f
+0ce81 si=0x6d4
+0ce84 int    0x96
+0ce86 si=0x556 (MSGBUF2$)
+0ce89 int    0x9a
+0ce8b call   0xcfbc
+0ce8e ret
+0ce8f si=0x6d0
+0ce92 int    0x96
+0ce94 si=0x556 (MSGBUF2$)
+0ce97 int    0x9a
+0ce99 call   0xcfbc
+0ce9c si=0x6cc
+0ce9f int    0x96
+0cea1 si=0x556 (MSGBUF2$)
+0cea4 int    0x9a
+0cea6 call   0xcfbc
+0cea9 si=0x7ac
+0ceac int    0x96
+0ceae si=0x53a (MSGBUF$)
+0ceb1 int    0x9a
+0ceb3 call   0xcf33
+0ceb6 si=0x6c8
+0ceb9 int    0x96
+0cebb si=0x556 (MSGBUF2$)
+0cebe int    0x9a
+0cec0 call   0xcfbc
+0cec3 si=0x6c4
+0cec6 int    0x96
+0cec8 si=0x556 (MSGBUF2$)
+0cecb int    0x9a
+0cecd call   0xcfbc
+0ced0 si=0x7ac
+0ced3 int    0x96
+0ced5 si=0x53a (MSGBUF$)
+0ced8 int    0x9a
+0ceda call   0xcf33
+0cedd si=0x6c0
+0cee0 int    0x96
+0cee2 si=0x556 (MSGBUF2$)
+0cee5 int    0x9a
+0cee7 call   0xcfbc
+0ceea jmp    0x10aae
+
+
+===== verbo 30 @ 0ceed PULAR =====
+0ceed si=0x6bc
+0cef0 int    0x96
+0cef2 si=0x556 (MSGBUF2$)
+0cef5 int    0x9a
+0cef7 call   0xcfbc
+0cefa ret
+
+
+===== verbo 31 @ 0cefb JOGAR/BRINCAR/PASSEAR/DORMIR/CAVALGAR/MASTURBAR =====
+0cefb si=0x6b8
+0cefe int    0x96
+0cf00 si=0x556 (MSGBUF2$)
+0cf03 int    0x9a
+0cf05 call   0xcfbc
+0cf08 ret
+
+
+===== verbo 32 @ 0cf09 ARREMESSAR/LANCAR =====
+0cf09 si=0x6b4
+0cf0c int    0x96
+0cf0e si=0x556 (MSGBUF2$)
+0cf11 int    0x9a
+0cf13 call   0xcfbc
+0cf16 ret
+
+
+===== verbo 33 @ 0cf17 SENTAR/DEITAR =====
+0cf17 si=0x6b0
+0cf1a int    0x96
+0cf1c si=0x556 (MSGBUF2$)
+0cf1f int    0x9a
+0cf21 call   0xcfbc
+0cf24 ret
+
+
+===== verbo 34 @ 0cf25 APAGAR =====
+0cf25 si=0x6ac
+0cf28 int    0x96
+0cf2a si=0x556 (MSGBUF2$)
+0cf2d int    0x9a
+0cf2f call   0xcfbc
+0cf32 ret

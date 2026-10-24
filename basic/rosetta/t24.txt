@@ -1,0 +1,7 @@
+N = N - (N < 6 AND (A$ = " " OR A$ = CHR$(0) + "P" OR A$ = CHR$(9))) + (N > 1 AND A$ = CHR$(0) + "H")
+N = N - (N < 6 AND ((A$ = " " OR A$ = CHR$(0) + "P") OR A$ = CHR$(9))) + (N > 1 AND A$ = CHR$(0) + "H")
+N = N - (N < 6 AND (A$ = " " OR (A$ = CHR$(0) + "P" OR A$ = CHR$(9)))) + (N > 1 AND A$ = CHR$(0) + "H")
+N = N - (N < 6 AND (A$ = " " OR A$ = CHR$(0) + "P" OR A$ = CHR$(9)) AND 1) + (N > 1 AND A$ = CHR$(0) + "H")
+N = N - ((N < 6 AND (A$ = " " OR A$ = CHR$(0) + "P" OR A$ = CHR$(9)))) + ((N > 1 AND A$ = CHR$(0) + "H"))
+N = N - (N < 6 AND (A$ = CHR$(9) OR A$ = CHR$(0) + "P" OR A$ = " ")) + (N > 1 AND A$ = CHR$(0) + "H")
+N = N - (N < 6 AND (A$ = " " OR A$ = CHR$(9) OR A$ = CHR$(0) + "P")) + (N > 1 AND A$ = CHR$(0) + "H")

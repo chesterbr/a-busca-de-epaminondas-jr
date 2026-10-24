@@ -1,0 +1,87 @@
+# Vai à loja de autopeças com só $500: o vendedor recusa. Só depois do cofre (com $5000) ele leva à BucanoWare.
+# Prefixo: até a rua central (sala 21), logo depois da viagem de ônibus para a agência.
+# --- começo igual ao caminho completo (linhas 1 a 42) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+S
+CONVERSAR BALCONISTA
+ENTRAR BALCAO
+DESCER
+PEGAR LANTERNA
+SUBIR
+N
+O
+PEGAR ONIBUS
+4283
+N
+S
+S
+L
+PEGAR ENVELOPE
+O
+S
+L
+S
+L
+PEGAR PILHAS
+O
+N
+O
+S
+USAR LANTERNA
+B
+PEGAR MALA
+ABRIR MALA
+C
+N
+L
+N
+N
+L
+USAR PASSAGEM
+L
+# --- a partir daqui, a variação ---
+# a loja é a leste da rua central (sala 21); com $500 não adianta
+L
+OLHAR GRANA
+L
+# agora o caminho normal até o cofre da fábrica (linhas 43 a 76 do caminho completo)
+S
+L
+L
+PEGAR CARTEIRA
+OLHAR CARTEIRA
+O
+O
+N
+O
+N
+PEGAR BISPO
+N
+PEGAR NOZ
+QUEBRAR NOZ
+S
+S
+L
+S
+O
+LARGAR BISPO
+L
+N
+O
+N
+O
+USAR MARRETA
+B
+S
+OLHAR COFRE
+B
+O
+C
+L
+N
+# na segunda visita o vendedor reconhece o jogador (outro texto) e leva
+L

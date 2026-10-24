@@ -1,0 +1,9 @@
+IF ((ASC(T$) >= 48 AND ASC(T$) <= 57) OR (ASC(T$) >= 65 AND ASC(T$) <= 90)) AND LEN(N$) < 8 THEN N$ = N$ + T$
+IF ((ASC(T$) >= 65 AND ASC(T$) <= 90) OR (ASC(T$) >= 48 AND ASC(T$) <= 57)) AND LEN(N$) < 8 THEN N$ = N$ + T$
+IF LEN(N$) < 8 AND ((ASC(T$) >= 48 AND ASC(T$) <= 57) OR (ASC(T$) >= 65 AND ASC(T$) <= 90)) THEN N$ = N$ + T$
+IF LEN(N$) < 8 AND ((ASC(T$) >= 65 AND ASC(T$) <= 90) OR (ASC(T$) >= 48 AND ASC(T$) <= 57)) THEN N$ = N$ + T$
+IF (ASC(T$) >= 48 AND ASC(T$) <= 57 OR ASC(T$) >= 65 AND ASC(T$) <= 90) AND LEN(N$) < 8 THEN N$ = N$ + T$
+IF (ASC(T$) >= 65 AND ASC(T$) <= 90 OR ASC(T$) >= 48 AND ASC(T$) <= 57) AND LEN(N$) < 8 THEN N$ = N$ + T$
+IF LEN(N$) < 8 AND (ASC(T$) >= 48 AND ASC(T$) <= 57 OR ASC(T$) >= 65 AND ASC(T$) <= 90) THEN N$ = N$ + T$
+IF LEN(N$) < 8 AND (ASC(T$) >= 65 AND ASC(T$) <= 90 OR ASC(T$) >= 48 AND ASC(T$) <= 57) THEN N$ = N$ + T$
+IF ((ASC(T$) >= ASC("0") AND ASC(T$) <= ASC("9")) OR (ASC(T$) >= ASC("A") AND ASC(T$) <= ASC("Z"))) AND LEN(N$) < 8 THEN N$ = N$ + T$

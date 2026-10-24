@@ -1,0 +1,12 @@
+LOCATE 18, 16 + LEN(A$)
+LOCATE 18, LEN(A$) + 16
+N = LEN(A$) - 1
+N = 1 - LEN(A$)
+N = LEN(A$) * 2
+N = 2 * LEN(A$)
+N = INSTR(A$, "x") + 1
+N = 1 + INSTR(A$, "x")
+A$ = LEFT$(B$, LEN(B$) - 1)
+A$ = MID$(B$, N + 1)
+A$ = MID$(B$, 1 + N)
+A$ = MID$(B$, N - 1)

@@ -1,0 +1,16 @@
+name: teste
+on: [push, pull_request]
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.9', '3.x']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python3 python/testar.py
+      - run: cd original && sha256sum -c SHA256SUMS
+      - run: cd analise/dumps && sha256sum -c SHA256SUMS

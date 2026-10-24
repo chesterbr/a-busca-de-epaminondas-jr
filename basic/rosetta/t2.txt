@@ -1,0 +1,39 @@
+CLS
+LOCATE 3,4
+LOCATE N,X
+COLOR 7
+COLOR 7,1
+COLOR N
+PRINT "A"
+PRINT A$
+PRINT A$;
+PRINT A$;B$
+PRINT N
+PRINT "A";N
+PRINT
+PRINT TAB(5);"A"
+INPUT A$
+INPUT N
+INPUT "q";A$
+A$ = INKEY$
+A$ = CHR$(65)
+A$ = CHR$(N)
+N = LEN(A$)
+N = ASC(A$)
+A$ = LEFT$(B$,3)
+A$ = RIGHT$(B$,N)
+A$ = MID$(B$,2,3)
+A$ = MID$(B$,N)
+A$ = STR$(N)
+N = VAL(A$)
+A$ = SPACE$(5)
+A$ = STRING$(5,"X")
+A$ = UCASE$(B$)
+N = INSTR(A$,B$)
+N = INSTR(2,A$,B$)
+A$ = B$ + "x"
+N = INT(X)
+N = RND
+N = ABS(X)
+BEEP
+SOUND 400,2

@@ -1,0 +1,54 @@
+# A passagem de ônibus: abrir a mala sem tê-la, deixar a mala para trás (e ficar sem passagem), a porta automática da agência.
+# Prefixo: até a sala 19 (depósito escuro, com a lanterna acesa) ainda sem pegar a mala (linha 32 é o B).
+# --- começo igual ao caminho completo (linhas 1 a 32) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+S
+CONVERSAR BALCONISTA
+ENTRAR BALCAO
+DESCER
+PEGAR LANTERNA
+SUBIR
+N
+O
+PEGAR ONIBUS
+4283
+N
+S
+S
+L
+PEGAR ENVELOPE
+O
+S
+L
+S
+L
+PEGAR PILHAS
+O
+N
+O
+S
+USAR LANTERNA
+B
+# --- a partir daqui, a variação ---
+ABRIR MALA
+OLHAR MALA
+PEGAR MALA
+ABRIR MALA
+ABRIR MALA
+# deixa a passagem na mala? não: ela está na mão. Largar e sair sem ela.
+LARGAR PASSAGEM
+C
+N
+L
+N
+N
+L
+# agência de viagens (sala 57) sem a passagem: a porta automática não abre e não há saída
+OLHAR PORTA
+ABRIR PORTA
+L
+USAR PASSAGEM

@@ -1,0 +1,30 @@
+# Tenta entrar na faculdade antes de virar careca: o vigia barra. Depois passa pelos carecas e entra.
+# Na viela (sala 8) logo depois do ônibus.
+# --- começo igual ao caminho completo (linhas 1 a 15) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+S
+CONVERSAR BALCONISTA
+ENTRAR BALCAO
+DESCER
+PEGAR LANTERNA
+SUBIR
+N
+O
+PEGAR ONIBUS
+4283
+# --- a partir daqui, a variação ---
+S
+# sala 11: o vigia não deixa passar a quem não passou pelos carecas
+S
+FALAR VIGIA
+N
+# os carecas raspam a cabeça (primeira visita)
+N
+S
+S
+# agora o vigia deixa passar
+S

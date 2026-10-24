@@ -1,0 +1,89 @@
+id | nome | local inicial | texto 'aqui' | texto 'examinar'
+1 | NORTE | 0 |  | 
+2 | SUL | 0 |  | 
+3 | LESTE | 0 |  | 
+4 | OESTE | 0 |  | 
+5 | LISTA | 2 | Há uma lista telefônica jogada num canto. | 
+6 | AZULEJO | 1 | Você nota um azulejo solto no chäo. | O azulejo tem um desenho bastante trabalhado. No verso está escrito al
+7 | COFRE | -1 | Um grande cofre de metal jaz na parede. | Cheio de trancas e travas, este cofre somente pode ser aberto por quem
+8 | HOMEM | -3 | Um homem mal-encarado está apoiado num poste. | 'Qualé, nunca viu, ô palhaço ?', ele diz, enquanto polui a calçada cus
+9 | POSTE | -3 |  | Ali diz: 'PONTO DE ôNIBUS'
+10 | LOCAL | 0 |  | 
+11 | SALAO | -4 |  | A porta está aberta. Há uma placa no topo da mesma
+12 | PLACA | -4 |  | Ela diz: 'BIBLIOTECA'
+13 | PORTA | -4 |  | Ela está aberta.
+14 | BALCONISTA | -5 | Uma linda balconista devora um exemplar da revista 'Capricho' atrás do | Ela é totalmente DEMAIS. Ela nota seu olhar insistente, e responde da 
+15 | LIVRO | 0 | Um livro atrapalha a passagem | É um exemplar de 'Operaçäo Cavalo de Tróia III'.
+16 | PAPEL | 0 |  | Ali diz: ' 442-8093 '.
+17 | BALCAO | -5 | O balcäo lhe chama a atençäo, pois ocupa metade da biblioteca. | A única coisa notável é que só se pode pegar livros de dentro dele.
+18 | ESCADA | -6 | Há uma escada aqui. | Nada de especial nela.
+19 | CIMA | 0 |  | Nada a declarar.
+20 | BAIXO | 0 |  | Nada de novo que chame a atençäo.
+21 | LANTERNA | 7 | Uma lanterna está no chäo. | Ela está sem pilhas
+22 | PILHAS | 15 | Algumas pilhas estäo jogadas no chäo. | As pilhas servem bem na lanterna.
+23 | SALA | 0 |  | 
+24 | AREA | 0 |  | 
+25 | ONIBUS | -4 |  | Vários deles passam por aqui, e PEGAR um ONIBUS seria uma idéia bastan
+26 | GRANA | -999 |  | 
+27 | VIGIA | -11 | Um vigia está te encarando, rapaz. | O homem näo é täo forte para exercer a profissäo de vigia, mas sua aut
+28 | BORRACHA | 0 | Uma borracha está largada no chäo. | Nada de especial nela
+29 | MESA | -13 |  | Nem pense em mexer nela. Você poderia acordar a secretária, e ser pres
+30 | SECRETARIA | -13 | A secretária 'puxa um ronco' sobre sua mesa. | Ela näo é nada de que se diga 'OH, mas que secretária SUPIMPA', mas nä
+31 | FOSFOROS | -999 |  | Cada um dos fósforos consiste em uma haste de madeira e uma concentraç
+32 | MALA | 0 | Uma mala lhe chama a atençäo. | Deve haver algo interessante dentro dela.
+33 | PAPEIS | 0 | Há um bolo de papéis aqui. | Säo apenas papéis em branco
+34 | PASSAGEM | 0 | Uma passagem perdida repousa no chäo. | 'Destino: Bazárgada'
+35 | PORTA | -57 | Há uma porta automática ao leste. | 
+36 | AKIRA | 0 |  | 
+37 | CARTEIRA | 24 | Uma carteira está largada no chäo. | Nada de especial.
+38 | CARTAO | 0 | Há um cartäo aqui. | Ele diz: 'JADER DANCING POINT - «A» Danceteria - Permanente'
+39 | VELHINHO | -27 | Um velhinho está jogando uma máquina qualquer | Ele é, sem dúvida, um bom velhinho.
+40 | ELEVADOR | -30 |  | Nada a declarar.
+41 | BISPO | 29 | Uma figura imponente se destaca do cenário. É um bispo. Todos os que p | É um bispo como outro qualquer.
+42 | MARRETA | 0 | Eis uma marreta no chäo. | Näo pode destruir uma parede, mas quem sabe algo menos forte...
+43 | MADEIRA | -31 |  | É apenas madeira.
+44 | PAREDE | -31 |  | É feita de madeira.
+45 | COFRE | -35 | Há um cofre aqui. | Está vazio.
+46 | TUBO | -35 | Um tubo abaixo de você dá acesso a alguma coisa. | Está bem escuro lá embaixo.
+47 | TAXISTA | -39 | Um taxista está apoiado em seu taxi. | O cara näo parece ser daqui.
+48 | TAXI | -39 |  | Näo é o MACH 5, mas depois do carro do vendedor, qualquer eca serve.
+49 | ENVELOPE | 12 | Tem um envelope marrom no chäo. | O envelope é daqueles comerciais, que costumam conter documentos impor
+50 | RECEPCIONISTA | -40 |  | Ela é muito bonita, mas precisa de um bom truque para ser dobrada e no
+51 | ELEVADOR | -42 |  | Näo é o que se possa chamar de 'estado-da-arte' em termos de elevadore
+52 | ELEVADOR | -43 |  | Ele só conduz aos sub-solos inferiores (1 e 2)
+53 | PLACA | -42 |  | É uma tabela que diz: 	1ºAndar.........................Analistas 	2ºAn
+54 | ANALISTAS | -44 | Alguns analistas de sistemas passam por você. | Näo parecem ser as pessoas mais amigáveis do mundo, nem as mais trabal
+55 | PROGRAMADORES | -45 | Alguns programadores estäo com o nariz colado nos monitores. | Eles parecem muito interessados no que estäo fazendo
+56 | DISQUETES | -55 | Há uma pilha de disquetes bem presa ao chäo. | Hum... vejamos... imagens digitalizadas... Space Quest III... Digger (
+57 | COMPUTADORES | -45 | Os computadores estäo todos sendo usados por eles. | Agora você vê o que eles estäo fazendo. É melhor näo incomodá-los. Afi
+58 | ARAME | -55 |  | Isso pode ser útil num adventure, especialmente quando você precisar d
+59 | PAINEL | -50 | Há um grande painel na parede. | Um desenho bastante incrementado, e uma frase do Laerte: 'Neste local,
+60 | PIA | -51 | Tem uma pia aqui. | Olhe, alguém deixou uma bala aqui...
+61 | PORTA | -52 |  | Ela está aberta.
+62 | MESA | -53 | A mesa do Sr. L. está cheia de coisinhas. | Näo prima muito pela organizaçäo. As coisas estäo caindo pelos cantos,
+63 | DOCUMENTOS | 53 | Estes documentos aí podem ser importantes. | Nada que lhe fascine. Apenas coisas corriqueiras da firma, como suborn
+64 | CESTO | -53 |  | Ele está cheio de lixo.
+65 | LIXO | -53 |  | O que você espera encontrar ?
+66 | AGENDA | 0 |  | Vejamos as anotaçöes recentes... A caligrafia é boa, mas näo dá para e
+67 | GRUPO | -59 | Um grupo de dança está fazendo seu showzinho | O grupo é organizado, mas nada de incrível
+68 | BALCAO | -61 | Näo há ninguém no balcäo. | Nada de especial.
+69 | BARMAN | -61 | O Barman está olhando para você. | A única funçäo dele é servir bebidas. Ele näo serve para mais nada.
+70 | MESAS | -60 | As mesas estäo espalhadas pelo lugar | Estäo todas ocupadas, e o pessoal parece näo querer ser incomodado. Ne
+71 | CD | 53 | Tem um CD aqui no chäo. | É um disco laser do Bomb the Bass
+72 | DJ | -62 | O DJ vai selecionando as músicas. | Ele parece curtir o que faz.
+73 | TETO | 0 |  | Nada ali em cima vai lhe ajudar
+74 | NOZ | 30 | Tem uma noz aqui. | É uma noz comum.
+75 | CHAO | 0 |  | Levante a cabeça, rapaz !!!
+76 | CHAVE | 0 | Tem uma chave aqui. | Parece ser uma chave de cofre...
+77 | LAMPADA | 66 |  | A lâmpada faz parte de uma ligaçäo elétrica bastante ruim.
+78 | BALA | 51 |  | É uma bala comum.
+79 | EMBALAGEM | 0 | Há uma embalagem de bala no chäo. | A embalagem da bala é de papel-alumínio
+80 | MESA | -62 |  | Atrás da mesa de som (e do DJ, obviamente) tem uma porta. Mas näo dá p
+81 | NI | 0 |  | 
+82 | SOQUETE | -66 |  | Geralmente é utilizado para segurar lâmpadas no teto, impedindo que el
+83 | PERFUME | 0 |  | Talvez isso seja um pouco difícil...
+84 | BANHEIRO | 0 |  | 
+85 | LIVROS | -6 |  | Säo muitos volumes, mas näo dá para alcançá-los.
+86 | RUA | -3 |  | Está bastante movimentada, com todos os tipos de veículos imagináveis.
+87 | COMPUTADOR | -18 |  | Está firmemente preso à mesa. Uma preciosidade dessas näo pode ser lev
+88 | GRAVADOR | -18 |  | Como você já deve ter suposto, ele näo funciona. Nem tente levá-lo.

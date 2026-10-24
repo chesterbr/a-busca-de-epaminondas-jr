@@ -1,0 +1,11 @@
+TOPO = 1
+I = 3
+++
+Z = I + TOPO
+Z = TOPO + I
+Z = I + TOPO - 1
+Z = TOPO + I - 1
+Z = I + K
+Z = K + I
+Z = I + K - 1
+Z = K + I - 1

@@ -1,0 +1,41 @@
+# Desce ao depósito escuro (sala 19) sem acender a lanterna: não há saída e só resta morrer com os fósforos.
+# --- começo igual ao caminho completo (linhas 1 a 30) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+S
+CONVERSAR BALCONISTA
+ENTRAR BALCAO
+DESCER
+PEGAR LANTERNA
+SUBIR
+N
+O
+PEGAR ONIBUS
+4283
+N
+S
+S
+L
+PEGAR ENVELOPE
+O
+S
+L
+S
+L
+PEGAR PILHAS
+O
+N
+O
+S
+# --- a partir daqui, a variação ---
+# sala 17 (almoxarifado) com lanterna e pilhas, mas sem acender
+B
+OLHAR LOCAL
+USAR LANTERNA
+C
+N
+# a única saída é a morte
+USAR FOSFOROS

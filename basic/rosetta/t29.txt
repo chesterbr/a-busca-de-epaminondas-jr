@@ -1,0 +1,4 @@
+FOR I = 1 TO 11 : Z = I + TOPO - 1 : NEXT I
+FOR I = 1 TO 11 : Z = TOPO + I - 1 : NEXT I
+FOR I = 1 TO 11 : Z = I + TOPO : NEXT I
+FOR I = 1 TO 11 : Z = I + 1 + TOPO : NEXT I

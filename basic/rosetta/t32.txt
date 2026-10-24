@@ -1,0 +1,10 @@
+J = 3
+K = 4
+TOPO = 1
+++
+Z = J + K
+Z = K + J
+FOR I = 1 TO 11 : Z = I + K : NEXT I
+FOR I = 1 TO 11 : Z = K + I : NEXT I
+FOR I = 1 TO 11 : Z = J + I : NEXT I
+FOR I = 1 TO 11 : Z = I + J : NEXT I

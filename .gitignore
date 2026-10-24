@@ -1,0 +1,12 @@
+.DS_Store
+.claude/settings.local.json
+__pycache__/
+_guardado/
+# gerados pelas ferramentas do DOSBox-X
+ferramentas/dosbox/log/
+ferramentas/dosbox/dbx
+ferramentas/dosbox/ocr
+ferramentas/dosbox/dbx.log
+ferramentas/dosbox/dbx.pid
+ferramentas/dosbox/cap.bmp
+ferramentas/dosbox/cur.png

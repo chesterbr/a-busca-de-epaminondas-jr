@@ -1,0 +1,20 @@
+# Placa da biblioteca, livro e papel da balconista: o que dá para ler e olhar.
+# Prefixo: até o calçadão (sala 4).
+# --- começo igual ao caminho completo (linhas 1 a 5) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+N
+L
+# --- a partir daqui, a variação ---
+LER PLACA
+OLHAR PLACA
+S
+CONVERSAR BALCONISTA
+LISTAR
+LER LIVRO
+LER PAPEL
+OLHAR PAPEL
+OLHAR LIVRO
+LER LIVROS
+LER BALCAO

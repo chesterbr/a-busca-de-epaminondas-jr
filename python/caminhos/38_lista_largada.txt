@@ -1,0 +1,15 @@
+# Larga a lista na rua e tenta lê-la de novo; pega de volta.
+# Prefixo: azulejo e lista na mão (sala 2).
+# --- começo igual ao caminho completo (linhas 1 a 3) ---
+PEGAR AZULEJO
+N
+PEGAR LISTA
+# --- a partir daqui, a variação ---
+N
+LARGAR LISTA
+OLHAR LISTA
+PEGAR LISTA
+OLHAR LISTA
+S
+LARGAR LISTA
+OLHAR LISTA
