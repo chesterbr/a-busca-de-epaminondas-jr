@@ -4,6 +4,8 @@ Um adventure de texto para MS-DOS, escrito por mim em 1992 usando Turbo Basic 1.
 
 Este repositório documenta a engenharia reversa do `CA1.EXE`, traz uma reimplementação fiel em Python e uma reconstrução do fonte em Turbo Basic (que recompila para o mesmo código do `CA1.EXE`). Também recria uma versão um pouco mais legível e comentada, que [pode ser lida diretamente aqui](basic/gerado/LEGIVEL.BAS).
 
+<p align="center"><img src="docs/tela.png" width="720" alt="Tela do jogo rodando no DOSBox-X: o escritório de Epaminondas, com os painéis de mensagens, objetos, direções, comando e avisos"></p>
+
 > **In English:** this is a 1992 Brazilian Portuguese text adventure written in Turbo Basic 1.0, whose source code was lost. The repository has the original DOS files, the reverse-engineering notes and memory dumps, a faithful Python reimplementation checked against the original running in DOSBox-X, and a rebuilt Turbo Basic source that recompiles to byte-identical code. The game is in Portuguese only.
 
 ## Jogar
