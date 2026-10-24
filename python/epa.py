@@ -488,12 +488,32 @@ TEXTO_SALA = {
 }
 
 
+LARGURA = 58  # a janela de mensagens do original tem 58 colunas (MostraMensagem quebra quando COL passa disso)
+
+
+def quebra_linhas(texto):
+    """Quebra como o MostraMensagem do original: palavras com o espaço final, rolando quando a coluna passa de 58."""
+    texto += ' '
+    linhas, linha, col = [], '', 1
+    while texto:
+        i = texto.index(' ') + 1
+        trecho, texto = texto[:i], texto[i:]
+        col += len(trecho)
+        if col > LARGURA:
+            linhas.append(linha.rstrip(' '))
+            linha, col = '', len(trecho) + 1
+        linha += trecho
+    linhas.append(linha.rstrip(' '))
+    return linhas
+
+
 class Jogo:
-    def __init__(self, entrada=input, saida=print, teleporta_ao_beijar_akira=False):
+    def __init__(self, entrada=input, saida=print, teleporta_ao_beijar_akira=False, quebra=True):
         # Meu atalho de desenvolvimento, desligado no jogo distribuído (ver v16): BEIJAR AKIRA pergunta
         # um número e teleporta para a sala (1 a 66); 999 vai direto ao final. Na linha de comando:
         # --teleporta-ao-beijar-akira
         self.teleporta_ao_beijar_akira = teleporta_ao_beijar_akira
+        self.quebra = quebra         # False (--sem-wrap): não quebra as linhas (a linha em branco depois de cada mensagem fica)
         self.loc = {i: int(v) for i, v in enumerate(LOC0[:90])
                     if v == v and abs(v) < 1e5}
         self.sala = Sala.ESCRITORIO_CHEFE
@@ -516,10 +536,14 @@ class Jogo:
         self.nome_sala = ''          # SALANOME$: OLHAR <nome> (e LUGAR) mostra a sala
         self.txt_aqui = {}           # textos que o jogo troca durante a partida (txtaqui[]/txtexam[])
         self.txt_exam = {}
+        self.objetos_mostrados = None  # última lista mostrada por mostrar_objetos (o painel Objetos do original)
 
     # ---------- util
     def dizer(self, t):
-        self.saida(t)
+        # como o original: cada mensagem termina com uma linha em branco
+        for linha in quebra_linhas(t) if self.quebra else [t]:
+            self.saida(linha)
+        self.saida('')
 
     def aqui(self, o):
         return abs(self.loc.get(o, 0)) == self.sala
@@ -1117,6 +1141,14 @@ class Jogo:
 
     # ---------- parser
     def comando(self, texto):
+        self.executar(texto)
+        self.mostrar_objetos()
+
+    def iniciar(self):
+        self.descrever()
+        self.mostrar_objetos()
+
+    def executar(self, texto):
         pal = [p for p in re.sub(r'[^A-Za-z ]', '', texto.upper()).split() if p]
         if len(pal) > 1:  # o filtro do jogo usa ' O ' com espaços, então "O" sozinho (oeste) sobrevive
             pal = [p for p in pal if p not in FILTRO]
@@ -1370,6 +1402,13 @@ class Jogo:
     def verbo_listar(self, o):
         itens = [VOC[i] for i in sorted(self.loc) if self.loc[i] == COM_JOGADOR]
         self.dizer('Objetos: ' + (', '.join(itens) or 'NADA'))
+
+    def mostrar_objetos(self):
+        """O painel Objetos do original se redesenha quando o inventário muda; aqui a lista sai só nessas horas."""
+        itens = [VOC[i] for i in sorted(self.loc) if self.loc[i] == COM_JOGADOR]
+        if itens != self.objetos_mostrados:
+            self.objetos_mostrados = itens
+            self.dizer('[objetos: %s]' % (', '.join(itens) or 'NADA'))
 
     # ---------- LARGAR: 0xa5a1 (caso geral)
     # verbo 8 @ 0xa5a1: LARGAR/DEIXAR/SOLTAR
@@ -1829,14 +1868,14 @@ def jogar(cmds, **opcoes):
         return Jogo(entrada=lambda _: next(it), saida=print, **opcoes)
 
     j = novo()
-    j.descrever()
+    j.iniciar()
     for c in it:
-        print('\n> ' + c)
+        print('> ' + c)
         j.comando(c)
         if j.morreu:
-            print('\n--- reiniciando o jogo ---')
+            print('--- reiniciando o jogo ---\n')
             j = novo()
-            j.descrever()
+            j.iniciar()
         elif j.saiu or j.fim:
             break
     return j
@@ -1847,20 +1886,30 @@ if __name__ == '__main__':
     if '--teleporta-ao-beijar-akira' in sys.argv:
         sys.argv.remove('--teleporta-ao-beijar-akira')
         opcoes['teleporta_ao_beijar_akira'] = True
+    if '--sem-wrap' in sys.argv:
+        sys.argv.remove('--sem-wrap')
+        opcoes['quebra'] = False
     if len(sys.argv) > 1:  # python3 epa.py caminhos/00_caminho_feliz.txt: roda os comandos do arquivo (um por linha)
         jogar(Path(sys.argv[1]).read_text().splitlines(), **opcoes)
         sys.exit()
+    # abertura (só no modo interativo; os textos vêm das telas de ajuda 2 e 3 do original)
+    print('A Busca de Epaminondas Jr. V1.5 - (c) 1992 por CHESTER (Carlos Duarte)\n')
+    for p in ('Digite comandos com um verbo e um objeto, como PEGAR AZULEJO ou OLHAR HOMEM. Artigos e complementos '
+              'são ignorados: PEGAR A NOZ vale PEGAR NOZ.',
+              'Para se mover, digite IR PARA O NORTE, IR NORTE ou só N (também S, L e O; C para cima e B para baixo). '
+              'INVENTARIO mostra o que você carrega, e SAIR termina o jogo.'):
+        print(*(quebra_linhas(p) if opcoes.get('quebra', True) else [p]), sep='\n', end='\n\n')
     j = Jogo(**opcoes)
-    j.descrever()
+    j.iniciar()
     while True:
         try:
-            c = input('\n> ')
+            c = input('> ')
         except EOFError:
             break
         j.comando(c)
         if j.morreu:
-            print('\n--- reiniciando o jogo ---')
+            print('--- reiniciando o jogo ---\n')
             j = Jogo(**opcoes)
-            j.descrever()
+            j.iniciar()
         elif j.saiu:
             break
