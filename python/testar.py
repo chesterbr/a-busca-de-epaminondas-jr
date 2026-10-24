@@ -12,6 +12,7 @@
 import difflib
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 AQUI = Path(__file__).resolve().parent
@@ -52,6 +53,16 @@ def main():
                 falhas += 1
             else:
                 print('ok    %s' % nome)
+    # o original apagava as letras acentuadas dos comandos; aqui os acentos são ignorados
+    with tempfile.NamedTemporaryFile('w', suffix='.txt', encoding='utf-8') as t:
+        t.write('INVENTÁRIO\n')
+        t.flush()
+        r = rodar(AQUI / 'epa.py', '--sem-wrap', t.name)
+    if 'Objetos: GRANA, FOSFOROS' in r.stdout:
+        print('ok    comando com acento')
+    else:
+        print('FALHA comando com acento\n' + r.stdout[-300:])
+        falhas += 1
     r = rodar(AQUI / 'testar_textos.py')
     print(r.stdout.rstrip())
     if r.returncode:

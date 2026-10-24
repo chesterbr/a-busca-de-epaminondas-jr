@@ -37,3 +37,7 @@ modernizado; `modernizar.py` tem as regras e `testar_textos.py` confere o fonte 
 - 166 (pilhas caem no escuro): código morto no original.
 - 280 a 293 (telas de ajuda e menu): o MENU está fora do escopo.
 - 3 ("Ela está fechada...") **passou a ser usada**: `ENTRAR PORTA` na agência com a porta fechada (descoberto por esta conferência).
+
+## Interface (diferenças propositais, fora do texto)
+
+- Comandos com acento: o original apagava as letras acentuadas (`INVENTÁRIO` virava `INVENTRIO` e não era entendido). Aqui os acentos são tirados antes de interpretar o comando.

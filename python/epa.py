@@ -8,6 +8,7 @@ import re
 import struct
 from enum import IntEnum
 import sys
+import unicodedata
 from pathlib import Path
 
 from modernizar import moderniza
@@ -1166,6 +1167,8 @@ class Jogo:
         self.fechar_bloco()
 
     def executar(self, texto):
+        # o original apagava as letras acentuadas (INVENTÁRIO virava INVENTRIO); aqui os acentos são tirados antes
+        texto = ''.join(c for c in unicodedata.normalize('NFD', texto) if not unicodedata.combining(c))
         pal = [p for p in re.sub(r'[^A-Za-z ]', '', texto.upper()).split() if p]
         if len(pal) > 1:  # o filtro do jogo usa ' O ' com espaços, então "O" sozinho (oeste) sobrevive
             pal = [p for p in pal if p not in FILTRO]
