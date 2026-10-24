@@ -526,11 +526,12 @@ def quebra_linhas(texto):
 
 
 # o que a abertura e o comando AJUDA explicam (baseado nas telas de ajuda 2 e 3 do original)
-AJUDA = ('Digite comandos com um verbo e um objeto, como PEGAR AZULEJO ou EXAMINAR HOMEM. Artigos e complementos '
-         'são ignorados: PEGAR A NOZ é a mesma coisa que PEGAR NOZ.',
+AJUDA = ('Digite comandos com um verbo e um objeto, como PEGAR AZULEJO ou EXAMINAR HOMEM. Maiúsculas, minúsculas e '
+         'acentos tanto faz (inventário = INVENTARIO). Artigos e complementos são ignorados: '
+         'PEGAR A NOZ é a mesma coisa que PEGAR NOZ.',
          'Para se mover, digite IR PARA O NORTE, IR NORTE ou só N (também S, L e O; C para cima e B para baixo). '
          'Vale a pena EXAMINAR qualquer objeto, e EXAMINAR LOCAL descreve onde você está. '
-         'INVENTARIO mostra o que você carrega, e SAIR termina o jogo.')
+         'INVENTÁRIO mostra o que você carrega, e SAIR termina o jogo.')
 
 
 class Jogo:
