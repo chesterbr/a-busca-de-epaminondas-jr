@@ -41,3 +41,4 @@ modernizado; `modernizar.py` tem as regras e `testar_textos.py` confere o fonte 
 ## Interface (diferenças propositais, fora do texto)
 
 - Comandos com acento: o original apagava as letras acentuadas (`INVENTÁRIO` virava `INVENTRIO` e não era entendido). Aqui os acentos são tirados antes de interpretar o comando.
+- `AJUDA` (ou `?`) repete a explicação da abertura. No original a ajuda ficava no menu (ESC), que não foi reimplementado.

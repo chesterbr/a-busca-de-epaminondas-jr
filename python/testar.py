@@ -63,6 +63,15 @@ def main():
     else:
         print('FALHA comando com acento\n' + r.stdout[-300:])
         falhas += 1
+    with tempfile.NamedTemporaryFile('w', suffix='.txt', encoding='utf-8') as t:
+        t.write('AJUDA\n?\n')
+        t.flush()
+        r = rodar(AQUI / 'epa.py', '--sem-wrap', t.name)
+    if r.stdout.count('Digite comandos com um verbo') == 2:
+        print('ok    AJUDA e ?')
+    else:
+        print('FALHA AJUDA e ?\n' + r.stdout[-300:])
+        falhas += 1
     r = rodar(AQUI / 'testar_textos.py')
     print(r.stdout.rstrip())
     if r.returncode:

@@ -508,6 +508,14 @@ def quebra_linhas(texto):
     return linhas
 
 
+# o que a abertura e o comando AJUDA explicam (baseado nas telas de ajuda 2 e 3 do original)
+AJUDA = ('Digite comandos com um verbo e um objeto, como PEGAR AZULEJO ou EXAMINAR HOMEM. Artigos e complementos '
+         'são ignorados: PEGAR A NOZ é a mesma coisa que PEGAR NOZ.',
+         'Para se mover, digite IR PARA O NORTE, IR NORTE ou só N (também S, L e O; C para cima e B para baixo). '
+         'Vale a pena EXAMINAR qualquer objeto, e EXAMINAR LOCAL descreve onde você está. '
+         'INVENTARIO mostra o que você carrega, e SAIR termina o jogo.')
+
+
 class Jogo:
     def __init__(self, entrada=input, saida=print, teleporta_ao_beijar_akira=False, quebra=True):
         # Meu atalho de desenvolvimento, desligado no jogo distribuído (ver v16): BEIJAR AKIRA pergunta
@@ -1166,7 +1174,13 @@ class Jogo:
         self.mostrar_objetos()
         self.fechar_bloco()
 
+    def ajuda(self):
+        for p in AJUDA:
+            self.dizer(p)
+
     def executar(self, texto):
+        if texto.strip().upper() in ('AJUDA', '?'):  # no original a ajuda ficava no menu (ESC)
+            return self.ajuda()
         # o original apagava as letras acentuadas (INVENTÁRIO virava INVENTRIO); aqui os acentos são tirados antes
         texto = ''.join(c for c in unicodedata.normalize('NFD', texto) if not unicodedata.combining(c))
         pal = [p for p in re.sub(r'[^A-Za-z ]', '', texto.upper()).split() if p]
@@ -1908,11 +1922,7 @@ def interativo(opcoes):
                   'https://github.com/chesterbr/a-busca-de-epaminondas-jr'):
         print('║' + linha.center(LARGURA - 2) + '║')
     print('╚' + '═' * (LARGURA - 2) + '╝\n')
-    for p in ('Digite comandos com um verbo e um objeto, como PEGAR AZULEJO ou EXAMINAR HOMEM. Artigos e complementos '
-              'são ignorados: PEGAR A NOZ é a mesma coisa que PEGAR NOZ.',
-              'Para se mover, digite IR PARA O NORTE, IR NORTE ou só N (também S, L e O; C para cima e B para baixo). '
-              'Vale a pena EXAMINAR qualquer objeto, e EXAMINAR LOCAL descreve onde você está. '
-              'INVENTARIO mostra o que você carrega, e SAIR termina o jogo.'):
+    for p in AJUDA:
         print(*(quebra_linhas(p) if opcoes.get('quebra', True) else [p]), sep='\n', end='\n\n')
     if sys.stdin.isatty():  # numa sessão interativa, espera para a abertura não rolar para fora da tela
         try:
