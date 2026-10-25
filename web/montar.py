@@ -23,7 +23,19 @@ PARA_O_PYODIDE = ['python/epa.py', 'python/modernizar.py',
 PAGINAS = ['original.html', 'python.html', 'estilo.css']
 # o que vai no original.jsdos: o jogo de 1992, como nos arquivos de original/
 DO_ORIGINAL = ['CA1.EXE', 'CHESTER.EXE', 'AVENTURA.MSG', 'AVENTURA.BAT']
-DOSBOX_CONF = '''[autoexec]
+DOSBOX_CONF = '''[mixer]
+nosound=true
+
+[speaker]
+pcspeaker=false
+
+[sblaster]
+sbtype=none
+
+[gus]
+gus=false
+
+[autoexec]
 @echo off
 mount c .
 c:

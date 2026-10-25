@@ -1,8 +1,16 @@
 html, body { margin: 0; height: 100%; background: #000; color: #ccc; font-family: monospace; }
-#jogo { position: fixed; inset: 0; }
-#terminal { position: fixed; inset: 8px 8px 8px 12px; }
+header { position: fixed; top: 0; left: 0; right: 0; height: 44px; box-sizing: border-box; padding: 0 16px;
+         display: flex; align-items: center; justify-content: space-between; gap: 16px;
+         background: #111; border-bottom: 1px solid #333; font-size: 16px; }
+header a { color: #4da3ff; text-decoration: underline; }
+header a:hover { color: #8cc4ff; }
+header .titulo a { font-weight: bold; }
+header .titulo span { color: #888; margin-left: 10px; }
+header nav { display: flex; gap: 20px; white-space: nowrap; }
+@media (max-width: 700px) { header .titulo span { display: none; } header { font-size: 14px; } header nav { gap: 12px; } }
+#caixa { position: fixed; inset: 44px 0 28px 0; overflow: hidden; }
+#jogo { width: 100%; height: 100%; }
+#terminal { position: fixed; top: 52px; bottom: 8px; left: 50%; transform: translateX(-50%); width: min(100% - 24px, 660px); }
 #aviso { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
 #aviso.erro { color: #f66; text-align: center; padding: 1rem; }
-a.repositorio { position: fixed; right: 10px; bottom: 6px; font-size: 12px; color: #888; text-decoration: none; z-index: 10; }
-a.repositorio:hover { color: #ccc; }
-div.dica { position: fixed; left: 50px; bottom: 6px; font-size: 12px; color: #888; z-index: 10; }
+div.dica { position: fixed; z-index: 10; background: #111; left: 0; right: 0; bottom: 0; height: 28px; line-height: 28px; text-align: center; font-size: 13px; color: #888; }

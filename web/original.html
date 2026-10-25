@@ -9,14 +9,19 @@
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+<header>
+  <div class="titulo"><a href="https://github.com/chesterbr/a-busca-de-epaminondas-jr">A Busca de Epaminondas Jr.</a><span>original de 1992 (DOSBox)</span></div>
+  <nav><a href="python.html">Versão Python</a><a href="https://github.com/chesterbr/a-busca-de-epaminondas-jr">Código-fonte no GitHub</a></nav>
+</header>
 <div id="aviso">Carregando… (o DOSBox no navegador)</div>
-<div id="jogo"></div>
+<div id="caixa"><div id="jogo"></div></div>
 <div class="dica">Depois de GRAVAR no jogo, clique no disquete (canto superior esquerdo) para guardar no navegador.</div>
-<a class="repositorio" href="https://github.com/chesterbr/a-busca-de-epaminondas-jr">repositório</a>
 <script src="https://cdn.jsdelivr.net/npm/js-dos@8.5.3/dist/js-dos.js"></script>
 <script>
 try {
-  Dos(document.getElementById('jogo'), { url: 'original.jsdos', autoStart: true });
+  // os emuladores (wasm) vêm do mesmo pacote fixado no jsDelivr; o padrão é o v8.js-dos.com/latest, que muda sozinho
+  Dos(document.getElementById('jogo'), { url: 'original.jsdos', autoStart: true, volume: 0,
+                                         pathPrefix: 'https://cdn.jsdelivr.net/npm/js-dos@8.5.3/dist/emulators/' });
   document.getElementById('aviso').remove();
 } catch (e) {
   const aviso = document.getElementById('aviso');
