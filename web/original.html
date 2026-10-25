@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Busca de Epaminondas Jr. (original de 1992)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/js-dos@8.5.3/dist/js-dos.css">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div id="aviso">Carregando… (o DOSBox no navegador)</div>
+<div id="jogo"></div>
+<div class="dica">Depois de GRAVAR no jogo, clique no disquete (canto superior esquerdo) para guardar no navegador.</div>
+<a class="repositorio" href="https://github.com/chesterbr/a-busca-de-epaminondas-jr">repositório</a>
+<script src="https://cdn.jsdelivr.net/npm/js-dos@8.5.3/dist/js-dos.js"></script>
+<script>
+try {
+  Dos(document.getElementById('jogo'), { url: 'original.jsdos', autoStart: true });
+  document.getElementById('aviso').remove();
+} catch (e) {
+  const aviso = document.getElementById('aviso');
+  aviso.className = 'erro';
+  aviso.textContent = 'Não consegui carregar: ' + e.message;
+  console.error(e);
+}
+</script>
+</body>
+</html>

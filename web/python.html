@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Busca de Epaminondas Jr. (versão Python)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/css/xterm.css">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div id="aviso">Carregando… (uns 10 MB na primeira vez)</div>
+<div id="terminal"></div>
+<a class="repositorio" href="https://github.com/chesterbr/a-busca-de-epaminondas-jr">repositório</a>
+<script src="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/lib/xterm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@xterm/addon-fit@0.10.0/lib/addon-fit.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v314.0.7/full/pyodide.js"></script>
+<script>
+const aviso = document.getElementById('aviso');
+
+async function iniciar() {
+  const pyodide = await loadPyodide();
+
+  // recria no sistema de arquivos do Pyodide a mesma árvore do repositório (o epa.py acha os dados a partir dele)
+  const { arquivos } = await (await fetch('manifest.json')).json();
+  for (const caminho of arquivos) {
+    const resposta = await fetch('app/' + caminho);
+    if (!resposta.ok) throw new Error('não achei ' + caminho);
+    const destino = '/app/' + caminho;
+    pyodide.FS.mkdirTree(destino.slice(0, destino.lastIndexOf('/')));
+    pyodide.FS.writeFile(destino, new Uint8Array(await resposta.arrayBuffer()));
+  }
+  pyodide.runPython("import sys; sys.path[:0] = ['/app/python', '/app/web']");
+  const sessao = pyodide.runPython('import jogo_web; jogo_web.Sessao()');
+
+  aviso.remove();
+  const term = new Terminal({ fontFamily: 'monospace', fontSize: 16, cursorBlink: true, convertEol: true,
+                              theme: { background: '#000000' } });
+  const ajuste = new FitAddon.FitAddon();
+  term.loadAddon(ajuste);
+  term.open(document.getElementById('terminal'));
+  ajuste.fit();
+  window.addEventListener('resize', () => ajuste.fit());
+  term.focus();
+
+  const VERDE = '\x1b[1;32m', ZERAR = '\x1b[0m';
+  let buf = '', pos = 0, rotulo = '', historico = [], hpos = 0, terminou = false;
+
+  function desenha() {  // reescreve a linha de comando inteira e põe o cursor no lugar
+    term.write('\r' + VERDE + rotulo + buf + '\x1b[K' + ZERAR);
+    const atras = buf.length - pos;
+    if (atras > 0) term.write('\x1b[' + atras + 'D');
+  }
+  function pedeLinha() {
+    rotulo = sessao.prompt();
+    buf = ''; pos = 0; hpos = historico.length;
+    desenha();
+  }
+  function envia() {
+    term.write('\r\n');
+    const linha = buf;
+    const primeira = rotulo.startsWith('Tecle ENTER');
+    if (!primeira && linha.trim()) historico.push(linha);
+    term.write(sessao.enviar(linha));
+    if (sessao.terminou) { terminou = true; term.write('Fim de jogo. Recarregue a página para jogar de novo.\r\n'); return; }
+    pedeLinha();
+  }
+
+  term.onData(dados => {
+    if (terminou) return;
+    switch (dados) {
+      case '\r': envia(); return;
+      case '\x7f': if (pos > 0) { buf = buf.slice(0, pos - 1) + buf.slice(pos); pos--; desenha(); } return;
+      case '\x1b[3~': if (pos < buf.length) { buf = buf.slice(0, pos) + buf.slice(pos + 1); desenha(); } return;
+      case '\x1b[D': if (pos > 0) { pos--; term.write('\x1b[D'); } return;
+      case '\x1b[C': if (pos < buf.length) { pos++; term.write('\x1b[C'); } return;
+      case '\x1b[H': case '\x01': pos = 0; desenha(); return;
+      case '\x1b[F': case '\x05': pos = buf.length; desenha(); return;
+      case '\x15': buf = ''; pos = 0; desenha(); return;  // Ctrl-U
+      case '\x03': term.write('^C\r\n'); pedeLinha(); return;  // Ctrl-C só descarta a linha
+      case '\x1b[A': if (hpos > 0) { hpos--; buf = historico[hpos]; pos = buf.length; desenha(); } return;
+      case '\x1b[B':
+        if (hpos < historico.length) { hpos++; buf = hpos < historico.length ? historico[hpos] : ''; pos = buf.length; desenha(); }
+        return;
+    }
+    if (dados.startsWith('\x1b')) return;  // outras teclas especiais: ignora
+    const texto = dados.replace(/[\x00-\x1f\x7f]/g, '');  // digitado ou colado
+    if (texto) { buf = buf.slice(0, pos) + texto + buf.slice(pos); pos += texto.length; desenha(); }
+  });
+
+  term.write(sessao.abertura());
+  pedeLinha();
+}
+
+iniciar().catch(e => { aviso.className = 'erro'; aviso.textContent = 'Não consegui carregar: ' + e.message; console.error(e); });
+</script>
+</body>
+</html>
