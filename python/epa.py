@@ -535,7 +535,7 @@ AJUDA = ('Digite comandos com um verbo e um objeto, como PEGAR AZULEJO ou EXAMIN
 
 
 class Jogo:
-    def __init__(self, entrada=input, saida=print, teleporta_ao_beijar_akira=False, quebra=True, cor=False):
+    def __init__(self, saida=print, teleporta_ao_beijar_akira=False, quebra=True, cor=False):
         # Meu atalho de desenvolvimento, desligado no jogo distribuído (ver v16): BEIJAR AKIRA pergunta
         # um número e teleporta para a sala (1 a 66); 999 vai direto ao final. Na linha de comando:
         # --teleporta-ao-beijar-akira
@@ -552,7 +552,7 @@ class Jogo:
         self.aula_usada = False
         self.porta57 = False
         self.noz_avisada = False
-        self.entrada = entrada
+        self.pergunta = None         # (prompt, função): o jogo espera uma resposta; a próxima linha digitada vai para ela
         self.saida = saida
         self.fim = False
         self.morreu = False
@@ -581,6 +581,11 @@ class Jogo:
             self.branco_pendente = True
         else:
             self.saida('')
+
+    def perguntar(self, prompt, tratar):
+        """O motor não lê entrada: o comando que precisa de uma resposta deixa a pergunta pendente, e a próxima linha
+        digitada (a janela de Comando, no original) vai para tratar(resposta)."""
+        self.pergunta = (prompt, tratar)
 
     def fechar_bloco(self):
         if self.branco_pendente:
@@ -1198,6 +1203,10 @@ class Jogo:
             self.dizer(p)
 
     def executar(self, texto):
+        if self.pergunta:
+            _, tratar = self.pergunta
+            self.pergunta = None
+            return tratar(texto.strip())
         if texto.strip().upper() in ('AJUDA', '?'):  # no original a ajuda ficava no menu (ESC)
             return self.ajuda()
         # o original apagava as letras acentuadas (INVENTÁRIO virava INVENTRIO); aqui os acentos são tirados antes
@@ -1292,16 +1301,19 @@ class Jogo:
             return self.verbo_pegar(o)
         if self.teleporta_ao_beijar_akira and o == Obj.AKIRA:  # AKIRA
             self.dizer('Muito bem! Agora digite o número da tela desejada:')  # msg 112
-            try:
-                n = float(self.entrada('sala> ').replace(',', '.'))
-            except ValueError:
-                n = 0
-            if n == 999:  # salta direto para o curto-circuito (0x10af6), o final do jogo
-                return self.curto_circuito()
-            if 1 <= n <= Sala.CELA:
-                self.sala = int(n)
-                return self.descrever()
-            return self.dizer('Nada feito.')  # msg 113
+
+            def tela(resposta):
+                try:
+                    n = float(resposta.replace(',', '.'))
+                except ValueError:
+                    n = 0
+                if n == 999:  # salta direto para o curto-circuito (0x10af6), o final do jogo
+                    return self.curto_circuito()
+                if 1 <= n <= Sala.CELA:
+                    self.sala = int(n)
+                    return self.descrever()
+                return self.dizer('Nada feito.')  # msg 113
+            return self.perguntar('sala> ', tela)
         if self.sala != abs(self.loc.get(o, 0)) and self.loc.get(o) != COM_JOGADOR:
             return self.dizer('Não está aqui...')  # msg 114
         self.dizer('Vá com calma...' if o in (Obj.BALCONISTA, Obj.SECRETARIA, Obj.RECEPCIONISTA) else 'Freud explica...')  # msg 115, 116
@@ -1827,16 +1839,18 @@ class Jogo:
                               (Obj.ELEVADOR_ANDARES, Sala.ELEVADOR_ANDARES),
                               (Obj.ELEVADOR_SUBSOLOS, Sala.ELEVADOR_SUBSOLOS)):
             self.dizer('Digite o número do sub-solo:' if self.sala == Sala.ELEVADOR_SUBSOLOS else dstr(0x778))  # msg 84
-            resposta = self.entrada('andar> ').strip()
-            if o == Obj.ELEVADOR_FLIPERAMA:
-                return self.dizer('O elevador não se move.')  # msg 85
-            andares, primeiro = (('123', Sala.ESCRITORIO_ANALISTAS) if o == Obj.ELEVADOR_ANDARES
-                                 else ('12', Sala.GARAGEM))  # no original: 43 ou 53 + posição
-            if len(resposta) != 1 or resposta not in andares:
-                return self.dizer('O elevador não se move.')  # msg 86 e 87 (iguais)
-            self.sala = primeiro + andares.index(resposta)
-            self.elevador_moveu = True
-            return self.descrever()
+
+            def andar(resposta):
+                if o == Obj.ELEVADOR_FLIPERAMA:
+                    return self.dizer('O elevador não se move.')  # msg 85
+                andares, primeiro = (('123', Sala.ESCRITORIO_ANALISTAS) if o == Obj.ELEVADOR_ANDARES
+                                     else ('12', Sala.GARAGEM))  # no original: 43 ou 53 + posição
+                if len(resposta) != 1 or resposta not in andares:
+                    return self.dizer('O elevador não se move.')  # msg 86 e 87 (iguais)
+                self.sala = primeiro + andares.index(resposta)
+                self.elevador_moveu = True
+                return self.descrever()
+            return self.perguntar('andar> ', andar)
         if v == 'EMBALAGEM' and self.com_jogador(Obj.EMBALAGEM) and self.com_jogador(Obj.LAMPADA):
             self.dizer(
                 'Você coloca o papel-alumínio da bala em volta da '
@@ -1892,23 +1906,25 @@ class Jogo:
             if self.sala != Sala.CALCADA:
                 return self.dizer('Não aqui.')  # msg 96
             self.dizer('Digite o nº da linha do ônibus:')  # msg 97
-            linha = self.entrada('linha> ').strip()
-            if not linha.isdigit() or int(linha) == 0:
-                return self.dizer('Não entendi. Nada feito.')  # msg 98
-            self.dizer(
-                'Você entra no ônibus. Este meio sem-vergonha de '
-                'transporte continua cada vez mais sem-vergonha.')  # msg 99
-            self.dizer(
-                'Ao chegar na metade do mesmo, depara com um '
-                'indivíduo que tenta lhe mostrar exatamente o que '
-                'comeu no almoço. Você passa direto e paga o '
-                'motorista.')  # msg 100
-            self.grana -= PRECO_DO_ONIBUS
-            self.dizer(
-                'O ônibus para. Este é o ponto final. Todos '
-                'descem, inclusive você.')  # msg 101
-            self.sala = Sala.VIELA if linha == LINHA_CERTA else Sala.BAIRRO_PERIGOSO
-            return self.descrever()
+
+            def onibus(linha):
+                if not linha.isdigit() or int(linha) == 0:
+                    return self.dizer('Não entendi. Nada feito.')  # msg 98
+                self.dizer(
+                    'Você entra no ônibus. Este meio sem-vergonha de '
+                    'transporte continua cada vez mais sem-vergonha.')  # msg 99
+                self.dizer(
+                    'Ao chegar na metade do mesmo, depara com um '
+                    'indivíduo que tenta lhe mostrar exatamente o que '
+                    'comeu no almoço. Você passa direto e paga o '
+                    'motorista.')  # msg 100
+                self.grana -= PRECO_DO_ONIBUS
+                self.dizer(
+                    'O ônibus para. Este é o ponto final. Todos '
+                    'descem, inclusive você.')  # msg 101
+                self.sala = Sala.VIELA if linha == LINHA_CERTA else Sala.BAIRRO_PERIGOSO
+                return self.descrever()
+            return self.perguntar('linha> ', onibus)
         self.dizer('Você não pode usar isso!')  # msg 103
 
 
@@ -1918,7 +1934,7 @@ def jogar(cmds, **opcoes):
     it = iter([c for c in cmds if c.strip() and not c.startswith('#')])
 
     def novo():
-        return Jogo(entrada=lambda _: next(it), saida=print, **opcoes)
+        return Jogo(saida=print, **opcoes)
 
     j = novo()
     j.iniciar()
@@ -1953,15 +1969,15 @@ def interativo(opcoes):
         import readline  # noqa: F401
     except ImportError:
         pass
-    prompt = '> '
+    prompt = ''
     if opcoes.get('cor'):  # com o readline, o que não ocupa coluna vai entre \001 e \002
         ini, fim = ('\001', '\002') if 'readline' in sys.modules else ('', '')
-        prompt = ini + VERDE + fim + '> '
+        prompt = ini + VERDE + fim
     j = Jogo(**opcoes)
     j.iniciar()
     while True:
         try:
-            c = input(prompt)
+            c = input(prompt + (j.pergunta[0] if j.pergunta else '> '))
             if opcoes.get('cor'):
                 print(ZERAR, end='', flush=True)
         except EOFError:  # Ctrl-D

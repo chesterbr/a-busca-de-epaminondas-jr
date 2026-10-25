@@ -182,6 +182,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, GRANA, FOSFOROS
 > PEGAR ONIBUS
 Digite o nº da linha do ônibus:
 
+> 4283
 Você entra no ônibus. Este meio sem-vergonha de transporte continua cada vez mais sem-vergonha.
 
 Ao chegar na metade do mesmo, depara com um indivíduo que tenta lhe mostrar exatamente o que comeu no almoço. Você passa direto e paga o motorista.
@@ -884,6 +885,7 @@ Objetos: LISTA, AZULEJO, LIVRO, PAPEL, LANTERNA, PILHAS, GRANA, FOSFOROS, MALA, 
 > USAR ELEVADOR
 Digite o número do andar:
 
+> 3
 Estamos na recepção da administração.
 
 [saídas: LESTE, OESTE]

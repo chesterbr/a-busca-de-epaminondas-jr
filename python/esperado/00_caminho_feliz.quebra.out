@@ -173,6 +173,7 @@ Um homem mal-encarado está apoiado num poste.
 > PEGAR ONIBUS
 Digite o nº da linha do ônibus:
 
+> 4283
 Você entra no ônibus. Este meio sem-vergonha de
 transporte continua cada vez mais sem-vergonha.
 
@@ -814,6 +815,7 @@ Você está num elevador.
 > USAR ELEVADOR
 Digite o número do andar:
 
+> 3
 Estamos na recepção da administração.
 
 [saídas: LESTE, OESTE]
