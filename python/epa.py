@@ -1960,27 +1960,31 @@ def interativo(opcoes):
     print('╚' + '═' * (LARGURA - 2) + '╝\n')
     for p in AJUDA:
         print(*(quebra_linhas(p) if opcoes.get('quebra', True) else [p]), sep='\n', end='\n\n')
-    if sys.stdin.isatty():  # numa sessão interativa, espera para a abertura não rolar para fora da tela
-        try:
-            input('Tecle ENTER para começar...')
-        except EOFError:
-            pass
-        print()
     try:  # histórico (seta para cima) e edição da linha; onde não existe (Windows), segue sem
         import readline  # noqa: F401
     except ImportError:
         pass
-    prompt = ''
-    if opcoes.get('cor'):  # com o readline, o que não ocupa coluna vai entre \001 e \002
-        ini, fim = ('\001', '\002') if 'readline' in sys.modules else ('', '')
-        prompt = ini + VERDE + fim
+    ini, fim = ('\001', '\002') if 'readline' in sys.modules else ('', '')  # o que não ocupa coluna vai entre \001 e \002
+
+    def pedir(texto):  # input() com o prompt em verde (e o que for digitado), como na página
+        if not opcoes.get('cor'):
+            return input(texto)
+        try:
+            return input(ini + VERDE + fim + texto)
+        finally:
+            print(ZERAR, end='', flush=True)
+
+    if sys.stdin.isatty():  # numa sessão interativa, espera para a abertura não rolar para fora da tela
+        try:
+            pedir('Tecle ENTER para começar...')
+        except EOFError:
+            pass
+        print()
     j = Jogo(**opcoes)
     j.iniciar()
     while True:
         try:
-            c = input(prompt + (j.pergunta[0] if j.pergunta else '> '))
-            if opcoes.get('cor'):
-                print(ZERAR, end='', flush=True)
+            c = pedir(j.pergunta[0] if j.pergunta else '> ')
         except EOFError:  # Ctrl-D
             print(ZERAR if opcoes.get('cor') else '')
             break
@@ -1988,7 +1992,7 @@ def interativo(opcoes):
         if j.morreu:
             if sys.stdin.isatty():  # como no original: pausa antes de reiniciar (RUN)
                 try:
-                    input(PAUSA_MORTE)
+                    pedir(PAUSA_MORTE)
                 except EOFError:
                     break
             print()
