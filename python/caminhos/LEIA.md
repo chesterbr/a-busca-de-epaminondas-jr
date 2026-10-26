@@ -29,7 +29,7 @@ Resultado da comparação (2026-10-19): nenhum texto da reimplementação ficou 
 | 22_atravessar_no_bairro_pior | Atravessar a rua no bairro pior (sala 56) |
 | 25_soquete_choque | Pegar o soquete da cela: choque de 220V |
 
-A morte só mostra as mensagens 294 e 295, pausa e reinicia o jogo (`RUN`). A reimplementação também reinicia (imprime "--- reiniciando o jogo ---") e os comandos seguintes do arquivo valem para o jogo novo, como no original.
+A morte só mostra as mensagens 294 e 295, pausa e reinicia o jogo (`RUN`). A reimplementação também reinicia (nos roteiros imprime "--- reiniciando o jogo ---"; no terminal e na página pede uma tecla antes, como o original) e os comandos seguintes do arquivo valem para o jogo novo, como no original.
 
 ## Becos sem saída e tentativas que falham
 

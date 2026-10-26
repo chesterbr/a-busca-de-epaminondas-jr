@@ -506,6 +506,7 @@ def cor_suportada():
     return True
 
 
+PAUSA_MORTE = 'Digite qualquer tecla para reiniciar o jogo...'  # aviso do original antes do RUN
 LARGURA = 58  # a janela de mensagens do original tem 58 colunas (MostraMensagem quebra quando COL passa disso)
 
 
@@ -1985,7 +1986,12 @@ def interativo(opcoes):
             break
         j.comando(c)
         if j.morreu:
-            print('--- reiniciando o jogo ---\n')
+            if sys.stdin.isatty():  # como no original: pausa antes de reiniciar (RUN)
+                try:
+                    input(PAUSA_MORTE)
+                except EOFError:
+                    break
+            print()
             j = Jogo(**opcoes)
             j.iniciar()
         elif j.saiu:

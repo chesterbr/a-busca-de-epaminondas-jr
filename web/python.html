@@ -62,7 +62,7 @@ async function iniciar() {
   function envia() {
     term.write('\r\n');
     const linha = buf;
-    const primeira = rotulo.startsWith('Tecle ENTER');
+    const primeira = rotulo.startsWith('Tecle ENTER') || rotulo.startsWith('Digite qualquer tecla');
     if (!primeira && linha.trim()) historico.push(linha);
     term.write(sessao.enviar(linha));
     if (sessao.terminou) { terminou = true; term.write('Fim de jogo. Recarregue a página para jogar de novo.\r\n'); return; }

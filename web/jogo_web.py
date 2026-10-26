@@ -3,13 +3,14 @@
 A página (JS) chama abertura() uma vez e depois enviar(linha) a cada linha digitada; cada chamada devolve o texto
 (com sequências ANSI de cor) para o xterm.js mostrar, e prompt() diz o que escrever antes da próxima linha.
 """
-from epa import AJUDA, LARGURA, Jogo, quebra_linhas
+from epa import AJUDA, LARGURA, PAUSA_MORTE, Jogo, quebra_linhas
 
 
 class Sessao:
     def __init__(self):
         self.linhas = []
         self.jogo = None  # None até o ENTER da abertura
+        self.morreu = False  # esperando o ENTER que reinicia o jogo
         self.terminou = False
 
     def _texto(self):
@@ -37,19 +38,20 @@ class Sessao:
     def prompt(self):
         if self.jogo is None:
             return 'Tecle ENTER para começar...'
+        if self.morreu:
+            return PAUSA_MORTE
         return self.jogo.pergunta[0] if self.jogo.pergunta else '> '
 
     def enviar(self, linha):
         """Uma linha digitada. Na abertura, qualquer linha é o ENTER que começa o jogo."""
-        if self.jogo is None:
+        if self.jogo is None or self.morreu:  # o ENTER da abertura, ou o que reinicia depois da morte
+            self.morreu = False
             self.linhas.append('')
             self._novo_jogo()
             return self._texto()
         self.jogo.comando(linha)
-        if self.jogo.morreu:  # como o original (RUN): a morte recomeça o jogo
-            self.linhas.append('--- reiniciando o jogo ---')
-            self.linhas.append('')
-            self._novo_jogo()
+        if self.jogo.morreu:  # como o original: pausa e recomeça (RUN)
+            self.morreu = True
         elif self.jogo.saiu:
             self.terminou = True
         return self._texto()
