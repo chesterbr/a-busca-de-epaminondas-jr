@@ -1,8 +1,8 @@
 # A Busca de Epaminondas Jr.
 
-Em 1992 publiquei este adventure de texto para MS-DOS, feito em Turbo Basic 1.0: você é Epaminondas e precisa achar o disquete do chefe para não perder o emprego. Na época distribuí só o executável, e o código-fonte se perdeu.
+Em 1992 publiquei este adventure de texto para MS-DOS, feito em Turbo Basic 1.0: você é Epaminondas e precisa achar o disquete do chefe para não perder o emprego.
 
-Com ferramentas como o [REA](https://github.com/morluto/rea), resolvi fazer o disassembly e reconstruir o fonte, assistido por IA. O resultado:
+Na época distribuí só o executável, e o código-fonte se perdeu. Influenciado pelo burburinho recente em torno do [Reverse Engineer Anything](https://github.com/morluto/rea), resolvi fazer o disassembly e reconstruir o fonte, assistido por IA. O resultado:
 
 - **[LEGIVEL.BAS](basic/gerado/LEGIVEL.BAS)** **(comece por aqui)**: o fonte do jogo, comentado e formatado.
 - **[CA1.BAS](basic/gerado/CA1.BAS)**: o fonte mais próximo do original, que recompila para o executável idêntico byte a byte.
