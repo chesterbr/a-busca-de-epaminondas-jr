@@ -1,14 +1,32 @@
 # A Busca de Epaminondas Jr.
 
-Um adventure de texto para MS-DOS, escrito por mim em 1992 usando Turbo Basic 1.0. Este repositório contém o jogo original que, à época, publiquei em BBSes como domínio público, mas o código-fonte se perdeu. Você é Epaminondas, e precisa achar o disquete do seu chefe para não perder o emprego.
+Em 1992 eu publiquei este adventure de texto para MS-DOS, feito em Turbo Basic 1.0: você é Epaminondas e precisa achar o disquete do seu chefe para não perder o emprego. Na época eu não conhecia o conceito de software livre, então distribuí nas BBSes só o executável, e o código-fonte acabou se perdendo.
 
-Este repositório documenta a engenharia reversa do `CA1.EXE`, traz uma reimplementação fiel em Python e uma reconstrução do fonte em Turbo Basic (que recompila para o mesmo código do `CA1.EXE`). Também recria uma versão um pouco mais legível e comentada, que [pode ser lida diretamente aqui](basic/gerado/LEGIVEL.BAS).
+Com a popularização recente de ferramentas como o [REA](https://github.com/morluto/rea), resolvi experimentar fazer o disassembly e a reconstrução desse código-fonte, assistido por IA. Este repositório documenta o processo e hospeda os frutos dele:
 
-<p align="center"><img src="docs/tela.png" width="720" alt="Tela do jogo rodando no DOSBox-X: o escritório de Epaminondas, com os painéis de mensagens, objetos, direções, comando e avisos"></p>
+- **[LEGIVEL.BAS](basic/gerado/LEGIVEL.BAS)**: o código-fonte do jogo, amplamente comentado e num formato próprio para humanos.
+- **[CA1.BAS](basic/gerado/CA1.BAS)**: uma versão mais próxima do que seria o original, que gera o executável original idêntico byte a byte.
+- **[epa.py](python/epa.py)**: uma implementação de referência que recria o jogo como um aplicativo de linha de comando, num formato mais confortável de jogar.
 
-> **In English:** this is a 1992 Brazilian Portuguese text adventure written in Turbo Basic 1.0, whose source code was lost. The repository has the original DOS files, the reverse-engineering notes and memory dumps, a faithful Python reimplementation checked against the original running in DOSBox-X, and a rebuilt Turbo Basic source that recompiles to byte-identical code. The game is in Portuguese only.
+Além disso, aqui é possível:
 
-## Jogar
+- [Jogar o original no navegador](https://chester.me/a-busca-de-epaminondas-jr/original.html) (via [js-dos](https://js-dos.com/), um DOSBox em WebAssembly)
+- [Jogar a versão Python no navegador](https://chester.me/a-busca-de-epaminondas-jr/python.html) (via [Pyodide](https://pyodide.org/) e [xterm.js](https://xtermjs.org/))
+
+<table align="center">
+<tr>
+<td><img src="docs/tela.png" width="440" alt="O original rodando no DOSBox-X: o escritório de Epaminondas, com os painéis de mensagens, objetos, direções, comando e avisos"></td>
+<td><img src="docs/tela-python.png" width="440" alt="A versão Python no terminal: o mesmo texto de abertura da sala, com as saídas e os objetos que você carrega, e o prompt de comando"></td>
+</tr>
+<tr>
+<td align="center">O original (DOSBox-X)</td>
+<td align="center">A versão Python (terminal)</td>
+</tr>
+</table>
+
+> **In English:** this is a 1992 Brazilian Portuguese text adventure written in Turbo Basic 1.0, whose source code was lost because I only ever distributed the executable. With AI assistance I disassembled it and rebuilt the source: this repository has a readable, commented Turbo Basic version, a second one that recompiles to a byte-identical executable, and a faithful Python reimplementation checked against the original running in DOSBox-X, plus the original DOS files, the reverse-engineering notes and memory dumps. You can play [the original](https://chester.me/a-busca-de-epaminondas-jr/original.html) and [the Python version](https://chester.me/a-busca-de-epaminondas-jr/python.html) in the browser. The game is in Portuguese only.
+
+## Jogar localmente
 
 A reimplementação em Python não tem dependências (Python 3.9 ou mais novo):
 
@@ -40,7 +58,7 @@ Foi conduzida com o Claude Code, com estas ferramentas:
 - O DOSBox-X e seu depurador (`BPINT`, `MEMDUMPBIN`), para extrair a memória do jogo rodando e comparar o original com a reimplementação.
 - O Turbo Basic 1.0 ([WinWorld](https://winworldpc.com/product/turbo-basic/1x)), para compilar programas de teste e descobrir o que o compilador gera (`basic/rosetta/`).
 
-Os detalhes estão em `docs/engenharia-reversa.md`.
+Comece por `docs/engenharia-reversa.md`, que tem os detalhes.
 
 ## O que tem aqui
 
@@ -49,11 +67,10 @@ Os detalhes estão em `docs/engenharia-reversa.md`.
 | `original/` | Os arquivos de 1992 (`CA1.EXE`, `CHESTER.EXE`, `AVENTURA.MSG`, `AVENTURA.BAT`, `LEIAME.TXT`), com `SHA256SUMS`, o `epa15.zip` de onde saíram (https://chester.me/download/epa15.zip; guarda as datas originais dos arquivos) e cópias em UTF-8 dos textos |
 | `analise/` | Engenharia reversa: dumps de memória, listagem do código, tabelas e pseudocódigo de salas e verbos |
 | `python/` | A reimplementação em Python, os 45 roteiros de teste e as saídas esperadas |
+| `web/` | As duas páginas para jogar no navegador (`original.html` e `python.html`) e o `montar.py`, que monta o site publicado no GitHub Pages |
 | `docs/` | Como o jogo funciona por dentro, e os testes feitos no original |
 | `ferramentas/dosbox/` | Scripts (macOS) que pilotam o original no DOSBox-X para comparar com a reimplementação |
 | `basic/` | O fonte Turbo Basic reconstruído (`gerado/CA1.BAS`, que recompila para o mesmo código do `CA1.EXE`, e `gerado/LEGIVEL.BAS`, para ler), o gerador a partir do executável e a "Pedra de Roseta" do compilador (`rosetta/`) |
-
-Comece por `docs/engenharia-reversa.md`.
 
 ## Testes
 
